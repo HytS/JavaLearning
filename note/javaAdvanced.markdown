@@ -301,8 +301,17 @@ system.out.println(boy);//就是访问Gender父类enum的tostring方法
 ### 细节
 * 使用enum关键字，就不能继承其他类了，因为已经隐式继承了Enum类 
 * enum实现的枚举类，仍然是一个类，所以还是可以实现接口的
+### 成员方法
+* toString:返回当前对象名，子类可以重写该方法，用于返回对象的属性信息
+* name:返回当前对象名（常量名），子类中不能重写
+* ordinal:返回当前对象的位置号，默认从0开始
+* values:返回当前枚举类中的所有常量
+* valueOf:将字符串转换成枚举对象，要求字符串必须为已有的常量名，否则报异常
+* compareTo:比较两个枚举常量，比较的是位置号
+
 
 ## 注解
+* 注解也被称为元数据，用于修饰解释包、类、方法、属性、构造器、局部变量等数据信息
 * 使用Annotation是要在其前面加上@符号，并把该annotation当作一个修饰符使用  
 * @interface不是接口，而是注解类 
 ### override注解
@@ -332,8 +341,16 @@ system.out.println(boy);//就是访问Gender父类enum的tostring方法
 #### @Documented
 * 用于指定被该元annotation修饰的annotation类将被javadoc工具提取成文档，即在生成文档时，可以看到该注解
 #### @Inherited注解
-* 被它修饰的annotation将具有继承性，如果某个类使用了被@Inherited修饰的annotation，其子类将自动具有该注解，    
+* 被它修饰的annotation将具有继承性，如果某个类使用了被@Inherited修饰的annotation，其子类将自动具有该注解， 
+
+
 ## 异常
+### 异常-面试
+#### 举例常见异常的例子
+* 编译异常和运行异常
+#### error和exception的区别和对应的例子
+* error：jvm无法解决的问题
+* exception:其他因编程错误或偶然的外在因素导致的一般性问题
 ### 异常的概念
 * 程序执行中发生的不正常情况称为异常（语法错误和逻辑错误不是异常）
 * 执行过程中的异常时间分为error和Exception
@@ -341,15 +358,16 @@ system.out.println(boy);//就是访问Gender父类enum的tostring方法
 * exception：其他因编程错误或偶然的外在因素导致的一般性问题
 * exception分为两大类：运行时异常、编译时异常
 ### 异常体系图
-* java源程序（编译杨）--javac.exe---字节码文件--java.exe/运行异常--在内存中加载、运行类
-* 运行时异常，编译器不要求强制处置异常。一般是指编程时的逻辑错误，是程序员应该避免其出现的异常 java.lang.RuntimeExcption类及它的子类都是运行时异常
+  编译异常                             运行异常
+* java源程序--javac.exe---字节码文件--java.exe--在内存中加载、运行类
+
+* 运行时异常，编译器检查不出来。一般是指编程时的逻辑错误，是程序员应该避免其出现的异常 java.lang.RuntimeExcption类及它的子类都是运行时异常
 * 对于运行时异常，可以不作处理，因为这类异常很普遍，若全处理会对程序的可读性和运行效率产生影响
 * 编译时异常是编译器要求必须处理的异常
 ### 常见的异常
 * NullPointerExcption 空指针异常
 * 当应用程序试图在需要对象的地方使用null时，抛出该异常
 * ArithmeticException 数学运算异常
-* 
 * ArrayIndexOutOfBoundsException数组下标越界异常
 * 用非法索引访问数组
 * ClassCastException 类型转换异常
@@ -365,7 +383,7 @@ system.out.println(boy);//就是访问Gender父类enum的tostring方法
 * FileNotFoundException 当操作一个不存在的文件时，发生异常
 * ClassNotFoundException 加载类，而该类不存在时异常
 * EOFException 操作文件到文件末尾发生异常
-* IIIegalArguementException 参数异常
+* IIlegalArguementException 参数异常
 ### 异常处理方式
 * Ⅰ try-catch-finally
 * 程序员在代码中捕获发生的异常，自行处理
@@ -386,13 +404,25 @@ try{
 ```
 * Ⅱ throws处理机制
 * 将发生的异常抛出，交给调用者（方法）来处理，最顶级的处理者就是jvm
-* jvm-->main-->f1()method--f2() 抛出异常--throws-->f1()//try-catch-finally-throws->main//trycatchfinally--throws-->jvm（处理异常：1、输出异常信息2、退出程序）
+* jvm-->main-->f1()方法-->f2()方法抛出异常--throws-->f1()可以选择try-catch-finally/throws->main可以选择try-catch-finally/throws-->jvm（处理异常：1、输出异常信息2、退出程序）
 * try-catch=finally和throws二选一
 * 如果程序员没有显式的处理异常，默认就是throws
 
 
 
 ## try|catch|throws
+### 掌握度
+1、知道 try catch finally 的一个执行顺序，以及掌握如何使用他们。
+2、还有一个很重要的点就是，如果有 finally，那么无论是否发生异常，都有执行 finally 的语句，即使 catch 里面有 return 语句，那么也会执行 finally。
+
+3、明白 try-catch-finally 来处理异常了，为啥还需要 和 throws 的使用区别，就是有了 try-catch-finally 来处理异常了，为啥还需要 throws 呢
+
+这个面试其实问的不多，在笔试选择题会多一些
+### 面试
+
+13、throw和throws的区别
+
+14、try catch会影响性能吗？为什么抛出异常的时候会影响性能？
 ### try-catch异常处理
 * java提供try和catch来处理异常，try块用于包含可能出错的代码，catch块用于处理try块中发生的异常，
 * 如果没有finally，语法上允许
@@ -405,6 +435,8 @@ try{
 
 #### 小结
 * 如果出现异常，则try块中异常发生后，try块剩下的语句不再执行，将执行catch块中的语句，如果有finally，最后还需要执行finally块中的语句
+
+
 ### throws异常处理
 #### 基本介绍
 * 如果语句执行中可能生成某种异常，但是不能确定如何处理异常，则此方法应显式的声明抛出异常，表明该方法将不对这些异常进行处理，而是由该方法的调用者负责处理
@@ -412,17 +444,20 @@ try{
 #### 细节
 * 对与编译异常，程序中必须处理，比如try-catch或throws
 * 对于运行时异常，程序中如果没有处理，默认就是throws方式处理
-* 子类重写父类的方法时，对抛出异常的规定：子类重写的方法，所抛出的异常类型要么和父类抛出的异常一致，要么时父类抛出异常类型的子类
+* 子类重写父类的方法时，对抛出异常的规定：子类重写的方法，所抛出的异常类型要么和父类抛出的异常一致，要么时父类抛出异常类型的子类（见throwDetail.java）
 * 在throws过程中，如果有方法try-catch，就相当于处理异常，就不必throws
 
 ### 自定义异常
 * 当程序中出现了某些错误，但该错误信息并没有在Throwable子类中描述处理，这个时候可以自己设计异常类，用于描述错误信息
+* 一般情况，自定义异常继承RuntimeException；把自定义异常做成运行时异常，这样可以使用默认的处理机制
 
 ### throw和throws区别
 ||意义|位置|后面跟的东西|
 |---|---|---|---|
 |throws|异常处理的一种方式|方法声明处|异常类型|
 |throw|手动生成异常对象的关键字|方法体中|异常对象|
+
+
 ## 八大常用类
 * 针对八种基本数据里欸选哪个相应的引用类型--包装类
 * 有了类的特点，就可以调用类中的方法
@@ -438,18 +473,117 @@ try{
 |double|Double|
 
 ## Integer类：拆箱与装箱
+### 面试问题
+1、掌握拆箱与装箱的大致过程
+2、了解下缓存池 cache，掌握下缓存的数值范围，另外关于这种缓存之类的，后面 JVM 会详细讲
+
+一般面试官会问你下装箱和拆箱的理解，然后具体的这种数值比较，判断 true false 之类的，一般在笔试中出现多一些
 ### 包装类
 * jdk5以前的手动装箱和拆箱的方式，装箱：基本类型->包装类型，反之，拆箱
 * jdk5以后（含jdk5）的自动装箱和拆箱方式
 * 自动装箱底层调用的是valueOf方法
 * 注意：只要有基本数据类型，==判断的就是值是否相同
+
+### Integer类：拆箱与装箱
+
+//手动装箱int->Integer
+int n1=100;
+//方式1
+Integer integer=new Integer(n1);
+//方式2
+Integer integer1=Integer.valueOf(n1);
+
+//手动拆箱 Integer->int
+int i=integer.intValue();
+//自动装箱
+int n2=200;
+Integer integer2=n2;//底层使用valueOf()
+```
+public static Integer valueOf(int i) {
+        if (i >= IntegerCache.low && i <= IntegerCache.high)
+            return IntegerCache.cache[i + (-IntegerCache.low)];
+        return new Integer(i);
+    }
+```
+//自动拆箱
+int n3=integer2;//底层使用intValue()
+
+#### 包装类型和String类型的转换
+##### 包装类Integer-->String
+```
+Integer n1=100;
+//方式1
+String str=n1.toString();
+//方式2
+String str2=n1+"";
+//方式3
+String str3=String.valueOf(n1);
+```
+##### String-->包装类Integer
+```
+String str4="1234";
+Integer i=Integer.parseInt(str4);
+Integer i1=new Integer(str4);
+```
+#### 包装类的常用方法
+```
+Integer.MIN_VALUE//返回最小值
+Integer.MAX_VALUE//返回最大值
+
+Character.isDigit('a')//判断是不是数字
+Character.isLetter('a')//判断是不是字母
+Character.isUpperCase('a')//判断是不是大写
+Character.isLowerCase('a')//判断是不是小写
+
+Character.isWhitespace('a')//判断是不是空格
+Character.toUpperCase('a')//转成大写
+Character.toLowerCase('a')//转成小写
+```
+
+#### Integer面试题
+```
+    Integer i = new Integer(1);
+    Integer j = new Integer(1);
+    System.out.println(i == j);// 对象的比较 false
+
+    Integer m = 1;// 底层装箱 Integer.valueOf(1)
+    Integer n = 1;
+    // 如果范围在-128-127直接返回，否则就new Integer(xx)
+    System.out.println(m == n);// T
+    
+    Integer x = 128;
+    Integer y = 128;
+    System.out.println(x == y);// F
+    /*public static Integer valueOf(int i) {
+        if (i >= IntegerCache.low && i <= IntegerCache.high)
+            return IntegerCache.cache[i + (-IntegerCache.low)];
+        return new Integer(i);
+}   
+    */
+```
+```
+    Integer i5 = 127;// 使用底层的Integer.valueOf()
+    Integer i6 = 127;
+    System.out.println(i5 == i6);
+    Integer i7 = 128;
+    Integer i8 = 128;
+    System.out.println(i7 == i8);
+    Integer i9 = 127;
+    int i10 = 127;
+    // 只要有基本数据类型判断的就是值是否相同
+    System.out.println(i9 == i10);
+```
 ## String详解
+### 面试题
+5、用户自己写一个String类，会发生什么？
+
+6、语句 String s = new String(“aa”) 会创建多少个对象？
 ### String结构
 * String实现了serialize接口，可以串行化（数据可以在网络传输）
 * comparable：String对象可以相互比较
 * String是final类，不能被其他的类继承
 * String有属性private final char value[],用于存放字符串内容
-* value是final类型，不可以修改（value不能指向新的地址，但是单个字符内容可以变化）
+* value是final类型，不可以修改（地址不可以修改）（value不能指向新的地址，但是单个字符内容可以变化 "tom"->"toh"）
 * String对象用于保存字符串，也是一组字符序列
 * 字符串常量对象是用双引号括起的字符序列
 * 字符串的字符使用Unicode编码，一个字符占两个字节
@@ -459,29 +593,52 @@ try{
 * 先从常量池查看是否有“hsedu”数据空间，如果有，直接指向，如果没有则创建，然后指向，s最终指向的是常量池的空间地址
 ##### 调用构造器
 * String s2=new String("hsedu");
-* 先在堆中创建空间，里卖弄维护了value属性，指向常量池的hsedu空间；如果常量池里没有“hsedu”，重新创建，如果有，直接通过value指向，最终指向的是堆中的空间地址
+* 先在堆中创建空间，里面有value属性，指向常量池的hsedu空间；如果常量池里没有“hsedu”，重新创建，如果有，直接通过value指向，最终s2指向的是堆中的空间地址
 * 调用intern方法时，如果池已经包含一个等于此String对象的字符串（用equals（Object）确定），则返回池中的字符串。否则，将此String对象添加到池中，并返回此String对象的引用
 * b.intern()方法最终返回的是常量池的地址（对象）
+* equals()方法重写过，功能是比较内容是否相同
 ### String对象特性
 * String是一个final类，代表不可变的字符序列
-* 字符串是不可变的。一个字符串对象一旦  被分配，其内容是不可变的
-* String c1="ab"+"cd";常量相加，看的是池  String c1=a+b;变量相加，是在堆中
-  
+* 字符串是不可变的。一个字符串对象一旦被分配，其内容是不可变的
+```
+Stirng s1="hello";
+s1="haha";//s1
+```
+* String c1="ab"+"cd"优化成String c1="abcd"; 判断创建的常量池对象是否有引用指向
+* 常量相加，看的是池  String c1=a+b;变量相加，是在堆中
+```
+String a="hello"; String b="abc";
+String c=a+b;//创建了几个对象：一共创建了三个对象
+//1、创建一个StringBuilder sb=new StringBuilder();
+//sb在堆中，并且append是在原来字符串的基础上追加的
+//2、sb.append("hello");sb.append("abc");
+//3、String c=sb.toString(); 
+//c指向堆中的对象(String)value[],value[]指向池中的“helloabc” 
+```
+
 ### String常用方法
 * String类用于保存字符串常量，每次更新都要开辟新空间，效率低
+* equals 区分大小写
 * equalsIgnoreCase 忽略大小写的判断内容是否相等 
 * indexOf 获取字符在字符串对象中第一次出现的位置，索引从0开始， 如果获取不到返回-1
-* substring 截取指定范围的子串 str.substring(6);从索引6开始截取
-* substring(m,n)从索引m开始截取，截取到n-1位置
+* lastIndexOf 获取字符在字符串中最后一次出现的索引，索引从0开始，找不到返回-1
+* substring 截取指定范围的子串 str.substring(6);从索引6开始截取后面所有的字符
+* substring(m,n)从索引m开始截取，截取到第n个字符
 * concat 拼接字符 str.concat("abc").concat("cde")
 * replace 替换字符串中的字符 str.replace("abc","cde");把str中的abc替换成cde
 * split(",")以，为标准对字符串进行分割，返回一个数组
 * 在对字符产进行分割时，如果字符串内有特殊字符，需要加转义字符
 * str.toCharArray(); 转换成字符数组
 * compareTo 比较两个字符串的大小，如果前者大，则返回正数。后者大，则返回负数，如果相等，则返回0
-* 如果长度相同，并且每个字符都相同返回0；如果长度相同或不相同，但在进行比较时，可以区分大小；如果前面的部分都相同，就返回str1.len-str2.len
+* 如果长度相同，并且每个字符都相同返回0；如果长度相同或不相同，但在进行比较时，可以区分大小（前者长度-后者长度）；如果前面的部分都相同，就返回str1.len-str2.len
 * String info=Stirng.format("%s",name);%s占位符
+* trim 去前后空格
+* charAt 获取某索引处的字符,数组专用，数组不可以用str[i]这种方法获取字符
+
+
 ## StringBuffer与StringBuilder
+### 面试
+6、String、StringBuilder、StringBuffer有什么区别？
 ### StringBuffer
 * 代表可变的字符序列，可以对字符串的内容进行增删，很多方法与Stirng相同，但是StringBuffer类是可变长度的
 * StringBuffer类是一个容器
@@ -491,15 +648,17 @@ try{
 * StringBuffer是final类，不能被继承
 * 因为StringBuffer字符内容是存在char[] value，所有的变化（增加/删除）不用每次都改变地址（即不是每次都创建新对象），所以效率高于String
 
+
+#### String VS StringBuffer
+* String保存的是字符串常量，里面的值不能修改，每次String类的更新实际上就是更改地址，效率较低；String保存的字符串放在常量池里
+* private final char[] value;
+* StringBuffer保存的是字符串变量（字符内容存在char[] value），里面的值可以更改，每次StringBuffer的更新实际上可以更新内容，不用每次更新地址（只有在存储空间不够时，才会去扩容），效率高；
+* char[] value;这个放在堆
+
 #### StringBuffer构造器
 * StringBuffer() 创建一个大小为16的char[] ,用于存放字符内容
-* 通过构造器指定 char[] 大小
-* 通过给一个String 创建StringBuffer
-#### String VS StringBuffer
-* String保存的是字符串常量，里面的值不能修改，每次String类的更新实际上就是更改地址，效率较低 
-* private final char[] value;
-* StringBuffer保存的是字符串变量，里面的值可以更改，每次StringBuffer的更新实际上可以更新内容，不用每次更新地址（只有在存储空间不够时，才会去扩容），效率高；
-* char[] value;这个放在堆
+* 通过构造器指定 char[] 大小    new StringBuffer(5);
+* 通过给一个String 创建StringBuffer  new StringBuffer("hello");//char数组大小就是str.length()+16=21
 #### StringBuffer-->Stirng
 * 1 toString()
 * 2 String构造器
@@ -515,7 +674,7 @@ try{
 * insert(m,str) 在索引为m的位置插入str，原来索引为m的内容自动后移
 
 ### StringBuilder
-#### 
+#### StringBuilder结构分析
 * StringBuilder继承AbstractStringBuilder类
 * 实现serializable，说明StringBuilder对象可以串行化（对象可以网络传输，可以保存到文件）
 * StringBuilder是final类，不能被继承
@@ -533,7 +692,10 @@ try{
 * 如果字符串存在大量的修改操作，并在多线程的情况下，使用StringBuffer
 * 如果我们字符串很少被修改，被多个对象引用，使用String
 
-## Math
+## 其他常用类
+### 关键
+日期函数比较重要
+### Math
 ### Math方法
 * abs 求绝对值
 * pow(m,n) m的n次方
@@ -553,7 +715,7 @@ try{
 * 调用定制排序时，传入两个参数，排序的数组，实现了comparator的匿名内部类，要求实现compare方法
 * copyOf(arr,arr.length) 数组元素的复制  从arr中拷贝arr.length个元素到arr中
 * 如果拷贝的长度>arr.lenth,就在新数组中加null
-* fill(arr,num)  用num去填充arr
+* fill(arr,num)  用num去填充arr Arrays.fill(num,99)
 * equals(arr,arr2) 比较两个数组元素是否完全一致
 * asList 将一组值转换成list
 * asList会把(2,3,4,5,6,1)转为List集合
@@ -580,7 +742,7 @@ try{
 ### Date
 #### 第一代日期类
 * Date 精确到毫秒
-* Date读取当前时间，date类子啊java.util包，默认输出的日期是国外的方式，需要对格式进行转换，使用SimpleDateFormat类
+* Date读取当前时间，date类在java.util包，默认输出的日期是国外的方式，需要对格式进行转换，使用SimpleDateFormat类
 * 可以使用parse(str)把字符串转成对应的Date，Date在输出时，仍然按照国外的形式
 
 #### 第二代日期类Calendar
@@ -601,8 +763,13 @@ try{
 * Date date=Date.from(instant);
 * Date--Instant
 * Instant instant date.toInstant();
+* MonthDay类：检查重复事件
+* 是否是闰年
+* 增加日期的某个部分
+* 使用plus方法测试增加时间的某个部分
+* 使用minus方法检测查看一年前和一年后的日期
 
-* * * String反转??? 
+
 ## 集合
 * 可以动态保存任意多个对象
 ### 集合框架体系

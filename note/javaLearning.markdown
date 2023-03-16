@@ -31,7 +31,7 @@ int[] b=new int[5];
 ### Àà
 * ´´½¨¶ÔÏóÊ±»áÏÈ¼ÓÔØÀàÐÅÏ¢£¬·ÖÅä¿Õ¼ä£¬×îºó°ÑµØÖ··ÖÅä¸øÒýÓÃ
 * ¶ÔÏóµÄÊôÐÔÄ¬ÈÏÖµ£¬×ñÊØÊý×é¹æÔò int 0 char \u0000
-
+* Õ»¡¢¶Ñ¡¢·½·¨Çø
 
 ### ·½·¨Ïê½â
 
@@ -86,9 +86,9 @@ int[] b=new int[5];
 * ÔÚ´´½¨¶ÔÏóÊ±£¬ÏµÍ³×Ô¶¯µÄµ÷ÓÃ¸ÃÀàµÄ¹¹Ôì·½·¨
 * Èç¹ûÃ»ÓÐ¶¨Òå¹¹ÔìÆ÷£¬¾Í»áÄ¬ÈÏ¹¹ÔìÒ»¸öÎÞ²Î¹¹ÔìÆ÷
 * ×Ô¼º¶¨ÒåÁË¹¹ÔìÆ÷¾Í»á¸²¸ÇÁËÄ¬ÈÏ¶¨ÒåµÄÎÞ²Î¹¹ÔìÆ÷£¬ÈôÒªÊ¹ÓÃÄ¬ÈÏµÄÎÞ²Î¹¹ÔìÆ÷£¬ÐèÒªÏÔÊ½µÄ¶¨Òå
-#### ¶ÔÏó´´½¨Á÷³Ì
+#### ¶ÔÏó´´½¨Á÷³Ì--ÃæÊÔ
 * ¼ÓÔØÀàÐÅÏ¢Ö»»á¼ÓÔØÒ»´Î£¬ÔÚ¶ÑÖÐ·ÖÅä¿Õ¼ä/µØÖ·£¬
-* ½øÐÐÄ¬ÈÏ³õÊ¼»¯£¨¼´0ºÍnull£©£¬È»ºóÏÔÊ½³õÊ¼»¯£¬¹¹ÔìÆ÷³õÊ¼»¯
+* ½øÐÐÄ¬ÈÏ³õÊ¼»¯£¨¼´0ºÍnull£©£¬È»ºóÏÔÊ½³õÊ¼»¯(ÊôÐÔÖµ¸³Öµ)£¬¹¹ÔìÆ÷³õÊ¼»¯
 * ÔÙ°Ñ¶ÑÖÐµÄµØÖ··µ»Ø¸ø¶ÔÏóÒýÓÃ/¶ÔÏóÃû
 
 ### this
@@ -98,9 +98,9 @@ int[] b=new int[5];
 
 #### Ï¸½Ú
 * this¹Ø¼ü×Ö¿ÉÒÔÓÃÀ´·ÃÎÊ±¾ÀàµÄÊôÐÔ¡¢·½·¨¡¢¹¹ÔìÆ÷
-* this¿ÉÒÔÓÃÀ´Çø·ÖÊôÐÔºÍ¾Ö²¿±äÁ¿
-* this¿ÉÒÔ·ÃÎÊ³ÉÔ±·½·¨ this.·½·¨Ãû(²ÎÊýÁÐ±í)
-* this·ÃÎÊ¹¹ÔìÆ÷Óï·¨  this(²ÎÊýÁÐ±í)£»Ö»ÄÜÔÚ¹¹ÔìÆ÷ÖÐÊ¹ÓÃ
+* this¿ÉÒÔÓÃÀ´Çø·ÖÊôÐÔºÍ¾Ö²¿±äÁ¿ this.age
+* this¿ÉÒÔ·ÃÎÊ³ÉÔ±·½·¨ this.·½·¨Ãû(²ÎÊýÁÐ±í) this.hello()
+* this·ÃÎÊ¹¹ÔìÆ÷Óï·¨  this(²ÎÊýÁÐ±í)£»Ö»ÄÜÔÚ¹¹ÔìÆ÷ÖÐÊ¹ÓÃ this("smith",20)
 * this²»ÄÜÔÚÀà¶¨ÒåµÄÍâ²¿Ê¹ÓÃ£¬Ö»ÄÜÔÚÀà¶¨ÒåµÄ·½·¨ÖÐÊ¹ÓÃ
 * Èç¹ûÒª·ÃÎÊ¹¹ÔìÆ÷£¬±ØÐë·ÅÔÚµÚÒ»ÌõÓï¾ä£¬±ØÐë·ÅÔÚ¹¹ÔìÆ÷ÖÐ
 * thisÖ»ÄÜÔÚÀà¶¨ÒåµÄÄÚ²¿Ê¹ÓÃ
@@ -111,6 +111,7 @@ int[] b=new int[5];
 improtÖ¸ÁîÎ»ÖÃÒª·ÅÔÚpackageµÄÏÂÃæ£¬ÔÚÀà¶¨ÒåÇ°Ãæ£¬¿ÉÒÔÓÐ¶à¾äÇÒÃ»ÓÐË³ÐòÒªÇó
 
 ### ·â×°
+* ·â×°ÊÇ°Ñ³éÏó³öÀ´µÄÊý¾Ý£¨ÊôÐÔ£©ºÍ¶ÔÊý¾ÝµÄ²Ù×÷£¨·½·¨£©·â×°ÔÚÒ»Æð£¬Êý¾Ý±»±£»¤ÔÚÄÚ²¿£¬³ÌÐòµÄÆäËû²¿·ÖÖ»ÓÐÍ¨¹ý±»ÊÚÈ¨µÄ²Ù×÷£¬²ÅÄÜ¶ÔÊý¾Ý½øÐÐ²Ù×÷
 * ¶ÔÊôÐÔ½øÐÐ·â×°£¬Ê¹µÃÊôÐÔÐÅÏ¢¹æ·¶»¯
 
 ### ·ÃÎÊÐÞÊÎ·û
@@ -146,11 +147,11 @@ public void getxxx(ÀàÐÍ ²ÎÊýÃû){
 * ×ÓÀà²»ÄÜÖ±½Ó·ÃÎÊË½ÓÐÊôÐÔºÍ·½·¨£¬ÒªÍ¨¹ý¸¸ÀàÌá¹©¹«¹²µÄ·½·¨È¥·ÃÎÊ
 * ´´½¨×ÓÀà¶ÔÏó£¬×ÓÀà»áÏÈµ÷ÓÃ¸¸ÀàµÄ¹¹ÔìÆ÷£¬Íê³É¸¸ÀàµÄ³õÊ¼»¯£¬ÔÙÈ¥µ÷ÓÃ×ÓÀàµÄ¹¹ÔìÆ÷
 * ´´½¨×ÓÀà¶ÔÏóÊ±£¬²»¹ÜÊ¹ÓÃ×ÓÀàÄÄ¸ö¹¹ÔìÆ÷£¬Ä¬ÈÏÇé¿ö¶¼»áÏÈÈ¥µ÷ÓÃ¸¸ÀàµÄÎÞ²Î¹¹ÔìÆ÷£¬Èç¹û¸¸ÀàÃ»ÓÐÌá¹©ÎÞ²Î¹¹ÔìÆ÷£¬¾Í±ØÐëÔÚ×ÓÀàµÄ¹¹ÔìÆ÷ÖÐÓÃsuperÖ¸¶¨Ê¹ÓÃ¸¸ÀàµÄÄÄ¸ö¹¹ÔìÆ÷Íê³É¶Ô¸¸ÀàµÄ³õÊ¼»¯£¬·ñÔò±àÒë²»Í¨¹ý¡£
-* ±ÈÈçÄ¬ÈÏ¹¹ÔìÆ÷±»¸²¸Ç£¬¾ÍÒªÊ¹ÓÃsuper(¹¹ÔìÆ÷²ÎÊý)½øÐÐ³õÊ¼»¯
+* ±ÈÈçÄ¬ÈÏ¹¹ÔìÆ÷±»¸²¸Ç(µ±ÐÂÐ´ÁËÒ»¸ö¹¹ÔìÆ÷£¬Ä¬ÈÏµÄÎÞ²Î¹¹ÔìÆ÷¾Í±»¸²¸ÇÁË)£¬¾ÍÒªÔÚ×ÓÀàÖ¸¶¨Ê¹ÓÃ¸¸ÀàµÄÄÇ¸ö¹¹ÔìÆ÷½øÐÐ³õÊ¼»¯£¨ÓÐ²ÎÊýµÄ»¹ÊÇÎÞ²ÎÊýµÄ£©
 
 * super();Ä¬ÈÏµ÷ÓÃ¸¸ÀàµÄÎÞ²Î¹¹ÔìÆ÷£¬Ê²Ã´¶¼²»Ð´£¬Ä¬ÈÏµ÷ÓÃsuper()
 * Èç¹ûÏ£ÍûÖ¸¶¨È¥µ÷ÓÃ¸¸ÀàµÄÄ³¸ö¹¹ÔìÆ÷£¬ÔòÏÔÊ½µÄµ÷ÓÃÒ»ÏÂ£ºsuper(²ÎÊýÁÐ±í)
-* superÔÚÊ¹ÓÃÊ±£¬ÐèÒª·ÅÔÚ¹¹ÔìÆ÷µÚÒ»ÐÐ
+* superÔÚÊ¹ÓÃÊ±£¬ÐèÒª·ÅÔÚ¹¹ÔìÆ÷µÚÒ»ÐÐ£¬superÖ»ÄÜ·ÅÔÚ¹¹ÔìÆ÷ÖÐ
 * super(),this()¶¼Ö»ÄÜ·ÅÔÚ¹¹ÔìÆ÷µÚÒ»ÐÐ£¬Òò´ËÕâÁ½¸ö·½·¨²»ÄÜ¹²´æÔÚÒ»¸ö¹¹ÔìÆ÷ÖÐ
 * ×ÓÀàµÄµ÷ÓÃ²»ÏÞÓÚÖ±½Ó¸¸Àà£¬»áÍùÉÏ×·Êöµ½ObjectÀà   
 * ×ÓÀà×î¶àÖ»ÄÜ¼Ì³ÐÒ»¸ö¸¸Àà£¬¼´µ¥¼Ì³Ð»úÖÆ
@@ -172,14 +173,14 @@ public void getxxx(ÀàÐÍ ²ÎÊýÃû){
 
 #### superÏ¸½Ú
 * ºÃ´¦£º¸¸ÀàµÄÊôÐÔÓÉ¸¸Àà³õÊ¼»¯£¬×ÓÀàÓÉ×ÓÀà³õÊ¼»¯
-* ×ÓÀàºÍ¸¸ÀàµÄÊôÐÔ·½·¨ÖØÃûÊ±£¬ÎªÁË·ÃÎÊ¸¸Àà³ÉÔ±£¬ÐèÒªÓÃsuper½øÐÐ·ÃÎÊÈç¹ûÃ»ÓÐÖØÃû£¬super£¬this£¬Ö±½Ó·ÃÎÊµÄÐ§¹û¶¼ÊÇÒ»ÑùµÄ
+* ×ÓÀàºÍ¸¸ÀàµÄÊôÐÔ·½·¨ÖØÃûÊ±£¬ÎªÁË·ÃÎÊ¸¸Àà³ÉÔ±£¬ÐèÒªÓÃsuper½øÐÐ·ÃÎÊ,Èç¹ûÃ»ÓÐÖØÃû£¬super£¬this£¬Ö±½Ó·ÃÎÊµÄÐ§¹û¶¼ÊÇÒ»ÑùµÄ
 * ÕÒ·½·¨cal()£¬Èç¹û±¾ÀàÓÐ£¬¾Íµ÷ÓÃ£¬Èç¹ûÃ»ÓÐ¾ÍÈ¥¸¸ÀàÕÒ£¬Èç¹û¸¸ÀàÃ»ÓÐ¾Í¼ÌÐøÕÒ¸¸ÀàµÄ¸¸Àà£¬Èç¹ûÕÒµ½ÁË²»ÄÜ·ÃÎÊÔò±¨´í
 * this.cal() Í¬ÉÏ
 * super.cal() Ö±½Ó²éÕÒ¸¸Àà£¬ÆäËûµÄ¹æÔòÒ»Ñù
   
 * superµÄ·ÃÎÊ²»ÏÞÓÚÖ±½Ó¸¸Àà£¬Èç¹ûÒ¯Ò¯ÀàºÍ±¾ÀàÓÐÍ¬ÃûµÄ³ÉÔ±Ò²¿ÉÒÔÊ¹ÓÃsuperÈ¥·ÃÎÊÒ¯Ò¯ÀàµÄ³ÉÔ±£»Èç¹ûÉÏ¼¶ÀàÖÐ¶¼ÓÐÍ¬ÃûµÄ³ÉÔ±£¬Ê¹ÓÃsuper·ÃÎÊ²ÉÓÃ¾Í½üÔ­Ôò
 
-### superºÍthisµÄÇø±ð
+### superºÍthisµÄÇø±ð--ÃæÊÔ
 |Çø±ðµã|this|super|
 |:---|:---|:---|
 |·ÃÎÊÊôÐÔ|·ÃÎÊ±¾ÀàÊôÐÔ£¬ÈôÎÞÔñ´Ó¸¸Àà²éÕÒ|´Ó¸¸Àà²éÕÒÊôÐÔ
@@ -231,7 +232,7 @@ animal.cry();//cry()·½·¨¸ú×ÅÔËÐÐÀàÐÍ±£³ÖÒ»ÖÂ£¬ÔËÐÐÀàÐÍÊÇCat£¬Ö´ÐÐCatÀàÖÐµÄcry·½·
 ##### ¶àÌ¬µÄÏòÉÏ×ªÐÍ
 * ±¾ÖÊ£º¸¸ÀàµÄÒýÓÃÖ¸Ïò×ÓÀàµÄ¶ÔÏó
 * Óï·¨£º¸¸ÀàÀàÐÍ ÒýÓÃ=new ×ÓÀàÀàÐÍ();//Aninaml animal=new Cat();
-* ÌØµã£º±àÒëÀàÐÍ¿´×ó±ß£¬ÔËÐÐÀàÐÍ¿´ÓÒ±ß£¬¿ÉÒÔµ÷ÓÃ¸¸ÀàµÄËùÓÐ³ÉÔ±(ÐèÒª×ñÊØ·ÃÎÊÈ¨ÏÞ)£¬²»ÄÜµ÷ÓÃ×ÓÀàµÄÌØÓÐ³ÉÔ±£¬¿ÉÒÔµ÷ÓÃ¸¸ÀàÀïÓÐµÄÔÚ×ÓÀàÀïÖØÐ´µÄ·½·¨¡£×îÖÕÔËÐÐÐ§¹û¿´×ÓÀàµÄ¾ßÌåÊµÏÖ£¬ÔËÐÐ·½·¨°´ÕÕ´Ó×ÓÀà¿ªÊ¼²éÕÒ·½·¨£¬È»ºóµ÷ÓÃ
+* ÌØµã£º±àÒëÀàÐÍ¿´×ó±ß£¬ÔËÐÐÀàÐÍ¿´ÓÒ±ß£¬¿ÉÒÔµ÷ÓÃ¸¸ÀàµÄËùÓÐ³ÉÔ±(ÐèÒª×ñÊØ·ÃÎÊÈ¨ÏÞ)£¬²»ÄÜµ÷ÓÃ×ÓÀàµÄÌØÓÐ³ÉÔ±£¬×îÖÕÔËÐÐÐ§¹û¿´×ÓÀàµÄ¾ßÌåÊµÏÖ(¼´µ÷ÓÃÍ¬·½·¨Ê±£¬´Ó×ÓÀà¿ªÊ¼²éÕÒ·½·¨£¬È»ºóµ÷ÓÃ£¬¹æÔòºÍ·½·¨µ÷ÓÃ¹æÔòÒ»ÖÂ).¿ÉÒÔµ÷ÓÃ¸¸ÀàÀïÓÐµÄÔÚ×ÓÀàÀïÖØÐ´µÄ·½·¨¡£
 * ÔÚ±àÒë½×¶Î£¬ÄÜµ÷ÓÃÄÄÐ©³ÉÔ±ÓÉ±àÒëÀàÐÍ¾ö¶¨£»µ«ÊÇµ÷ÓÃ³ÉÔ±·½·¨µÄ¹æÔòÈÔ¾ÉºÍ·½·¨µ÷ÓÃ¹æÔòÒ»Ñù£»±àÒë½×¶ÎÓÉjavacÖ÷µ¼£¬ÔËÐÐ½×¶ÎÓÉjavaÀ´×ö
 * ·½·¨µÄµ÷ÓÃ¿´ÔËÐÐÀàÐÍ
 
@@ -241,7 +242,8 @@ animal.cry();//cry()·½·¨¸ú×ÅÔËÐÐÀàÐÍ±£³ÖÒ»ÖÂ£¬ÔËÐÐÀàÐÍÊÇCat£¬Ö´ÐÐCatÀàÖÐµÄcry·½·
 Cat cat=(Cat)animal;±àÒëÀàÐÍÊÇCat£¬ÔËÐÐÀàÐÍÒ²ÊÇCat
 ```
 * Ö»ÄÜÇ¿×ª¸¸ÀàµÄÒýÓÃ£¬²»ÄÜÇ¿×ª¸¸ÀàµÄ¶ÔÏó£¬¶ÔÏóÎÞ·¨¸Ä±ä
-* ÒªÇó¸¸ÀàµÄÒýÓÃ±ØÐëÖ¸ÏòµÄÊÇµ±Ç°Ä¿±êÀàÐÍµÄ¶ÔÏó£¬ÒªÇó¸¸ÀàµÄÀàÐÍÔ­ÏÈ¾ÍÒªÊÇÖ¸Ïò×ÓÀàÐÍ
+* ÒªÇó¸¸ÀàµÄÒýÓÃ±ØÐëÖ¸ÏòµÄÊÇµ±Ç°Ä¿±êÀàÐÍµÄ¶ÔÏó£¨Animal animal=new Cat() ×ªÐÍÖ®Ç°ÈÔÈ»Ö¸ÏòCat£©
+* ÒªÇó¸¸ÀàµÄÀàÐÍÔ­ÏÈ¾ÍÒªÊÇÖ¸Ïò×ÓÀàÐÍ£¨£©
 ```
 //ÒªÇó
 Animal animal = new Cat();//ÏòÉÏ×ªÐÍ
@@ -268,8 +270,10 @@ Person -name,age,say()  Student score  Teacher salary
 Person[] person = new Person[5];
 person[0]=new Person("jacl",15);
 person[1]=new Student("sa",12,100);
-person[i].say();//ÔËÐÐÀàÐÍ»á¸ù¾ÝÊµ¼ÊÇé¿öÓÉjvmÅÐ¶Ï
+person[i].say();//ÔËÐÐÀàÐÍ»á¸ù¾ÝÊµ¼ÊÇé¿ö£¨¶¯Ì¬°ó¶¨»úÖÆ£©ÓÉjvmÅÐ¶Ï
 //µ±ÒªÔËÐÐ²»ÊÇ±¾ÀàµÄ·½·¨¿ÉÒÔÏòÏÂ×ªÐÍ×ª³É¶ÔÓ¦µÄÔËÐÐÀàÐÍÔÙÔËÐÐ·½·¨
+Student stu=(Student)Person[i]//ÏòÏÂ×ªÐÍ
+((Student)Person[i]).studey();
 ```
 
 ##### ¶àÌ¬²ÎÊý¡Ì
@@ -293,7 +297,7 @@ person[i].say();//ÔËÐÐÀàÐÍ»á¸ù¾ÝÊµ¼ÊÇé¿öÓÉjvmÅÐ¶Ï
 #### ÃæÊÔÌáÎÊ·½Ê½
 * ==ºÍequalsÓÉÊ²Ã´Çø±ð
 
-### hashcode|toString|finalize
+### hashcode|toString|finalize  ÃæÊÔ
 #### hashcode()
 * ·µ»Ø¶ÔÏóµÄ¹þÏ£Öµ£¬»á¸ù¾Ý²»Í¬µÄ¶ÔÏó·µ»Ø²»Í¬µÄÕûÊý
 * ¿ÉÒÔµ±×÷µØÖ·¿´£¬µ«ÊÇ²»ÊÇµØÖ·
@@ -308,10 +312,10 @@ person[i].say();//ÔËÐÐÀàÐÍ»á¸ù¾ÝÊµ¼ÊÇé¿öÓÉjvmÅÐ¶Ï
 
 
 #### toString
-* ·µ»ØÈ«ÀàÃû+@+¹þÏ£ÖµµÄÊ®Áù½øÖÆ
-* ×ÓÀàÍùÍùÖØÐ´toString£¬Êä³ö¶ÔÏóµÄÊôÐÔ
+* Ä¬ÈÏ·µ»ØÈ«ÀàÃû+@+¹þÏ£ÖµµÄÊ®Áù½øÖÆ
+* ×ÓÀàÍùÍùÖØÐ´toString£¬ÓÃÓÚ·µ»Ø¶ÔÏóµÄÊôÐÔÐÅÏ¢
 * ÖØÐ´toString·½·¨£¬´òÓ¡¶ÔÏó»òÆ´½Ó¶ÔÏóÊ±£¬¶¼»áµ÷ÓÃ¸Ã¶ÔÏóµÄtoStringÐÎÊ½
-* Ö±½ÓÊä³öÒ»¸ö¶ÔÏó£¬Ä¬ÈÏµ÷ÓÃtoString
+* µ±Ö±½ÓÊä³öÒ»¸ö¶ÔÏóÊ±£¬toString·½·¨»á±»Ä¬ÈÏµ÷ÓÃ
 
 
 ##### finalize
