@@ -1,6 +1,8 @@
 public class abstract01 {
     public static void main(String[] args) {
 
+        Animal animal = new Animal("tom");
+
     }
 }
 
@@ -18,4 +20,23 @@ abstract class Animal {
      */
 
     public abstract void eat();
+
+}
+
+class Cat extends Animal {
+    public Cat() {
+        super("tomn");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("抽象类 eat()被实现");
+    }
+}
+
+class Dog {
+    // 类包含了抽象方法就必须声明为抽象类
+    // abstract public void say(){
+    // System.out.println("hello");
+    // }
 }
