@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/javaAdvanced/javaAdvanced/src/com.hsedu.InnerClass/AnonymousInnerClass.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaAdvanced/javaAdvanced/src/com.hsedu.anstract_/abstract01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaAdvanced/javaAdvanced/src/com.hsedu.collection/CollectionExercise.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaAdvanced/javaAdvanced/src/com.hsedu.enum_/Enumration.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaAdvanced/javaAdvanced/src/com.hsedu.enum_/Enumratuiion02.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaAdvanced/javaAdvanced/src/com.hsedu.final_/final01.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/javaAdvanced/javaAdvanced/src/com.hsedu.final_/finalDetail.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/javaAdvanced/javaAdvanced/src/com.hspedu.static_/ChildGame.java" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>
