@@ -1,12 +1,16 @@
+package com.hsedu.anstract_;
+
 public class abstract01 {
     public static void main(String[] args) {
 
-        Animal animal = new Animal("tom");
+        //抽象类无法初始化
+//        Animal animal = new Animal("tom");
 
     }
 }
 
-abstract class Animal {
+ abstract class Animal {
+
     private String name;
 
     Animal(String name) {

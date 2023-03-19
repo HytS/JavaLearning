@@ -1,13 +1,15 @@
+package com.hsedu.anstract_;
+
 public class abstractExer {
     public static void main(String[] args) {
-
+        System.out.println("hello");
     }
 }
 
 /**
  * Employee
  */
-public abstract class Employee {
+abstract class Employee {
     String name;
     int id;
     double salary;
@@ -49,7 +51,7 @@ public abstract class Employee {
 /**
  * Manage
  */
-public class Manage extends Employee {
+class Manage extends Employee {
     double bonus;
 
     public Manage(String name, int id, double salary) {

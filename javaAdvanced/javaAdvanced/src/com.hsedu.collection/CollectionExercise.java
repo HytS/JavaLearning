@@ -1,3 +1,5 @@
+package com.hsedu.collection;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -31,7 +33,7 @@ class Dog {
         this.name = name;
     }
 
-    @Override
+    //@Override
     public String toString(String name, int age) {
 
         return "name=" + name + "age=" + age;
