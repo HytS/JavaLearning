@@ -1,18 +1,18 @@
-public class abstractDetail {
-    public static void main(String[] args) {
-        // ³éÏóÀà²»ÄÜ±»ÊµÀý»¯
-        // new A();
-    }
-}
-
-abstract class A {
-    public void say() {
-        System.out.println("hello");
-    }
-}
-
-class B {
-    // Ò»µ©ÀàÖÐ°üº¬abstract·½·¨£¬Àà¾ÍÒªÉùÃ÷Îªabstract
-    // public abstract void name();
-
-}
+//public class abstractDetail {
+//    public static void main(String[] args) {
+//        // ï¿½ï¿½ï¿½ï¿½ï¿½à²»ï¿½Ü±ï¿½Êµï¿½ï¿½ï¿½ï¿½
+//        // new A();
+//    }
+//}
+//
+//abstract class A {
+//    public void say() {
+//        System.out.println("hello");
+//    }
+//}
+//
+//class B {
+//    // Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½abstractï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Îªabstract
+//    // public abstract void name();
+//
+//}
