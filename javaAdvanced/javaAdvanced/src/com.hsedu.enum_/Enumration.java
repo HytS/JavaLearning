@@ -1,3 +1,5 @@
+package com.hsedu.enum_;
+
 public class Enumration {
     public static void main(String[] args) {
         System.out.println(Season.class);
@@ -17,7 +19,7 @@ class Season {
     // ÓÅ»¯£ºÌí¼ÓfinalĞŞÊÎ·û
     private Season(
             String name, String desc) {
-        this.name = namel;
+        this.name = name;
         this.desc = desc;
     }
 

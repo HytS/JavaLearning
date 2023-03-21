@@ -1,3 +1,5 @@
+package com.hsedu.enum_;
+
 public class EnumrationExercise {
     public static void main(String[] args) {
         Week[] weeKs = Week.values();
@@ -17,7 +19,7 @@ enum Week {
         this.name = name;
     }
 
-    @Override
+//    @Override
     public String toString(String name) {
         return name;
     }
