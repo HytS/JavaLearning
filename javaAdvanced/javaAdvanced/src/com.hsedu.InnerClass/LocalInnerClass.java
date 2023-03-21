@@ -1,13 +1,15 @@
+package com.hsedu.InnerClass;
+
 public class LocalInnerClass {
     public static void main(String[] args) {
-        Outer02 outer02 = new Outer02();
+        Outer021 outer02 = new Outer021();
         outer02.hello();
         // 外部其他类无法访问局部内部类，因为局部内部类地位上是局部变量
-        System.out.println(outer02.this.num);
+        //System.out.println(Outer021.this.num);
     }
 }
 
-class Outer02 {
+class Outer021 {
     private int num = 1;
     private String name = "hello";
 
@@ -31,7 +33,7 @@ class Outer02 {
                 // Outer02.this.hello()
                 // Outer02.this 本质就是外部类的一个对象，
                 // 即那个对象调用hello(),那个对象就是Outer02.this
-                System.out.println(Outer02.this.name);
+                System.out.println(Outer021.this.name);
                 ;
                 say();
             }

@@ -1,4 +1,6 @@
-import Outer02.Inner10;
+package com.hsedu.InnerClass;
+
+
 
 public class StaticInnerClass {
     public static void main(String[] args) {
@@ -27,8 +29,10 @@ class Outer02 {
     private static void cry() {
         Inner10 inner10 = new Inner10();
         // 外部类访问静态成员需要创建对象
-        System.out.println(inner10.say());
+//        System.out.println(inner10.say());
+        inner10.say();
     }
+
 
     // Inner10就是静态内部类
     public static class Inner10 {

@@ -1,12 +1,17 @@
+package com.hsedu.InnerClass;
+
 public class AnonymousInnerClass {
     public static void main(String[] args) {
         Outer04 outer04 = new Outer04();
         outer04.method();
+        // 外部其他类无法访问匿名内部类，因为地位上匿名内部类是局部变量
+        // System.out.println(Outer04.this.name);
     }
 }
 
 class Outer04 {// 外部类
     private int n1 = 10;
+    private String name = "hello";
 
     public void method() {
         // 基于接口的匿名内部类
@@ -16,7 +21,14 @@ class Outer04 {// 外部类
         // 并且把地址返回给tiger
         // 匿名内部类使用一次就不能再使用
         A tiger = new A() {
+            private int n1 = 20;
+
             public void cry() {
+                // 匿名内部类访问外部类成员：直接访问
+                System.out.println(name);
+                // 外部类和匿名内部类成员重名时，按照就近原则
+                // 访问外部类成员
+                System.out.println(Outer04.this.name);
                 System.out.println("tiger cry");
             }
         };
