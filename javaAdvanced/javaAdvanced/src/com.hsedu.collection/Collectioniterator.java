@@ -1,3 +1,5 @@
+package com.hsedu.collection;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -35,7 +37,7 @@ class Book {
         this.price = price;
     }
 
-    @Override
+//    @Override
     public String toString(String name, String author, double price) {
         // TODO Auto-generated method stub
         return name + author + price;

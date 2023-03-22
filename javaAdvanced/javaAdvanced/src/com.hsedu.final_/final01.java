@@ -1,17 +1,19 @@
+package com.hsedu.final_;
+
 public class final01 {
     public static void main(String[] args) {
 
     }
 }
 
-final class A {
+ class Afinal {
     // final修饰的类，不希望被继承
     public final void say() {
         System.out.println("hello");
     }
 }
 
-class B extends A {
+class B extends Afinal {
     // final修饰属性，不希望属性值被修改
     public final int N = 100010;
 

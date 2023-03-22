@@ -1,8 +1,6 @@
 public class EnumMehod {
     public static void main(String[] args) {
 
-        // toString:Enum类已经重写了，返回的是当前对象名，
-        // 子类可以重写该方法，用于返回对象的属性信息
         Season autumn = Season.SPRING;
         // 输出枚举对象的名字
         System.out.println(autumn.name());
@@ -26,10 +24,14 @@ public class EnumMehod {
 
 enum Season {
 
-    SPRING("spring", "warm"), WINTER("winter", "cool");
+    SPRING("spring", "warm"),
+    WINTER("winter", "cool"), what();
 
     private String name;
     private String desc;
+
+    private Season() {
+    }
 
     private Season(String name, String desc) {
         this.name = name;
