@@ -1,3 +1,5 @@
+package com.hsedu.enum_;
+
 public class EnumDetail {
     public static void main(String[] args) {
 
