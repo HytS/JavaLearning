@@ -1,8 +1,10 @@
+package com.hsedu.interface_;
+
 public class Interfacce01 {
     public static void main(String[] args) {
-        Phone p1 = new Phone();
-        Computer computer = new Computer();
-        computer.work(p1);
+//        Phone p1 = new Phone();
+//        Computer computer = new Computer();
+//        computer.work(p1);
 
         // A a = new A(); 接口不能实例化
 

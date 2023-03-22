@@ -1,3 +1,5 @@
+package com.hsedu.final_;
+
 public class finalDetail {
     public static void main(String[] args) {
         EE ee = new EE();

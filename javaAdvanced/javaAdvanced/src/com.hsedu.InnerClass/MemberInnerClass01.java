@@ -1,20 +1,22 @@
-import Outer08.Inner08;
+package com.hsedu.InnerClass;
+
+
 
 public class MemberInnerClass01 {
     public static void main(String[] args) {
         Outer08 outer08 = new Outer08();
         // 外部其他类访问内部类
         // Outer08.new Inner08();相当于把new Inner08()当作outer08的一个成员
-        Outer08.Inner08 inner08 = Outer08.new Inner08();
+        Outer08.Inner08 inner08 = outer08.new Inner08();
         // 在外部类里编写一个方法，可以返回Inner08的对象
-        Outer08.Inner08 gInner08 = outer08.getInner08instance();
+        Outer08.Inner08 gInner08 = inner08.getInner08instance();
 
         // Outer08 outer08 = new Outer08();
         // 外部其他类访问内部类需要创建对象
-        outer08.say();
+        inner08.say();
         // 外部其他类访问内部类方式一
         Outer08 outer082 = new Outer08();
-        Inner08 inner081 = outer08.new Inner08();
+        Outer08.Inner08 inner081 = outer08.new Inner08();
 
         // 方式2在外部类中写一个方法，可以返回Inner08对象
         Outer08.Inner08 inner082 = outer08.getInnerInstance();
