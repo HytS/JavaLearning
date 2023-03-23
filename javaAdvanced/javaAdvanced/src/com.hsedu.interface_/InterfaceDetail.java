@@ -17,7 +17,7 @@ interface IC {
     void say();
 }
 
-public interface ID extends IB, IC {
+interface ID extends IB, IC {
     // 接口的修饰符只能是public和默认
 }
 

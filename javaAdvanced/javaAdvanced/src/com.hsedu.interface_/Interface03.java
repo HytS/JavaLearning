@@ -1,3 +1,5 @@
+package com.hsedu.interface_;
+
 public class Interface03 {
     public static void main(String[] args) {
         MysqlDB mysqlDB = new MysqlDB();
@@ -11,14 +13,14 @@ public class Interface03 {
 }
 
 // 接口
-public interface DBInterface {
+ interface DBInterface {
     public void connection();
 
     public void close();
 }
 
 // 实现接口
-public class MysqlDB implements DBInterface {
+ class MysqlDB implements DBInterface {
     @Override
     public void connection() {
         System.out.println("connection");
@@ -31,7 +33,7 @@ public class MysqlDB implements DBInterface {
 }
 
 // 实现接口
-public class Oracle implements DBInterface {
+ class Oracle implements DBInterface {
     @Override
     public void connection() {
         System.out.println("connection");
