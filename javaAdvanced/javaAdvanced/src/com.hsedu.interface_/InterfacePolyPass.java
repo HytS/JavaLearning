@@ -1,8 +1,10 @@
+package com.hsedu.interface_;
+
 public class InterfacePolyPass {
     public static void main(String[] args) {
-        IG ig = new IG();
+        //IG ig = new IG();
         // 接口多态传递现象
-        IH ih = new IH();
+        //IH ih = new IH();
     }
 }
 

@@ -1,6 +1,8 @@
+package com.hsedu.interface_;
+
 public class InterfacePolyPara {
     public static void main(String[] args) {
-        IF if01 = new IF();
+        IF if01 ;
         if01 = new Cat();
         if01 = new Monster();
 
