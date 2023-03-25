@@ -14,7 +14,7 @@ public class Obj01 {
  * Person
  * 同一个类的方法可以调用，不同类的方法需要创建对象调用
  */
-public class Person {
+ class Person {
     public String name;
     public int age;
 
@@ -43,7 +43,7 @@ public class Person {
 /**
  * Student
  */
-public class Student {
+class Student {
 
     public int sNo;
     public String name;

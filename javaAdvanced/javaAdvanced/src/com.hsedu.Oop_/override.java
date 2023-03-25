@@ -12,7 +12,7 @@ public class override {
 /**
  * Inneroverride
  */
-public class A {
+class A {
     /**
      * 重载条件：方法名必须相同，数据类型、顺序、个数至少一个不同
      * 
