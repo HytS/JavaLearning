@@ -772,6 +772,9 @@ String c=a+b;//创建了几个对象：一共创建了三个对象
 
 ## 集合
 * 可以动态保存任意多个对象
+
+### 面试
+集合类的顶级接口
 ### 集合框架体系
 * 集合框架图要背下来
 * 集合主要是单列集合，双列集合
@@ -782,21 +785,450 @@ String c=a+b;//创建了几个对象：一共创建了三个对象
         List                                    Set
 ArrayList LinkList Vector        HashSet        TreeSet
 
-### Collection
-#### List
-#### Set
-### Map
-### Collections
+### Collection接口和常用方法
+#### Collection接口实现类的特点
+* collection实现子类可以存放多个元素，每个元素可以是Object
+* 有些Collection的实现类，可以存放重复的元素，有些不可以
+* 有些Collection的实现类，有些是有序的(List)，有些不是有序的(Set)
+* Collection接口没有直接的实现子类，是通过它的子接口Set和List来实现的
+
+### Collction接口遍历元素方式1-迭代器遍历
+* Iterator对象称为迭代器，主要用于遍历Collection集合中的元素
+* 所有实现了Collection接口的集合类都有一个Iterator()方法，用于返回一个实现了Iterator接口的对象，即可以返回一个迭代器    
+* Iterator的结构
+* Iterator仅用于遍历集合，Iterator本身并不存放对象
+
+#### 迭代器的执行原理
+```
+Iterator iterator=coll.iterator();//得到一个集合的迭代器
+while(iterator.hasNext()){}//hasNext() 判断是否还有下一个元素，如果有返回true
+//next()作用:1、下移2、将下移以后集合位置的元素返回
+System.out.println(iterator.next());
+```
+* 在调用iterator.next()前必须要调用iterator.hasNext()进行检测，若不调用且下一条记录无效，直接调用iterator.next()会抛出NoSuchElementException异常
+
 ## List|ArrayList|Vector
-## HashSet与LinkedHashSet
+17、ArrayList和LinkedList区别
+
+19、list和set有什么区别 （只说了特性应该扩展说说）
+一般会问Array List和Vector的区别，底层数据结构区别，扩容区别，是否线程安全等。
+### List接口和常用方法
+#### List接口
+* List接口时Collection接口的子接口
+* List集合类中元素有序（即添加顺序和取出顺序一致），且可重复
+* List集合中的每一个元素都有其对应的顺序索引
+  
+### ArrayList底层结构和源码分析
+#### 注意事项
+* 允许多个元素，包括空值，ArrayList可以加入null，并且多个
+* ArrayList是由数组来实现数据存储的
+* ArrayList基本等同于Vector，除了ArrayList是线程不安全（执行效率高），在多线程情况下不建议用ArrayList
+#### ArrayList的底层操作机制源码分析
+* ArrayList中维护了一个Object类型的数组elementData  transient Object[] elementData;//transient 表示瞬间 表示该属性不会被序列化
+* 当创建ArrayList对象时，如果使用的是无参构造器，则初始elementData容量为0，第一次添加，则扩容elementData为10，如需要再次扩容，则扩容elementData为1.5倍
+* 如果使用的是指定大小的构造器，则初始elementData容量为指定大小，如果需要扩容，则直接扩容elementData为1.5倍
+##### 分析使用无参构造器创建和使用ArrayList
+* 无参构造器  this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;创建了一个空的elementData数组={}
+* 执行list.add{ensureCapacityInternal; elementData[size++] = e} 1、先确定是否要扩容2、然后再执行赋值
+* ensureCapacityInternal方法确定minCapacity; 1、第一次扩容为10
+* ensureExplicitCapacity方法 1、modCount++记录集合被修改的次数 2、如果elementData的大小不够，就调用grow去扩容(minCapacity - elementData.length > 0)
+* grow方法 1、扩容功能实现2、使用扩容机制来确定要扩容到多大3、第一次newCapacity=10; 4、第二次及以后都是1.5倍扩容5、扩容使用的是Array.copyOf()//使用copyOf是要确保原有数据不丢失
+* elementData = Arrays.copyOf(elementData, newCapacity);
+* 注意：使用idea默认情况下，debug显示的数据是简化后的，如果希望看到完整的数据，需要做设置  build--debugger--data view--java--enable alternative view 取消选中
+
+##### 分析使用有参构造器创建和使用ArrayList
+* 有参构造器创建一个指定大小elementData数组 this.elementData=new Object[initialCapacity]
+* ensureCapacityInternal
+* ensureExplicitCapacity
+* grow
+
+### Vector
+#### 
+* Vector底层也是一个对象数组 protected Object[] elementData
+* vector是线程同步的，即线程安全，vector类的操作方法带有synchronized
+* 在开发中，需要线程同步安全时，考虑使用vector
+
+||底层结构|版本|线程安全效率|扩容倍数|
+|---|---|---|---|---|
+|ArrayList|可变数组|jdk1.2|不安全，效率高|如果有参构造1.5倍，如果无参，第一次10，第二次按1.5倍扩|
+|Vector|可变数组|jdk1.0|安全效率不高|如果是无参默认10，满后按2倍扩容；如果指定大小，每次按2倍扩|
+
+#####
+* 如果是无参构造器，默认给10
+* add(i)--确定是否需要扩容minCapacity - elementData.length > 0--
+```
+ int newCapacity = oldCapacity + ((capacityIncrement > 0) ?
+capacityIncrement : oldCapacity);
+```
+* ensureCapacityHelper确定是否需要扩容
+* 
+
+### LinkedList源码
+```
+LinkedList linkedList=new LinkedList();
+/*  public LinkedList() {} linkList属性first=null last=null
+     
+*/
+
+remove 默认删除第一个元素
+```
+#### add 执行添加节点
+```
+void linkLast(E e) {
+        final Node<E> l = last;
+        //创建一个新节点 null,e,null
+        //l的引用付给新节点
+        final Node<E> newNode = new Node<>(l, e, null);
+        //
+        last = newNode;
+        if (l == null)
+            first = newNode;
+        else
+            //l指向新节点
+            l.next = newNode;
+        size++;
+        modCount++;
+    }
+```
+
+#### remove删除
+```
+public E remove() {
+    return removeFirst();
+}
+public E removeFirst() {
+    final Node<E> f = first;
+    if (f == null)
+        throw new NoSuchElementException();
+    return unlinkFirst(f);
+}
+//删除功能的核心
+private E unlinkFirst(Node<E> f) {
+    // assert f == first && f != null;
+    //赋值
+    final E element = f.item;
+    //让新节点指向删除节点的下一个节点
+    final Node<E> next = f.next;
+    //数值设空
+    f.item = null;
+    //指针为空
+    f.next = null; // help GC
+    //first指向下一个节点
+    first = next;
+    if (next == null)
+        last = null;
+    else
+        next.prev = null;
+    size--;
+    modCount++;
+    return element;
+}
+```
+* set 修改某个节点的对象
+* get 得到某个节点的对象
+
+#### ArrayList和LinkedList比较
+||底层结构|增删效率|改查效率|
+|---|---|---|---|
+|ArrayList|可变数组|较低，数组扩容|较高|
+|LinkedList|双向链表|较高，通过链表追加|较低|
+##### 如何选择
+* 如果我们改查的操作多，选择ArrayList
+* 如果我们增删操作多，选择LinkList
+* 一般来说，程序中选择ArrayList
+* 
+
+### Set
+#### Set接口
+* 无序（添加和取出的顺序不一致），没有索引；取出的顺序不是添加的顺序，但是是固定的
+* 不允许重复元素，所以最多包含一个null
+* Set接口的常用方法和Collection方法一样
+#### Set接口的遍历方式
+* Set接口是Collection接口的子接口
+* 1、可以使用迭代器
+* 2、增强for
+* 3、不能使用索引的方式获取
+
+##### Set接口实现类HashSet
+* HashSet实现了Set接口
+* HashSet实际上是HashMap，看下源码
+* 可以存放null值，但是只能有一个null
+* HashSet不保证元素是有序的，取决于hash后，再确定索引的结果（即不保证存放元素的顺序和取出顺序一致）
+* 不能有重复的元素/对象
+##### HashSet的扩容机制
+* HashSet底层是HashMap
+* 添加一个元素时，先得到hash值会转成索引值
+* 找到存储数据表table，看这个索引位置是否已经存放元素；如果没有直接加入
+* 如果有，调用equals比较(不能简单理解成比较内容)，如果相同则放弃添加，如果不同则添加到最后
+* 在java8，如果一条链表的元素个数到达TREEIFY_THRESHOLD(默认是8)，并且table大小>=MIN_TREEIFY_CAPACITY(默认64)，就会进行树化
+##### HashSet底层机制说明
+* HashSet底层是HashMap，第一次添加时，table数组扩容到16，临界值是16*（加载因子是0.75）=12
+* 如果table数组使用到了临界值12，就会扩容到16*2=32，新的临界值就是32*0.75=24，以此类推
+* 在java8中，如果一条链表的元素个数到达TREEIFY_THRESHOLD（默认8）并且table大小>=MIN_TREEIFY_CAPACITY(默认64)就会进行树化，否则仍然采用数组扩容机制
+
+注意：HashSet扩容，不只是table里被添加元素到12个会扩容，当链表中的元素总和>12也会扩容
+## LinkedHashSet
+### 介绍
+* LinkedHashSet是HashSet的子类
+* LinkedHashSet底层是一个LinkedHashMap，底层维护了一个数组table+双向链表
+* LinkedHashSet根据元素的hashCode值来决定元素的存储位置，同时使用链表维护元素的次序，这使得元素看起来是以插入顺序保存的
+* LinkedHashSet不允许添加重复元素
+#### 说明
+* 在LinkedHashSet中维护了一个hash表和双向链表
+* 每一个节点有pre和next属性，这样可以形成双向链表
+* 在添加一个元素时，先求hash值，再求索引，确定该元素在hashtable的位置，然后将添加的元素加入到双向链表（如果已经存在，不添加）
+* 这样的话，遍历LinkedHashSet也能确保插入顺序和遍历顺序一致
+
+#### 源码
+* 添加第一次时，直接将数组table扩容到16，存放的节点类型是LinkedHashMap$Entry
+* 数组是HashSet$Node[]存放的元素是LinkedHashMap$Entry类型
 ## Hashmap与HashTable
+### 面试要求
+* HashMap的底层原理
+* HashMap底层为什么用红黑树
+### Map接口特点
+* Map和Collection并列存在，用于保存具有映射关系的数据key-value
+* Map中的key和value可以是任何引用类型的数据，会封装到HashMap$Node对象中
+* Map中的key不允许重复，原因和HashSet一样，
+* Map中的value可以重复
+* Map的key可以为null，value也可以为null，注意key为null，只能有一个，value为null可以多个
+* 常用String类作为Map的key
+* key和value之间存在单向一对一关系，即通过指定的key总能找到对应的value
+* Map存放数据的key-value示意图，一对k-v时放在一个Node中的，又因为Node实现了Entry接口，有些书上也说一对k-v就是一个Entry
+### Map接口方法
+* remove() 根据键删除映射关系
+* get 根据键获取值
+* size 获取元素个数
+* isEmpty 判断个数是否为0
+* clear 清除k-v
+* congtainsKey 查找键是否存在
+
+### Map遍历
+* containsKey:查找键是否存在
+* keySet：获取所有的键
+* entrySet：获取所有关系
+* values:获取所有的值
+### HashMap源码
+#### HashMap底层机制
+* table数组-->HashMap$Node-->Map$Entry
+* (k,v)是一个Node实现了Map$Entry<k,v>
+
+##### 扩容机制
+* 扩容机制和HashSet相同
+* HashMap底层维护了Node类型的数组table，默认为null
+* 当创建对象时，将加载因子初始化为0.75
+* 当添加key-val时，通过key的哈希值得到在table的索引。然后判断该索引处是否有元素，如果没有元素直接添加。如果该索引处有元素，继续判断该索引处的key和准备添加的key是否相等，如果相等直接替换val，如果不相等还要判断是树结构还是链表结构，做出相应处理，如果添加时发现容量不够，则需要扩容
+* 第一次添加时，需要扩容table容量为16，临界值是16*（加载因子是0.75）=12
+* 以后再扩容，就会扩容到16*2=32，新的临界值就是32*0.75=24，以此类推
+* 在java8中，如果一条链表的元素个数到达TREEIFY_THRESHOLD（默认8）并且table大小>=MIN_TREEIFY_CAPACITY(默认64)就会进行树化，否则仍然采用数组扩容机制
+##### HashMap源码解析
+* 1、执行构造器 new HashMap();  初始化加载因子loadfactor=0.75
+* HashMap$Node[] table=null;
+* 2、执行put调用hash方法，计算key的hash值
+* 3、执行putVal
+```
+//如果底层table=null或length=0就扩容到16
+if((tab=table)==null)
+//取出hash值对应的table的索引位置的Node，如果为null，就直接把加入的k-v创建成一个Node，加入该位置即可    
+if((p=tab[i=(n-1)&hash])==null)
+//如果table的索引位置的key的hash和新的key的hash值相同&&（table现有结点的key和准备添加的key是同一个对象||equals返回真）就不能添加新的key-value
+
+if((p.hash=hash&&((k=p.key)==key||(key!=null&&key.equals(k)))))
+```
+### HashTable
+#### 基本介绍
+* 存放的元素是键值对
+* hashtable的键值对都不能是null
+* hashtable使用方法基本和hashMap一样
+* hashtable是线程安全的，hashMap是线程不安全的
+* 见HashTable的应用案例
+
 ## properties
+### 基本介绍
+* properties类继承自Hashtable类实现了Map接口，也是一种键值对的形式来保存数据
+* 它的使用特点和Hashtable类似
+* properties还可以用于从xxx.properties文件中，加载数据到properties类对象并惊醒读取和修改
+### 方法
+* put()添加数据或修改数据
+* remove()删除
+* get()查
+* getproperty() 
 ## 集合选型规则
+### 如何选择集合实现类
+* 1.先判断存储的类型（一组对象[单列]或一组键值对[双列]）
+* 2.一组对象：collection接口
+* 允许重复：List
+* 增删多：LinkedList（底层维护了一个双向链表） 改查多：ArrayList（底层维护Object类型的可变数组）
+* 不允许重复：Set
+* 无需：HashSet（底层是HashMap，维护了一个hash表） 排序：TreeSet 插入和取出顺序一致：LinkedHashSet，维护数组+双向链表
+* 3.一组键值对：Map
+* 键无序：HashMap（底层是哈希表，jdk7：数组+链表 jdk8：数组+链表+红黑树）
+* 键排序：TreeMap
+* 键插入和取出顺序一致：LinkedHashMap
+* 读取文件 Properties
 ## TreeSet与TreeMap
 ## Collections工具类
+### 方法
+* reverse(List)反转List中元素的顺序
+* shuffle(List)对List元素进行随机排序
+* sort(List)根据元素的自然顺序对指定List集合元素按升序排序
+* sort(List,Comparator)根据指定的Comparator产生的顺序对List集合元素进行排序
+* swap(List,int,int)将指定的i和j两处元素交换 
+* Object max(Collection)根据元素的自然顺序，返回给定集合中最大的元素
+* Object max(Collection,Comparator)根据Comparator指定顺序，返回给定集合中最大的元素
+* Object min(Collection)
+* Object min(Collection,Comparator)
+* int frequency(Collection,Object)返回给定集合中指定的元素出现次数
+* void copy(List dest,List src)将src的内容复制到dest中去；赋值前，要先给dest赋值，因为源码会先检测dest和src的size大小关系，如果src.size>dest.size 会抛出异常
+* boolean replaceAll(List list,Object oldVal,Object newVal)使用新值替换List对象的所有旧值
 ## 泛型
+### 泛型的理解和好处
+* 编译时，检查添加元素的类型，提高了安全性
+* 减少了类型转换的次数，提高效率
+* 不再提示编译警告
+### 泛型介绍
+* 泛型又称参数化类型，
+* 在类声明或实例化时只要指定好需要的具体的类型即可
+* java泛型可以保证如果程序在编译时没有发出警告，运行时就不会产生classCastException
+* 泛型的作用是可以在类声明时通过一个标识表示类中某个属性的类型，或是某个方法返回值的类型，或是参数类型
+### 泛型的语法
+* interface<T>{} class A<K,V>{}
+* 其中TKV都是代表类型，任意字母都可以
+### 泛型细节
+* 1、interface List<T>{},public class HashSet<E>{}
+* TE只能是引用类型
+* 2、在指定泛型具体类型后，可以传入该类型或者其子类类型
+* 3、泛型使用形式
+```
+List<Integer> list1=new ArrayList<Integer>();
+List<Integer> list2=new ArrayList<>();
+List list3 = new ArrayList();默认给它的泛型是<E> E是Object
+```
+### 自定义泛型
+#### 自定义泛型类
+##### 基本语法
+* class 类名 <T,R>{}
+##### 注意细节
+* 普通成员可以使用泛型（属性、方法）
+* 使用泛型的数组，不能初始化
+* 静态方法中不能使用类的泛型
+* 泛型类的类型，是在创建对象时确定的（因为创建对象时，需要指定确定类型）
+* 如果在创建对象时，没有指定类型，默认Object
+
+#### 自定义泛型接口
+##### 基本语法
+* interface 接口名<T,R>{}
+##### 注意细节
+* 接口中，静态成员也不能使用泛型（这个和泛型类规定一样）
+* 泛型接口的类型，在继承接口或者实现接口时确定
+* 没有指定类型，默认为Object
+#### 自定义泛型方法
+##### 基本语法
+* 修饰符 <T,R> 返回类型 方法名（参数列表）{}
+##### 注意细节
+* 泛型方法，可以定义在普通类中，也可以定义在泛型类中
+* 当泛型方法被调用时，类型会确定
+* public void eat(E e){},修饰符后没有<L,R> eat方法不是泛型方法，而是使用泛型
+### 泛型的继承和通配符
+* 泛型不具备继承性
+* <?> 支持任意泛型类型
+* <?extends A>支持A类和A的子类
+* <? super A>支持A类和A的父类，不限于直接父类，规定了泛型的下限
 ## 多线程详解
+### 线程
+* 进程时运行中的程序
+* 进程时程序的一次执行过程或是正在运行的程序是一个动态过程
+* 线程由进程创建，是进程的一个实体
+* 一个进程可以拥有多个线程
+* 单线程：同一个时刻，只允许执行一个线程
+* 多线程：同一个时刻，可以执行多个线程
+* 并发：同一个时刻，多个任务交替执行，单核CPU实现的多任务就是并发
+* 并行：同一时刻，多个任务同时执行，多核CPU可以实现并行
+#### 线程的基本使用
+* java是单继承的，在某些情况下一个类可能已经继承了父类，这时再用继承Thread类方法来创建线程显然不可能了
+* java设计者提供了另一个方式创建线程，就是通过实现Runnable接口来创建线程（底层使用了代理模式）
+##### 继承Thread和实现Runnable的区别
+* 从java设计上来看，通过继承Thread或者实现Runnable接口来创建线程本质上没有区别
+* 实现Runnable接口方式更加适合多个线程共享一个资源的情况，并且避免了单继承的限制
+### 线程终止
+* 当线程完成任务后，会自动退出
+* 还可以通过使用遍量来控制run方法退出的方式停止线程，即通知方式
+
+### 线程常用方法
+* setName 设置线程名称使之与参数name相同
+* getName 返回该线程名称
+* start 使该线程开始执行
+* run 调用线程对象run方法
+* setPriority 更改线程优先级
+* getPriority 获取线程优先级
+* sleep 使线程休眠
+* interrupt 中断线程
+#### 注意事项
+* start底层会创建新的线程，调用run，run就是一个简单的方法调用，不会启动新的线程
+* 线程优先级的范围
+* interrupt，中断线程，但并没有真正的结束线程，所以一般用于中断正在休眠线程
+* sleep 线程的静态方法，使当前线程休眠
+* yield：线程的礼让，让出cpu，让其他线程执行，但是礼让的时间不确定，所以也不一定礼让成功
+* join：线程的插队，插队的线程一旦插队成功，则肯定先执行完插如的线程所有的任务
+##### 用户线程和守护线程
+* 用户线程：也叫工作线程，当线程的任务执行完或通知方式结束
+* 守护线程：一般是为工作线程服务的，当所有的用户线程结束，守护线程自动结束
+* 常见的守护线程：垃圾回收机制
+### Synchronized
+* 在多线程编程，一些敏感数据不允许被多个线程同时访问，此时就使用同步访问技术，保证数据在任何时刻，最多由一个线程访问，以保证数据的完整性
+* 线程同步，即当有一个线程在对内存进行操作时，其他线程都不可以对这个内存地址进行操作，直到该线程完成操作，其他线程才能对该内存地址进行操作
+#### 同步具体方法
+* 同步代码块
+```
+synchronized(对象){//得到对象的锁，才能操作同步代码
+//需要被同步代码
+}
+```
+* synchronized话可以放在方法声明中，表示整个方法为同步方法
+public synchronized void m(String name){
+    //需要被同步的代码
+}
+##### 理解
+* 就好像上洗手间先把门关上（上锁），结束后出来（解锁），其他人就可以使用厕所了
+#### 互斥锁
+##### 基本介绍
+* java语言中，引入了对象互斥锁的概念，来保证共享数据操作的完整性
+* 每个对象都对应于一个可称为"互斥锁"的标记，这个标记用来保证在任一时刻，只能有一个线程访问该对象
+* 关键字synchronized来与对象的互斥锁联系，当某个对象用synchronized修饰时，表面该对象在任一时刻只能由一个线程访问
+* 同步的局限性：导致程序的执行效率要降低
+* 同步方法（非静态）的锁可以是this，也可以是其他对象（要求是同一个对象）
+* 同步方法（静态的）的锁为当前类本身
+* public synchronzied void sell(){} 就是一个同步方法
+* 这是锁在this对象
+* 也可以在代码块上锁
+##### 注意事项
+* 同步方法如果没有使用static修饰，默认锁对象是this
+* 如果方法使用static修饰，默认锁对象是当前类.class
+* 实现的落地步骤：
+* 需要先分析上锁的代码
+* 选择同步代码块或同步方法
+* 要求多个线程的锁对象为同一个即可
+### 线程的死锁
+#### 基本介绍
+* 多个线程都占用了对方的锁资源，但不肯相让，导致了死锁，在编程时要规避死锁的发生
+
+### 释放锁
+#### 释放锁操作
+* 当前线程的同步方法，同步代码块执行结束
+* 当前线程在同步代码块，同步方法中遇到break，return
+* 当前线程在同步代码块，同步方法中出现了未处理的Error或Exception，导致异常结束
+* 当前线程在同步代码块，同步方法中执行了线程对象的wait()方法，当前线程暂停，并释放锁
+#### 不会释放锁操作
+* 线程执行同步代码块或同步方法时，程序调用Thread.sleep()、Thread.yield()方法暂停当前线程的执行，不会释放锁
+* 线程执行同步代码块时，其他线程调用了该线程的suspend()方法将该线程挂起，该线程不会释放锁；不推荐
 ## 文件基本操作
+### 文件
+* 文件就是保存数据的地方
+### 文件流
+* 文件在程序中是以流的形式来操作的
+* 流：数据子啊数据源（文件）和程序（内存）之间经历的路径
+* 输入流：数据从数据源（文件）到程序（文件）的路径
+* 输出流：数据从程序（内存）到数据源（文件）的路径
 ## 文件流
 ## buffered流
 ## 对象处理流
