@@ -1229,6 +1229,85 @@ public synchronized void m(String name){
 * 流：数据子啊数据源（文件）和程序（内存）之间经历的路径
 * 输入流：数据从数据源（文件）到程序（文件）的路径
 * 输出流：数据从程序（内存）到数据源（文件）的路径
+### 常见的文件操作
+* 创建文件对象相关构造器和方法
+* new File(String pathname)//根据路径构建一个File对象
+* new File(File parent,String child)//根据父目录文件+子路径构建
+* new File(String parent,String child)//根据父目录+子路径构建
+* createNewFile 创建新文件
+#### 获取文件相关信息
+* getName
+* getAbsolutePath 获得绝对路径
+* getParent 获取父级目录
+* length 获取长度
+* exists 是否存在
+* isFile 是否是文件
+* isDirectory 是否是目录
+* mkdir 创建一级目录
+* mkdirs创建多级目录
+* delete 删除空目录或文件
+* java编程中，目录也被当作文件
+## IO流
+### 流的分类
+* 按操作数据单位分为字节流（二进制文件）字符流（文本文件）
+* 按数据流的流向分为输入流、输出流
+* 按流的角色分为节点流、处理流/包装流
+|抽象基类|字节流|字符流|
+|---|---|---|
+|输入流|InputStream|Reader|
+|输出流|OutputStream|Writter|
+* java的IO流都是从上述4个抽象基类中派生的
+* 由这四个类派生出的子类名称都是以其父类名作为子类名后缀
+#### InputStream常用子类
+* FileInputStream 文件输入流
+* BufferedInputStream 缓冲字节输入流
+* ObjectInputStream 对象字节输入流
+#### OutputStream常用子类
+* new FileOutputStream(filePath)创建方式，当写入内容时，会覆盖原来的内容
+* new FileOutputStream(filePath,true) 当写入内容时，是追加到文件的后面
+#### FileReader和FileWriter
+* new FileReader(File/String)
+* read:每次读取单个字符，返回该字符，如果到文件末尾返回-1
+* read(char[])批量读取多个字符到数组，返回读取到的字符数，如果到文件末尾就返回-1
+* new String(char[]) 将char[]转换成String
+* new String(char[],off,len) 将char[]的指定部分转换成String
+  
+* new FileWriter(File/String)覆盖模式相当于流的指针在首端
+* new FileWriter(File/String,true)追加模式，相当于流的指针在尾端
+* Writer(int):写入单个字符
+* Writer(char[])写入指定数组
+* Writer(char[],off,len)写入指定数组的指定部分
+* Writer(String)写入整个字符串
+* Writer(String,off,len)写入字符串的指定部分
+* String类：toCharArray 将String转换成char[]
+* FileWriter使用后,必须要close或flush，否则写入不到指定的文件
+### 节点流和处理流
+* 节点流可以从一个特定的数据源读写数据 egFileReader
+* 处理流（包装流）是"连接"在已存在的流（节点流或处理流）之上，为程序提供更为强大的读写功能 egBufferedReader
+* BufferedReader类中，有属性Reader，即可以封装一个节点流，只要是Reader子类
+#### 区别
+* 节点流是底层流/低级流，直接跟数据源相接
+* 处理流包装节点流，既可以消除不同节点流的实现差异，也可以提供更方便的方法来完成输入输出
+* 处理流对节点流进行包装，使用了修饰器设计模式，不会直接与数据源相连
+#### 处理流的功能
+* 性能提高：主要以增加缓冲的方式来提高输入输出的效率
+* 处理流可能提供一系列便捷的方法来一次输入输出大批量的数据，使用更方便
+
+* BufferedReader和BufferedWriter属于字符流，是按照字符来读取数据的，关闭时，只需要关闭外层流即可
+* BufferedReader和BufferedWriter不能操作二进制文件
+#### BufferedInputStream
+* BufferInputStream是字节流，在创建BufferedInputStream时，会创建一个内部缓冲区数组
+* BufferedOutputStream是字节流，实现缓冲的输出流，可以将多个字节写入底层输出流中，而不必对每次字节写入调用底层系统
+#### ObjectInputStream/ObjectOutputStream（都是处理流）
+* 保存值和数据类型称为序列化
+* 想要序列化，需要类实现serializable(标记接口，没有方法)或Externalizable(有方法需要实现，不推荐) 
+##### 注意事项
+* 读写顺序要一致
+* 要求实现序列化或反序列化对象需要实现Serializable
+* 序列化的类中建议添加SerialVersionUID，为了提高版本的兼容性
+* 序列化对象时，默认将里面所有属性都及逆行序列化，但除了static或transient修饰的成员
+* 序列化对象时，要求里面属性的类型也需要实现序列化接口
+* 序列化具备可继承性，也就是如果某类已经实现了序列化，则它的所有子类也已经默认实现了序列化
 ## 文件流
 ## buffered流
 ## 对象处理流
