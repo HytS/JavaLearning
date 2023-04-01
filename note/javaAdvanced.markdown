@@ -1308,10 +1308,27 @@ public synchronized void m(String name){
 * 序列化对象时，默认将里面所有属性都及逆行序列化，但除了static或transient修饰的成员
 * 序列化对象时，要求里面属性的类型也需要实现序列化接口
 * 序列化具备可继承性，也就是如果某类已经实现了序列化，则它的所有子类也已经默认实现了序列化
-## 文件流
-## buffered流
-## 对象处理流
-## 标准输入输出流与打印流
+### 转换流InputStreamReader
+* InputStreamReader:Reader的子类，可以把InputStream（字节流）包装成Reader(字符流)
+* 当处理纯文本数据时，如果使用字符流效率更高，并且可以有效解决中文问题，所以建议将字节流转成字符流
+* 可以在使用时指定编码格式
+### properties类
+#### 常用方法
+* load 加载配置文件的键值对到Properties对象
+* list 将数据显示到指定设备
+* getProperty(key) 根据键获取值
+* setProperty(key,value) 设置键值对到Properties对象
+* store 将properties中的键值对存储到配置文件中，idea中，保存信息到配置文件，如果含有中文，会存储为unicode码
+
 ## 网络编程入门
+### IP地址
+* ipv4 4个字节32位
+* ipv6 128位
+* A 0 网络号（7）主机号（24）
+* B 10 网络号（14）主机号（16）
+* C 110网络号（21）主机号（8）
+* D 1110多播组号（28）
 ## 网络编程实战
+多用户通信系统--通信系统梳理
 ## 反射
+反射机制--反射梳理
