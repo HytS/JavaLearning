@@ -8,6 +8,6 @@ public class Cat {
         this.name=name;
     }
     public void hi(){
-        System.out.println("hi");
+//        System.out.println("hi");
     }
 }
