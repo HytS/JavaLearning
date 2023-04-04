@@ -7,7 +7,7 @@ public class homeWork03 {
         if (str == null) {
             return;
         }
-        String[] names = str.split(' ');
+        String[] names = str.split(" ");
         if (names.length != 3) {
             System.out.println("false");
             return;

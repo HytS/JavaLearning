@@ -1,3 +1,5 @@
+package com.hsedu.OtherMethod;
+
 import javax.management.RuntimeErrorException;
 
 public class StringReverseExercise01 {
@@ -15,7 +17,7 @@ public class StringReverseExercise01 {
     public static String reveString(String str, int start, int end) {
 
         if (!(str != null && start >= 0 && start < end && end < str.length())) {
-            throw new RuntimeErrorException("parameter false");
+//            throw new RuntimeErrorException("parameter false");
         }
         char[] chars = str.toCharArray();
         char tmp = ' ';
