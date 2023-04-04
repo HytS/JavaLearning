@@ -1,3 +1,5 @@
+package com.hsedu.wrapper;
+
 public class Integer01 {
     public static void main(String[] args) {
         // 手动装箱 int-->Integer
@@ -6,7 +8,7 @@ public class Integer01 {
         Integer integer2 = Integer.valueOf(n1);
 
         // 手动拆箱 integer-->int
-        integer.intValue(n1);
+        integer.intValue();
 
         // 自动装箱
         int n2 = 200;
