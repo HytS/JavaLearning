@@ -1,3 +1,5 @@
+package com.hsedu.tryCatch_;
+
 public class TryCatchDetail {
     public static void main(String[] args) {
 
@@ -23,10 +25,6 @@ public class TryCatchDetail {
             System.out.println(e.getMessage());
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
-        } catch (Exception e) {// 父类异常要放在子类异常后面
-
-            System.out.println(e.getMessage());
-            // TODO: handle exception
         }
 
     }

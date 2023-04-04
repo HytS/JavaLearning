@@ -1,12 +1,15 @@
+package com.hsedu.tryCatch_;
+
 import java.lang.reflect.Method;
 
 public class tryCatchExercise {
     public static void main(String[] args) {
-        System.out.println(method());// ·µ»ØÁÙÊ±±äÁ¿3
+
+        //System.out.println(method());// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½3
     }
 }
 
-class Exception {
+class Exception extends Throwable {
     public static int method() {
         int i = 1;
         try {
@@ -22,7 +25,7 @@ class Exception {
             // TODO: handle exception
             return 2;
         } catch (NullPointerException e) {
-            return i++;// Ö´ÐÐÍê++iÖ®ºó»áÓÃÁÙÊ±±äÁ¿±£´æiµÄÖµ
+            return i++;// Ö´ï¿½ï¿½ï¿½ï¿½++iÖ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½iï¿½ï¿½Öµ
         } finally {
             ++i;
             System.out.println(i);// 4
