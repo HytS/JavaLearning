@@ -1,3 +1,5 @@
+package com.hsedu.String_;
+
 public class StringExercise04 {
     public static void main(String[] args) {
         Test1 ex = new Test1();

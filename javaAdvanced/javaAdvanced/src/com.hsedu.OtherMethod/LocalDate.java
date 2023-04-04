@@ -1,4 +1,6 @@
-import java.sql.Date;
+package com.hsedu.OtherMethod;
+
+import java.util.Date;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -24,6 +26,6 @@ public class LocalDate {
         // 通过from可以把Instant转成Date
         Date date = Date.from(now);
         // 通过date的toInstant()可以把date转成Instant对象
-        Instant instant = date.toString();
+//        Instant instant = date.toString();
     }
 }
