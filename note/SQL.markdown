@@ -93,29 +93,88 @@
 > SELECT * FROM stu where not score<10 && not gender='男';
 
 ### 排序查询
-* 如果有多个排序条件，当前面的条件值一样时，才会根据第二条件进行排序
+#### 排序查询语法
+> select 字段列表 from 表名 order by 排序字段名1 排序方式1;
+> 如果有多个排序条件，当前面的条件值一样时，才会根据第二条件进行排序
 
 ### 分组查询
-* null不参与所有聚合函数的运算
-* count()统计的列名不能为null;count取值：1.主键2.*
-* 分组之后，查询的字段为聚合函数和分组字段，查询其他字段无意义
-* where和having的区别
-* 执行时机不一样：where是分组之前进行限定，不满足where条件，则不参加分组，而having是分组之后对结果进行过滤
-* 可判断的条件不一样：where不能对聚合函数进行判断，having可以
-* 执行顺序：where>聚合函数>having
-### 排序查询
+#### 分组查询语法
+> select 字段列表 from 表名 where 分组前条件限定 group by 分组字段名 having 分组后条件过滤;
+> 注意：分组之后，查询的字段为聚合函数和分组字段，查询其他字段无意义
+> null不参与所有聚合函数的运算
+> count()统计的列名不能为null;count取值：1.主键2.*
+> where和having的区别
+> 执行时机不一样：where是分组之前进行限定，不满足where条件，则不参加分组，而having是分组之后对结果进行过滤
+> 可判断的条件不一样：where不能对聚合函数进行判断，having可以
+> 执行顺序：where>聚合函数>having
+
 ### 分页查询
-* 起始索引=（当前页码-1）*每页显示的条数
-* limit属于mysql专属
+1. 分页查询语法
+> select 字段列表 from 表名 limit 起始索引 ,查询条目数 
+2. 计算公式
+> 起始索引=（当前页码-1）*每页显示的条数 起始索引从0开始
+> limit属于mysql专属
   
 ### 约束
-* 作用于表中列上的规则，用于限制加入表中的数据
-* 非空约束 唯一约束 主键约束 检查约束 默认约束 外键约束
-* mysql不支持检查约束
-* 外键用来让两个表的数据之间建立联系
-### 数据库设计
+1. 约束的分类
+> 非空约束 not null、唯一约束 unique、主键约束 primary key（主键是一行数据的唯一标识，要求非空且唯一）、检查约束 check（保证列中的值满足某一条件）、 默认约束 default（保存数据时，未指定值则采用默认值）、外键约束 foreign key（让两个表的数据之间建立链接，保证数据的一致性）
+> 作用于表中列上的规则，用于限制加入表中的数据
+> 非空约束 唯一约束 主键约束 检查约束 默认约束 外键约束
+> mysql不支持检查约束
+> 外键用来让两个表的数据之间建立联系
+#### 非空约束
+1. 添加约束
+> create table 表名(列名 数据类型 not null);//创建表添加约束
+> alter table 表名 modify 字段名 数据类型 not null//建完表添加约束
+2. 删除约束
+> alter table 表名 modify 字段名 数据类型
+#### 唯一约束
+1. 添加约束
+> create table 表名 (列名 数据类型 unique[auto_increment]);
+> //创建表时添加唯一约束
+2. 删除约束
+> alter table 表名 modify 字段名 数据类型 unique;
+> //建表后添加唯一约束
+#### 主键约束
+1. 添加约束
+> create table 表名(列名 数据类型 primary key );//创建表添加主键约束
+> alter table 表名 add primary key(字段名)
+2. 删除约束
+> alter table 表名 drop primary key
+#### 默认约束
+1. 添加约束
+> create table 表名(列名 数据类型 default 默认值)
+> alter table 表名 alter 列名 set default 默认值
+2. 删除约束
+> alter 表名 table alter 列名 drop default 
+#### 外键约束
+1. 添加约束
+> create table 表名(列名 数据类型,..constraint 外键名称 foregin key 外键列名 references 主表(主表列名));
+> alter table 表名 add constraint 外键名称 foreign key (外键字段名称) reference 主表名称(主表字段名称)
+2. 删除约束
+> alter table 表名 drop foreign key 外键名称
+
+
 ### 多表查询
-* 笛卡尔积：有AB两个集合，取AB所有的组合情况
-* 连接查询
+> 笛卡尔积：有AB两个集合，取AB所有的组合情况
+> 连接查询
+#### 内连接
+> 相当于查询AB交集数据
+1. 内连接查询语法
+> select 字段列表 from 表1，表2 where 条件
+> select 字段列表 from 表1[inner] join 表2 on 条件
+#### 外连接
+> 左外连接：相当于查询A表所有数据和交集部分数据
+> 右外连接：相当于查询B表所有数据和交集部分数据
+1. 外连接查询语法
+> select 字段列表 from 表1 left[outer] join 表2 on 条件
+> select 字段列表 from 表1 right[outer] join 表2 on 条件
+#### 子查询
+1. 单行单列
+> select 字段列表 from 表 where 字段名 = (子查询)
+2. 多行单列
+> select 字段列表 from 表 where 字段名 in (子查询)
+3. 多行多列 
+> select 字段列表 from (子查询) where 条件
 ### 事务
-* mysql事务默认自动提交
+> mysql事务默认自动提交
