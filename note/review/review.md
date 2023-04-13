@@ -24,6 +24,12 @@
 > HashMap和HashSet等集合类使用HashCode方法来计算对象应该存储的位置，因此要将对象添加到这些集合类中，需要对应的类重写hashCode方法
 > toString() 默认返回全类名+@+哈希值的十六进制 当直接输出一个对象时会调用；子类重写方法，返回该对象的属性信息
 > finalize 对象被回收时，系统自动调用finalize方法；对象没有任何引用时被jvm认为是垃圾
+> clone()是Object类的protected方法，一个类不显式的重写clone方法，其他类就不能直接去调用该类实例的clone方法；如果一个类没有实现Cloneable接口又调用clone方法会抛出异常
+> 浅拷贝 拷贝对象和原始对象的引用类型引用同一个对象
+> 深拷贝 拷贝对象和原始对象的引用类型引用不同对象
+
+
+
 
 ##
 > 类加载时，静态方法会放在方法区中，静态变量在类加载时就生成了；jdk8以后放在堆中类对应的class对象中，通过反射机制加载一个class对象 
@@ -74,14 +80,45 @@
 >
 > 注解
 >
-> 异常（error：jvm无法结局的问题 exception：其他因编程错误产生的一般性问题）；exception分为编译异常和运行异常
+> 异常（error：jvm无法结局的问题 exception：其他因编程错误产生的一般性问题）；exception分为编译异常和运行异常（https://www.cnblogs.com/Qian123/p/5715402.html）
 > 编译时异常是编译器要求必须处理的异常；程序员没有显式的处理异常，默认throws
 > try-catch 异常发生了直接进入catch，try异常发生点后的代码不会执行
 > throws 在方法声明处，后面跟异常类型 throw是手动生成异常对象的关键字，在方法体中，后面跟异常对象
 >
 > Integer 装箱（valueOf）与拆箱（intValue）；String->Integer parseInt(str)
-> String不可以被继承；不可变（好处：可以缓存hash值、StringPool的需要、安全性、线程安全）
+> String不可以被继承；不可变（好处：可以缓存hash值、StringPool的需要、安全性、线程安全）；单个字符可以改变
 > StringBuffer、StringBuilder可变；String、StringBuffer（内部使用synchronized）线程安全StringBuilder线程不安全
 > 字符串常量池中保存这所有的字符串字面量，这些字面量在编译时期就被确定，可以使用intern方法加入到常量池中
-> 当一个字符串调用intern方法，如果StringPool中已经存在一个字符串值和该字符串相等，就会返回StringPool中字符串的引用；否则添加新字符串，返回新字符串的引用
->       
+> 当一个字符串调用intern方法（返回常量池的地址），如果StringPool中已经存在一个字符串值和该字符串相等，就会返回StringPool中字符串的引用；否则添加新字符串，返回新字符串的引用
+> 常量相加，看的是池，变量相加，看的是堆；StringBuffer可以堆字符串内容进行删减；是一个容器是final类；StringBuffer存放在父类的char[] value 中，只有在存储空间不够时才会扩容
+> StringBuffer默认创建一个大小为16的char[]
+> StringBuilder对象字符序列存放在父类的char[] value 字符序列存放在堆中
+>
+> 集合 Collection接口有两个子接口set和list(实现子类都是单列集合)，Map接口的实现子类是双列集合：list有序 set无序；Collection接口通过子接口set和list实现
+> 迭代器遍历集合元素；List集合类元素有序，添加顺序和取出顺序一致且可重复；ArrayList可以加入多个null，线程不安全；
+> 创建ArrayList对象时，使用无参构造器初始容量为0，第一次添加扩容为10，第二次扩容为1.5倍；如果使用指定大小的构造器，初始容量为指定大小，再扩容为1.5倍
+> vector是线程安全的；如果无参默认10，扩容时按2倍扩容，如果指定大小每次按2倍扩；ArrayList增删效率低改查效率高vector增删效率高改查效率低
+> set 添加顺序和取出顺序不一致，没有索引，取出顺序固定 不允许重复元素且只有一个null；遍历方式：迭代器、增强for
+
+> HashSet的扩容：添加元素得到的hash值转成索引值，找到table，看索引位置是否存放元素，如果没有直接加入，如果有，调用equals比较，相同则放弃添加，不同则添加到最后；如果一条链表元素个数达到默认值（8）且table大小>=64就会树化；
+> HashSet第一次添加时，table数组扩容到16，临界值时16*加载因子(0.75)=12;如果table数组达到临界值12就会继续扩容到16*2=32；当链表中的元素总和>12也会扩容
+
+> LinkedHashSet 底层是一个LinkedHashMap，底层维护了一个数组table+双向链表；根据元素的hashcode值决定元素的存储位置，同时使用链表维护元素的次序；不允许添加重复元素；添加元素时，先求hash值，确定元素再table中的位置，再将要添加的元素加入到双向链表（如果已经存在，不添加）
+> 扩容 添加第一次将table数组扩容到16，存放的节点类型时LinkedHashMap$Entry 数组是HashSet$Node[] 存放的元素是LinkedHashMap$Entry
+
+> Map 
+
+
+
+
+
+
+
+
+
+> 泛型
+> https://www.cnblogs.com/Blue-Keroro/p/8875898.html
+> 反射 每个类都有class对象，包含了与类有关的信息，当编译一个新类时，会产生一个同名的.class文件,该文件内容保存着Class对象；java反射机制可以动态的创建对象并调用其属性
+> 类加载相当于Class对象的加载，类在使用时才动态加载到jvm中，也可以使用Class.forName("com.mysql.jdbc.Driver")来控制类的加载，该方法会返回一个Class对象
+> 反射可以提供运行时的类信息，并且这个类可以在运行时才加载进来；getField访问公有的成员变量getDeclaredField 访问所有已声明的成员变量
+> 从类中获取了一个方法后，使用invoke方法来调用这个方法
