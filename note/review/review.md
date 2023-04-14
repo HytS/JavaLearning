@@ -106,17 +106,17 @@
 > LinkedHashSet 底层是一个LinkedHashMap，底层维护了一个数组table+双向链表；根据元素的hashcode值决定元素的存储位置，同时使用链表维护元素的次序；不允许添加重复元素；添加元素时，先求hash值，确定元素再table中的位置，再将要添加的元素加入到双向链表（如果已经存在，不添加）
 > 扩容 添加第一次将table数组扩容到16，存放的节点类型时LinkedHashMap$Entry 数组是HashSet$Node[] 存放的元素是LinkedHashMap$Entry
 
-> Map 
-
-
-
-
-
-
-
-
+> Map中的key和value可以是任何引用类型的数据，会封装到HashMap$Node对象中；Map中的key和value不可以重复；key和value都可以为null，但是key中null只能有一个，value中null可以有多个
+> Map存放数据的key-value示意图，一对k-v是放在一个Node中的，又因为Node实现了Entry接口，所以有些书也说一对k-v就是一个Entry
+> HashMap底层机制：table——HashMap$Node--Map$Entry;(k,v)是一个Node实现了Map$Entry<k,v>;扩容机制和HashSet相同
+> HashMap底层维护了Node类型的table，默认null；当创建对象时，将加载因子初始化为0.75；当添加k-v时，通过key的hash值得到table的索引，然后判断该索引处是否有元素，没有元素直接添加，如果有元素，判断该索引处key和准备添加的key是否相同，如果相同直接替换value，不同要继续判断是树还是链表并作出相应处理，如果添加时发现容量不够，则需要扩容
+> 第一次添加时，需要扩容table到16，临界值是16*加载因子(0.75)=12;再扩容就是16*2=32；新的临界值是32*0.75=24；在java8中，如果一条链表的元素个数达到8并且table大小>=64就会进行树化，否则仍采用数组扩容机制
+> hashtable的键值对都不能是null，hashtable是线程安全的，hashMap线程不安全；properties继承hashtable类实现了Map接口，也是一种键值对的形式来保存数据
+>
+> 如何选择集合实现类
 
 > 泛型
+> 
 > https://www.cnblogs.com/Blue-Keroro/p/8875898.html
 > 反射 每个类都有class对象，包含了与类有关的信息，当编译一个新类时，会产生一个同名的.class文件,该文件内容保存着Class对象；java反射机制可以动态的创建对象并调用其属性
 > 类加载相当于Class对象的加载，类在使用时才动态加载到jvm中，也可以使用Class.forName("com.mysql.jdbc.Driver")来控制类的加载，该方法会返回一个Class对象
