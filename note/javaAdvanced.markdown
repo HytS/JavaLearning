@@ -583,7 +583,7 @@ Character.toLowerCase('a')//转成小写
 * comparable：String对象可以相互比较
 * String是final类，不能被其他的类继承
 * String有属性private final char value[],用于存放字符串内容
-* value是final类型，不可以修改（地址不可以修改）（value不能指向新的地址，但是单个字符内容可以变化 "tom"->"toh"）
+* value是final类型，地址不可以修改（字符串的值可以修改）（value不能指向新的地址，但是单个字符内容可以变化 "tom"->"toh"）
 * String对象用于保存字符串，也是一组字符序列
 * 字符串常量对象是用双引号括起的字符序列
 * 字符串的字符使用Unicode编码，一个字符占两个字节
@@ -605,7 +605,7 @@ Stirng s1="hello";
 s1="haha";//s1
 ```
 * String c1="ab"+"cd"优化成String c1="abcd"; 判断创建的常量池对象是否有引用指向
-* 常量相加，看的是池  String c1=a+b;变量相加，是在堆中
+* 常量相加，看的是池 ； String c1=a+b 变量相加，是在堆中
 ```
 String a="hello"; String b="abc";
 String c=a+b;//创建了几个对象：一共创建了三个对象
@@ -613,7 +613,8 @@ String c=a+b;//创建了几个对象：一共创建了三个对象
 //sb在堆中，并且append是在原来字符串的基础上追加的
 //2、sb.append("hello");sb.append("abc");
 //3、String c=sb.toString(); 
-//c指向堆中的对象(String)value[],value[]指向池中的“helloabc” 
+//a,b指向常量池中的字符串
+//c指向堆中的对象(String)value[],堆中的value[]指向池中的“helloabc” 
 ```
 
 ### String常用方法
