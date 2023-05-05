@@ -75,3 +75,55 @@
 * intern() 将指定的字符串对象引用保存在常量池中，
 * 对于编译期可以确定值的字符串，也就是常量字符串 ，jvm 会将其存入字符串常量池。并且，字符串常量拼接得到的字符串常量在编译阶段就已经被存放字符串常量池，这个得益于编译器的优化。常量折叠会把常量表达式的值求出来作为常量嵌在最终生成的代码中，这是 Javac 编译器会对源代码做的极少量优化措施之一(代码优化几乎都在即时编译器中进行)。并不是所有的常量都会进行折叠，只有编译器在程序编译期就可以确定值的常量才可以：基本数据类型( byte、boolean、short、char、int、float、long、double)以及字符串常量。final 修饰的基本数据类型和字符串变量。字符串通过 “+”拼接得到的字符串、基本数据类型之间算数运算（加减乘除）、基本数据类型的位运算（<<、>>、>>> ）
 * 引用的值在程序编译期是无法确定的，编译器无法对其进行优化。字符串使用 final 关键字声明之后，可以让编译器当做常量来处理。被 final 关键字修改之后的 String 会被编译器当做常量来处理，编译器在程序编译期就可以确定它的值，其效果就相当于访问常量。
+
+### checked Exception unchecked Exception有什么区别
+> checked Exception是受检查异常，java代码在编译过程中，如果受检查异常没有被catch或throws处理的话，则无法通过编译；除了RuntimeException及其子类以外，其他的Exception类及其子类都是受检查异常
+> java在编译时，不处理不受检查异常也可以通过编译；常见的有空指针、数组越界
+
+### Throwable类常用方法有哪些
+> String getMessage() 返回异常发生时的简要描述
+> Stirng toString() 返回异常发生时的详细信息
+> String getLocalizedMessage() 返回异常对象的本地化信息
+> void printStackTrace() 在控制台上打印Throwable对象封装的异常信息
+
+* 注意：不要在finally语句块中使用return，当try和finally语句中都存在return时，try中的return会被忽略，因为try中的return返回值会被暂存到一个本地变量中，当执行到finally中的return时，本地变量的值就变成了finally中的return值
+* finally中的代码不一定会被执行，比如finally之前虚拟机被终止运行，则finally中的代码就不会执行；或者程序所在线程死亡、关闭cpu都会导致finally不被执行
+
+### 如何使用try-with-resources代替try-catch-finally
+### 异常的注意事项
+
+
+* 编译器可以通过泛型参数可以指定传入的对象类型
+### 泛型的使用方式
+> 泛型类，泛型接口（实现泛型接口，不指定类型；实现泛型接口，指定类型）；泛型方法
+
+* public static < E > void printArray( E[] inputArray ) 一般被称为静态泛型方法;在 java 中泛型只是一个占位符，必须在传递类型后才能使用。类在实例化时才能真正的传递类型参数，由于静态方法的加载先于类的实例化，也就是说类中的泛型还没有传递真正的类型参数，静态的方法的加载就已经完成了，所以静态泛型方法是没有办法使用类上声明的泛型的。只能使用自己声明的 <E>
+* 注解的解析方法：编译期直接扫描（编译器在编译java代码的时候扫描对应的注解并处理，）；运行期通过反射处理（比如@Value@Component）
+
+* spi:服务提供者的接口（专门提供给服务提供者或者扩展框架功能开发者使用的接口）
+* spi将服务接口和具体的服务实现分离开
+### spi和api的区别
+> 当实现方提供了接口和实现，我们可以通过调用实现方的接口从而拥有实现方给我们提供的能力，这就是api，这种接口和实现都是放在实现方
+> 当接口存在于调用方这边时，就是spi，由接口调用方确定规则，然后由不同的厂商去根据这个规则对这个接口进行实现
+
+* spi的缺点：需要遍历加载所有的实现类；当多个ServiceLoader同时load时，会有并发问题
+* 序列化的主要目的是通过网络传输对象或者将对象存储到文件系统、数据库、内存中
+
+### 如果有些字段不想进行序列化怎么办
+> 不想进行序列化的变量，使用transient修饰
+> transient：阻止实例中那些使用关键字修饰的变量序列化，当对象被反序列化时，被transient修饰的变量不会被持久化和恢复
+> transient只能修饰变量；修饰的变量在反序列化后变量值会被置为类型的默认值
+
+### IO流为什么要分为字节流和字符流
+> 字符流是由java虚拟机将字节转换得到的，耗时多
+> 当不清楚编码类型时，使用字节流的过程会乱码
+
+
+* java中将实参传给方法的方式是值传递；如果参数是基本类型，传递的就是基本类型的拷贝，会创建副本；如果参数是引用类型，传递的就是实参所引用对象在堆中的地址的拷贝，同样也会创建副本
+
+
+### 获取Class对象的四种方式
+> 知道具体类的情况：（Class clunbarClass=TargetObject.class）但是一般不知道具体类，基本都是通过遍历包下面的类获取Class对象，通过此方式获取Class对象不会进行初始化
+> 通过Class.forName()传入类的全路径获取 Class.forName("cn.javaguide.TargetObject")
+> 通过对象实例instance.getClass()获取 TargetObject o=new TargetObject(); Class lc2=o.getClass()
+> 通过类加载器xxClassLoader.loadClass()传入类路径获取 ClassLoader.getSystemClassLoader().loadClass("cn.javaguide.TargetObject") 通过类加载器获取Class对象不会进行初始化，即不进行包括初始化等一系列步骤，静态代码块和静态对象不会得到执行
