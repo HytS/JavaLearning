@@ -127,3 +127,5 @@
 > 通过Class.forName()传入类的全路径获取 Class.forName("cn.javaguide.TargetObject")
 > 通过对象实例instance.getClass()获取 TargetObject o=new TargetObject(); Class lc2=o.getClass()
 > 通过类加载器xxClassLoader.loadClass()传入类路径获取 ClassLoader.getSystemClassLoader().loadClass("cn.javaguide.TargetObject") 通过类加载器获取Class对象不会进行初始化，即不进行包括初始化等一系列步骤，静态代码块和静态对象不会得到执行
+
+## java集合
