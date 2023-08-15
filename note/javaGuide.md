@@ -108,13 +108,21 @@
 * 两个对象的hashcode值相等，那这两个值也不一定相等
 * 两个对象的hashcode值相等不代表两个对象就相等；哈希值相等和equals返回true才代表两个对象相等
 ### 为什么重写equals()必须要重写hashcode()
+* 两个相等的对象的hashcode值必须是相等的    
 > 如果重写equals没有重写hashcode，会导致equals判断的是相等的两个对象，hashcode值不相等
 
+### String、StringBuilder、StringBuffer区别
+* 操作少量数据 String 线程安全
+* 单线程操作字符串缓冲区下操作大量数据 StringBuilder
+* 多线程操作字符串缓冲区下操作大量数据 StringBuilder 线程安全
+
 ### String为什么是不可变的
+> final关键字修饰的数组保存字符串并不是String不可变的根本原因，因为这个数组保存的字符串是可变的
 > 保存字符串的数组被final修饰且为私有，并且String类没有提供修改这个字符串的方法
 > String类被final修饰，不能被继承，避免子类破坏String不可变
 
-
+* 字符串对象通过+的字符串拼接方式，实际上是StringBuilder的append方法实现的，然后用toString得到String对象
+* 在循环中使用+进行字符串拼接会造成‘创建过多的StringBuiler对象’
 * 字符串常量池主要目的是避免字符串的重新创建
 
 ### String s1=new String("abc") 创建了几个对象
