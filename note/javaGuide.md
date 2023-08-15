@@ -98,10 +98,15 @@
 * 类没有重写equals，通过equals比较两个对象等价于==比较两个对象，使用的默认是Object类equals方法  ；类重写equals，一般重写equals用于比较两个对象的属性是否相等  
 
 * 哈希码的作用是确定该对象在哈希表中的索引位置
-* 两个对象的hashcode值相等不代表两个对象就相等；哈希值相等和equals返回true才代表两个对象相等
+
 ### 为什么要有hashcode
 * 要以hashset如何检查重复引入：当把对象加入hashset中，hashset会先计算对象的hashcode来判断加入的位置，同时也会与其他对象的hashcode进行比较，如果没有相同的hashcode，hashset会先假设对象没有重复出现，但是如果发现相同的hashcode，会用equals进行检查hashcode相同的对象是否相同，如果相同，hashset不会让其加入成功，如果不同，会重新散列到其他位置  
 * 添加元素进入hashSet的过程中，如果hashset在对比时，同样的hashcode有多个对象，会继续使用equals来判断是否真的相同
+
+### 两个对象有相同的hashcode值，他们相等吗
+* hashcode使用的哈希算法会让多个对象返回相同的哈希值，越糟糕的算法越容易碰撞
+* 两个对象的hashcode值相等，那这两个值也不一定相等
+* 两个对象的hashcode值相等不代表两个对象就相等；哈希值相等和equals返回true才代表两个对象相等
 ### 为什么重写equals()必须要重写hashcode()
 > 如果重写equals没有重写hashcode，会导致equals判断的是相等的两个对象，hashcode值不相等
 
