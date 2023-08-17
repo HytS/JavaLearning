@@ -153,7 +153,9 @@
 
 * 注意：不要在finally语句块中使用return，当try和finally语句中都存在return时，try中的return会被忽略，因为try中的return返回值会被暂存到一个本地变量中，当执行到finally中的return时，本地变量的值就变成了finally中的return值
 * finally中的代码不一定会被执行，比如finally之前虚拟机被终止运行，则finally中的代码就不会执行；或者程序所在线程死亡、关闭cpu都会导致finally不被执行
-
+### finally中的代码一定会被执行吗
+不一定！比如说finally之前虚拟机被终止运行的话，finally中的代码不会被运行
+或者程序所在线程死亡、关闭cpu
 ### 如何使用try-with-resources代替try-catch-finally
 ### 异常的注意事项
 
