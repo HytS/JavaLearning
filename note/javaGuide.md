@@ -143,7 +143,7 @@
 
 ### checked Exception unchecked Exception有什么区别
 > checked Exception是受检查异常，java代码在编译过程中，如果受检查异常没有被catch或throws处理的话，则无法通过编译；除了RuntimeException及其子类以外，其他的Exception类及其子类都是受检查异常
-> java在编译时，不处理不受检查异常也可以通过编译；常见的有空指针、数组越界
+> java在编译时，不处理不受检查异常也可以通过编译；常见的有空指针错误、数组越界错误、参数错误、字符串转换为数字格式错误
 
 ### Throwable类常用方法有哪些
 > String getMessage() 返回异常发生时的简要描述
