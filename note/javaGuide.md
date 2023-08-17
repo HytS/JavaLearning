@@ -164,8 +164,23 @@
 * 编译器可以通过泛型参数可以指定传入的对象类型
 ### 泛型的使用方式
 > 泛型类，泛型接口（实现泛型接口，不指定类型；实现泛型接口，指定类型）；泛型方法
+```
+class GeneratorImpl<T> implements Generator<T>{
+    @Override
+    //不指定类型
+    public T method() {
+        return null;
+    }
+}
+class GeneratorImpl<T> implements Generator<String>{
+    @Override
+    public String method() {
+        return "hello";
+    }
+}
 
-* public static < E > void printArray( E[] inputArray ) 一般被称为静态泛型方法;在 java 中泛型只是一个占位符，必须在传递类型后才能使用。类在实例化时才能真正的传递类型参数，由于静态方法的加载先于类的实例化，也就是说类中的泛型还没有传递真正的类型参数，静态的方法的加载就已经完成了，所以静态泛型方法是没有办法使用类上声明的泛型的。只能使用自己声明的 <E>
+```
+* public static <E> void printArray( E[] inputArray ) 一般被称为静态泛型方法;在 java 中泛型只是一个占位符，必须在传递类型后才能使用。类在实例化时才能真正的传递类型参数，由于静态方法的加载先于类的实例化，也就是说类中的泛型还没有传递真正的类型参数，静态的方法的加载就已经完成了，所以静态泛型方法是没有办法使用类上声明的泛型的。只能使用自己声明的 <E>
 * 注解的解析方法：编译期直接扫描（编译器在编译java代码的时候扫描对应的注解并处理，）；运行期通过反射处理（比如@Value@Component）
 
 * spi:服务提供者的接口（专门提供给服务提供者或者扩展框架功能开发者使用的接口）
@@ -197,3 +212,14 @@
 > 通过类加载器xxClassLoader.loadClass()传入类路径获取 ClassLoader.getSystemClassLoader().loadClass("cn.javaguide.TargetObject") 通过类加载器获取Class对象不会进行初始化，即不进行包括初始化等一系列步骤，静态代码块和静态对象不会得到执行
 
 ## java集合
+### List、Set、Queue、Map
+* List存储的元素有序、可重复
+* Set存储的元素不可重复
+* Queue按特定的排队规则确定先后顺序，存储的元素有序可重复
+* Map使用键值对存储，key无序不可重复，value无序可重复
+
+### 集合框架底层数据结构总结
+List：ArrayList Object[] Vector Object[] LinkedList 双向链表
+Set：1、HashSet（无序唯一） 基于HashMap实现，底层采用HashMap存储元素 2、LinkedHashSet 是HashSet的子类，其内部是通过LinkedHashMap来实现的，3、TreeSet（有序唯一）红黑树
+Queue：1、priorityQueue Object[]数组实现二叉堆2、ArrayQueue Object[] 数组+双指针
+Map：1、HashMap jdk1.8之前HashMap有数组+链表组成，数组是HashMap的主体，链表是为了解决哈希冲突而存在的；1.8之后解决哈希冲突有了较大变化，当链表长度>8（将链表转成红黑树前会判断，如果当前数组长度小于64，那么会先进行数组扩容，而不是转换为红黑树）2、LinkedHashMap 继承自HashMap，所以底层仍然是基于由数组和链表或红黑树组成，LinkedHashMap在上面的基础上，增加了一条双向链表 3、Hashtable 数组+链表组成，数组是Hashtable的主体，链表是为了解决哈希冲突存在的4、TreeMap 红黑树
