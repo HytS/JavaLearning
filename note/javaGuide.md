@@ -270,3 +270,13 @@ HashMap可以存储null的key和value，但null做键只能有一个，null做值可以有多个；Hasht
 1、创建时如果不指定容量初始值，Hashtable默认初始大小为11，之后每次扩充，容量变为原来的2n+1;HashMap初始大小为16，之后每次扩容，容量变为原来的2倍
 2、创建时如果指定容量初始值，那么Hashtable会直接使用给定的大小，而HashMap会将其扩充为2的幂次方大小
 jdk8之后HashMap：当链表长度大于8，将链表转化为红黑树（将链表转化为红黑树前会判断，如果当前数组长度小于64，则会选择先对数组扩容，而不是转化为红黑树）Hashtable没有这样的机制
+
+### HashMap和HashSet区别
+HashSet底层基于HashMap实现；实现Set接口、仅存储对象、调用add()向set中添加元素、HashSet使用成员对象来计算hashcode值，对两个对象来说hashcode可能相等，所以equals用来判断对象的相等性
+HashMap实现了Map接口、存储键值对、调用put向map中添加元素、HashMap使用键计算hashcode
+
+### HashMap和TreeMap区别
+实现NavigableMap接口让TreeMap有了对集合内元素的搜索能力
+实现SortedMap接口让TreeMap有了对集合中的元素根据键排序的能力，默认是按key的升序排序，也可以指定排序的比较器
+
+### HashSet如何检查重复
