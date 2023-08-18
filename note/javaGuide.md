@@ -280,3 +280,4 @@ HashMap实现了Map接口、存储键值对、调用put向map中添加元素、HashMap使用键计算hashc
 实现SortedMap接口让TreeMap有了对集合中的元素根据键排序的能力，默认是按key的升序排序，也可以指定排序的比较器
 
 ### HashSet如何检查重复
+当把对象加入HashSet时，HashSet会先计算hashcode值来判断对象加入的位置，同时也会与其他加入的对象的hashcode值作比较，如果没有相符的hashcode，HashSet会假设对象没有重复出现，但是如果发现相同的hashcode值的对象，就会用equals进行检查hashcode值相同的对象是否真的相同，如果两者相同，HashSet就不会让加入操作成功
