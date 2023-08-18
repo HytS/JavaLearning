@@ -223,3 +223,20 @@ List：ArrayList Object[] Vector Object[] LinkedList 双向链表
 Set：1、HashSet（无序唯一） 基于HashMap实现，底层采用HashMap存储元素 2、LinkedHashSet 是HashSet的子类，其内部是通过LinkedHashMap来实现的，3、TreeSet（有序唯一）红黑树
 Queue：1、priorityQueue Object[]数组实现二叉堆2、ArrayQueue Object[] 数组+双指针
 Map：1、HashMap jdk1.8之前HashMap有数组+链表组成，数组是HashMap的主体，链表是为了解决哈希冲突而存在的；1.8之后解决哈希冲突有了较大变化，当链表长度>8（将链表转成红黑树前会判断，如果当前数组长度小于64，那么会先进行数组扩容，而不是转换为红黑树）2、LinkedHashMap 继承自HashMap，所以底层仍然是基于由数组和链表或红黑树组成，LinkedHashMap在上面的基础上，增加了一条双向链表 3、Hashtable 数组+链表组成，数组是Hashtable的主体，链表是为了解决哈希冲突存在的4、TreeMap 红黑树
+
+### 如何选用集合
+我们需要根据键值获取到元素值时就采用Map接口下的集合
+    排序TreeMap   不排序 HashMap  保证线程安全 ConcurrentHashMap
+我们只需要存放元素时，就选择Collection接口下的集合
+    保证元素唯一时，选择Set接口的TreeSet、HashSet 不需要就选择List接口的ArrayList、LinkedList
+### 为什么要使用集合
+当我们要存储一组数据类型相同的数据是，数组有不足。java集合提高了灵活性
+
+### ArrayList和Array区别
+ArrayList允许使用泛型确保类型安全，Array不可以
+ArrayList只允许存储对象，对于基础数据类型要使用对应的包装类，Array可以直接存储基本数据类型也可以存储对象
+ArrayList创建时不需要指定大小，Array创建时必须指定大小
+ArrayList支持插入删除操作，Array只是一个固定长度的数组，只能按下标访问元素
+
+ArrayList可以添加null值，但是不建议添加；ArrayList中可以存储任何类型的对象
+
