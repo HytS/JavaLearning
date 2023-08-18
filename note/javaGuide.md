@@ -240,3 +240,33 @@ ArrayList支持插入删除操作，Array只是一个固定长度的数组，只能按下标访问元素
 
 ArrayList可以添加null值，但是不建议添加；ArrayList中可以存储任何类型的对象
 
+### LinkedList为什么不能实现RandomAccess接口
+RandomAaccess时一个标记接口，用来表明实现该接口的类支持随机访问（即可以通过索引访问元素），由于LinkedList底层是链表，内存地址不连续，只能通过指针来定位，故不能实现接口
+
+RandomAccess是一个标识，标识实现这个接口的类具有随机访问功能
+
+### ArrayList、LinkedList区别
+都不能保证线程安全；ArrayList底层是Object[] LinkedList底层是双向链表
+
+
+### Comparable和Comparator的区别
+都是java中用于排序的接口；Comparable接口出自java.lang包，使用compareTo(Object obj)进行排序
+Comparator接口出自java.util包，它有一个compare(Object obj1,Object obj2)进行排序
+一般我们需要堆一个集合使用自定义排序时，我们就要重写compareTo、compare方法，当我们需要对某一个集合实现两种排序方式，我们可以重写compareTo方法和使用自制的Comparator方法（只能使用两个参数版的Collections.sort()）
+
+### 无序性和不可重复性
+无序性不等于随机性，无序性是指存储的数据在底层数组中并非按照数组索引的顺序添加，而是根据数据的哈希值决定的
+不可重复性是指添加的元素按照equals判断时返回false，需要重写equals和hashcode
+
+### HashSet、LinkedHashSet、TreeSet异同
+都是Set接口的实现类，都能保证元素唯一，都不是线程安全
+HashSet底层结构是哈希表（基于HashMap实现）LinkedHashSet底层结构是链表和哈希表 TreeSet底层结构是红黑树，元素是有序的，排序方式有自然排序和定制排序
+HashSet用于不需要保证元素插入和取出顺序的场景 LinkedHashSet用于保证元素插入和取出顺序满足FIFO TreeSet用于支持对元素进行自定义排序规则的场景
+
+### HashMap和Hashtable区别
+HashMap非线程安全，Hashtable线程安全，因为Hashtable内部的方法基本上都经过synchronized的修饰
+由于线程安全的关系，HashMap效率比Hashtable高
+HashMap可以存储null的key和value，但null做键只能有一个，null做值可以有多个；Hashtable不允许有null键和null值，否则会抛出NullPointException
+1、创建时如果不指定容量初始值，Hashtable默认初始大小为11，之后每次扩充，容量变为原来的2n+1;HashMap初始大小为16，之后每次扩容，容量变为原来的2倍
+2、创建时如果指定容量初始值，那么Hashtable会直接使用给定的大小，而HashMap会将其扩充为2的幂次方大小
+jdk8之后HashMap：当链表长度大于8，将链表转化为红黑树（将链表转化为红黑树前会判断，如果当前数组长度小于64，则会选择先对数组扩容，而不是转化为红黑树）Hashtable没有这样的机制
