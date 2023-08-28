@@ -150,4 +150,10 @@ StringBuffer()´´½¨ÁËÒ»¸ö´óÐ¡Îª16µÄchar[];¹¹ÔìÆ÷Ò²¿ÉÒÔÖ¸¶¨Êý×é´óÐ¡£¬²ÎÊý¿ÉÒÔÊÇÊý×
 
 String->StringBuffer append(),StringBuffer¹¹ÔìÆ÷
 StringBuffer->String String¹¹ÔìÆ÷£¬toString()
+StringBufferÏß³Ì°²È«£¬StringBuilderÏß³Ì²»°²È«
+¶Ô×Ö·û´®ÐèÒª´óÁ¿²Ù×÷Ê±£¬²»ÓÃString
 
+Collection½Ó¿ÚÊµÏÖ±éÀú£ºµü´úÆ÷±éÀú£¨ËùÓÐÊµÏÖCollection½Ó¿ÚµÄÀà¶¼ÓÐÒ»¸öIterator()·½·¨ÓÃÓÚ·µ»ØÒ»¸öIterator½Ó¿ÚµÄ¶ÔÏó£¬¼´Ò»¸öµü´úÆ÷£©
+Iterator¶ÔÏó³ÆÎªµü´úÆ÷£¬ÓÃÓÚ±éÀúCollectionÖÐµÄÔªËØ
+
+µü´úÆ÷µÄÔËÐÐÔ­Àí
