@@ -140,10 +140,14 @@ Integer->String toString()
 String 调用intern()时，如果常量池中包含一个等于该String对象的字符串，则返回池中的字符串，否则将该String对象添加到对象池中，并返回此对象的引用；intern()返回的是常量池的地址
 
 常量相加，发生在池中；变量相加，发生在堆中
-String、StringBuffer是final
+String、StringBuffer、StringBuilder是final，不能被继承
 String的字符串存放在 final char value[],地址不可以修改
 StringBuffer的字符内容放在char value[]中，所有变化不用每次改变地址来完成，效率高于String
+StringBuilder字符序列放在堆中 
 
 String保存的是字符串常量，StringBuffer保存的是字符串变量；StringBuffer每次更新的是内容，不是内存地址
 StringBuffer()创建了一个大小为16的char[];构造器也可以指定数组大小，参数可以是数字或者是字符串（字符串长度+16）
+
+String->StringBuffer append(),StringBuffer构造器
+StringBuffer->String String构造器，toString()
 
