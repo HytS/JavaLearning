@@ -157,3 +157,8 @@ Collection接口实现遍历：迭代器遍历（所有实现Collection接口的类都有一个Iterator()
 Iterator对象称为迭代器，用于遍历Collection中的元素
 
 迭代器的运行原理
+Iterator i=col.iterator()//获取迭代器
+while(i.hasNext()){//判断是否还有下一个元素，如果有返回true
+    System.out.println(i.next())//下移并将下移后集合位置的元素返回
+}
+
