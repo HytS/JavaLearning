@@ -162,3 +162,5 @@ while(i.hasNext()){//判断是否还有下一个元素，如果有返回true
     System.out.println(i.next())//下移并将下移后集合位置的元素返回
 }
 
+ArrayList基本等同于Vector，ArrayList线程不安全，但是执行效率高
+transient表示不会被序列化
