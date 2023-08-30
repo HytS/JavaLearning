@@ -165,7 +165,9 @@ while(i.hasNext()){//判断是否还有下一个元素，如果有返回true
 ArrayList基本等同于Vector，ArrayList线程不安全，但是执行效率高
 transient表示不会被序列化
 当创建ArrayList对象时，如果使用无参构造器，则elementData容量为0，第一次添加扩容为10，若再次添加，扩容为上次的1.5倍；如果使用指定大小的构造器，elementData容量为指定大小，如果需要扩容则扩容为上次的1.5 倍
+不安全效率高
 
 无参构造器创建ArrayList、有参构造器创建和使用ArrayList
 
-
+Vector底层也是对象数组，线程安全，vector类的操作方法有synchronized；在开发中，需要线程安全选择vector；扩容：如果无参，初始为10，然后按2倍扩容；如果指定大小，按2倍扩容
+安全效率不高
