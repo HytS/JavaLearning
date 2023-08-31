@@ -189,4 +189,10 @@ LinkedHashSet是HashSet的子类；LinkedHashSet的底层是LinkedHashMap，底层维护了一个
 
 Map和Collection并列存在，用于保存具有映射关系的key-value
 Map中的k-v可以是任何引用类型的数据，保存在HashSet$Node对象中
-Map中key不可以重复，value可以重复
+Map中key不可以重复，value可以重复；key和value都可以是null，但是key只能有一个null，value可以有很多个null；一对k-v是放在node中的
+
+HashMap底层维护了node类型的table数组，默认为null；当创建对象时，将加载因子初始化为0.75
+
+当添加k-v时，通过key的hash值得到table的索引，然后判断索引处是否有元素。如果没有元素直接添加，如果有元素，继续判断该索引处key和准备添加的key是否相同，如果相等直接替换val，如果不相同还要判断是树结构还是链表结构；如果添加时发现容量不够还要扩容
+
+第一次添加时，table扩容为16，临界值是12，再次扩容，容量为32，临界值为24；在java8中，如果数组长度达到8且链表元素个数>=64，就会树化，否则使用数组扩容机制
