@@ -1253,10 +1253,10 @@ public synchronized void m(String name){
 * 按操作数据单位分为字节流（二进制文件）字符流（文本文件）
 * 按数据流的流向分为输入流、输出流
 * 按流的角色分为节点流、处理流/包装流
-|抽象基类|字节流|字符流|
-|---|---|---|
-|输入流|InputStream|Reader|
-|输出流|OutputStream|Writter|
+|抽象基类|字节流|字符流|aa|
+|----|----|----|----|
+|输入流|InputStream|Reader||
+|输出流|OutputStream|Writter||
 * java的IO流都是从上述4个抽象基类中派生的
 * 由这四个类派生出的子类名称都是以其父类名作为子类名后缀
 #### InputStream常用子类
