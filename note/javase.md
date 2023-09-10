@@ -11,3 +11,7 @@
 
 ### 守护线程是什么
 守护线程：运行在后台，为其他前台线程服务。一旦所有用户线程都结束运行，守护线程会和jvm一起结束工作
+
+### 创建线程的方式
+继承Thread类、实现Runnable接口、通过Callable和Future、通过线程池创建线程
+通过Callable来实现的方法是因为Future task实现了Runnable接口，Future task可以接收一个Callable参数，然后把这个Future task传入到Thread中，Future task调用run()时，run会调用Callable的call()然后把call()的返回值赋给outcome属性
