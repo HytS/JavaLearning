@@ -15,3 +15,29 @@
 ### 创建线程的方式
 继承Thread类、实现Runnable接口、通过Callable和Future、通过线程池创建线程
 通过Callable来实现的方法是因为Future task实现了Runnable接口，Future task可以接收一个Callable参数，然后把这个Future task传入到Thread中，Future task调用run()时，run会调用Callable的call()然后把call()的返回值赋给outcome属性
+
+
+### Runnable和Callable区别
+Runnable接口中的run()的返回值时void，功能时执行run()
+Callable接口中的call()有返回值，是一个泛型，和Future、Future task配合可以获取异步执行的结果
+
+### 线程状态与转换
+Thread中定义了6种状态：new、runnable、blocked、waiting、time waiting定时等待、terminated终止
+new 初始状态，线程被构建，还没有调用start();runnable 运行状态，java线程将os种就绪和运行两种状态笼统的称为'运行中'；blocked 表示线程阻塞与锁 ；time waiting 可以在指定的时间自动返回；waiting 表示线程进入等待状态，进入该状态表示当前线程需要等待其他线程做出一些特定动作
+
+### sleep和wait的区别
+sleep()正在执行的线程主动让出cpu（然后cpu去执行其他任务），在sleep指定时间后cpu再回到该线程继续往下执行（注意：sleep只让出了cpu，并不会释放同步资源锁）；wait()指当前线程让自己暂时让出资源锁，让其他正在等待该资源的线程得到该资源进而运行，只有调用了notify()，之前调用wait()的线程才会解除wait抓鬼太，可以参与竞争同步资源锁，进而得到执行（注意：notify的作用相当于叫醒睡着的人，并不会给他分配任务，即notify只是让之前调用wait的线程有权力重新参与线程的调度）
+sleep可以在任何地方使用，而wait只能在同步方法或同步块中使用
+wait如果不加具体时间需要手动唤醒
+sleep是线程类Thread的静态方法，调用回暂停此线程指定的时间，但监控依然保持，不会释放对象锁，到时间自动恢复；wait是Object方法，调用会放弃对象锁，进入等待队列，待调用notify/notifyAll唤醒指定线程或全部线程，才会进入锁池，再次获得对象锁才会进入运行状态
+
+### start和run区别
+每个线程都是通过某个特定Thread对象所对应的run方法来完成操作，run()称为线程体，通过调用Thread类的start()来启动一个线程
+start()来启动一个线程，真正实现了多线程运行，这时无需等待run()代码执行完毕，可以直接执行下面代码，这时线程处于就绪状态，并没有运行，然后通过此Thread类调用run()来完成其运行状态，run()称为线程体，线程体包含了要执行的这个线程的内容，run()运行结束，此线程终止，然后cpu再调度其他线程
+run()是在本线程中的，只是线程里的一个函数，而不是多线程的。如果直接调用run()，就像与调用一个普通函数，直接调用run()必须等待run()执行完毕才能执行下面的代码，所以执行路径还是只有一条，根本没有线程的特征，所以在多线程执行时要使用start()而不是run()
+
+new一个Thread对象，线程进入了新建状态，调用start()，会启动一个线程并使线程进入了就绪状态，当分配到时间片后就可以开始运行了。start()会执行线程的相应准备工作，然后自动执行run()的内容，这就是真正的多线程工作
+直接执行run()，会把run当成main线程下的普通方法去执行，并不会在某个线程中执行它，所以不算多线程工作
+
+当程序调用start()，将会创建一个新线程去执行run()的代码，但是如果直接调用run()，会直接在当前线程中执行run()的代码，注意：这里不会创建新线程，这样run()就像一个普通方法一样
+当一个线程启动后，不能重复调用start()，否则会报异常，但是可以重复调用run()，即run()就是一个普通方法，start()会创建一个新线程去执行run()代码
