@@ -62,4 +62,14 @@ ThreadLocal人手一份线程私有变量，保证了线程安全
 
 对于wait中的等待notify、notifyAll唤醒的线程，其实这个线程已经'暂停'执行，因为它正在某一对象的休息室中，这时如果它的中断状态被改变，那么他就会抛出异常，这个interruptException不是线程抛出的，是wait抛出的，也就是对象的wait方法内部会不断检查在此对象上休息的线程的状态，如果发现哪个线程的状态被置为已中断，则会抛出interruptException，意思是这个线程不能再等待了，其意义就等同于唤醒它了，然后执行catch中的代码
 
-对于sleep中的线程，如果调用了Thread.sleep(一年)，现在后悔了，想让它早点醒过来，调用interrupt()是唯一的手段，只有改变它的中断状态，让它从sleep中将控制权转到处理异常的catch语句中，然后再由catch中的处理转到正常的逻辑，同样，对于join中的线程也可以这样处理
+对于sleep中的线程，如果调用了Thread.sleep(一年)，现在后悔了，想让它早点醒过来，调用interrupt()是唯一的手段，只有改变它的中断状态，让它从sleep中将控制权转到处理异常的catch语句中，然后再由catch中的处理转到正常的逻辑，同样，对于join中的线程也可以这样处理、
+
+
+### ThreadLocal的理解
+javaweb项目大部分都是基于Tomcat，每次访问都是一个新的线程，每一个线程都独享一个ThreadLocal，我们可以在接收请求的时候set特定内容，在需要的时候get这个值
+ThreadLocal提供set和get方法，为每一个使用这个变量的线程都保存一份独立的副本
+get()用来获取ThreadLocal在当前线程中保存的变量副本 set()用来设置当前线程中变量的副本
+remove()用来移除当前线程中变量的副本 initialValue()是一个protected方法，一般用来在使用时进行重写的，如果在没有set的时候调用get，会调用initialValue方法初始化内容
+
+ThreadLocal，线程本地变量，只属于当前线程，其他线程无法获取这个变量，是隔离的；每个线程Thread对象具有一个自己的ThreadLocalMap对象，把线程信息放入到ThreadLocalMap对象中，同一个线程Thread在任何地方都可以拿出来
+ThreadLocalMap对象的元素entry的key是ThreadLoca对象，value是需要存储的数据，可以具有多个Threadlocal对象及对应的value数据
