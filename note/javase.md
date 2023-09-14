@@ -74,3 +74,6 @@ remove()用来移除当前线程中变量的副本 initialValue()是一个protected方法，一般用来
 ThreadLocal，线程本地变量，只属于当前线程，其他线程无法获取这个变量，是隔离的；每个线程Thread对象具有一个自己的ThreadLocalMap对象，把线程信息放入到ThreadLocalMap对象中，同一个线程Thread在任何地方都可以拿出来
 ThreadLocalMap对象的元素entry的key是ThreadLoca对象，value是需要存储的数据，可以具有多个Threadlocal对象及对应的value数据
 
+### 使用ThreadLocal的场景
+在调用api接口的时候传递了一些公共参数，这些公共参数携带了一些设备信息（安卓/ios），服务端接口根据不同的信息组装不同的格式返回给客户端。假定服务器端需要通过设备类型（device）来下发下载地址，当然接口也有同样的其他逻辑，我们只要在返回数据的时候判断好是什么类型的客户端就好，上面着中国场景可以将传进来的参数device设置到ThreadLocal中，用的时候取出来就行。避免参数的层层传递
+
