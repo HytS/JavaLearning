@@ -77,3 +77,6 @@ ThreadLocalMap¶ÔÏóµÄÔªËØentryµÄkeyÊÇThreadLoca¶ÔÏó£¬valueÊÇÐèÒª´æ´¢µÄÊý¾Ý£¬¿ÉÒÔ¾
 ### Ê¹ÓÃThreadLocalµÄ³¡¾°
 ÔÚµ÷ÓÃapi½Ó¿ÚµÄÊ±ºò´«µÝÁËÒ»Ð©¹«¹²²ÎÊý£¬ÕâÐ©¹«¹²²ÎÊýÐ¯´øÁËÒ»Ð©Éè±¸ÐÅÏ¢£¨°²×¿/ios£©£¬·þÎñ¶Ë½Ó¿Ú¸ù¾Ý²»Í¬µÄÐÅÏ¢×é×°²»Í¬µÄ¸ñÊ½·µ»Ø¸ø¿Í»§¶Ë¡£¼Ù¶¨·þÎñÆ÷¶ËÐèÒªÍ¨¹ýÉè±¸ÀàÐÍ£¨device£©À´ÏÂ·¢ÏÂÔØµØÖ·£¬µ±È»½Ó¿ÚÒ²ÓÐÍ¬ÑùµÄÆäËûÂß¼­£¬ÎÒÃÇÖ»ÒªÔÚ·µ»ØÊý¾ÝµÄÊ±ºòÅÐ¶ÏºÃÊÇÊ²Ã´ÀàÐÍµÄ¿Í»§¶Ë¾ÍºÃ£¬ÉÏÃæ×ÅÖÐ¹ú³¡¾°¿ÉÒÔ½«´«½øÀ´µÄ²ÎÊýdeviceÉèÖÃµ½ThreadLocalÖÐ£¬ÓÃµÄÊ±ºòÈ¡³öÀ´¾ÍÐÐ¡£±ÜÃâ²ÎÊýµÄ²ã²ã´«µÝ
 
+### ¶ÔsynchronizedµÄÁË½â
+synchronized½â¾öµÄÊÇ¶à¸öÏß³ÌÖ®¼ä·ÃÎÊ×ÊÔ´µÄÍ¬²½ÐÔ£¬synchronized¿ÉÒÔ±£Ö¤±»ËüÐÞÊÎµÄ·½·¨»ò´úÂë¿éÔÚÈÎÒâÊ±¿ÌÖ»ÄÜÓÐÒ»¸öÏß³ÌÖ´ÐÐ
+ÔÚjavaÔçÆÚ°æ±¾£¬synchronizedÊôÓÚÖØÁ¿¼¶Ëø£¬Ð§ÂÊµÍ£¬ÒòÎª¼àÊÓÆ÷ËøÊÇÒÀÀµÓÚµ×²ãµÄ²Ù×÷ÏµÍ³µÄMutex LockÊµÏÖµÄ£¬javaµÄÏß³ÌÊÇÓ³Éäµ½²Ù×÷ÏµÍ³µÄÔ­ÉúÏß³ÌÖ®ÉÏµÄ¡£Èç¹ûÒª¹ÒÆð»ò»½ÐÑÒ»¸öÏß³Ì£¬¶¼ÐèÒªos°ïÃ¦Íê³É£¬¶øosÊµÏÖÏß³ÌÖ®¼äµÄÇÐ»»Ê±ÐèÒª´ÓÓÃ»§Ì¬ÇÐ»»µ½ÄÚºËÌ¬£¬Õâ¸ö×´Ì¬Ö®¼äµÄ×ª»»ÐèÒªÏà¶Ô±È½Ï³¤µÄÊ±¼ä£¬ÕâÒ²ÊÇÔçÆÚµÄsynchronizedµÍÐ§µÄÔ­Òò
