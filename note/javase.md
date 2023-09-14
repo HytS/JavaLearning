@@ -80,3 +80,11 @@ ThreadLocalMap¶ÔÏóµÄÔªËØentryµÄkeyÊÇThreadLoca¶ÔÏó£¬valueÊÇÐèÒª´æ´¢µÄÊý¾Ý£¬¿ÉÒÔ¾
 ### ¶ÔsynchronizedµÄÁË½â
 synchronized½â¾öµÄÊÇ¶à¸öÏß³ÌÖ®¼ä·ÃÎÊ×ÊÔ´µÄÍ¬²½ÐÔ£¬synchronized¿ÉÒÔ±£Ö¤±»ËüÐÞÊÎµÄ·½·¨»ò´úÂë¿éÔÚÈÎÒâÊ±¿ÌÖ»ÄÜÓÐÒ»¸öÏß³ÌÖ´ÐÐ
 ÔÚjavaÔçÆÚ°æ±¾£¬synchronizedÊôÓÚÖØÁ¿¼¶Ëø£¬Ð§ÂÊµÍ£¬ÒòÎª¼àÊÓÆ÷ËøÊÇÒÀÀµÓÚµ×²ãµÄ²Ù×÷ÏµÍ³µÄMutex LockÊµÏÖµÄ£¬javaµÄÏß³ÌÊÇÓ³Éäµ½²Ù×÷ÏµÍ³µÄÔ­ÉúÏß³ÌÖ®ÉÏµÄ¡£Èç¹ûÒª¹ÒÆð»ò»½ÐÑÒ»¸öÏß³Ì£¬¶¼ÐèÒªos°ïÃ¦Íê³É£¬¶øosÊµÏÖÏß³ÌÖ®¼äµÄÇÐ»»Ê±ÐèÒª´ÓÓÃ»§Ì¬ÇÐ»»µ½ÄÚºËÌ¬£¬Õâ¸ö×´Ì¬Ö®¼äµÄ×ª»»ÐèÒªÏà¶Ô±È½Ï³¤µÄÊ±¼ä£¬ÕâÒ²ÊÇÔçÆÚµÄsynchronizedµÍÐ§µÄÔ­Òò
+
+
+### ÈçºÎÔÚÏîÄ¿ÖÐÊ¹ÓÃsynchronized
+×îÖ÷ÒªµÄÈýÖÖÊ¹ÓÃ·½Ê½£º1¡¢ÐÞÊÎÊµÀý·½·¨£º×÷ÓÃÓÚµ±Ç°¶ÔÏóÊµÀý¼ÓËø£¬½øÈëÍ¬²½´úÂëÇ°Òª»ñµÃµ±Ç°¶ÔÏóÊµÀýµÄËø£»
+2¡¢ÐÞÊÎ¾²Ì¬·½·¨£º×÷ÓÃÓÚµ±Ç°Àà¶ÔÏó¼ÓËø£¬½øÈëÍ¬²½´úÂëÇ°Òª»ñµÃµ±Ç°Àà¶ÔÏóµÄËø¡£Ò²¾ÍÊÇ¸øµ±Ç°Àà¼ÓËø£¬»á×÷ÓÃÓÚÀàµÄËùÓÐ¶ÔÏóÊµÀý£¬ÒòÎª¾²Ì¬³ÉÔ±²»ÊôÓÚÈÎºÎÒ»¸öÊµÀý¶ÔÏó£¬ÊÇÀà³ÉÔ±£¨static±íÊ¾²»¹ÜnewÁË¶àÉÙ¸ö¶ÔÏó£¬Ö»ÓÐÒ»·Ý£¬ËùÒÔ¶Ô¸ÃÀàµÄËùÓÐ¶ÔÏó¶¼¼ÓÁËËø£©¡£ËùÒÔÈç¹ûÒ»¸öÏß³Ìaµ÷ÓÃÒ»¸öÊµÀý¶ÔÏóµÄ·Ç¾²Ì¬synchronized·½·¨£¬¶øÏß³ÌbÐèÒªµ÷ÓÃÕâ¸öÊµÀý¶ÔÏóËùÊôÀàµÄ¾²Ì¬synchronized·½·¨£¬ÊÇÔÊÐíµÄ£¬²»»á·¢Éú»¥³âÏÖÏó£¬ÒòÎª·ÃÎÊ¾²Ì¬synchronized·½·¨Õ¼ÓÃµÄËøÊÇµ±Ç°ÀàµÄËø£¬¶ø·ÃÎÊ·Ç¾²Ì¬synchronized·½·¨Õ¼ÓÃµÄËøÊÇµ±Ç°ÊµÀý¶ÔÏóËø£»
+3¡¢ÐÞÊÎ´úÂë¿é£ºÖ¸¶¨¼ÓËø¶ÔÏó£¬¶Ô¸ø¶¨¶ÔÏó£¬½øÈëÍ¬²½´úÂë¿âÇ°Òª»ñµÃ¸ø¶¨¶ÔÏóµÄËø¡£ºÍsynchronized·½·¨Ò»Ñù£¬synchronized(this)´úÂë¿éÒ²ÊÇËø¶¨µ±Ç°¶ÔÏóµÄ£¬synchronized¼Óµ½static¾²Ì¬·½·¨ºÍsynchronized(class)´úÂë¿é¶¼ÊÇ¸øClassÀàÉÏËø¡£×¢Òâ£ºsynchronized¼Óµ½·Çstatic¾²Ì¬·½·¨ÉÏÊÇ¸ø¶ÔÏóÊµÀýÉÏËø£¬¾¡Á¿²»ÒªÊ¹ÓÃsynchronized(String a)ÒòÎªjvmÖÐ£¬×Ö·û´®³£Á¿³Ø¾ßÓÐ»º³å¹¦ÄÜ
+
+Ê¹ÓÃsynchronizedË«ÖØÐ£ÑéËùµÄ·½·¨ÊµÏÖµ¥ÀýÄ£Ê½
