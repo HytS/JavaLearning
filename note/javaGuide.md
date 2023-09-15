@@ -468,4 +468,12 @@ synchronized同步语句块的实现使用的是monitorenter和monitorexit指令，其中monitoren
 synchronized修饰的方法并没有monitorenter指令和monitorexit指令，使用ACC_SYNCHRONIZED标识，该标识指明了该方法是一个同步方法
 
 ### jdk1.6之后的synchronized底层做了那些优化
+对锁的实现引入优化；锁主要存在四种状态：无锁状态、偏向锁状态、轻量级锁状态、重量级锁状态，他们会随着竞争的激烈而逐渐升级。注意锁可以升级不可降级
+
+### synchronized和volatile的区别
+synchronized和volatile是两个互补的存在，不是对立的存在
+volatile是线程同步的轻量级实现，所以volatile性能比synchronized好，但是volatile只能用于变量而synchronized可以修饰方法和代码块
+volatile只能保证数据的可见性，但不能保证数据的原子性，synchronized两者都能保证
+volatile主要用于解决变量在多个线程之间的可见性，而synchronized解决的是多个线程之间访问资源的同步性
+
 
