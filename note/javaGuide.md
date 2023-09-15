@@ -445,3 +445,16 @@ volatile能保证变量的可见性，但不能保证对变量的操作是原子性的
 构造方法不能使用synchronized修饰。因为构造方法本身就属于线程安全的，不存在同步的构造方法一说
 
 ###  synchronized的底层原理
+底层原理属于jvm层面的东西
+
+synchronized同步语句块
+    public class SynchronizedDemo {
+        public void method() {
+            synchronized (this) {
+                System.out.println("synchronized 代码块");
+            }
+        }
+    }
+
+当执行monitorenter指令时，线程试图获得锁也就是获得对象监视器monitor的持有权
+在java虚拟机中，Monitor是基于c++实现的，每个对象中都内置了一个ObjectMonitor对象，wait/notify等方法也依赖monitor对象，这也是为什么只有在同步的块或方法中才能调用wait/notify
