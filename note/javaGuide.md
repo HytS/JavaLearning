@@ -457,4 +457,15 @@ synchronized同步语句块
     }
 
 当执行monitorenter指令时，线程试图获得锁也就是获得对象监视器monitor的持有权
-在java虚拟机中，Monitor是基于c++实现的，每个对象中都内置了一个ObjectMonitor对象，wait/notify等方法也依赖monitor对象，这也是为什么只有在同步的块或方法中才能调用wait/notify
+在java虚拟机中，Monitor是基于c++实现的，每个对象中都内置了一个ObjectMonitor对象，wait/notify等方法也依赖monitor对象，这也是为什么只有在同步的块或方法中才能调用wait/notify，否则抛出异常
+
+在执行monitorenter时，会尝试获取对象的锁，如果锁的计数器为0则表示锁可以被获取，获取后将锁的计数器设为1
+对象锁的拥有者线程才可以执行monitorexit指令来释放锁，在执行monitorexit后，将锁计数器设为0，表明锁被释放；如果获取对象锁失败，那当前线程就要阻塞等待，直到锁被另外一个线程释放为止
+
+ACC_SYNCHRONIZED标识了该方法是一个同步方法，jvm通过该标识来辨认一个方法是否声明为同步方法，从而执行相应的同步调用；如果是实例方法，jvm会尝试获取实例对象的锁，如果是静态方法，jvm会尝试获取当前class的锁
+
+synchronized同步语句块的实现使用的是monitorenter和monitorexit指令，其中monitorenter指向同步代码块开始的位置，monitorexit指向同步代码块结束位置
+synchronized修饰的方法并没有monitorenter指令和monitorexit指令，使用ACC_SYNCHRONIZED标识，该标识指明了该方法是一个同步方法
+
+### jdk1.6之后的synchronized底层做了那些优化
+
