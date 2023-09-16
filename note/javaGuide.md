@@ -477,3 +477,14 @@ volatile只能保证数据的可见性，但不能保证数据的原子性，synchronized两者都能保证
 volatile主要用于解决变量在多个线程之间的可见性，而synchronized解决的是多个线程之间访问资源的同步性
 
 
+### ReentrantLock
+
+### ReentrantReadWritrLock
+ReentrantReadWritrLock实现了ReadWriteLock，是一个可重入的读写锁，既可以保证多个线程同时读的效率，同时又可以保证有写入操作时的线程安全
+
+### ThreadLocal用处
+通常情况下，我们创建的变量是可以被任何一个线程访问并修改的，如果想实现每一个线程都有自己专属的本地变量该如何解决；ThreadLocal类就是解决这类问题
+ThreadLocal类主要解决让每个线程绑定自己的值，可以将ThreadLocal类比喻成存放数据的盒子，盒子中可以存放每个线程的私有数据
+如果创建了一个ThreadLocal变量，访问这个变量的每个线程都会有这个变量的本地副本。他们可以使用get()和set()获取默认值或将其值改为当前线程所存副本的值，从未避免线程安全的问题
+
+### 如何使用ThreadLocal
