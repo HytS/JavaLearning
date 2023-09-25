@@ -260,3 +260,45 @@ java中引入互斥锁，保证共享数据操作的完整性
 流按操作数据单位分为字节流和字符流；按数据流的流向分为输入流和输出流；按流的角色分为节点流、处理流;字节流 InputStream OutputStream  字符流 Reader Writer
 
 InputStream子类：FileInputStream BufferInputStram
+
+
+### 反射
+1.反射的基本概念
+使用反射机制可以构造类对象，动态获取当前class的信息比如方法的信息、注解信息、方法的参数、属性
+2.实现反射相关的类库
+construct、field、method分别获取类的构造方法、成员变量、方法信息
+3.反射技术的应用
+1- jdbc加载驱动连接 class.forname时运用到了反射技术
+2- spring框架用反射来实例化对象
+3- 自定义注解生效（反射+aop）
+4- 第三方核心的框架
+5- 动态代理的场景
+4.优点
+增加程序的灵活性，可以在运行的过程中动态对类进行修改和操作；提高代码的复用率；可以在运行时轻松获取任意一个类的方法、属性
+5.缺点
+反射会涉及到动态类型的解析，所以jvm无法对这些代码进行优化，导致性能要比非反射调用更低；使用反射后代码可读性更低；
+
+6. 程序运行过程的对比
+Java程序的运行过程：
+ 
+Person.java -> 编译器 -> Persion.class -> Java虚拟机 ->运行程序
+ 
+Person = new Person()
+ 
+虚拟机在执行的时候已经确切知道要实例化哪个类的对象
+ 
+
+使用Java反射后程序运行的过程：
+ 
+Java反射? -> 编译器 <=> 运行程序
+ 
+虚拟机在实例化对象的时候，可以事先不知道要实例化哪个类的对象，传参的时候虚拟机根据参数确定要实例化哪个类的对象；根据参数不同，虚拟机可以实例化任意类型对象。
+ 
+Class clz = Class.forName("persionPackage.Persion");
+ 
+Object obj = clz.newInstance();
+ 
+执行Class.forName的时候，类加载器会根据参数persionPackage.Persion去找这个类，把这个类加载到Java虚拟机，同时获取这个类的Class对象，每个类都有Class类型的对象，
+ 
+这个对象保存了对应对象的元信息（属性，方法，构造函数）接下来再调用newInstance方法来实例化对象
+
