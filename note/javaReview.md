@@ -268,11 +268,11 @@ InputStream子类：FileInputStream BufferInputStram
 2.实现反射相关的类库
 construct、field、method分别获取类的构造方法、成员变量、方法信息
 3.反射技术的应用
-1- jdbc加载驱动连接 class.forname时运用到了反射技术
-2- spring框架用反射来实例化对象
-3- 自定义注解生效（反射+aop）
-4- 第三方核心的框架
-5- 动态代理的场景
+    1- jdbc加载驱动连接 class.forname时运用到了反射技术
+    2- spring框架用反射来实例化对象
+    3- 自定义注解生效（反射+aop）
+    4- 第三方核心的框架
+    5- 动态代理的场景
 4.优点
 增加程序的灵活性，可以在运行的过程中动态对类进行修改和操作；提高代码的复用率；可以在运行时轻松获取任意一个类的方法、属性
 5.缺点
@@ -280,20 +280,13 @@ construct、field、method分别获取类的构造方法、成员变量、方法信息
 
 6. 程序运行过程的对比
 Java程序的运行过程：
- 
 Person.java -> 编译器 -> Persion.class -> Java虚拟机 ->运行程序
- 
 Person = new Person()
- 
 虚拟机在执行的时候已经确切知道要实例化哪个类的对象
- 
 
 使用Java反射后程序运行的过程：
- 
 Java反射? -> 编译器 <=> 运行程序
- 
 虚拟机在实例化对象的时候，可以事先不知道要实例化哪个类的对象，传参的时候虚拟机根据参数确定要实例化哪个类的对象；根据参数不同，虚拟机可以实例化任意类型对象。
- 
 Class clz = Class.forName("persionPackage.Persion");
  
 Object obj = clz.newInstance();
