@@ -66,3 +66,11 @@ seo£¨ËÑË÷ÒýÇæÓÅ»¯£©£ºËÑË÷ÒýÇæÍ¨³£¸üÇàíùÊ¹ÓÃhttpsÐ­ÒéµÄÍøÕ¾£¬ÒòÎªhttpsÄÜÌá¹©¸ü¸ßµ
 Host Í·£¨Host Header£©´¦Àí :HTTP/1.1 ÒýÈëÁË Host Í·×Ö¶Î£¬ÔÊÐíÔÚÍ¬Ò» IP µØÖ·ÉÏÍÐ¹Ü¶à¸öÓòÃû£¬´Ó¶øÖ§³ÖÐéÄâÖ÷»úµÄ¹¦ÄÜ¡£¶ø HTTP/1.0 Ã»ÓÐ Host Í·×Ö¶Î£¬ÎÞ·¨ÊµÏÖÐéÄâÖ÷»ú¡£
 
 ### http/1.1ºÍhttp/2.0ÓÐÊ²Ã´Çø±ð
+¶àÂ·¸´ÓÃ£ºhttp/2.0ÔÚÍ¬Ò»Á¬½ÓÉÏ¿ÉÒÔÍ¬Ê±´«Êä¶à¸öÇëÇóºÍÏìÓ¦£¬»¥²»¸ÉÈÅ¡£http/1.1ÔòÊ¹ÓÃ´®ÐÐ·½Ê½£¬Ã¿¸öÇëÇóºÍÏìÓ¦¶¼ÐèÒª¶ÀÁ¢µÄÁ¬½Ó£¬¶øä¯ÀÀÆ÷ÎªÁË¿ØÖÆ×ÊÔ´»áÓÉ6-8¸÷tcpÁ¬½Ó¶¼ÏÞÖÆ£¬ÕâÊ¹µÃhttp/2.0ÔÚ´¦Àí¶à¸öÇëÇóÊ±¸ü¸ßÐ§
+¶þ½øÖÆÖ¡£ºhttp/2.0Ê¹ÓÃ¶þ½øÖÆÖ¡½øÐÐÊý¾Ý´«Êä£¬¶øhttp/1.1ÔòÊ¹ÓÃÎÄ±¾¸ñÊ½µÄ±¨ÎÄ£¬¶þ½øÖÆÖ¡¸ü¼Ó½ô´ÕºÍ¸ßÐ§
+Í·²¿Ñ¹Ëõ£ºhttp/1.1Ö§³ÖbodyÑ¹Ëõ£¬header²»Ö§³ÖÑ¹Ëõ¡£http/2.0Ö§³ÖheaderÑ¹Ëõ£¬Ê¹ÓÃÁË×¨ÃÅÎªheaderÑ¹Ëõ¶øÉè¼ÆµÄhpackËã·¨£¬¼õÉÙÁËÍøÂç¿ªÏú
+·þÎñÆ÷ÍÆËÍ£ºhttp/2.0Ö§³Ö·þÎñÆ÷ÍÆËÍ£¬¿ÉÒÔÔÚ¿Í»§¶ËÇëÇóÒ»¸ö×ÊÔ´Ê±£¬½«ÆäËû×ÊÔ´Ò»²¢ÍÆËÍ¸ø¿Í»§¶Ë£¬´Ó¶ø¼õÉÙ¿Í»§¶ËµÄÇëÇó´ÎÊýºÍÑÓ³Ù£»¶øhttp/1.1ÐèÒª¿Í»§¶Ë×Ô¼º·¢ËÍÇëÇó»ñÈ¡×ÊÔ´
+
+http/2.0µÄ¶àÂ·¸´ÓÃÊ¹µÃ²»Í¬ÇëÇó¿ÉÒÔ¹²ÓÃÒ»¸ötcpÁ¬½Ó£¬±ÜÃâ½¨Á¢¶à¸öÁ¬½Ó´øÀ´²»±ØÒªµÄ¶îÍâ¿ªÏú£¬¶øhttp/1.1ÖÐµÄÃ¿¸öÇëÇó¶¼»á½¨Á¢Ò»¸öµ¥¶ÀµÄÁ¬½Ó
+
+### http/2.0ºÍhttp/3.0ÓÐÊ²Ã´Çø±ð
