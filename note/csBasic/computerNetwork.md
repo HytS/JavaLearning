@@ -80,3 +80,4 @@ http/2.0µÄ¶àÂ·¸´ÓÃÊ¹µÃ²»Í¬ÇëÇó¿ÉÒÔ¹²ÓÃÒ»¸ötcpÁ¬½Ó£¬±ÜÃâ½¨Á¢¶à¸öÁ¬½Ó´øÀ´²»±ØÒªµÄ¶
 ´íÎó»Ö¸´£ºhttp/3.0ÓÐ¸üºÃµÄ´íÎó»Ö¸´»úÖÆ¡£http/2.0¸üÐèÒªÒÀÀµtcpµÄ´íÎó»Ö¸´»úÖÆ
 °²È«ÐÔ£ºhttp/2.0ºÍhttp/3.0ÔÚ°²È«ÐÔÉÏÓÐ½Ï¸ßÒªÇó£¬Ö§³Ö¼ÓÃÜÍ¨ÐÅ£¬µ«ÊµÏÖ²»Í¬£»http/2.0Ê¹ÓÃtls¼ÓÃÜ£¬http/3.0»ùÓÚquicÐ­Òé£¬°üº¬ÁËÄÚÖÃµÄ¼ÓÃÜºÍÉí·ÝÑéÖ¤»úÖÆ£»
 
+### 
