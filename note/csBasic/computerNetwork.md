@@ -74,3 +74,9 @@ Host Í·£¨Host Header£©´¦Àí :HTTP/1.1 ÒýÈëÁË Host Í·×Ö¶Î£¬ÔÊÐíÔÚÍ¬Ò» IP µØÖ·ÉÏÍÐ¹
 http/2.0µÄ¶àÂ·¸´ÓÃÊ¹µÃ²»Í¬ÇëÇó¿ÉÒÔ¹²ÓÃÒ»¸ötcpÁ¬½Ó£¬±ÜÃâ½¨Á¢¶à¸öÁ¬½Ó´øÀ´²»±ØÒªµÄ¶îÍâ¿ªÏú£¬¶øhttp/1.1ÖÐµÄÃ¿¸öÇëÇó¶¼»á½¨Á¢Ò»¸öµ¥¶ÀµÄÁ¬½Ó
 
 ### http/2.0ºÍhttp/3.0ÓÐÊ²Ã´Çø±ð
+´«ÊäÐ­Òé£ºhttp/2.0ÊÇ»ùÓÚtcpÐ­ÒéÊµÏÖµÄ£¬http/3.0ÐÂÔöÁËquicÐ­ÒéÊµÏÖ¿É¿¿´«Êä£¬Ìá¹©Óëtls/sslÏàµ±µÄ°²È«ÐÔ£¬¿ÉÒÔ½«quic¿´×öudpµÄÉý¼¶°æ£¬
+Á¬½Ó½¨Á¢£ºhttp/2.0ÐèÒª¾­¹ý¾­µäµÄtcpÈý´ÎÎÕÊÖ£¨ÓÉÓÚ°²È«µÄhttpsÁ¬½Ó½¨Á¢ÐèÒªtlsÎÕÊÖ¹²ÐèÒª´óÔ¼3¸örtt£©£»quicÔÚ×î¼ÑÇé¿öÏÂ ²»ÐèÒªÈÎºÎÍù·µÊ±¼ä¾Í¿ÉÒÔ½¨Á¢ÐÂÁ¬½Ó
+¶ÓÍ·×èÈû£ºhttp/2.0¶àÇëÇó¸´ÓÃÒ»¸ötcpÁ¬½Ó£¬Ò»µ©·¢Éú¶ª°ü£¬¾Í»á×èÈû×¡ËùÓÐµÄhttpÇëÇó£¬http/3.0ÔÚÒ»¶¨³Ì¶ÈÉÏ½â¾öÁË¶ÓÍ·×èÈûÎÊÌâ£¬Ò»¸öÁ¬½Ó½¨Á¢¶à¸ö²»Í¬µÄÊý¾ÝÁ÷£¬ÕâÐ©Êý¾ÝÁ÷Ö®¼ä¶ÀÁ¢»¥²»Ó°Ïì£¬Ä³¸öÊý¾ÝÁ÷·¢Éú¶ª°ü£¬ÆäËûÊý¾ÝÁ÷²»ÊÜÓ°Ïì
+´íÎó»Ö¸´£ºhttp/3.0ÓÐ¸üºÃµÄ´íÎó»Ö¸´»úÖÆ¡£http/2.0¸üÐèÒªÒÀÀµtcpµÄ´íÎó»Ö¸´»úÖÆ
+°²È«ÐÔ£ºhttp/2.0ºÍhttp/3.0ÔÚ°²È«ÐÔÉÏÓÐ½Ï¸ßÒªÇó£¬Ö§³Ö¼ÓÃÜÍ¨ÐÅ£¬µ«ÊµÏÖ²»Í¬£»http/2.0Ê¹ÓÃtls¼ÓÃÜ£¬http/3.0»ùÓÚquicÐ­Òé£¬°üº¬ÁËÄÚÖÃµÄ¼ÓÃÜºÍÉí·ÝÑéÖ¤»úÖÆ£»
+
