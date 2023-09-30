@@ -81,4 +81,13 @@ http/2.0µÄ¶àÂ·¸´ÓÃÊ¹µÃ²»Í¬ÇëÇó¿ÉÒÔ¹²ÓÃÒ»¸ötcpÁ¬½Ó£¬±ÜÃâ½¨Á¢¶à¸öÁ¬½Ó´øÀ´²»±ØÒªµÄ¶
 °²È«ÐÔ£ºhttp/2.0ºÍhttp/3.0ÔÚ°²È«ÐÔÉÏÓÐ½Ï¸ßÒªÇó£¬Ö§³Ö¼ÓÃÜÍ¨ÐÅ£¬µ«ÊµÏÖ²»Í¬£»http/2.0Ê¹ÓÃtls¼ÓÃÜ£¬http/3.0»ùÓÚquicÐ­Òé£¬°üº¬ÁËÄÚÖÃµÄ¼ÓÃÜºÍÉí·ÝÑéÖ¤»úÖÆ£»
 
 ### httpÊÇ²»±£´æ×´Ì¬µÄÐ­Òé£¬ÈçºÎ±£´æÓÃ»§×´Ì¬
-httpÊÇÒ»ÖÖ²»±£´æ×´Ì¬£¬¼´ÎÞ×´Ì¬Ð­Òé£¬Ò²¾ÍÊÇËµhttpÐ­Òé×ÔÉí²»¶ÔÇëÇóºÍÏìÓ¦  Ö®¼äµÄÍ¨ÐÅ×´Ì¬½øÐÐ±£´æ¡£
+httpÊÇÒ»ÖÖ²»±£´æ×´Ì¬£¬¼´ÎÞ×´Ì¬Ð­Òé£¬Ò²¾ÍÊÇËµhttpÐ­Òé×ÔÉí²»¶ÔÇëÇóºÍÏìÓ¦Ö®¼äµÄÍ¨ÐÅ×´Ì¬½øÐÐ±£´æ¡£
+ÄÇÃ´ÎÒÃÇÈçºÎ±£´æÓÃ»§×´Ì¬ÄØ£¿
+Session »úÖÆµÄ´æÔÚ¾ÍÊÇÎªÁË½â¾öÕâ¸öÎÊÌâ£¬Session µÄÖ÷Òª×÷ÓÃ¾ÍÊÇÍ¨¹ý·þÎñ¶Ë¼ÇÂ¼ÓÃ»§µÄ×´Ì¬¡£µäÐÍµÄ³¡¾°ÊÇ¹ºÎï³µ£¬µ±ÄãÒªÌí¼ÓÉÌÆ·µ½¹ºÎï³µµÄÊ±ºò£¬ÏµÍ³²»ÖªµÀÊÇÄÄ¸öÓÃ»§²Ù×÷µÄ£¬ÒòÎª HTTP Ð­ÒéÊÇÎÞ×´Ì¬µÄ¡£·þÎñ¶Ë¸øÌØ¶¨µÄÓÃ»§´´½¨ÌØ¶¨µÄ Session Ö®ºó¾Í¿ÉÒÔ±êÊ¶Õâ¸öÓÃ»§²¢ÇÒ¸ú×ÙÕâ¸öÓÃ»§ÁË£¨Ò»°ãÇé¿öÏÂ£¬·þÎñÆ÷»áÔÚÒ»¶¨Ê±¼äÄÚ±£´æÕâ¸ö Session£¬¹ýÁËÊ±¼äÏÞÖÆ£¬¾Í»áÏú»ÙÕâ¸ö Session£©¡£
+
+ÔÚ·þÎñ¶Ë±£´æ Session µÄ·½·¨ºÜ¶à£¬×î³£ÓÃµÄ¾ÍÊÇÄÚ´æºÍÊý¾Ý¿â(±ÈÈçÊÇÊ¹ÓÃÄÚ´æÊý¾Ý¿â redis ±£´æ)¡£¼ÈÈ» Session ´æ·ÅÔÚ·þÎñÆ÷¶Ë£¬ÄÇÃ´ÎÒÃÇÈçºÎÊµÏÖ Session ¸ú×ÙÄØ£¿´ó²¿·ÖÇé¿öÏÂ£¬ÎÒÃÇ¶¼ÊÇÍ¨¹ýÔÚ Cookie ÖÐ¸½¼ÓÒ»¸ö Session ID À´·½Ê½À´¸ú×Ù¡£
+
+### Cookie ±»½ûÓÃÔõÃ´°ì?
+×î³£ÓÃµÄ¾ÍÊÇÀûÓÃ URL ÖØÐ´°Ñ Session ID Ö±½Ó¸½¼ÓÔÚ URL Â·¾¶µÄºóÃæ¡£
+
+### uriºÍurlµÄÇø±ð
