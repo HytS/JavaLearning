@@ -153,3 +153,17 @@ http/2ÖÐ´æÔÚµÄ¶ÓÍ·×èÈûÎÊÌâ£º¶à¸öhttpÇëÇóºÍÏìÓ¦¹²ÏíÒ»¸ötcpÁ¬½Ó£¬Èç¹ûÆäÖÐÒ»¸öÇëÇó»
 tcpÈý´ÎÎÕÊÖ£º¿Í»§¶ËºÍ·þÎñÆ÷½»»»synºÍack°ü£¬½¨Á¢Ò»¸ötcpÁ¬½Ó£¬Õâ¸ö¹ý³ÌÐèÒª1.5¸örtt£¬¼´Ò»¸öÊý¾Ý°ü´Ó·¢ËÍµ½½ÓÊÕµÄÊ±¼ä
 tlsÎÕÊÖ£º¿Í»§¶ËºÍ·þÎñÆ÷½»»»ÃÜÔ¿ºÍÖ¤Êé£¬½¨Á¢Ò»¸ötls¼ÓÃÜ²ã£¬Õâ¸ö¹ý³ÌÖÁÉÙÐèÒª1¸örtt£¨tls1.3£©»ò2¸örtt£¨tls1.2£©
 ËùÒÔ£¬HTTP/2.0 µÄÁ¬½Ó½¨Á¢¾ÍÖÁÉÙÐèÒª 2.5 ¸ö RTT£¨TLS 1.3£©»òÕß 3.5 ¸ö RTT£¨TLS 1.2£©¡£¶øÔÚ HTTP/3.0 ÖÐ£¬Ê¹ÓÃµÄ QUIC Ð­Òé£¨TLS 1.3£¬TLS 1.3 ³ýÁËÖ§³Ö 1 ¸ö RTT µÄÎÕÊÖ£¬»¹Ö§³Ö 0 ¸ö RTT µÄÎÕÊÖ£©Á¬½Ó½¨Á¢½öÐè 0-RTT »òÕß 1-RTT¡£ÕâÒâÎ¶×Å QUIC ÔÚ×î¼ÑÇé¿öÏÂ²»ÐèÒªÈÎºÎµÄ¶îÍâÍù·µÊ±¼ä¾Í¿ÉÒÔ½¨Á¢ÐÂÁ¬½Ó¡£
+
+### ÔËÐÐÔÚtcpÉÏµÄÐ­Òé
+http¡¢https¡¢ftp¡¢smtp¡¢pop3/imap¡¢telent¡¢ssh
+
+### ÔËÐÐÔÚudpÉÏµÄÐ­Òé
+dhcpÐ­Òé£º¶¯Ì¬Ö÷»úÅäÖÃÐ­Òé£¬¶¯Ì¬ÅäÖÃipµØÖ·
+dnsÓòÃûÏµÍ³£º½«ÈËÀà¿É¶ÁµÄÓòÃû×ª»»Îª»úÆ÷¿É¶ÁµÄipµØÖ·£¬dnsÍ¬Ê±Ö§³ÖudpºÍtcpÐ­Òé
+
+### ipÐ­ÒéµÄ×÷ÓÃ
+ip£¨Íø¼ÊÐ­Òé£©ÊôÓÚÍøÂç²ãÐ­Òé£¬Ö÷Òª×÷ÓÃÊÇ¶¨ÒåÊý¾Ý°üµÄ¸ñÊ½£¬¶ÔÊý¾Ý°ü½øÐÐÂ·ÓÉºÍÑ°Ö·£¬ÒÔ±ãËüÃÇ¿ÉÒÔ¿çÍøÂç´«²¥²¢µ½´ïÕýÈ·µÄÄ¿µÄµØ
+
+### Ê²Ã´ÊÇipµØÖ·£¿ipÑ°Ö·ÈçºÎ¹¤×÷
+Ã¿¸öÁ¬Èë»¥ÁªÍøµÄÉè±¸»òÓò¶¼±»·ÖÅäÒ»¸öipµØÖ·£¬×÷ÎªÎ¨Ò»±êÊ¶·û¡£Ã¿¸öipµØÖ·¶¼ÊÇÒ»¸ö×Ö·ûÐòÁÐ
+
