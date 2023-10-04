@@ -226,3 +226,14 @@ arp£¬È«³ÆµØÖ·½âÎöÐ­Òé£¬½â¾öÁËÍøÂç²ãµØÖ·ºÍÁ´Â·²ãµØÖ·Ö®¼äµÄ×ª»»ÎÊÌâ£¬ÒòÎªÒ»¸öipÊý¾
 Ö¡£¬Ã¿Ò»Ö¡°üÀ¨Êý¾ÝºÍ±ØÒªµÄ¿ØÖÆÐÅÏ¢£¨Í¬²½ÐÅÏ¢£¬µØÖ·ÐÅÏ¢£¬²î´í¿ØÖÆ£©
 
 ÎïÀí²ãµÄ×÷ÓÃÊÇÊµÏÖÏàÁÚ¼ÆËã»ú½ÚµãÖ®¼ä±ÈÌØÁ÷µÄÍ¸Ã÷´«ËÍ£¬¾¡¿ÉÄÜÆÁ±Îµô¾ßÌå´«Êä½éÖÊºÍÎïÀíÉè±¸µÄ²îÒì
+
+### tcpÈý´ÎÎÕÊÖºÍËÄ´Î»ÓÊÖ
+ÎªÁË×¼È·ÎÞÎóµÄ°ÑÊý¾ÝËÍµ½Ä¿±ê´¦£¬tcpÐ­Òé²ÉÓÃÁËÈý´ÎÎÕÊÖ²ßÂÔ
+
+½¨Á¢Ò»¸ötcpÁ¬½ÓÐèÒª¡°Èý´ÎÎÕÊÖ¡±£¬È±Ò»²»¿É£º
+Ò»´ÎÎÕÊÖ£º¿Í»§¶Ë·¢ËÍ´øÓÐsyn£¨seq=x£©µÄÊý¾Ý°ü->·þÎñ¶Ë£¬È»ºó¿Í»§¶Ë½øÈësyn_sendµÄ×´Ì¬£¬µÈ´ý·þÎñÆ÷µÄÈ·ÈÏ
+¶þ´ÎÎÕÊÖ:·þÎñ¶Ë·¢ËÍ´øÓÐsyn+ack£¨seq=y£¬ack=x+1£©±êÖ¾µÄÊý¾Ý±¨->¿Í»§¶Ë£¬È»ºó·þÎñ¶Ë½øÈësyn_recv×´Ì¬
+Èý´ÎÎÕÊÖ£º¿Í»§¶Ë·¢ËÍ´øÓÐack£¨ack=y+1£©±êÖ¾µÄÊý¾Ý°ü->·þÎñ¶Ë£¬È»ºó¿Í»§¶ËºÍ·þÎñ¶Ë¶¼½øÈëestablished×´Ì¬£¬Íê³ÉtcpÈý´ÎÎÕÊÖ
+µ±½¨Á¢ÁË3´ÎÎÕÊÖÖ®ºó£¬¿Í»§¶ËºÍ·þÎñ¶Ë¾Í¿ÉÒÔ´«ÊäÊý¾ÝÁË
+
+#### ÎªÊ²Ã´ÒªÈý´ÎÎÕÊÖ
