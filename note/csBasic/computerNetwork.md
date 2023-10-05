@@ -272,3 +272,4 @@ tcpÊÇÈ«Ë«¹¤Í¨ÐÅ£¬¿ÉÒÔË«Ïò´«ÊäÊý¾Ý¡£ÈÎºÎÒ»·½¶¼¿ÉÒÔÔÚÊý¾Ý´«ËÍ½áÊøºó·¢³öÁ¬½ÓÊÍ·ÅµÄÍ
 ¿Í»§¶ËÃ»ÓÐÊÕµ½ ACK È·ÈÏ£¬»áÖØÐÂ·¢ËÍ FIN ÇëÇó¡£
 
 ### ÎªÊ²Ã´µÚËÄ´Î»ÓÊÖ¿Í»§¶ËÐèÒªµÈ´ý2*msl£¨±¨ÎÄ×î³¤ÊÙÃü£©Ê±¼äºó²Å½øÈëclosed×´Ì¬
+µÚËÄ´Î»ÓÊÖÊ±£¬¿Í»§¶Ë·¢ËÍ¸ø·þÎñÆ÷µÄ ACK ÓÐ¿ÉÄÜ¶ªÊ§£¬Èç¹û·þÎñ¶ËÒòÎªÄ³Ð©Ô­Òò¶øÃ»ÓÐÊÕµ½ ACK µÄ»°£¬·þÎñ¶Ë¾Í»áÖØ·¢ FIN£¬Èç¹û¿Í»§¶ËÔÚ 2*MSL µÄÊ±¼äÄÚÊÕµ½ÁË FIN£¬¾Í»áÖØÐÂ·¢ËÍ ACK ²¢ÔÙ´ÎµÈ´ý 2MSL£¬·ÀÖ¹ Server Ã»ÓÐÊÕµ½ ACK ¶ø²»¶ÏÖØ·¢ FIN¡£
