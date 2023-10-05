@@ -242,3 +242,11 @@ arp£¬È«³ÆµØÖ·½âÎöÐ­Òé£¬½â¾öÁËÍøÂç²ãµØÖ·ºÍÁ´Â·²ãµØÖ·Ö®¼äµÄ×ª»»ÎÊÌâ£¬ÒòÎªÒ»¸öipÊý¾
 µÚ¶þ´ÎÎÕÊÖ£ºclientÈ·ÈÏÁË£º×Ô¼º·¢ËÍ¡¢½ÓÊÕÕý³££¬¶Ô·½·¢ËÍ¡¢½ÓÊÕÕý³££»serverÈ·ÈÏÁË£º¶Ô·½·¢ËÍÕý³££¬×Ô¼º½ÓÊÕÕý³£
 µÚÈý´ÎÎÕÊÖ£ºclientÈ·ÈÏÁË£º×Ô¼º·¢ËÍ¡¢½ÓÊÕÕý³££¬¶Ô·½·¢ËÍ¡¢½ÓÊÕÕý³££»serverÈ·ÈÏÁË£º×Ô¼º·¢ËÍ¡¢½ÓÊÕÕý³££¬¶Ô·½·¢ËÍ¡¢½ÓÊÕÕý³£
 Èý´ÎÎÕÊÖ¾ÍÄÜÈ·ÈÏË«·½ÊÕ·¢¹¦ÄÜ¶¼Õý³£
+
+#### µÚ2´ÎÎÕÊÖ´«»ØÁËack£¬ÎªÊ²Ã´»¹Òª´«»Øsyn
+·þÎñ¶Ë´«»Ø·¢ËÍ¶ËËù·¢ËÍµÄackÊÇÎªÁË¸æËß¿Í»§¶Ë£º¡°ÎÒ½ÓÊÕµ½µÄÐÅÏ¢È·ÊµÊÇÄã·¢ËÍµÄÐÅºÅ¡±£¬Õâ±íÃ÷´Ó¿Í»§¶Ëµ½·þÎñ¶ËµÄÍ¨ÐÅÊÇÕý³£µÄ¡£»Ø´«synÊÇÎªÁË½¨Á¢²¢È·ÈÏ´Ó·þÎñ¶Ëµ½¿Í»§¶ËµÄÍ¨ÐÅ
+
+synÍ¬²½ÐòÁÐ±àºÅÊÇtcp/ip½¨Á¢Á¬½ÓÊ±Ê¹ÓÃµÄÎÕÊÖÐÅºÅ¡£ÔÚ¿Í»§»úºÍ·þÎñÆ÷Ö®¼ä½¨Á¢Õý³£µÄtcpÍøÂçÁ¬½ÓÊ±£¬¿Í»§»úÊ×ÏÈ·¢³öÒ»¸ösynÏûÏ¢£¬·þÎñÆ÷Ê¹ÓÃsyn-ackÓ¦´ð±íÊ¾½ÓÊÕµ½ÁËÕâ¸öÏûÏ¢£¬×îºó¿Í»§»úÔÙÒÔackÏûÏ¢ÏìÓ¦£¬ÕâÑùÔÚ·þÎñÆ÷ºÍ¿Í»§»úÖ®¼ä²ÅÄÜ½¨Á¢Æð¿É¿¿µÄtcpÁ¬½Ó£¬Êý¾Ý²ÅÄÜÔÚ¿Í»§»úºÍ·þÎñÆ÷Ö®¼ä´«µÝ
+
+### ¶Ï¿ªÁ¬½Ó-tcpËÄ´Î»ÓÊÖ
+¶Ï¿ªÒ»¸ötcpÁ¬½ÓÐèÒªËÄ´Î»ÓÊÖ£¬È±Ò»²»¿É
