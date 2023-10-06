@@ -273,3 +273,5 @@ tcpÊÇÈ«Ë«¹¤Í¨ÐÅ£¬¿ÉÒÔË«Ïò´«ÊäÊý¾Ý¡£ÈÎºÎÒ»·½¶¼¿ÉÒÔÔÚÊý¾Ý´«ËÍ½áÊøºó·¢³öÁ¬½ÓÊÍ·ÅµÄÍ
 
 ### ÎªÊ²Ã´µÚËÄ´Î»ÓÊÖ¿Í»§¶ËÐèÒªµÈ´ý2*msl£¨±¨ÎÄ×î³¤ÊÙÃü£©Ê±¼äºó²Å½øÈëclosed×´Ì¬
 µÚËÄ´Î»ÓÊÖÊ±£¬¿Í»§¶Ë·¢ËÍ¸ø·þÎñÆ÷µÄ ACK ÓÐ¿ÉÄÜ¶ªÊ§£¬Èç¹û·þÎñ¶ËÒòÎªÄ³Ð©Ô­Òò¶øÃ»ÓÐÊÕµ½ ACK µÄ»°£¬·þÎñ¶Ë¾Í»áÖØ·¢ FIN£¬Èç¹û¿Í»§¶ËÔÚ 2*MSL µÄÊ±¼äÄÚÊÕµ½ÁË FIN£¬¾Í»áÖØÐÂ·¢ËÍ ACK ²¢ÔÙ´ÎµÈ´ý 2MSL£¬·ÀÖ¹ Server Ã»ÓÐÊÕµ½ ACK ¶ø²»¶ÏÖØ·¢ FIN¡£
+
+MSL: Ò»¸öÆ¬¶ÎÔÚÍøÂçÖÐ×î´óµÄ´æ»îÊ±¼ä£¬2MSL ¾ÍÊÇÒ»¸ö·¢ËÍºÍÒ»¸ö»Ø¸´ËùÐèµÄ×î´óÊ±¼ä¡£Èç¹ûÖ±µ½ 2MSL£¬Client ¶¼Ã»ÓÐÔÙ´ÎÊÕµ½ FIN£¬ÄÇÃ´ Client ÍÆ¶Ï ACK ÒÑ¾­±»³É¹¦½ÓÊÕ£¬Ôò½áÊø TCP Á¬½Ó¡£
