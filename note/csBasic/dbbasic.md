@@ -16,3 +16,14 @@
 mysql是一种关系型数据库，主要用于持久化存储我们的系统中的一些数据。mysql默认端口号3306
 
 ### mysql字段类型
+数值类型:整型（TINYINT、SMALLINT、MEDIUMINT、INT 和 BIGINT）、 浮点型（FLOAT 和 DOUBLE）、定点型（DECIMAL）
+字符串类型：CHAR、VARCHAR、TINYTEXT、TEXT、MEDIUMTEXT、LONGTEXT、TINYBLOB、BLOB、MEDIUMBLOB 和 LONGBLOB 等，最常用的是 CHAR 和 VARCHAR。
+日期时间类型：YEAR、TIME、DATE、DATETIME 和 TIMESTAMP 等。
+
+### 整数类型的unsigned属性有什么用
+unsigned属性表示不允许负值的无符号整数。使用unsigned属性可以将正整数的上限提高一倍，因为它不需要存储负值
+对于从0开始递增的id列，使用unsigned属性非常适合，因为不允许负值并且可以拥有更大的上限范围，提供了更多的id值可用
+
+### char和varchar的区别是什么
+char和varchar是最常用到的字符串类型，区别是char是定长字符串，varchar是变长字符串
+
