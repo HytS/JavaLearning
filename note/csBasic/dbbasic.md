@@ -63,7 +63,8 @@ mysqlÖÐÃ»ÓÐ×¨ÃÅµÄ²¼¶ûÀàÐÍ£¬Ê¹ÓÃtinyint(1)À´±íÊ¾²¼¶ûÖµ£¬tinyint(1)ÀàÐÍ¿ÉÒÔÓÃÀ´´æ´
 ²éÑ¯»º´æ:Ö´ÐÐ²éÑ¯Óï¾äµÄÊ±ºò£¬»áÏÈ²éÑ¯»º´æ£¨8.0Ö®ºóÒÆ³ý£©
 ·ÖÎöÆ÷£ºÃ»ÓÐÃüÖÐ»º´æµÄ»°£¬sqlÓï¾ä¾Í»á¾­¹ý·ÖÎöÆ÷£¬·ÖÎöÆ÷ÐèÒªÏÈ¿´sqlÓï¾äÒª×öÊ²Ã´£¬ÔÙ¼ì²éÄãµÄsqlÓï¾äÓï·¨ÊÇ·ñÕýÈ·
 ÓÅ»¯Æ÷£º°´ÕÕmysqlÈÏÎª×îÓÅµÄ·½°¸È¥Ö´ÐÐ
-Ö´ÐÐÆ÷£ºÖ´ÐÐÓï¾ä£¬È»ºó´Ó´æ´¢ÒýÇæ·µ»ØÊý¾Ý
+Ö´ÐÐÆ÷£ºÖ´ÐÐÓï¾ä£¬È»ºó´Ó´æ´¢ÒýÇæ·µ»ØÊý¾Ý¡£Ö´ÐÐÓï¾äÇ°»áÏÈÅÐ¶ÏÊÇ·ñÓÐÈ¨ÏÞ£¬Èç¹ûÃÀÓ´È¨ÏÞ¾Í»á±¨´í
+²å¼þÊ½´æ´¢ÒýÇæ£ºÖ÷Òª¸ºÔðÊý¾ÝµÄ´æ´¢Óë¶ÁÈ¡£¬²ÉÓÃµÄÊÇ²å¼þÊ½¼Ü¹¹£¬Ö§³ÖInnoDB¡¢MyISAM¡¢Memory µÈ¶àÖÖ´æ´¢ÒýÇæ
 ![Í¼Æ¬](https://oss.javaguide.cn/javaguide/13526879-3037b144ed09eb88.png)
 
 mysqlÖ÷Òª·ÖÎªserver²ãºÍ´æ´¢ÒýÇæ²ã£º
@@ -123,3 +124,7 @@ update tb_student A set A.age='19' where A.name=' ÕÅÈý ';
 ²éÑ¯Óï¾äµÄÖ´ÐÐÁ÷³ÌÈçÏÂ£ºÈ¨ÏÞÐ£Ñé£¨Èç¹ûÃüÖÐ»º´æ£©--->²éÑ¯»º´æ--->·ÖÎöÆ÷--->ÓÅ»¯Æ÷--->È¨ÏÞÐ£Ñé--->Ö´ÐÐÆ÷--->ÒýÇæ
 ¸üÐÂÓï¾äÖ´ÐÐÁ÷³ÌÈçÏÂ£º·ÖÎöÆ÷---->È¨ÏÞÐ£Ñé---->Ö´ÐÐÆ÷--->ÒýÇæ---redo log(prepare ×´Ì¬)--->binlog--->redo log(commit ×´Ì¬)
 
+
+### Mysql´æ´¢ÒýÇæ
+#### mysqlÖ§³ÖÄÄ¸ö´æ´¢ÒýÇæ£¿Ä¬ÈÏÊ¹ÓÃÄÄ¸ö£¿
+mysqlÖ§³Ö¶àÖÖ´æ´¢ÒýÇæ£¬¿ÉÒÔÊ¹ÓÃshow enginesÃüÁî²é¿´mysqlÖ§³ÖµÄ´æ´¢ÒýÇæ
