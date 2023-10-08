@@ -104,3 +104,18 @@ update tb_student A set A.age='19' where A.name=' 张三 ';
 * 然后拿到查询语句，把age改为19，然后调用引擎api接口，写入这一行数据，innoDB引擎把数据保存到内存中，同时记录redo log，此时redo log进入prepare状态，然后告诉执行器，执行完成，随时可以提交
 * 执行器收到通知后记录binlog，然后调用引擎接口，提交redo log为提交状态
 * 更新完成
+
+> 这里肯定有同学会问，为什么要用两个日志模块，用一个日志模块不行吗?
+
+这是因为最开始 MySQL 并没有 InnoDB 引擎（InnoDB 引擎是其他公司以插件形式插入 MySQL 的），MySQL 自带的引擎是 MyISAM，但是我们知道 redo log 是 InnoDB 引擎特有的，其他存储引擎都没有，这就导致会没有 crash-safe 的能力(crash-safe 的能力即使数据库发生异常重启，之前提交的记录都不会丢失)，binlog 日志只能用来归档。
+
+并不是说只用一个日志模块不可以，只是 InnoDB 引擎就是通过 redo log 来支持事务的。那么，又会有同学问，我用两个日志模块，但是不要这么复杂行不行，为什么 redo log 要引入 prepare 预提交状态？这里我们用反证法来说明下为什么要这么做？
+* 先写redo log直接提交，然后写binlog，假设写完redo log后，机器挂了，binlog日志没有写入，那么机器重启后，会通过redo log恢复数据，但是这个时候的binlog并没有记录该数据，后续进行数备份的时候，就会丢失这条数据，同时主从同步也会丢失这一条数据
+* 先写binlog，然后写redo log，假设写完binlog，机器异常重启了，由于没有redo log，本机无法恢复数据，但是binlog又有记录，那么和上面同样的道理，就会产生数据不一致的情况
+
+如果采用redo log两阶段提交的方式就不一样了，写完binlog后，然后在提交redo log就会防止上述的问题，从而保证数据的一致性。
+
+如果redo log处于预提交状态，binlog也写完了，这时发生异常重启会怎么样？
+这就要依赖mysql的处理机制了，处理过程如下：
+* 判断redo log是否完整，如果判断是完整的，就立即提交
+* 如果redo log只是预提交但不是commit状态，这个时候就会去判断binlog是否完整，如果完整就提交redo log，不完整就回滚事务
