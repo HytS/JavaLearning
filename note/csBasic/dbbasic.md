@@ -127,4 +127,11 @@ update tb_student A set A.age='19' where A.name=' 张三 ';
 
 ### Mysql存储引擎
 #### mysql支持哪个存储引擎？默认使用哪个？
-mysql支持多种存储引擎，可以使用show engines命令查看mysql支持的存储引擎
+mysql支持多种存储引擎，可以使用show engines命令查看mysql支持的存储引擎；mysql当前默认引擎是innoDB，并且所有存储引擎中只有innoDB是事务性存储引擎，即只有innoDB支持事务；5.5.5之前，MyISAM是默认存储引擎，5.5.5之后，InnoDB是默认存储引擎
+
+#### Mysql存储引擎架构
+mysql存储引擎采用的是插件式架构，支持多种存储引擎，我们可以为不同的数据表设置不同的存储引擎以适应不同场景的需要；存储式引擎是基于表的，不是数据库
+
+可以根据mysql定义的存储引擎实现标准接口来编写一个属于自己的存储引擎
+
+#### MyISAM和InnoDB有什么区别
