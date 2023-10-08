@@ -135,3 +135,15 @@ mysql´æ´¢ÒýÇæ²ÉÓÃµÄÊÇ²å¼þÊ½¼Ü¹¹£¬Ö§³Ö¶àÖÖ´æ´¢ÒýÇæ£¬ÎÒÃÇ¿ÉÒÔÎª²»Í¬µÄÊý¾Ý±íÉèÖÃ²»Í
 ¿ÉÒÔ¸ù¾Ýmysql¶¨ÒåµÄ´æ´¢ÒýÇæÊµÏÖ±ê×¼½Ó¿ÚÀ´±àÐ´Ò»¸öÊôÓÚ×Ô¼ºµÄ´æ´¢ÒýÇæ
 
 #### MyISAMºÍInnoDBÓÐÊ²Ã´Çø±ð
+MyISAM²»Ö§³ÖÊÂÎñºÍÐÐ¼¶Ëø£¬×î´óµÄÈ±ÏÝÊÇ±ÀÀ£ºóÎÞ·¨°²È«»Ö¸´
+1¡¢ÊÇ·ñÖ§³ÖÐÐ¼¶Ëø
+MyISAMÖ»ÓÐ±í¼¶Ëø£¬¶øInnoDBÖ§³ÖÐÐ¼¶ËøºÍ±í¼¶Ëø£¬Ä¬ÈÏÎªÐÐ¼¶Ëø£»¼´MyISAMÒ»Ëø¾ÍÊÇËø×¡ÁËÕûÕÅ±í£¬ÕâÔÚ²¢·¢Ð´µÄÇé¿öÏÂºÜÔã¸â
+2¡¢ÊÇ·ñÖ§³ÖÊÂÎñ
+MyISAM²»Ìá¹©ÊÂÎñÖ§³Ö£»InnoDBÌá¹©ÊÂÎñÖ§³Ö£¬ÊµÏÖÁËsql±ê×¼¶¨ÒåÁËËÄ¸ö¸ôÀë¼¶±ð£¬¾ßÓÐÌá½»ºÍ»Ø¹öÊÂÎñµÄÄÜÁ¦£¬InnoDBÄ¬ÈÏÊ¹ÓÃµÄrepeatable-read£¨¿ÉÖØ¶Á£©¸ôÀë¼¶±ðÊÇ¿ÉÒÔ½â¾ö»Ã¶ÁÎÊÌâµÄ·¢ÉúµÄ
+3¡¢ÊÇ·ñÖ§³ÖÍâ¼ü
+MyISAM²»Ö§³Ö£¬InnoDBÖ§³Ö
+Íâ¼ü¶ÔÓÚÎ¬»¤Êý¾ÝÒ»ÖÂÐÔ·Ç³£ÓÐ°ïÖú£¬µ«ÊÇ¶ÔÐÔÄÜÓÐÒ»¶¨µÄËðºÄ£¬Òò´Ë£¬Í¨³£²»½¨ÒéÔÚÉú²úÏîÄ¿ÖÐÊ¹ÓÃÍâ¼ü£¬ÔÚÒµÎñ´úÂëÖÐ½øÐÐÔ¼Êø¼´¿É
+×¢£º²»µÃÊ¹ÓÃÍâ¼üÓë¼¶Áª£¬Ò»ÇÐÍâ¼ü¸ÅÄî±ØÐëÔÚÓ¦ÓÃ²ã½â¾ö
+Ñ§Éú±íÖÐµÄstudent_idÊÇÖ÷¼ü£¬ÄÇÃ´³É¼¨±íÖÐµÄstudent_idÔòÎªÍâ¼ü£¬Èç¹û¸üÐÂÑ§Éú±íÖÐµÄstudent_id,Í¬Ê±´¥·¢³É¼¨±íÖÐµÄstudent_id¸üÐÂ£¬¼´Îª¼¶Áª¸üÐÂ£¬Íâ¼üºÍ¼¶Áª¸üÐÂ¸üÊÊÓÃÓÚµ¥»úµÍ²¢·¢£¬²»ÊÊºÏ·Ö²¼Ê½¡¢¸ß²¢·¢¼¯Èº£»¼¶Áª¸üÐÂÊÇÇ¿×èÈû£¬´æÔÚÊý¾Ý¿â¸üÐÂ·ç±©µÄ·çÏÕ£»Íâ¼üÓ°ÏìÊý¾Ý¿âµÄ²åÈëËÙ¶È
+
+4¡¢ÊÇ·ñÖ§³ÖÊý¾Ý¿âÒì³£±ÀÀ£ºóµÄ°²È«»Ö¸´
