@@ -231,5 +231,11 @@ mysqlÖÐ²¢·¢ÊÂÎñµÄ¿ØÖÆ·½Ê½ÓÐÁ½ÖÖ£ºËøºÍMVCC¡£Ëø¿ÉÒÔ¿´×÷ÊÇ±¯¹Û¿ØÖÆµÄÄ£Ê½£¬¶à°æ±¾²¢·
 * ¹²ÏíËø(sËø)£ºÓÖ³Æ¶ÁËø£¬ÊÂÎñÔÚ¶ÁÈ¡¼ÇÂ¼µÄÊ±ºò»ñÈ¡¹²ÏíËø£¬ÔÊÐí¶à¸öÊÂÎñÍ¬Ê±»ñÈ¡£¨Ëø¼æÈÝ£©
 * ÅÅËûËø(xËø)£ºÓÖ³ÆÐ´Ëø/¶ÀÕ¼Ëø£¬ÊÂÎñÔÚÐÞ¸Ä¼ÇÂ¼µÄÊ±ºò»ñÈ¡ÅÅËûËø£¬²»ÔÊÐí¶à¸öÊÂÎñÍ¬Ê±»ñÈ¡£¬Èç¹ûÒ»¸ö¼ÇÂ¼ÒÑ¾­±»¼ÓÁËÅÅËûËø£¬ÄÇÆäËûÊÂÎñ²»ÄÜÔÙ¶ÔÕâÌõ¼ÇÂ¼¼ÓÈÎºÎÀàÐÍµÄËø£¨Ëø²»¼æÈÝ£©
 
+¶ÁÐ´Ëø¿ÉÒÔ×öµ½¶Á¶Á²¢ÐÐ£¬µ«ÊÇÎÞ·¨×öµ½Ð´¶Á£¬Ð´Ð´²¢ÐÐ¡£ÁíÍâ£¬¸ù¾ÝËøÁ£¶ÈµÄ²»Í¬£¬ÓÖ±»·ÖÎª±í¼¶ËøºÍÐÐ¼¶Ëø¡£InnoDB²»¹âÖ§³Ö±í¼¶Ëø£¬Ò²Ö§³ÖÐÐ¼¶Ëø£¬Ä¬ÈÏÎªÐÐ¼¶Ëø¡£ÐÐ¼¶ËøµÄËøÁ£¶È¸üÐ¡£¬½ö¶ÔÏà¹ØµÄ¼ÇÂ¼ÉÏËø¼´¿É£¨¶ÔÒ»ÐÐ»ò¶àÐÐ¼ÇÂ¼¼ÓËø£©£¬ËùÒÔ¶ÔÓÚ²¢·¢Ð´Èë²Ù×÷À´Ëµ£¬InnoDBµÄÐÔÄÜ¸ü¸ß¡£²»ÂÛÊÇ±í¼¶Ëø»¹ÊÇÐÐ¼¶Ëø£¬¶¼´æÔÚ¹²ÏíËøºÍÅÅËûËø¡£
+
+MVCCÔÚmysqlÖÐÊµÏÖËùÒÀÀµµÄÊÖ¶ÎÖ÷ÒªÊÇ£ºÒþ²Ø×Ö¶Î¡¢read view¡¢undo log
+* undo log£ºÓÃÓÚ¼ÇÂ¼Ä³ÐÐÊý¾ÝµÄ¶à¸ö°æ±¾µÄÊý¾Ý
+* read viewºÍÒþ²Ø×Ö¶Î£ºÓÃÓÚÅÐ¶Ïµ±Ç°°æ±¾Êý¾ÝµÄ¿É¼ûÐÔ
+
 
 
