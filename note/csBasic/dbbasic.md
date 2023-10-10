@@ -326,3 +326,31 @@ select ... for share
 insert ...
 update ...
 ```
+
+
+### 自增锁（了解即可）
+关系型数据库设计表的时候，通常会由一列作为自增主键。InnoDB中的自增主键会涉及一种比较特殊的表级锁-自增锁
+```
+CREATE TABLE `sequence_id` (
+  `id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `stub` CHAR(10) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `stub` (`stub`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+```
+不仅仅是自增主键，auto_increment的列都会涉及到自增锁，毕竟非主键也可以设置自增长
+
+如果一个事务正在插入数据到有自增列的表时，会先获取自增锁，拿不到就可能被阻塞住，这里的阻塞行为只是自增锁行为的一种，可以理解为自增锁就是一个接口，其具体实现有多种，具体的配置项为innodb_autoinc_lock_mode(5.1.22引入)，可以选择的值如下：
+|innodb_autoinc_lock_mode|介绍|
+|:----:|:----:|
+|0|传统模式|
+|1|连续模式(8.0之前默认)|
+|2|交错模式(8.0之后默认)|
+
+交错模式下，所有的insert-like语句（所有的插入语句，包括：insert、replace、insert..select）都不是表级锁，使用的是轻量级互斥锁实现，多条插入语句可以并发执行
+
+如果你的mysql数据库有主从同步需求并且Binlog存储格式为statement的话，不要将InnoDB自增锁模式设置为交叉模式，不然会有数据不一致性问题。这是因为并发情况下插入语句的执行顺序无法得到保障
+如果mysql采用的格式是statement，那么mysql的主从同步实际上同步的就是一条一条的sql语句
+
+## mysql性能优化
+mysql高性能优化规范
