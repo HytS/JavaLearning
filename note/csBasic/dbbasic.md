@@ -435,3 +435,21 @@ avlÊ÷²ÉÓÃÁËÐý×ª²Ù×÷À´±£³ÖÆ½ºâ£¬Ö÷ÒªÓÐËÄÖÖÐý×ª²Ù×÷£ºllÐý×ª¡¢rrÐý×ª¡¢lrÐý×ª¡¢rlÐý×
 ºÍavlÊ÷²»Í¬£¬ºìºÚÊ÷²¢²»×·ÇóÑÏ¸ñµÄÆ½ºâ£¬¶øÊÇ´óÖÂµÄÆ½ºâ¡£ËùÒÔ£¬ºìºÚÊ÷µÄ²éÑ¯Ð§ÂÊÉÔÓÐÏÂ½µ£¬ÒòÎªºìºÚÊ÷µÄÆ½ºâÐÔÏà¶Ô½ÏÈõ£¬¿ÉÄÜ»áµ¼ÖÂÊ÷µÄ¸ß¶È½Ï¸ß£¬Õâ¿ÉÄÜ»áµ¼ÖÂÒ»Ð©Êý¾ÝÐèÒª½øÐÐ¶à´Î´ÅÅÌio²Ù×÷²ÅÄÜ²éÑ¯µ½£¬ÕâÒ²ÊÇmysqlÃ»ÓÐÑ¡ÔñºìºÚÊ÷µÄÖ÷ÒªÔ­Òò¡£ÕýÒòÈç´Ë£¬ºìºÚÊ÷µÄ²åÈëºÍÉ¾³ýÐ§ÂÊÌá¸ßÁË£¬ÒòÎªºìºÚÊ÷ÔÚ²åÈëºÍÉ¾³ý½ÚµãÊ±Ö»Ðè½øÐÐO(1)´ÎÊýµÄÐý×ªºÍ±äÉ«²Ù×÷£¬¼´¿É±£³Ö»ù±¾Æ½ºâ×´Ì¬£¬²»ÐèÒªÏñavlÊ÷Ò»Ñù½øÐÐO(logn)´ÎÊýµÄÐý×ª²Ù×÷
 
 treeMap¡¢treeSet¡¢HashMapµ×²ãÊ¹ÓÃºìºÚÊ÷
+
+### bÊ÷¡¢b+Ê÷
+bÊ÷Ò²½Ðb-Ê÷£¬È«³Æ¶àÂ·Æ½ºâ²éÕÒÊ÷£¬b+Ê÷ÊÇbÊ÷µÄ±äÌå¡£B Ê÷ºÍ B+Ê÷ÖÐµÄ B ÊÇ Balanced £¨Æ½ºâ£©µÄÒâË¼¡£
+Ä¿Ç°´ó²¿·ÖÊý¾Ý¿âÏµÍ³¼°ÎÄ¼þÏµÍ³¶¼²ÉÓÃb-tree»òb+tree×÷ÎªË÷Òý½á¹¹
+
+#### bÊ÷ºÍb+Ê÷ÓÐÊ²Ã´Çø±ð
+* bÊ÷µÄËùÓÐ½Úµã¼È´æ·ÅkeyÒ²´æ·Ådata£¬¶øb+Ê÷Ö»ÓÐÒ¶×Ó½Úµã´æ·ÅkeyºÍdata£¬ÆäËû½ÚµãÖ»´æ·Åkey
+* bÊ÷µÄÒ¶×Ó½Úµã¶¼ÊÇ¶ÀÁ¢µÄ£»b+Ê÷µÄÒ¶×Ó½ÚµãÓÐÒ»ÌõÒýÓÃÁ´Ö¸ÏòÓëËüÏàÁÚµÄÒ¶×Ó½Úµã
+* bÊ÷µÄ¼ìË÷µÄ¹ý³ÌÏàµ±ÓÚ¶Ô·¶Î§ÄÚµÄÃ¿¸ö½ÚµãµÄ¹Ø¼ü×Ö×ö¶þ·Ö²éÕÒ£¬¿ÉÄÜ»¹Ã»ÓÐµ½´ïÒ¶×Ó½Úµã£¬¼ìË÷¾Í½áÊøÁË¡£¶øb+Ê÷µÄ¼ìË÷Ð§ÂÊ¾ÍºÜÎÈ¶¨ÁË£¬ÈÎºÎ²éÕÒ¶¼ÊÇ´Ó¸ù½Úµãµ½Ò¶×Ó½ÚµãµÄ¹ý³Ì£¬Ò¶×Ó½ÚµãµÄË³Ðò¼ìË÷¾ÍºÜÃ÷ÏÔ¡£
+* ÔÚbÊ÷ÖÐ½øÐÐ·¶Î§²éÑ¯Ê±£¬Ê×ÏÈÕÒµ½²éÕÒµÄÏÂÏÞ£¬È»ºó¶ÔbÊ÷½øÐÐÖÐÐò±éÀú£¬Ö±µ½ÕÒµ½²éÕÒµÄÉÏÏÞ£»¶øb+Ê÷µÄ·¶Î§²éÑ¯£¬Ö»ÐèÒª¶ÔÁ´±í½øÐÐ±éÀú¼´¿É
+
+×ÛÉÏ£¬b+Ê÷ºÍbÊ÷Ïà±È£¬¾ß±¸¸üÉÙµÄio´ÎÊý¡¢¸üÎÈ¶¨µÄ²éÑ¯Ð§ÂÊºÍ¸üÊÊÓÚ·¶Î§²éÕÒ
+
+ÔÚmysqlÖÐ£¬myisamÒýÇæºÍinnoDBÒýÇæ¶¼ÊÇÊ¹ÓÃb+Ê÷×÷ÎªË÷Òý½á¹¹£¬µ«ÊÇ£¬¶þÕßµÄÊµÏÖ·½Ê½²»Ì«Ò»Ñù
+
+
+myisamÒýÇæÖÐ£¬b+Ê÷Ò¶½ÚµãµÄdataÓò·ÅµÄÊÇÊý¾Ý¼ÇÂ¼µÄµØÖ·¡£ÔÚË÷Òý¼ìË÷µÄÊ±ºò£¬Ê×ÏÈ°´ÕÕb+Ê÷ËÑË÷Ëã·¨ËÑË÷Ë÷Òý£¬Èç¹ûÖ¸¶¨µÄkey´æÔÚ£¬ÔòÈ¡³öÆädataÓòµÄÖµ£¬È»ºóÒÔdataÓòµÄÖµÎªµØÖ·¶ÁÈ¡ÏìÓ¦µÄÊý¾Ý¼ÇÂ¼¡£Õâ±»³ÆÎª·Ç¾Û´ØË÷Òý
+InnoDBÒýÇæÖÐ£¬ÆäÊý¾ÝÎÄ¼þ±¾Éí¾ÍÊÇË÷ÒýÎÄ¼þ¡£Ïà±Èmyisam£¬Ë÷ÒýÎÄ¼þºÍÊý¾ÝÎÄ¼þÊÇ·ÖÀëµÄ£¬Æä±íÊý¾ÝÎÄ¼þ±¾Éí¾ÍÊÇ°´b+Ê÷×éÖ¯µÄÒ»¸öË÷Òý½á¹¹£¬Ê÷µÄÒ¶½ÚµãdataÓò±£´æÁËÍêÕûµÄÊý¾Ý¼ÇÂ¼¡£Õâ¸öË÷ÒýµÄkeyÊÇÊý¾Ý±íµÄÖ÷¼ü£¬Òò´ËInnoDB±íÊý¾ÝÎÄ¼þ±¾Éí¾ÍÊÇÖ÷Ë÷Òý¡£Õâ±»³ÆÎª¾Û´ØË÷Òý£¬¶øÆäËûµÄË÷Òý¶¼×÷Îª¸¨ÖúË÷Òý£¬¸¨ÖúË÷ÒýµÄdataÓò´æ´¢ÏàÓ¦¼ÇÂ¼Ö÷¼üµÄÖµ¶ø²»ÊÇµØÖ·£¬ÕâÒ²ÊÇºÍmyisam²»Í¬µÄµØ·½¡£ÔÚ¸ù¾ÝÖ÷Ë÷ÒýËÑË÷Ê±£¬Ö±½ÓÕÒµ½keyËùÔÚµÄ½Úµã¼´¿ÉÈ¡³öÊý¾Ý£»ÔÚ¸ù¾Ý¸¨ÖúË÷Òý²éÕÒÊ±ÔòÐèÒªÏÈÈ¡³öÖ÷¼üµÄÖµ£¬ÔÙ×ßÒ»±éÖ÷Ë÷Òý¡£Òò´Ë£¬ÔÚÉè¼Æ±íµÄÊ±ºò£¬²»½¨ÒéÊ¹ÓÃ¹ý³¤µÄ×Ö¶Î×÷ÎªÖ÷¼ü£¬Ò²²»½¨ÒéÊ¹ÓÃ·Çµ¥µ÷µÄ×Ö¶Î×÷ÎªÖ÷¼ü£¬ÕâÑù»áÔì³ÉÖ÷Ë÷ÒýÆµ·±¶ÏÁÑ¡£
