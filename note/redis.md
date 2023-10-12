@@ -126,3 +126,7 @@
 62. Redis实现分布式锁
 
 63. RedLock的原理
+
+
+# redis常见面试题
+## 什么是redis
