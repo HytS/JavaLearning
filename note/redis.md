@@ -232,3 +232,25 @@ Set的应用场景如下：
 * 存放的数据不能有重复的场景：网站uv统计（数据量巨大的场景还是HyperLogLog更合适）、文章点赞、动态点赞
 * 需要获取多个数据源交集、并集和差集：共同好友（交集）、共同粉丝（交集）、共同关注（交集）、好友推荐（差集）、音乐推荐（差集）、订阅号推荐（差集+交集）
 * 需要随机获取数据源中的元素的场景：抽奖系统、随机点名
+
+
+### 使用Set实现抽奖系统怎么做
+如果想要使用Set实现一个简单的抽奖系统的话，直接使用以下几个命令就好
+* SADD key member1 member2 ...:向指定集合添加一个或多个元素
+* SPOP key count:随机移除并获取指定集合中一个或多个元素，适合不允许重复中奖的场景
+* SRANDMEMBER key count:随机获取指定集合中指定数量的元素，适合允许重复中奖的场景
+
+### 使用Bitmap统计活跃用户怎么做
+Bitmap存储的是连续的二进制数字，通过Bitmap，只需要一个bit位来表示某个元素对应的值或者状态，key就是对应元素本身。我们直到8bit组成一个byte，所以Bitmap可以极大节省空间
+
+可以将Bitmap看作是一个存储二进制数字的数组，数组中每个元素的下表叫offset（偏移量）
+
+### 使用HyperLogLog统计页面uv怎么做
+使用HyperLogLog统计页面uv主要需要用到下面这两个命令：
+* PFADD key element1 element2 ...:添加一个或多个元素到HyperLogLog中
+* PFCOUNT key1 key2:获取一个或多个HyperLogLog的唯一计数
+
+1、将访问指定页面的每个用户id添加到HyperLogLog中
+PFADD PAGE_1:uv user1 user2..usern
+2、统计指定页面的uv
+PFCOUNT PAGE_1:uv
