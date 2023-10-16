@@ -254,3 +254,16 @@ Bitmap´æ´¢µÄÊÇÁ¬ÐøµÄ¶þ½øÖÆÊý×Ö£¬Í¨¹ýBitmap£¬Ö»ÐèÒªÒ»¸öbitÎ»À´±íÊ¾Ä³¸öÔªËØ¶ÔÓ¦µÄÖ
 PFADD PAGE_1:uv user1 user2..usern
 2¡¢Í³¼ÆÖ¸¶¨Ò³ÃæµÄuv
 PFCOUNT PAGE_1:uv
+
+## redis³Ö¾Ã»¯»úÖÆ
+redis³Ö¾Ã»¯»úÖÆ£¨RDB³Ö¾Ã»¯¡¢AOF³Ö¾Ã»¯¡¢RDBºÍAOF»ìºÏ³Ö¾Ã»¯£©
+
+## redisÏß³ÌÄ£ÐÍ
+¶ÔÓÚ¶ÁÐ´ÃüÁîÀ´Ëµ£¬redisÒ»Ö±ÊÇµ¥Ïß³ÌÄ£ÐÍ¡£²»¹ý£¬ÔÚ4.0Ö®ºóÒýÈë¶àÏß³ÌÀ´Ö´ÐÐ´ó¼üÖµ¶ÔµÄÒì²½É¾³ý²Ù×÷£¬6.0Ö®ºóÒýÈëÁË¶àÏß³ÌÀ´´¦ÀíÍøÂçÇëÇó£¨Ìá¸ßÍøÂçio¶ÁÐ´ÐÔÄÜ£©
+### redisµ¥Ïß³ÌÄ£ÐÍ
+redis»ùÓÚreactorÄ£Ê½Éè¼Æ¿ª·¢ÁËÒ»Ì×¸ßÐ§µÄÊÂ¼þ´¦ÀíÄ£ÐÍ£¨NettyµÄÏß³ÌÄ£ÐÍÒ²»ùÓÚreactorÄ£Ê½£©£¬ÕâÌ×ÊÂ¼þ´¦ÀíÄ£ÐÍ¶ÔÓ¦µÄÊÇredisÖÐµÄÎÄ¼þÊÂ¼þ´¦ÀíÆ÷¡£ÓÉÓÚÎÄ¼þÊÂ¼þ´¦ÀíÆ÷ÊÇµ¥Ïß³Ì·½Ê½ÔËÐÐµÄ£¬ËùÒÔÎÒÃÇËµredisÊÇµ¥Ïß³ÌÄ£ÐÍ
+
+* ÎÄ¼þÊÂ¼þ´¦ÀíÆ÷Ê¹ÓÃio¶àÂ·¸´ÓÃ³ÌÐòÀ´Í¬Ê±¼àÌý¶à¸öÌ×½Ó×Ö£¬²¢¸ù¾ÝÌ×½Ó×ÖÄ¿Ç°Ö´ÐÐµÄÈÎÎñÀ´ÎªÌ×½Ó×Ö¹ØÁª²»Í¬µÄÊÂ¼þ´¦ÀíÆ÷
+* µ±±»¼àÌýµÄÌ×½Ó×Ö×¼±¸ºÃÖ´ÐÐÁ¬½ÓÓ¦´ð¡¢¶ÁÈ¡¡¢Ð´Èë¡¢¹Ø±ÕµÈ²Ù×÷Ê±£¬Óë²Ù×÷Ïà¶ÔÓ¦µÄÎÄ¼þÊÂ¼þ¾Í»á²úÉú£¬ÕâÊ±ÎÄ¼þÊÂ¼þ´¦ÀíÆ÷¾Í»áµ÷ÓÃÌ×½Ó×ÖÖ®Ç°¹ØÁªºÃµÄÊÂ¼þ´¦ÀíÆ÷À´´¦ÀíÕâÐ©ÊÂ¼þ
+
+ËäÈ»ÎÄ¼þÊÂ¼þ´¦ÀíÆ÷ÒÔµ¥Ïß³Ì·½Ê½ÔËÐÐ£¬µ«Í¨¹ýÊ¹ÓÃio¶àÂ·¸´ÓÃ³ÌÐòÀ´¼àÌý¶à¸öÌ×½Ó×Ö£¬ÎÄ¼þÊÂ¼þ´¦ÀíÆ÷¼ÈÊµÏÖÁË¸ßÐÔÄÜµÄÍøÂçÍ¨ÐÅÄ£ÐÍ£¬ÓÖ¿ÉÒÔºÜºÃµØÓëredis·þÎñÆ÷ÖÐÆäËûÍ¬ÑùÒÔµ¥Ïß³Ì·½Ê½ÔËÐÐµØÄ£¿é½øÐÐ¶Ô½Ó£¬Õâ±£³ÖÁËredisÄÚ²¿µ¥Ïß³ÌÉè¼ÆµØ¼òµ¥ÐÔ
