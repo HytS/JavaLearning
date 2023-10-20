@@ -3,121 +3,16 @@
 
 
 
-### 使用redis实现一个排行榜怎么做
 
 
-### Set的应用场景是什么
-redis中Set是一种无序集合，集合中的元素没有先后顺序但都唯一，有点类似java的HashSet
-Set的应用场景如下：
-* 存放的数据不能有重复的场景：网站uv统计（数据量巨大的场景还是HyperLogLog更合适）、文章点赞、动态点赞
-* 需要获取多个数据源交集、并集和差集：共同好友（交集）、共同粉丝（交集）、共同关注（交集）、好友推荐（差集）、音乐推荐（差集）、订阅号推荐（差集+交集）
-* 需要随机获取数据源中的元素的场景：抽奖系统、随机点名
 
-### 使用Set实现抽奖系统怎么做
-如果想要使用Set实现一个简单的抽奖系统的话，直接使用以下几个命令就好
-* SADD key member1 member2 ...:向指定集合添加一个或多个元素
-* SPOP key count:随机移除并获取指定集合中一个或多个元素，适合不允许重复中奖的场景
-* SRANDMEMBER key count:随机获取指定集合中指定数量的元素，适合允许重复中奖的场景
 
-### 使用Bitmap统计活跃用户怎么做
-Bitmap存储的是连续的二进制数字，通过Bitmap，只需要一个bit位来表示某个元素对应的值或者状态，key就是对应元素本身。我们直到8bit组成一个byte，所以Bitmap可以极大节省空间
 
-可以将Bitmap看作是一个存储二进制数字的数组，数组中每个元素的下表叫offset（偏移量）
 
-### 使用HyperLogLog统计页面uv怎么做
-使用HyperLogLog统计页面uv主要需要用到下面这两个命令：
-* PFADD key element1 element2 ...:添加一个或多个元素到HyperLogLog中
-* PFCOUNT key1 key2:获取一个或多个HyperLogLog的唯一计数
 
-1、将访问指定页面的每个用户id添加到HyperLogLog中
-PFADD PAGE_1:uv user1 user2..usern
-2、统计指定页面的uv
-PFCOUNT PAGE_1:uv
 
-## redis持久化机制
-redis持久化机制（RDB持久化、AOF持久化、RDB和AOF混合持久化）
 
-## redis线程模型
-对于读写命令来说，redis一直是单线程模型。不过，在4.0之后引入多线程来执行大键值对的异步删除操作，6.0之后引入了多线程来处理网络请求（提高网络io读写性能）
-### redis单线程模型
-redis基于reactor模式设计开发了一套高效的事件处理模型（Netty的线程模型也基于reactor模式），这套事件处理模型对应的是redis中的文件事件处理器。由于文件事件处理器是单线程方式运行的，所以我们说redis是单线程模型
 
-* 文件事件处理器使用io多路复用程序来同时监听多个套接字，并根据套接字目前执行的任务来为套接字关联不同的事件处理器
-* 当被监听的套接字准备好执行连接应答、读取、写入、关闭等操作时，与操作相对应的文件事件就会产生，这时文件事件处理器就会调用套接字之前关联好的事件处理器来处理这些事件
-
-虽然文件事件处理器以单线程方式运行，但通过使用io多路复用程序来监听多个套接字，文件事件处理器既实现了高性能的网络通信模型，又可以很好地与redis服务器中其他同样以单线程方式运行地模块进行对接，这保持了redis内部单线程设计地简单性
-
-#### 既然是单线程，那么怎么监听大量的客户端连接呢？
-redis通过io多路复用程序来监听来自客户端的大量连接（或者说是监听多个socket），它会将感兴趣的事件及类型注册到内核中并监听每个事件是否发生
-这样做的好处：io多路复用技术的使用让redis不需要额外创建多余的线程来监听客户端的大量连接，降低了资源的消耗
-
-文件事件处理器主要包含4个部分：
-* 多个socket（客户端连接）
-* io多路复用技术（支持多个客户端连接的关键）
-* 文件事件分派器（将socket关联到相应的事件处理器）
-* 事件处理器（连接应答处理器、命令请求处理器、命令回复处理器）
-
-#### redis6.0之前为什么不使用多线程
-redis4.0之后就已经加入了对多线程的支持；不过，redis4.0增加的多线程主要是针对一些大键值对的删除操作命令，使用这些命令就会使用主线程之外的其他线程来‘异步处理’
-
-原因：
-* 单线程编程容易且更易维护
-* redis的性能瓶颈不在cpu，主要在内存和网络
-* 多线程就会存在死锁、线程上下文切换等问题，甚至会影响性能
-
-#### redis6.0之后为何引入多线程
-redis6.0引入多线程主要是为了提高网络io读写性能，，因为这个是redis中的一个性能瓶颈
-虽然，redis6.0引入多线程，但是redis的多线程只是在网络数据的读写这类耗时的操作上使用，执行命令仍然是单线程顺序执行。因此，不需要担心线程安全问题
-
-redis6.0的多线程默认是禁用的，只使用主线程。如需开启需要设置io线程数>1,需要修改redis配置文件redis.conf
-io-threads 4 #设置1的话只会开启主线程，官网建议4核的机器建议设置为2或3个线程
-另外：
-* io-threads的个数一旦设置，不能通过config动态设置
-* 当设置ssl后，io-threads将不工作
-
-开启多线程后，默认只会使用多线程进入io写入writes，即发送数据给客户端，如果需要开启多线程io读取reads，同样需要修改redis配置文件redis.conf
-io-threads-do-reads yes
-开启多线程没有太大提升，不建议开启
-
-#### redis后台线程
-redis主要逻辑是单线程完成的，但实际还有一些后台线程用于执行一些比较耗时的操作：
-* 通过bio_close_file后台线程来释放AOF/RDB等过程中产生的临时资源文件
-* 通过bio_aof_fsync后台线程调用fsync函数将系统内核缓冲区还未同步到磁盘的数据强制刷到磁盘中（AOF文件）
-* 通过bio_lazy_free后台线程放大对象占用的内存空间
-
-### redis内存管理
-#### redis给缓存数据设置过期时间有啥用？
-一般情况下，我们设置保存的缓存数据有时候会设置一个过期时间，因为内存是有限的，如果缓存中的所有数据都是一直保存的话，分分钟out of memory
-redis自带了给缓存数据设置过期时间的功能
-expire key 60 # 数据在60s后过期
-setex key 60 value # 数据在60s之后过期
-ttl key # 查询数据还有多久过期
-
-注意：redis中处理字符串类型有自己独有设置过期时间的命令setex外，其他方法都要依靠expire命令来设置过期时间。另外，persist命令可以移除一个键的过期时间
-##### 过期时间除了有助于缓解内存的消耗，还有什么作用
-很多时候，我们的业务场景就是需要某个数据只在某一时间段内存在，如果使用传统的数据库来处理，一般都是自己判断过期，这样更麻烦并且性能要差很多
-
-#### redis是如何判断数据是否过期？
-redis通过一个叫做过期词典（可以看作hash表）来保存数据过期的时间。过期词典的键指向redis数据库中的某个key，过期词典的值是一个long long 类型的整数，这个整数保存了key所指向的数据库键的过期时间 
-
-#### 过期数据的删除策略
-如果假设你设置了一批key只能存活1分钟，1分钟之后，redis是怎么对这批key进行删除的呢？
-常用的过期数据的删除策略就两个
-1.惰性删除：只会在取出key的时候对数据进行过期检查，这样对cpu最友好，但是可能会造成过多的过期key没有被删除
-2.定期删除：每隔一段时间抽取一批key执行删除过期key操作。并且，redis底层会通过限制删除操作执行的时长和频率来减少删除操作对cpu时间的影响
-定期删除对内存更友好，惰性删除对cpu更友好。redis采用定期删除+惰性删除
-
-仅仅通过给key设置过期时间还有问题，因为还是可能存在定期删除和惰性删除漏掉了很多过期key的情况/这样导致大量过期key堆积在内存里，然后就out of memory，可以通过redis内存淘汰机制解决问题
-
-#### redis内存淘汰机制
-volatile-lru:从已设置过期时间的数据集中挑选最近最少使用的数据淘汰
-volatile-ttl:从已设置过期时间的数据集挑选要过期的数据淘汰
-volatile-random:从已设置过期时间的数据集中挑选任意数据淘汰
-allkeys-lru:当内存不足以纳新写入数据时，在键空间内，移除最少使用的key
-allkeys-random：从数据集中任意选择数据淘汰
-no-eviction：禁止驱逐数据，也就是说当内存不足以纳新写入数据时，新写入数据会报错
-volatile-lfu:从已设置过期时间的数据集中挑选最不经常使用的数据淘汰
-allkeys-lfu:当内存不足以纳新写入数据时，在键空间中，移除最不经常使用的key
 
 
 ## redis事务
@@ -347,3 +242,224 @@ prototype作用域下，每次获取都会创建一个新的bean实例，不存在资源竞争问题，所以 不
 对于有状态单例bean的线程安全问题，解决方法有两种：
 1、在bean中尽量避免定义可变的成员变量
 2、在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在ThreadLocal中
+
+### bean的声明周期
+* bean容器找到配置文件中spring bean的定义
+* bean容器利用java reflection api创建一个bean实例
+* 如果涉及到一些属性值利用set()设置一些属性值
+* 如果bean实现BeanNameAware接口，调用setBeanName方法，传入bean的名字
+* 如果bean实现了BeanClassLoaderAware接口，调用setBeanClassLoader(),传入ClassLoader对象的实例
+* 如果bean实现BeanFactoryAware接口，调用setBeanFactory方法，传入BeanFactory对象的实例
+* 与上面类似，如果实现了其他*.aware接口，就调用相应的方法
+* 如果有和加载这个bean的spring容器相关的BeanPostProcessor对象，执行postProcessBeforeInitialization()
+* 如果bean实现了InitializaingBean接口，执行afterPropertiesSet方法
+* 如果bean配置文件中的定义包含init-method属性，执行指定的方法
+* 如果有和加载这个bean的spring容器相关的BeanPostProcessor对象，执行postProcessAfterInitialization()
+* 当要销毁bean的时候，如果bean实现类DisposableBean接口，执行destory方法
+* 当要销毁bean的时候，如果bean在配置文件中的定义包含destroy-method属性，执行指定的方法
+
+![图片](https://images.xiaozhuanlan.com/photo/2019/b5d264565657a5395c2781081a7483e1.jpg)
+
+### spring aop
+#### 对aop的理解
+aop能够将哪些与业务无关，却为业务模块所共同调用的逻辑或责任封装起来，便于减少系统的重复代码，降低模块之间的耦合度
+spring aop就是基于动态代理的，如果要代理的对象，实现了某个接口，那么spring aop就会使用jdk proxy，去创建代理对象，而对于没有实现接口的对象，就无法使用jdk proxy进行代理，这时spring aop会使用Cglib生成一个被代理对象的子类作为代理
+![图片](https://oss.javaguide.cn/github/javaguide/system-design/framework/spring/230ae587a322d6e4d09510161987d346.jpeg)
+
+当然也可以使用AspectJ，spring aop已经集成AspectJ
+Target：被通知的对象
+Proxy：向目标对象应用通知之后创建的代理对象
+连接点/JoinPoint：目标对象的所属类中，定义的方法均为连接点
+切入点/Pointcut：被截面拦截/增强的连接点（切入点一定是连接点，连接点不一定是切入点）
+通知/Advice：增强的逻辑/代码，即拦截到目标对象的连接点之后要做的事
+Aspect：切入点+通知
+Weaving：将通知应用到目标对象，进而生成代理对象的过程动作
+
+#### spring aop和Aspect aop区别
+spring aop属于运行时增强，AspectJ属于编译时增强，spring aop基于代理，AspectJ 基于字节码操作
+spring aop已经集成了AspectJ，AspectJ比spring aop功能更强，spring aop更简单
+
+
+#### AspectJ定义的通知类型有哪些
+* Before（前置通知）：目标对象的方法调用之前触发
+* After（后置通知）：目标对象的方法调用之后触发
+* AfterReturning（返回通知）：目标对象的方法调用完成，在返回结果值之后触发
+* AfterThrowing（异常通知）：目标对象的方法运行中抛出异常后触发，AfterReturning和AfterThrowing两者互斥。如果方法调用成功无异常，则会有返回值；如果方法抛出异常，则不会有返回值
+* Around（环绕通知）：编程式控制目标对象的方法调用。环绕通知是所有通知类型中可操作范围最大的一种，因为它可以直接拿到目标对象，以及要执行的方法，所以环绕通知可以任意的在目标对象的方法调用前后搞事，甚至不调用目标对象的方法
+
+#### 多个切面的执行顺序如何控制
+1、通常使用@Order注解直接定义切面顺序（值越小优先级越高）
+2、实现Order接口重写getOrder方法（返回值越小优先级越高）
+
+### spring mvc
+#### mvc理解
+mvc是模型、视图、控制器的缩写，核心思想是通过将业务逻辑、数据、显示分离来组织代码
+model1
+整个web界面几乎全部用jsp页面组成，只有少量的javabean来处理数据库连接
+这个模式下，jsp既是控制层又是表现层，控制逻辑和表现逻辑混杂在一起，代码利用率低
+
+model2
+javaweb开发模式：javaBean（model）+jsp（view）+servlet（controller）
+* model：系统涉及的数据就是dao和bean
+* view：展示模型中的数据，只是用来展示
+* controller：接受用户请求，并将请求发送至model，最后返回数据给jsp并展示给用户
+
+model2的抽象和封装程度不够，
+
+spring mvc
+MVC 是一种设计模式，Spring MVC 是一款很优秀的 MVC 框架。Spring MVC 可以帮助我们进行更简洁的 Web 层的开发，并且它天生与 Spring 框架集成。Spring MVC 下我们一般把后端项目分为 Service 层（处理业务）、Dao 层（数据库操作）、Entity 层（实体类）、Controller 层(控制层，返回数据给前台页面)。
+
+
+#### spring mvc的核心组件有哪些
+* DispatcherServelet：核心的中央处理器，负责接受请求、分发，并给与客户端相应
+* HandlerMapping：处理器映射器，根据url去匹配查找能处理的Handler，并会将请求涉及到的拦截器和Handler一起封装
+* HandlerAdapter：处理器适配器，根据HandlerMapping找到的Handler，适配执行对应的Handler
+* Handler：请求处理器，处理实际请求的处理器
+* viewResoler：视图解析器，根据Handler返回的逻辑视图，解析并渲染真正的视图，并传递给DispathcerServlet
+
+#### spring mvc的工作原理
+![图片](https://oss.javaguide.cn/github/javaguide/system-design/framework/spring/de6d2b213f112297298f3e223bf08f28.png)
+
+流程说明：
+* 客户端发送请求，DispatcherServlet拦截请求
+* DispatcherServlet根据请求信息调用HandlerMapping，HandlerMapping根据url去匹配查找能处理的Handler（即controller控制器），并会将请求涉及到的拦截器和Hanler一起封装
+* DispatcherServlet调用HandlerAdapter执行Handler
+* Handler完成对用户的请求后，会返回一个ModelAndView对象给DispatcherServlet（ModelAndView包含了数据模型以及相应的视图的信息。model返回的是数据对象，view是逻辑上的view）
+* ViewResolver会根据逻辑view查找实际的view
+* DispatcherServlet把返回的model传给view
+* 把view返回给请求者
+
+#### 统一异常怎么做
+推荐使用注解的方式统一异常处理，使用@ControllerAdvice+@ExceptionHandler这两个注解
+这种异常处理方式下，会给所有或者指定的Controller织入异常处理的逻辑（aop），当controller中的方法抛出异常的时候，由被@ExceptionHandler注解修饰的方法进行处理。
+
+ExceptionHandlerMethodResolver中getMappedMethod方法决定了异常具体被哪个被@ExceptionHandler修饰的方法处理异常
+
+getMappedMethod()会首先找到可以匹配处理异常的所有方法信息，然后从小到大排序，最后取最小的哪一个匹配的方法（即匹配度最高的方法）
+
+### spring框架中用到了哪些设计模式
+* 工厂设计模式：spring使用工厂模式通过BeanFactory、ApplicationContext创建bean对象
+* 代理设计模式：springaop功能的实现
+* 单例设计模式：spring中的bean默认都是单例的
+* 模板方法设计模式：spring中jdbcTemplate、hibernateTemplate等以Template结尾的对数据库操作的类，它们就用到了模板模式
+* 包装器设计模式：我们的项目需要连接多个数据库，而且不同的用户在每次访问中根据需要会去访问不同的数据库。这种模式让我们可以根据客户的需求能够动态切换不同的数据源
+* 观察者模式：spring事件驱动模型就是观察者模式的应用
+* 适配器模式：spring aop的增强或通知（advice）使用到了适配器模式，spring mvc中也使用到了适配器模式适配Controller
+
+### spring事务
+#### spring管理事务的方式有几种
+* 编程式事务：在代码中硬编码（不推荐）：通过TransactionTemplate或者TransactionManager管理事务，实际应用很少使用
+* 声明式事务：在xml配置文件中配置或者直接基于注解（推荐）：实际是通过aop实现（基于@Transactional的全注解方式使用最多）
+
+#### spring事务中哪几种事务传播行为
+
+
+
+# hello-algo
+## 复杂度
+## 数据结构
+### 数据结构分类
+#### 逻辑结构：线性与非线性
+逻辑结构解释了数据元素之间的逻辑关系
+线性数据结构：链表、栈、队列、哈希表、数组
+非线性数据结构：树、图、堆
+非线性数据结构可以进一步被分为树形结构和网状结构
+
+#### 物理结构：连续和分散
+物理结构反映了数据在计算机内存中的存储方式  ，可分为连续存储和分散存储
+所有数据结构都是基于数组和链表或二者组合而成的；基于数组实现的数据结构被称为静态数据结构；基于链表实现的数据结构被称为动态数据结构
+
+#### 基本数据类型
+数据结构是在计算机中组织和存储数据的方式
+#### 数字编码
+整数在计算机中以补码存储。在补码的表示下，计算机对加法和减法一视同仁
+
+## 数组和链表
+### 数组
+#### 初始化数组
+```
+//存储在栈上
+int nums[5] {1,2,3,4,5}
+//存储在堆上，需要手动释放空间
+int* nums=new int[5]{1,2,3,4,5}
+```
+### 小结
+#### 为什么哈希表同时包含线性数据结构和非线性数据结构
+哈希表底层是数组，为了解决哈希冲突，可能会使用链式地址。在拉链法中，数组中的每个地址指向一个链表，当链表的长度超过一定阈值时，又可能被转化成树，所以哈希表可能同时包含线性数据结构和非线性数据结构
+#### char类型的长度是1byte吗
+char类型的数据长度由编程语言的编码方法决定，java（utf-16）的char是2byte
+### 链表
+#### 初始化链表
+初始化各节点对象，构建引用关系
+插入节点
+访问节点
+删除节点：只需改变一个节点的引用就好
+查找
+### 列表 
+list表示元素的有序集合
+#### 初始化列表
+vector<int> nums1;//无初始值
+vector<int> nums={1,2,3,4,5}//有初始值
+#### 访问元素
+列表本质上是数组，可以在O（1）的时间里访问和更新元素
+#### 小结
+
+## 栈与队列
+### 栈
+#### 基于链表的实现 
+使用链表实现栈时，可以将头节点看作栈顶，将尾节点看作栈底
+#### 基于数组的实现
+使用数组实现栈时，可以将数组的尾部作为栈顶
+#### 栈典型应用
+浏览器中的后退与前进、软件中的撤销和反撤销
+程序内存管理
+### 队列
+#### 队列实现
+##### 基于链表的实现
+可以将链表的头节点和尾节点看作队首和队尾，规定队尾仅可插入节点，队头仅可删除节点
+##### 基于数组的实现
+数组删除元素时间复杂度为O(n),出队效率低
+可以使用front指向队首元素的索引，维护一个size它用于记录队列长度，rear=front+size，得出rear指向队尾元素的下一个位置，基于此设计，数组中包含元素的有效区间是[front,rear-1]
+* 入队操作：将输入元素赋值给rear索引处，size+1
+* 出队操作： 将front+1，size-1
+##### 队列典型应用
+* 淘宝订单
+* 各类待办事项
+### 双向队列
+允许在头部和尾部增删节点    
+#### 双向队列实现
+基于双向链表的实现
+将双向链表的头节点对应队头，尾节点对应队尾
+基于数组的实现
+使用环形数组实现双向队列
+### 小结
+## 哈希表
+### 哈希表
+又叫散列表，通过建立key与value之间的映射，实现高效的元素查询。输入一个key，可以在O(1)时间内找到value
+哈希表中进行增删改查的时杂都是O(1)
+#### 哈希表常用操作
+初始化、查询操作、添加键值对和删除键值对
+##### 初始化
+* Map<Integer,String> map=new HashMap();
+##### 遍历
+三种常用的遍历方式：遍历键值对、遍历键、遍历值
+#### 哈希表简单实现
+最简单的情况，使用数组实现哈希表。在哈希表中，数组中的每个空位称为桶（bucket），每个桶可以存储一个键值对，因此，查询操作就是找到key对应的桶，并在桶中获取value
+通过hash函数可以基于key定位对应的桶，哈希函数的作用是将一个较大的输入空间映射到一个较小的输出空间
+
+哈希函数的计算过程
+1、通过某种哈希算法计算得到哈希值
+2、将哈希值对桶数量（数组长度）capacity取模，从而获得key对应的数组索引index
+然后，利用index在哈希表中访问对应的桶，从而获取value
+#### 哈希冲突和扩容
+哈希函数的作用是将所有key组成的输入空间全部映射到数组所有索引构成的输出空间。而输入空间往往远大于输出空间。因此，理论上一定存在“多个输入对应相同输出”的情况。
+
+哈希表容量n越大，多个key被分配到同一个桶的概率就低，冲突就越少。可以通过扩容哈希表来减少哈希冲突
+
+哈希表扩容需要将所有键值对从原哈希表迁移到新哈希表，非常耗时
+
+### 哈希冲突
+### 哈希算法
+### 小结
+
+
