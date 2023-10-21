@@ -362,3 +362,17 @@ redisµÄÊÂÎñºÍÆ½Ê±Àí½âµÄ¹ØÏµÐÍÊý¾Ý¿âµÄÊÂÎñ²»Í¬¡£ÊÂÎñ¾ßÓÐÔ­×ÓÐÔ¡¢¸ôÀëÐÔ¡¢³Ö¾ÃÐÔ¡¢Ò
 ³Ö¾ÃÐÔ£ºÒ»¸öÊÂÎñ±»Ìá½»ºó£¬Ëü¶ÔÊý¾Ý¿âµÄ±ä»¯ÊÇ³Ö¾ÃµÄ£¬¼´Ê¹Êý¾Ý¿â·¢Éú¹ÊÕÏÒ²²»Ó¦¸Ã¶ÔÆäÓÐÓ°Ïì
 Ò»ÖÂÐÔ£ºÖ´ÐÐÊÂÎñÇ°ºó£¬Êý¾Ý±£³ÖÒ»ÖÂ£¬¶à¸öÊÂÎñ¶ÔÍ¬Ò»¸öÊý¾Ý¶ÁÈ¡½á¹ûÊÇÒ»ÖÂµÄ
 redisÊÂÎñÔÚÔËÐÐ´íÎóµÄÇé¿öÏÂ£¬³ýÁËÖ´ÐÐ¹ý³ÌÖÐ³öÏÖ´íÎóµÄÃüÁîÍâ£¬ÆäËûÃüÁî¶¼ÄÜÕý³£Ö´ÐÐ¡£²¢ÇÒ£¬redisÊÂÎñ²»Ö§³Ö»Ø¹ö²Ù×÷¡£Òò´Ë£¬redisÊÂÎñ²»Âú×ãÔ­×ÓÐÔ£¨redis¿ª·¢ÕßÈÏÎªÃ»ÓÐ±ØÒªÊµÏÖ»Ø¹ö£¬ÃüÁîÖ´ÐÐ´íÎóÓ¦¸ÃÔÚ¿ª·¢¹ý³ÌÖÐ·¢ÏÖ¶ø²»ÊÇÉú²ú¹ý³ÌÖÐ£©¡£
+
+### redisÊÂÎñÖ§³Ö³Ö¾ÃÐÔÂð
+redis²»Í¬ÓÚmemcachedµÄÖØÒªÒ»µã¾ÍÊÇ£¬redisÖ§³Ö³Ö¾Ã»¯£¬¶øÇÒÌá¹©ÁË3ÖÐ³Ö¾Ã»¯·½Ê½£º
+* ¿ìÕÕ£¨RDB£©
+* Ö»×·¼ÓÎÄ¼þ£¨AOF£©
+* RBDºÍAOFµÄ»ìºÏ³Ö¾Ã»¯£¨4.0ÐÂÔö£©
+
+ÓëRDB³Ö¾Ã»¯Ïà±È£¬AOF³Ö¾Ã»¯µÄÊµÊ±ÐÔ¸üºÃ¡£ÔÚredisµÄÅäÖÃÎÄ¼þÖÐ´æÔÚ3ÖÖ²»Í¬µÄAOF³Ö¾Ã»¯·½Ê½£¬·Ö±ðÊÇ£º
+appendfsync always # Ã¿´ÎÓÐÊý¾ÝÐÞ¸Ä·¢ÉúÊ±¶¼»áµ÷ÓÃfsyncº¯ÊýÍ¬²½AOFÎÄ¼þ£¬fsyncÍê³ÉºóÏß³Ì·µ»Ø£¬ÕâÑù»á½µµÍredisµÄËÙ¶È
+appendfsync everysec # Ã¿Ãëµ÷ÓÃfsyncº¯ÊýÍ¬²½Ò»´ÎAOF
+appendfsync no # ÈÃos¾ö¶¨ºÎÊ±½øÐÐÍ¬²½£¬Ò»°ãÎª30sÒ»´Î
+
+AOF³Ö¾Ã»¯²ßÂÔÎªno¡¢everysecÊ±¶¼»á´æÔÚÊý¾Ý¶ªÊ§µÄÇé¿ö£¬alwaysÏÂ»ù±¾¿ÉÒÔÂú×ã³Ö¾ÃÐÔÒªÇó£¬µ«ÐÔÄÜÌ«²î
+Òò´Ë£¬redisÊÂÎñµÄ³Ö¾ÃÐÔÒ²ÊÇÃ»ÓÐ°ì·¨±£Ö¤µÄ
