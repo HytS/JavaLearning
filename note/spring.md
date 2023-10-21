@@ -18,3 +18,15 @@ iocÊÇinversion of controlµÄËõÐ´£¬Ò»°ã·­Òë³É¿ØÖÆ·´×ª£¬¼òµ¥À´Ëµ¾ÍÊÇ°Ñ¸´ÔÓÏµÍ³·Ö½â³
 ÎªÊ²Ã´iocÊÇ¿ØÖÆ·´×ª
 Èí¼þÔÚÃ»ÓÐÒý½øiocÈÝÆ÷Ç°£¬¶ÔÏóaÒÀÀµÓÚ¶ÔÏób£¬¶ÔÏóaÔÚ³õÊ¼»¯»òÔËÐÐµ½Ä³Ò»µãµÄÊ±ºò£¬×Ô¼º±ØÐëÏÈÖ÷¶¯È¥´´½¨»òÊ¹ÓÃÒÑ´´½¨µÄ¶ÔÏób£¬ÎÞÂÛÊ¹ÓÃ»¹ÊÇ´´½¨£¬¿ØÖÆÆ÷ÔÚ×Ô¼ºÊÖÉÏ
 Èí¼þÒýÈëiocÈÝÆ÷ºó£¬¶ÔÏóaºÍ¶ÔÏóbÊ§È¥ÁËÖ±½ÓÁªÏµ£¬ËùÒÔµ±¶ÔÏóaÔËÐÐµ½ÐèÒªÊ¹ÓÃ¶ÔÏóbÊ±£¬iocÈÝÆ÷»áÖ÷¶¯´´½¨Ò»¸ö¶ÔÏób×¢Èëµ½aÐèÒªµÄµØ·½£»¿ÉÒÔ¿´µ½ÓÉÖ÷¶¯µ½±»¶¯£¬¿ØÖÆÆ÷µßµ¹ÁË
+
+
+## spring»ù´¡
+### Ê²Ã´ÊÇspring¿ò¼Ü
+springÊÇÒ»¿î¿ªÔ´µÄÇáÁ¿¼¶java¿ª·¢¿ò¼Ü£¬Ò»°ãËµµÄspring¿ò¼ÜÖ¸µÄÊÇspring framework£¬ËüÊÇºÜ¶àÄ£¿éµÄ¼¯ºÏ£¬Ê¹ÓÃÕâÐ©Ä£¿é¿ÉÒÔ°ïÖú¿ª·¢£¬±ÈÈçspringÖ§³Öioc£¨¿ØÖÆ·´×ª£©ºÍaop£¨ÃæÏòÇÐÆ¬±à³Ì£©¡¢¿ÉÒÔºÜºÃµÄ¶ÔÊý¾Ý¿â½øÐÐ·ÃÎÊ
+### spring°üº¬µÄÄ£¿éÓÐÄÇÐ©
+#### Core container
+spring¿ò¼ÜµÄºËÐÄÄ£¿é£¬Ö÷ÒªÌá¹©iocÒÀÀµ×¢Èë¹¦ÄÜÖ§³Ö¡£springÆäËû¹¦ÄÜ¶¼ÒÀÀµ´ËÄ£¿é£¬
+* spring-core:spring¿ò¼Ü»ù±¾µÄºËÐÄ¹¤¾ßÀà
+* spring-beans£ºÌá¹©¶ÔbeanµÄ´´½¨¡¢ÅäÖÃºÍ¹ÜÀíµÈ¹¦ÄÜµÄÖ§³Ö
+* spring-context£ºÌá¹©¶Ô¹ú¼Ê»¯¡¢ÊÂ¼þ´«²¥¡¢×ÊÔ´¼ÓÔØµÈ¹¦ÄÜµÄÖ§³Ö
+* spring-expression£ºÌá¹©¶Ô±í´ïÊ½ÓïÑÔµÄÖ§³Ö£¬Ö»ÒÀÀµcoreÄ£¿é£¬²»ÒÀÀµÆäËûÄ£¿é£¬¿ÉÒÔµ¥¶ÀÊ¹ÓÃ
