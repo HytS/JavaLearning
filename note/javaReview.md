@@ -176,6 +176,18 @@ String的字符串存放在 final char value[],地址不可以修改
 StringBuffer的字符内容放在char value[]中，所有变化不用每次改变地址来完成，效率高于String
 StringBuilder字符序列放在堆中 
 
+String创建的字符串存储在公共池中，而new创建的字符串在堆上
+在堆区进行对象生成的过程是不会检测该对象是否已经存在。因此通过new创建的对象，一定是不同的对象，即使字符串内容一样
+对于字符串的加运算，当编译成class文件时，会自动编译成StringBuffer来进行字符串的连接操作
+创建格式化字符串：
+contact是通过复制数组再通过char数组进行拼接生成一个新的对象，地址会变动，而+不会
+
+StringBuffer和StringBuilder类对象可以修改字符串而不创建新的类
+在使用StringBuffer类时，每次都会对StringBuffer对象本身进行操作，而不是产生新对象，如果要对字符串本身进行修改推荐StringBuffer
+StringBuilder类和StringBuffer最大的区别在于StringBuilder的方法不是线程安全的（不能同步访问），StringBuilder比StringBuffer快，大多推荐StringBuilder
+
+相较于StringBuffer，String发生长度变化，非常消耗内存；
+
 String保存的是字符串常量，StringBuffer保存的是字符串变量；StringBuffer每次更新的是内容，不是内存地址
 StringBuffer()创建了一个大小为16的char[];构造器也可以指定数组大小，参数可以是数字或者是字符串（字符串长度+16）
 
@@ -183,6 +195,15 @@ String->StringBuffer append(),StringBuffer构造器
 StringBuffer->String String构造器，toString()
 StringBuffer线程安全，StringBuilder线程不安全
 对字符串需要大量操作时，不用String
+
+java正则表达式
+正则表达式定义了字符串的模式，可以用来搜索、编辑或处理文本；
+this is text :匹配字符串"this is text"
+this\s+is\s+text:this后的'\s+'可以匹配多个空格，之后匹配is字符串，再之后的\s+匹配多个空格再跟上'text'字符串
+^\d+(\.\d+)?:^定义了以什么开始；\d+匹配一个或多个数字；?设置括号内的选项是可选的；\.匹配"."；可以匹配2.21
+
+
+重载的方法必须拥有不同的参数列表，不能仅仅依据修饰符或返回类型的不同来重载方法
 
 Collection接口实现遍历：迭代器遍历（所有实现Collection接口的类都有一个Iterator()方法用于返回一个Iterator接口的对象，即一个迭代器）
 Iterator对象称为迭代器，用于遍历Collection中的元素
