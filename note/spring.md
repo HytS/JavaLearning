@@ -30,3 +30,14 @@ spring框架的核心模块，主要提供ioc依赖注入功能支持。spring其他功能都依赖此模块，
 * spring-beans：提供对bean的创建、配置和管理等功能的支持
 * spring-context：提供对国际化、事件传播、资源加载等功能的支持
 * spring-expression：提供对表达式语言的支持，只依赖core模块，不依赖其他模块，可以单独使用
+
+#### AOP
+* spring-aspects：该模块为与AspcetJ的集成提供支持
+* spring-aop：提供了面向切面的编程实现
+* spring-instrument：提供了为jvm添加代理的功能，它为tomcat提供了一个织入代理，能够为tomcat传递类文件，就像这些文件被类加载器加载一样
+#### data Access
+* spring-jdbc：提供了对数据库访问的抽象jdbc。不同的数据库都有自己独立的api用于操作数据库，而java程序只需要和jdbc api交互，这样就屏蔽了数据库的影响
+* spring-tx：提供对事务的支持
+* spring-orm：提供对Hibernate、JPA、iBatis等orm框架的支持
+* spring-oxm：提供一个抽象层oxm（Object-to-xml-Mapping）
+* spring-jms:消息服务。
