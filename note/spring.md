@@ -139,3 +139,5 @@ private SmsService smsService;
 总结：
 * 当一个接口存在多个实现类，@Autowired和@Resource都需要通过名称才能正确匹配到bean，Autowired可以通过@Qualifier注解来显式指定名称，Resource可以通过name属性来显式指定名称
 * @Autowired支持在构造函数、方法、字段和参数上使用。@Resource主要用于字段和方法的注入，不支持在构造函数或参数上使用
+
+
