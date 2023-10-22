@@ -75,3 +75,12 @@ ioc（控制反转）是一种设计思想，而不是一种具体的技术实现。ioc的思想就是将原本在程
 
 spring中，ioc容器是spring用来实现ioc的载体，ioc容器实际上是Map（key，value），Map中存放的是各种对象
 spring时代一般通过xml文件配置bean，后来开发人员认为xml文件配置不太好，于是改用springboot注解配置
+
+
+### 什么是spring bean
+bean代指那些被ioc容器所管理的对象；我们需要告诉ioc容器帮助我们管理哪些对象，这个是通过配置元数据来定义的。配置元数据可以是xml文件、注解或java配置类
+### 将一个类声明为bean的注解有哪些
+* @Component：通用的注解，可标注任意类为spring组件。如果一个bean不知道属于那一层，可以用@Component注解标注
+* @Repository：对应持久层即DAO层，主要用于数据库相关操作
+* @Service：对应服务层，主要涉及一些复杂的逻辑，需要用到DAO层
+* @Controller：对应Spring mvc控制层，主要用于接收用户请求并调用Service层返回数据给前端页面
