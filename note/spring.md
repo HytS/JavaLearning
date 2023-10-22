@@ -84,3 +84,22 @@ bean代指那些被ioc容器所管理的对象；我们需要告诉ioc容器帮助我们管理哪些对象，这个
 * @Repository：对应持久层即DAO层，主要用于数据库相关操作
 * @Service：对应服务层，主要涉及一些复杂的逻辑，需要用到DAO层
 * @Controller：对应Spring mvc控制层，主要用于接收用户请求并调用Service层返回数据给前端页面
+
+### @Component与@Bean的区别是什么
+* @Component注解作用于类，而@Bean注解作用于方法
+* @Component通常是通过类路径扫描来自动侦测以及自动装配到spring容器中（我们可以使用@ComponentScan注解定义要扫描的路径从中找出标识了需要装配的类自动装配到spring的bean容器中）。@bean注解通常是我们标有该注解的方法中定义产生这个bean，@bean告诉了spring这是某个类的实例。当我需要用它的时候还给我
+* @bean注解比@Component注解的自定义性更强，而且很多时候我们只能通过@bean注解注册bean。比如当我们引用第三方库中的类需要装配到spring容器时，则只能通过@bean来实现
+
+```
+@Configuration
+public class AppConfig {
+    @Bean
+    public TransferService transferService(){
+        return new TransferServiceImpl();
+    }
+}
+上面的代码相当于下面的xml配置
+<beans>
+    <bean id="transferService" class="com.acme.TransferServiceImpl"/>
+</beans>
+```
