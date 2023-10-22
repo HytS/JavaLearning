@@ -41,3 +41,13 @@ spring框架的核心模块，主要提供ioc依赖注入功能支持。spring其他功能都依赖此模块，
 * spring-orm：提供对Hibernate、JPA、iBatis等orm框架的支持
 * spring-oxm：提供一个抽象层oxm（Object-to-xml-Mapping）
 * spring-jms:消息服务。
+
+#### spring web
+* spring-web：对web功能实现提供一些最基础的支持
+* spring-webmvc：提供对spring mvc的实现
+* spring-websocket：提供了对webSocket的支持，webSocket可以让客户端和服务端进行双向通信
+* spring-webflux：提供对webflux的支持。webflux是spring framework 5.0引入的新的响应式框架，与spring mvc不同，它不需要servlet api，是完全异步（异步：指两个或两个以上的对象或事件不同时存在或发生；或多个相关事务的发生无需等待其前一事务的完成）
+#### messaging
+* spring-messaging：主要负责spring框架集成的基础的报文传送应用
+#### spring test
+spring团队提倡测试驱动开发（tdd）。有了ioc的帮助，单元测试和集成测试变得更简单，spring的测试模块对JUnit（单元测试框架）、TestNG等常用测试框架支持的都比较好
