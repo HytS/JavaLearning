@@ -104,3 +104,30 @@ public class AppConfig {
 </beans>
 ```
 
+### 注入bean的注解有哪些
+spring内置的@Autowired以及jdk内置的@Resource和@Inject都可以用于注入bean
+@Autowired和@Resource使用的比较多一些
+
+
+### @Autowired和@Resource的区别是什么
+Autowired属于spring内置的注解，默认的注入方式为byType（根据类型进行匹配），也就是说会先根据接口类型去匹配并注入bean（接口的实现类）
+
+当一个接口存在多个实现类的情况，byType这种方式就无法正确注入对象了，因为这个时候spring会同时找到多个满足条件的选择，默认情况下它自己不知道选择哪一个
+这种时候，注入方式会变成byName（根据名称进行匹配），这个名称通常是类名（首字母小写）。比如下面代码中的smsService就是这里的名称
+```
+@Autowired
+private SmsService smsService
+```
+举个例子，SmsService有两个实现类：SmsServiceImpl1和SmsServiceImpl2，且它们都被spring容器所管理
+```
+//报错，byName和byType无法匹配到bean
+@Autowired
+private SmsService smsService;
+//正确注入smsServiceImpl1对象对应的bean
+@Autowired
+private SmsService smsServiceImpl1;
+//正确注入 SmsServiceImpl1 对象对应的bean，smsServiceImpl1就是上面说的名称
+@Autowired
+@Qualifier(value="smsServiceImpl1")
+private SmsService smsService;
+```
