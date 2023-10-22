@@ -61,3 +61,17 @@ spring mvcÊÇspringÖÐµÄÒ»¸öÖØÒªÄ£¿é£¬Ö÷Òª¸³Óèspring ¿ìËÙ¹¹½¨mvc¼Ü¹¹µÄweb³ÌÐòÄÜÁ¦¡
 Ê¹ÓÃspring½øÐÐ¿ª·¢¸÷ÖÖÅäÖÃ¹ýÓÚÂé·³±ÈÈç¿ªÆôÄ³Ð©springÌØÐÔÊ±£¬ÐèÒªxml»òjava½øÐÐÏÔÊ½ÉèÖÃ¡£ÓÚÊÇspring-bootµ®ÉúÁË
 springÖ¼ÔÚ¼ò»¯j2eeÆóÒµÓ¦ÓÃ³ÌÐò¿ª·¢£¬spring-bootÖ¼ÔÚ¼ò»¯spring¿ª·¢£¨¼õÉÙÅäÖÃÎÄ¼þ£©
 spring bootÖ»ÊÇ¼ò»¯ÁËÅäÖÃ£¬Èç¹ûÐèÒª¹¹½¨mvc¼Ü¹¹µÄweb³ÌÐò£¬»¹ÊÇÐèÒªspring mvc¿ò¼Ü£¬Ö»ÊÇËµspring boot¼ò»¯ÁËspring mvcµÄºÜ¶àÅäÖÃ
+
+## spring ioc
+### ¶Ôspring iocµÄÀí½â
+ioc£¨¿ØÖÆ·´×ª£©ÊÇÒ»ÖÖÉè¼ÆË¼Ïë£¬¶ø²»ÊÇÒ»ÖÖ¾ßÌåµÄ¼¼ÊõÊµÏÖ¡£iocµÄË¼Ïë¾ÍÊÇ½«Ô­±¾ÔÚ³ÌÐòÖÐÊÖ¶¯´´½¨¶ÔÏóµÄ¿ØÖÆÈ¨£¬½»ÓÉspring¿ò¼ÜÀ´¹ÜÀí
+#### ÎªÊ²Ã´½Ð¿ØÖÆ·´×ª
+* ¿ØÖÆ£ºÖ¸µÄÊÇ¶ÔÏó´´½¨£¨ÊµÀý»¯¡¢¹ÜÀí£©µÄÈ¨Á¦
+* ·´×ª£º¿ØÖÆÆ÷½»¸øÍâ²¿»·¾³£¨spring¿ò¼Ü¡¢iocÈÝÆ÷£©
+
+½«¶ÔÏóÖ®¼äµÄ»¥ÏàÒÀÀµ¹ØÏµ½»¸øiocÈÝÆ÷¹ÜÀí£¬²¢ÓÉiocÈÝÆ÷Íê³É¶ÔÏóµÄ×¢Èë¡£ÕâÑù¿ÉÒÔºÜ´ó³Ì¶ÈÉÏ¼ò»¯Ó¦ÓÃµÄ¿ª·¢£¬°ÑÓ¦ÓÃ´Ó¸´ÔÓµÄÒÀÀµ¹ØÏµÖÐ½â·Å³öÀ´¡£iocÈÝÆ÷¾ÍÏñÒ»¸ö¹¤³§Ò»Ñù£¬µ±ÎÒÃÇÐèÒª´´½¨Ò»¸ö¶ÔÏóµÄÊ±ºò£¬Ö»ÐèÒªÅäÖÃºÃÅäÖÃÎÄ¼þ/×¢½â¼´¿É£¬ÍêÈ«²»ÓÃ¿¼ÂÇ¶ÔÏóÊÇÈçºÎ´´½¨³öÀ´µÄ
+
+ÔÚÊµ¼ÊÏîÄ¿ÖÐÒ»¸öServiceÀà¿ÉÄÜÒÀÀµÁËºÜ¶àÆäËûµÄÀà£¬¼ÙÈçÎÒÃÇÒªÊµÀý»¯Õâ¸öService£¬¿ÉÄÜÃ¿´Î¶¼Òª¸ãÇåÕâ¸öServiceËùÓÐµ×²ãÀàµÄ¹¹Ôìº¯Êý£¬ÕâºÜÂé·³¡£Èç¹ûÀûÓÃiocµÄ»°£¬Ö»ÐèÒªÅäÖÃºÃ£¬È»ºóÔÚÐèÒªµÄµØ·½ÒýÓÃ¾ÍÐÐÁË¡£
+
+springÖÐ£¬iocÈÝÆ÷ÊÇspringÓÃÀ´ÊµÏÖiocµÄÔØÌå£¬iocÈÝÆ÷Êµ¼ÊÉÏÊÇMap£¨key£¬value£©£¬MapÖÐ´æ·ÅµÄÊÇ¸÷ÖÖ¶ÔÏó
+springÊ±´úÒ»°ãÍ¨¹ýxmlÎÄ¼þÅäÖÃbean£¬ºóÀ´¿ª·¢ÈËÔ±ÈÏÎªxmlÎÄ¼þÅäÖÃ²»Ì«ºÃ£¬ÓÚÊÇ¸ÄÓÃspringboot×¢½âÅäÖÃ
