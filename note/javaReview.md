@@ -32,6 +32,26 @@ synchronizedÉùÃ÷µÄ·½·¨Í¬Ò»Ê±¼äÖ»ÄÜ±»Ò»¸öÏß³Ì·ÃÎÊ
 transientÐÞÊÎ·û£ºÐòÁÐ»¯µÄ¶ÔÏó°üº¬±»transientÐÞÊÎµÄÊµÀý±äÁ¿Ê±£¬jvmÌø¹ý¸ÃÌØ¶¨µÄ±äÁ¿£¬
 volatileÐÞÊÎ·û£ºvolatile ÐÞÊÎµÄ³ÉÔ±±äÁ¿ÔÚÃ¿´Î±»Ïß³Ì·ÃÎÊÊ±£¬¶¼Ç¿ÖÆ´Ó¹²ÏíÄÚ´æÖÐÖØÐÂ¶ÁÈ¡¸Ã³ÉÔ±±äÁ¿µÄÖµ¡£¶øÇÒ£¬µ±³ÉÔ±±äÁ¿·¢Éú±ä»¯Ê±£¬»áÇ¿ÖÆÏß³Ì½«±ä»¯Öµ»ØÐ´µ½¹²ÏíÄÚ´æ¡£ÕâÑùÔÚÈÎºÎÊ±¿Ì£¬Á½¸ö²»Í¬µÄÏß³Ì×ÜÊÇ¿´µ½Ä³¸ö³ÉÔ±±äÁ¿µÄÍ¬Ò»¸öÖµ¡£
 
+µ±Ò»¸öÀàÃ»ÓÐextend¡¢implement¹Ø¼ü×Ö£¬ÔòÄ¬ÈÏ¼Ì³ÐObject
+super£º¿ÉÒÔÊµÏÖ¶Ô¸¸Àà³ÉÔ±µÄ·ÃÎÊ
+this£ºÖ¸Ïò×Ô¼ºµÄÒýÓÃ
+
+×ÓÀà²»¼Ì³Ð¸¸ÀàµÄ¹¹ÔìÆ÷£¬Ö»ÊÇÒþÊ½/ÏÔÊ½µÄµ÷ÓÃ
+Èç¹û¸¸ÀàµÄ¹¹ÔìÆ÷´øÓÐ²ÎÊý£¬±ØÐëÔÚ×ÓÀà¹¹ÔìÆ÷ÖÐÊ¹ÓÃsuperÏÔÊ½µÄµ÷ÓÃ¸¸Àà¹¹ÔìÆ÷²¢ÅäÒÔÊÊµ±µÄ²ÎÊý
+Èç¹û¸¸ÀàµÄ¹¹ÔìÆ÷Ã»ÓÐ²ÎÊý£¬ÔòÔÚ×ÓÀà¹¹ÔìÆ÷ÖÐ²»±ØÊ¹ÓÃsuperµ÷ÓÃ¸¸Àà¹¹ÔìÆ÷
+×ÓÀà¹¹ÔìÆ÷ÖÐµÚÒ»¾äÃ»ÓÐÐ´´ø²Î»ò²»´ø²ÎµÄsuper(),¾ÍÄ¬ÈÏµ÷ÓÃÎÞ²ÎµÄsuper
+
+finalÐÞÊÎµÄÒýÓÃ±äÁ¿Ö¸µÄÊÇËüÀïÃæµÄµØÖ·²»ÄÜ±ä£¬²»ÊÇÕâ¸öµØÖ·ËùÖ¸ÏòµÄ¶ÔÏó»òÊý×éµÄÄÚÈÝ²»ÄÜ±ä
+finalÐÞÊÎµÄ·½·¨¿ÉÒÔ±»¼Ì³Ðµ«ÊÇ²»ÄÜÖØÐ´£»finalÐÞÊÎµÄÀà²»ÄÜ¼Ì³Ð£»finalÐÞÊÎµÄÊôÐÔÒ»¶¨Òª¸³Öµ£¬µ«ÊÇ¸³Öµºó¾Í²»ÄÜ±»ÐÞ¸ÄÁË
+
+java×ªÐÍÎÊÌâµÄºËÐÄ£º¸¸ÀàÒýÓÃÖ¸Ïò×ÓÀà¶ÔÏó£¬×ÓÀàÒýÓÃ²»ÄÜÖ¸Ïò¸¸Àà¶ÔÏó
+ÏòÉÏ×ªÐÍÊ±»áÒÅÊ§³ýÓë¸¸Àà¶ÔÏó¹«ÓÐµÄÆäËû·½·¨¡£
+
+ÖØÔØ¾ÍÊÇÍ¬ÑùµÄ·½·¨¸ù¾ÝÊäÈëÊý¾ÝµÄ²»Í¬£¬×ö³ö²»Í¬µÄ´¦Àí
+ÉùÃ÷Îªfinal²»ÄÜ±»ÖØÐ´£»ÉùÃ÷ÎªstaticµÄ·½·¨²»ÄÜ±»ÖØÐ´£¬µ«ÊÇ¿ÉÒÔ±»ÔÙ´ÎÉùÃ÷£»×ÓÀàºÍ¸¸ÀàÔÚÍ¬Ò»¸ö°üÄÚ£¬×ÓÀà¿ÉÒÔÖØÐ´³ýprivateºÍfinalÒÔÍâµÄËùÓÐ·½·¨£»×ÓÀàºÍ¸¸Àà²»ÔÚÍ¬Ò»¸ö°üÄÚ£¬ÄÇÃ´×ÓÀàÖ»ÄÜÖØÐ´¸¸ÀàÉùÃ÷ÎªprotectedºÍpublicµÄ·Çfinal·½·¨
+ÖØÐ´µÄ·½·¨¿ÉÒÔÅ×³öÈÎºÎ·ÇÇ¿ÖÆÒì³££¬ÎÞÂÛ±»ÖØÐ´·½·¨ÊÇ·ñÅ×³öÒì³££»µ«ÊÇ²»ÄÜÅ×³öÐÂµÄÇ¿ÖÆÐÔÒì³££¬»òÕß±È±»ÖØÐ´·½·¨ÉùÃ÷µÄ¸ü¹ã·ºµÄÇ¿ÖÆÐÔÒì³£
+Ã¿¸ö±»ÖØÔØµÄ·½·¨¶¼±ØÐëÓÐ¶ÀÒ»ÎÞ¶þµÄ²ÎÊýÁÐ±í£»
+
 ×ÓÀà²»ÄÜÖ±½Ó·ÃÎÊ¸¸ÀàµÄË½ÓÐÊôÐÔºÍ·½·¨£¬ÐèÒªÍ¨¹ý¸¸ÀàÌá¹©µÄ¹«¹²·½·¨È¥·ÃÎÊ
 ´´½¨×ÓÀà¶ÔÏóÊ±£¬»áÏÈ·ÃÎÊ¸¸Àà¹¹ÔìÆ÷£¬Íê³É¸¸Àà³õÊ¼»¯£¬ÔÙÈ¥·ÃÎÊ×ÓÀà¹¹ÔìÆ÷
 ÔÚ´´½¨×ÓÀà¶ÔÏóÊ±£¬²»¹Üµ÷ÓÃ×ÓÀàÄÄ¸ö¹¹ÔìÆ÷£¬Ä¬ÈÏµ÷ÓÃ¸¸ÀàµÄÎÞ²Î¹¹ÔìÆ÷£¬Èç¹û¸¸ÀàÃ»ÓÐÎÞ²Î¹¹ÔìÆ÷£¬ÐèÒªÔÚµ÷ÓÃ×ÓÀà¹¹ÔìÆ÷Ê±Ê¹ÓÃsuperÖ¸¶¨Ê¹ÓÃ¸¸ÀàµÄÄÄ¸ö¹¹ÔìÆ÷Íê³É¸¸ÀàµÄ³õÊ¼»¯£»superÔÚÊ¹ÓÃÊ±ÐèÒª·ÅÔÚ¹¹ÔìÆ÷µÚÒ»ÐÐ
@@ -93,6 +113,8 @@ finalÀà²»ÄÜ¼Ì³Ð£¬µ«ÊÇ¿ÉÒÔÊµÀý»¯¶ÔÏó
 final²»ÄÜÐÞÊÎ¹¹Ôì·½·¨£»finalºÍstaticÒ»ÆðÐÞÊÎ²»»áµ¼ÖÂÀà¼ÓÔØ£»
 °ü×°Àà¶¼ÊÇfinal£¬StringÒ²ÊÇfinal
 
+Èç¹ûÒ»¸öÀàÃ»ÓÐ×ã¹»µÄÐÅÏ¢È¥ÃèÊöÒ»¸ö¾ßÌåµÄ¶ÔÏó£¬ÕâÑùµÄÀà¾ÍÊÇ³éÏóÀà£»³éÏóÀà³ýÁË²»ÄÜÊµÀý»¯¶ÔÏó£¬ÆäËûµÄºÍÆÕÍ¨ÀàÒ»Ñù£¬ÒòÎª³éÏóÀà²»ÄÜÊµÀý»¯¶ÔÏó£¬ËùÒÔ±ØÐë±»¼Ì³Ð
+¹¹Ôì·½·¨ºÍ¾²Ì¬·½·¨²»ÄÜÉùÃ÷Îª³éÏó·½·¨
 ³éÏóÀà£ºµ±¸¸ÀàÐèÒªÉùÃ÷µ«ÊÇÓÖ²»ÖªÈçºÎÊµÏÖÊ±£¬¿ÉÒÔ½«ÆäÉùÃ÷Îª³éÏó·½·¨£¬ÀàÎª³éÏóÀà
 ³éÏóÀàµÄ¼ÛÖµ¶àÓÃÓÚÉè¼Æ£¬ÈÃ×ÓÀà¼Ì³Ð²¢ÊµÏÖ³éÏóÀà£»³éÏóÀà²»ÄÜ±»ÊµÀý»¯
 ³éÏóÀà¿ÉÒÔÃ»ÓÐ³éÏó·½·¨£¬Ò»µ©°üº¬³éÏó·½·¨¾ÍÒªÉùÃ÷Îª³éÏóÀà
@@ -100,6 +122,13 @@ abstractÖ»ÄÜÐÞÊÎ·½·¨ºÍÀà£¬²»ÄÜÐÞÊÎÊôÐÔºÍÆäËûµÄ
 ³éÏó·½·¨²»ÄÜÓÐÖ÷Ìå£»Èç¹ûÒ»¸öÀà¼Ì³ÐÁË³éÏóÀà¾Í±ØÐëÊµÏÖ³éÏóÀàµÄËùÓÐ·½·¨£¬³ý·Ç¸ÃÀàÉùÃ÷Îª³éÏóÀà
 ³éÏó·½·¨²»ÄÜÓÃfinal¡¢static¡¢privateÐÞÊÎ£¬ÒòÎªÕâÐ©¹Ø¼ü×ÖÓëÖØÐ´Î¥±³
 
+### ³éÏóÀàºÍ½Ó¿ÚµÄÇø±ð
+#### Óï·¨²ãÃæ
+* ³éÏóÀà¿ÉÒÔÌá¹©³ÉÔ±·½·¨µÄÊµÏÖÏ¸½Ú£¬½Ó¿ÚÖ»ÄÜ´æÔÚpublic abstract·½·¨
+* ³éÏóÀàÖÐµÄ³ÉÔ±±äÁ¿¿ÉÒÔÊÇ¸÷ÖÖÀàÐÍµÄ£¬¶ø½Ó¿ÚÖÐµÄ³ÉÔ±±äÁ¿Ö»ÄÜÊÇpublic static final
+* ½Ó¿ÚÖÐ²»ÄÜº¬ÓÐ¾²Ì¬´úÂë¿éÒÔ¼°¾²Ì¬·½·¨£¬¶ø³éÏóÀà¿ÉÒÔÓÐ¾²Ì¬´úÂë¿éºÍ¾²Ì¬·½·¨
+
+#### Éè¼Æ²ãÃæ
 
 ½Ó¿Ú£º¸ø³öÒ»Ð©Ã»ÓÐÊµÏÖµÄ·½·¨£¬·â×°µ½Ò»Æð£¬µ½Ä³¸öÀàÒªÊ¹ÓÃÊ±ÔÙ¾ßÌåÊµÏÖ
 jdk8Ö®ºó£¬½Ó¿ÚÀï¿ÉÒÔÓÐ¾²Ì¬·½·¨¡¢Ä¬ÈÏ·½·¨£¬¼´ÔÚ½Ó¿ÚÖÐ¿ÉÒÔÓÐ·½·¨µÄ¾ßÌåÊµÏÖ
@@ -139,6 +168,16 @@ enumÃ¶¾ÙÀà
 Ã¶¾Ù¶ÔÏó±ØÐë·ÅÔÚÃ¶¾ÙÀàµÄÐÐÊ×£»Èç¹ûÊ¹ÓÃÎÞ²Î¹¹ÔìÆ÷´´½¨Ã¶¾Ù¶ÔÏó£¬ÔòÊµ²ÎºÍÐ¡À¨ºÅ¿ÉÒÔÊ¡ÂÔ
 
 Ã¶¾Ù³ÉÔ±·½·¨£¨values£º·µ»ØÃ¶¾ÙÀàÖÐËùÓÐ³£Á¿£»valueOf£º½«×Ö·û´®×ª»»ÎªÃ¶¾Ù¶ÔÏó£¬×Ö·û´®±ØÐëÎªÒÑÓÐµÄ³£Á¿Ãû£»compareTo£º±È½ÏÃ¶¾Ù³£Á¿µÄÎ»ÖÃ£©
+
+throwÓÃÓÚÔÚ´úÂëÖÐÅ×³öÒì³££»throwsÓÃÓÚÔÚ·½·¨ÉùÃ÷ÖÐÖ¸¶¨¿ÉÄÜ»áÅ×³öÒì³£µÄÀàÐÍ
+try-with-resource£ºÓÃÀ´´ò¿ª×ÊÔ´²¢ÇÒ¿ÉÒÔÔÚÓï¾äÖ´ÐÐÍê±ÏºóÈ·±£Ã¿¸ö×ÊÔ´¶¼±»¹Ø±Õ
+try(resource declaration){//Ê¹ÓÃµÄ×ÊÔ´}
+catch(ExceptionType E){//Òì³£¿é}
+
+ÉùÃ÷×Ô¶¨ÒåÒì³£
+Âú×ãµÄÌõ¼þ£ºËùÓÐÒì³£¶¼±ØÐëÊÇThrowableµÄ×ÓÀà£»Èç¹ûÏ£ÍûÐ´Ò»¸ö¼ì²éÐÔÒì³£Àà£¬ÔòÐèÒª¼Ì³ÐExceptionÀà£»Èç¹ûÏ£ÍûÐ´Ò»¸öÔËÐÐÊ±Òì³£Àà£¬¾ÍÐèÒª¼Ì³ÐRuntimeException
+
+Ö»¼Ì³ÐExceptionÀàÀ´´´½¨µÄÒì³£ÀàÊÇ¼ì²éÐÔÒì³£Àà
 
 
 ±àÒëÒì³££ºÈç¹û²»´¦Àí£¬³ÌÐòÎÞ·¨Í¨¹ý£»ÔËÐÐÒì³££º²»¼ì²éÒì³££¬ÓÉ³ÌÐòÂß¼­´íÎóÒýÆðµÄ
@@ -204,6 +243,22 @@ this\s+is\s+text:thisºóµÄ'\s+'¿ÉÒÔÆ¥Åä¶à¸ö¿Õ¸ñ£¬Ö®ºóÆ¥Åäis×Ö·û´®£¬ÔÙÖ®ºóµÄ\s+Æ¥Å
 
 
 ÖØÔØµÄ·½·¨±ØÐëÓµÓÐ²»Í¬µÄ²ÎÊýÁÐ±í£¬²»ÄÜ½ö½öÒÀ¾ÝÐÞÊÎ·û»ò·µ»ØÀàÐÍµÄ²»Í¬À´ÖØÔØ·½·¨
+
+javaÁ÷¡¢ÎÄ¼þºÍio
+Ò»¸öÁ÷¿ÉÒÔÀí½âÎªÒ»¸öÊý¾ÝµÄÐòÁÐ
+¶ÁÈ¡¿ØÖÆÌ¨ÊäÈë£ºjavaµÄ¿ØÖÆÌ¨ÓÉSystem.inÍê³É£¬ÎªÁË»ñµÃÒ»¸ö°ó¶¨µ½¿ØÖÆÌ¨µÄ×Ö·ûÁ÷£¬¿ÉÒÔ°ÑSystem.in°ü×°ÔÚÒ»¸öBufferReader¶ÔÏóÖÐ´´½¨×Ö·ûÁ÷
+´Ó¿ØÖÆÌ¨¶ÁÈ¡¶à×Ö·ûÊäÈë£º´ÓBufferReader¶ÔÏó¶ÁÈ¡Ò»¸ö×Ö·ûÐèÒªÊ¹ÓÃread()
+´Ó¿ØÖÆÌ¨¶ÁÈ¡×Ö·û´®£º´Ó±ê×¼ÊäÈë¶ÁÈ¡Ò»¸ö×Ö·û´®ÐèÒªÊ¹ÓÃBufferReaderµÄreadLine()
+
+¿ØÖÆÌ¨µÄÊä³öÓÉ print( ) ºÍ println() Íê³É¡£ÕâÐ©·½·¨¶¼ÓÉÀà PrintStream ¶¨Òå£¬System.out ÊÇ¸ÃÀà¶ÔÏóµÄÒ»¸öÒýÓÃ¡£
+PrintStream ¼Ì³ÐÁË OutputStreamÀà£¬²¢ÇÒÊµÏÖÁË·½·¨ write()¡£ÕâÑù£¬write() Ò²¿ÉÒÔÓÃÀ´Íù¿ØÖÆÌ¨Ð´²Ù×÷¡£
+
+FileInputStreamÓÃÓÚ´ÓÎÄ¼þ¶ÁÈ¡Êý¾Ý£¬ËüµÄ¶ÔÏó¿ÉÒÔÓÃnewÀ´´´½¨£»¿ÉÒÔÊ¹ÓÃ×Ö·û´®ÀàÐÍµÄÎÄ¼þÃûÀ´´´½¨Ò»¸öÊäÈëÁ÷¶ÔÏóÀ´¶ÁÈ¡ÎÄ¼þ
+FileOutputStreamÓÃÀ´´´½¨Ò»¸öÎÄ¼þ²¢ÏòÎÄ¼þÖÐÐ´Êý¾Ý£»Èç¹û¸ÃÁ÷ÔÚ´ò¿ªÎÄ¼þ½øÐÐÊä³öÇ°£¬Ä¿±êÎÄ¼þ²»´æÔÚ£¬ÄÇÃ´¸ÃÁ÷¾Í»á´´½¨ÎÄ¼þ
+FileÀàÓÐÁ½¸ö·½·¨¿ÉÒÔ´´½¨ÎÄ¼þ¼Ð£¨mkdir¡¢mkdirs£©
+Ò»¸öÄ¿Â¼¾ÍÊÇÒ»¸öFile¶ÔÏó£¬Ëü°üº¬ÆäËûÎÄ¼þºÍÎÄ¼þ¼Ð¡£Èç¹û´´½¨Ò»¸öFile¶ÔÏó²¢ÇÒËüÊÇÒ»¸öÄ¿Â¼£¬µ÷ÓÃisDirectory()»á·µ»Øtrue£¬¿ÉÒÔÍ¨¹ýµ÷ÓÃ¸Ã¶ÔÏóµÄlist()À´ÌáÈ¡Ëü°üº¬µÄÎÄ¼þºÍÎÄ¼þ¼ÐµÄÁÐ±í
+É¾³ýÄ¿Â¼»òÎÄ¼þ£º¿ÉÒÔÊ¹ÓÃ¹ýdelete();ÐèÒª×¢Òâµ±É¾³ýÄ³Ò»Ä¿Â¼Ê±£¬±ØÐë±£Ö¤¸ÃÄ¿Â¼ÏÂÃ»ÓÐÆäËûÎÄ¼þ²ÅÄÜÕýÈ·É¾³ý
+
 
 Collection½Ó¿ÚÊµÏÖ±éÀú£ºµü´úÆ÷±éÀú£¨ËùÓÐÊµÏÖCollection½Ó¿ÚµÄÀà¶¼ÓÐÒ»¸öIterator()·½·¨ÓÃÓÚ·µ»ØÒ»¸öIterator½Ó¿ÚµÄ¶ÔÏó£¬¼´Ò»¸öµü´úÆ÷£©
 Iterator¶ÔÏó³ÆÎªµü´úÆ÷£¬ÓÃÓÚ±éÀúCollectionÖÐµÄÔªËØ
