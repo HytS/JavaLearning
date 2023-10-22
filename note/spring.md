@@ -131,3 +131,11 @@ private SmsService smsServiceImpl1;
 @Qualifier(value="smsServiceImpl1")
 private SmsService smsService;
 ```
+一般建议通过@Qualifier注解来显式指定名称而不是依赖变量的名称；@Resource属于jdk提供的注解，默认注入方式为byName，如果无法通过名称匹配到bean的话，注入方式会变成byType
+@Resource有两个比较重要的属性：name、type
+如果仅指定name属性则注入方式为byName，，如果仅指定type属性则注入方式为byType，如果同时指定name+type属性（不建议），则注入方式为byType+byName
+
+
+总结：
+* 当一个接口存在多个实现类，@Autowired和@Resource都需要通过名称才能正确匹配到bean，Autowired可以通过@Qualifier注解来显式指定名称，Resource可以通过name属性来显式指定名称
+* @Autowired支持在构造函数、方法、字段和参数上使用。@Resource主要用于字段和方法的注入，不支持在构造函数或参数上使用
