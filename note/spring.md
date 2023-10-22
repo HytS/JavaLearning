@@ -51,3 +51,13 @@ spring框架的核心模块，主要提供ioc依赖注入功能支持。spring其他功能都依赖此模块，
 * spring-messaging：主要负责spring框架集成的基础的报文传送应用
 #### spring test
 spring团队提倡测试驱动开发（tdd）。有了ioc的帮助，单元测试和集成测试变得更简单，spring的测试模块对JUnit（单元测试框架）、TestNG等常用测试框架支持的都比较好
+
+
+### spring、spring mvc、spring boot之间有什么关系
+spring包含了多个功能模块，spring-core是最重要的模块，spring中的其他模块（spring mvc）的功能实现基本都需要依赖该模块
+
+spring mvc是spring中的一个重要模块，主要赋予spring 快速构建mvc架构的web程序能力。mvc是模型、视图、控制器的简写，核心思想是将业务逻辑、数据、显示分离来组织代码
+
+使用spring进行开发各种配置过于麻烦比如开启某些spring特性时，需要xml或java进行显式设置。于是spring-boot诞生了
+spring旨在简化j2ee企业应用程序开发，spring-boot旨在简化spring开发（减少配置文件）
+spring boot只是简化了配置，如果需要构建mvc架构的web程序，还是需要spring mvc框架，只是说spring boot简化了spring mvc的很多配置
