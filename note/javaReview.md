@@ -1,3 +1,6 @@
+ÕûÊýÄ¬ÈÏÀàÐÍÊÇint£¬byte¡¢char¡¢short²ÎÓëÔËËã¶¼»á×ª»»³Éint²ÎÓëÔËËã£»boolean²»ÄÜÓëÆäËûÀàÐÍÏà»¥×ª»»
+Êý¾ÝÊäÈë£º1¡¢µ¼°ü2¡¢´´½¨Scanner¶ÔÏó3¡¢½ÓÊÕÊý¾Ý£¨sc.nextInt()£©
+
 ´´½¨¶ÔÏóÊ±»áÏÈ¼ÓÔØÀàÐÅÏ¢£¬·ÖÅä¿Õ¼ä£¬×îºó°ÑµØÖ··ÖÅä¸øÒýÓÃ£»¶ÔÏóµÄÊôÐÔÄ¬ÈÏÖµ×ñÊØÊý×é¹æÔò
 
 ÖØÔØ£ºÔÊÐíÍ¬Ò»¸öÀàÖÐ´æÔÚ¶à¸öÍ¬Ãû·½·¨£¬µ«ÒªÇóÐÎ²Î¸öÊý¡¢ÀàÐÍ¡¢Ë³ÐòÑ¡Ò»¸ö²»Í¬
@@ -126,15 +129,17 @@ abstractÖ»ÄÜÐÞÊÎ·½·¨ºÍÀà£¬²»ÄÜÐÞÊÎÊôÐÔºÍÆäËûµÄ
 #### Óï·¨²ãÃæ
 * ³éÏóÀà¿ÉÒÔÌá¹©³ÉÔ±·½·¨µÄÊµÏÖÏ¸½Ú£¬½Ó¿ÚÖ»ÄÜ´æÔÚpublic abstract·½·¨
 * ³éÏóÀàÖÐµÄ³ÉÔ±±äÁ¿¿ÉÒÔÊÇ¸÷ÖÖÀàÐÍµÄ£¬¶ø½Ó¿ÚÖÐµÄ³ÉÔ±±äÁ¿Ö»ÄÜÊÇpublic static final
-* ½Ó¿ÚÖÐ²»ÄÜº¬ÓÐ¾²Ì¬´úÂë¿éÒÔ¼°¾²Ì¬·½·¨£¬¶ø³éÏóÀà¿ÉÒÔÓÐ¾²Ì¬´úÂë¿éºÍ¾²Ì¬·½·¨
 
-#### Éè¼Æ²ãÃæ
+³éÏóÀàÖÐµÄ·½·¨¿ÉÒÔÓÐ·½·¨Ìå£¬µ«ÊÇ½Ó¿ÚÖÐµÄ·½·¨²»ÐÐ£»³éÏóÀàµÄ³ÉÔ±±äÁ¿¿ÉÒÔÊÇÈÎÒâÀàÐÍµÄ£¬½Ó¿ÚÖÐµÄ·½·¨Ö»ÄÜÊÇpublic static finalÀàÐÍµÄ£»
+
 
 ½Ó¿Ú£º¸ø³öÒ»Ð©Ã»ÓÐÊµÏÖµÄ·½·¨£¬·â×°µ½Ò»Æð£¬µ½Ä³¸öÀàÒªÊ¹ÓÃÊ±ÔÙ¾ßÌåÊµÏÖ
 jdk8Ö®ºó£¬½Ó¿ÚÀï¿ÉÒÔÓÐ¾²Ì¬·½·¨¡¢Ä¬ÈÏ·½·¨£¬¼´ÔÚ½Ó¿ÚÖÐ¿ÉÒÔÓÐ·½·¨µÄ¾ßÌåÊµÏÖ
 ÔÚ½Ó¿ÚÖÐ£¬³éÏó·½·¨¿ÉÒÔ²»¼Óabstract£»½Ó¿Ú²»ÄÜÊµÀý»¯£»Ò»¸öÆÕÍ¨ÀàÊµÏÖ½Ó¿Ú±ØÐëÒªÊµÏÖ½Ó¿ÚÀïËùÓÐ·½·¨£»³éÏóÀàÊµÏÖ½Ó¿Ú¿ÉÒÔ²»ÊµÏÖ·½·¨£»
 ½Ó¿ÚÀïµÄÊôÐÔÊÇ public static final£» ·ÃÎÊ½Ó¿ÚÊôÐÔ£º½Ó¿ÚÃû.ÊôÐÔÃû
 Ò»¸ö½Ó¿Ú²»ÄÜ¼Ì³ÐÀà£¬¿ÉÒÔ¼Ì³Ð½Ó¿Ú£»
+³ý·ÇÊµÏÖ½Ó¿ÚµÄÀàÊÇ³éÏóÀà£¬·ñÔò¸ÃÀàÒª¶¨Òå½Ó¿ÚÖÐµÄËùÓÐ·½·¨£»Ò»¸öÊµÏÖ½Ó¿ÚµÄÀà±ØÐëÊµÏÖ½Ó¿ÚÄÚµÄËùÓÐ·½·¨£¬·ñÔò¾ÍÒªÉùÃ÷Îª³éÏóÀà
+½Ó¿ÚÖÐµÄ·½·¨±ØÐëÊÇ³éÏó·½·¨£»½Ó¿Ú²»ÄÜ°üº¬³ÉÔ±±äÁ¿£¬³ýÁËstaticºÍfinal±äÁ¿£»½Ó¿ÚÖÐÃ¿Ò»¸ö·½·¨Ò²ÊÇÒþÊ½³éÏóµÄ£¬½Ó¿ÚÖÐµÄ·½·¨±»ÒþÊ½µÄÖ¸¶¨Îªpublic abstract£»½Ó¿ÚÖÐ¿ÉÒÔº¬ÓÐ±äÁ¿£¬Ö»ÊÇ»áÒþÊ½Ö¸¶¨Îª public static final£»
 
 ### ½Ó¿ÚÎªÊ²Ã´²»ÄÜÊµÀý»¯
 ÊµÀý»¯µÄÊµÀýÒâÒåÊÇÔÚjvmµÄ¶ÑÖÐ¿ª±ÙÒ»Æ¬¿Õ¼ä£¬±ÈÈçPerson p=new Person();¿ª±Ù³öÒ»Æ¬¿Õ¼äÓÃÓÚ´æ·ÅPerson¶ÔÏó£¬pÖ¸ÏòPerson¶ÔÏó
@@ -160,6 +165,8 @@ javaÄÚ´æ¿Õ¼ä·ÖÎª¶Ñ¡¢Õ»¡¢´úÂë¡¢¾²Ì¬Êý¾ÝÓÉ´Ë¿É¼û½Ó¿ÚËùÓÐµÄ¶«Î÷µÄ¾ßÌåÖµ¶¼ÊÇ´æ·ÅÔÚ´ú
 ¾²Ì¬ÄÚ²¿Àà·ÃÎÊÍâ²¿Àà£ºÖ±½Ó·ÃÎÊ¾²Ì¬³ÉÔ±£»Íâ²¿Àà·ÃÎÊ¾²Ì¬ÄÚ²¿Àà£º´´½¨¶ÔÏó£¬ÔÙ·ÃÎÊ
 ¾²Ì¬ÄÚ²¿Àà·ÃÎÊÍâ²¿ÆäËûÀà£ºÍâ²¿ÀàÃû.³ÉÔ±Ãû
 
+Ã¶¾ÙÊÇÒ»ÖÖÌØÊâµÄÀà£¬enum¶¨ÒåµÄÃ¶¾ÙÀà¼Ì³ÐÁËEnumÀà£¨values():·µ»ØÃ¶¾ÙÀàÖÐËùÓÐµÄÖµ,ordinal()£º¿ÉÒÔÕÒµ½Ã¿¸öÃ¶¾Ù³£Á¿µÄË÷Òý,valueOf()£º·µ»ØÖ¸¶¨×Ö·û´®ÖµµÄÃ¶¾Ù³£Á¿£©
+Ã¶¾Ù¿ÉÒÔºÍÆÕÍ¨ÀàÒ»ÑùÓÃ×Ô¼ºµÄ±äÁ¿¡¢·½·¨ºÍ¹¹Ôìº¯Êý£¬¹¹Ôìº¯ÊýÖ»¿ÉÒÔÊ¹ÓÃprivateÐÞÊÎ£¬ËùÒÔÍâ²¿ÎÞ·¨µ÷ÓÃ£»Ã¶¾Ù¿ÉÒÔ°üº¬¾ßÌå·½·¨£¬Ò²¿ÉÒÔ°üº¬³éÏó·½·¨£¬Èç¹ûÃ¶¾ÙÀà¾ßÓÐ³éÏó·½·¨£¬ÔòÃ¶¾ÙÀàµÄÃ¿¸öÊµÀý¶¼±ØÐëÊµÏÖËü
 ×Ô¶¨ÒåÃ¶¾Ù£º²»ÐèÒªÌá¹©set·½·¨£¬ÒòÎªÃ¶¾Ù¶ÔÏóÊÇÖ»¶Á¡¢¶ÔÃ¶¾Ù¶ÔÏóÊ¹ÓÃfinal+staticÐÞÊÎ¡¢Ã¶¾Ù¶ÔÏóÃûÍ¨³£´óÐ´±íÊ¾
 ×Ô¶¨Òå²½Öè£º¹¹ÔìÆ÷Ë½ÓÐ»¯¡¢±¾ÀàÄÚ²¿´´ÔìÒ»×é¶ÔÏó¡¢¶ÔÍâ±©Â¶¶ÔÏó£¨public static final£©¡¢Ìá¹©get·½·¨
 enumÃ¶¾ÙÀà
@@ -279,12 +286,13 @@ transient±íÊ¾²»»á±»ÐòÁÐ»¯
 Vectorµ×²ãÒ²ÊÇ¶ÔÏóÊý×é£¬Ïß³Ì°²È«£¬vectorÀàµÄ²Ù×÷·½·¨ÓÐsynchronized£»ÔÚ¿ª·¢ÖÐ£¬ÐèÒªÏß³Ì°²È«Ñ¡Ôñvector£»À©ÈÝ£ºÈç¹ûÎÞ²Î£¬³õÊ¼Îª10£¬È»ºó°´2±¶À©ÈÝ£»Èç¹ûÖ¸¶¨´óÐ¡£¬°´2±¶À©ÈÝ
 °²È«Ð§ÂÊ²»¸ß
 
+
 LinkedListÐÞ¸ÄÄ³¸ö½Úµã¶ÔÏóµÄ·½·¨£ºset£»µÃµ½Ä³¸ö½Úµã¶ÔÏóµÄ·½·¨£ºget
 
 set½Ó¿ÚÎÞÐò£¨Ìí¼ÓºÍÈ¡³öµÄË³Ðò²»Ò»ÖÂ£©£¬µ«ÊÇÈ¡³öµÄË³ÐòÊÇ¹Ì¶¨µÄ£¬Ã»ÓÐË÷Òý£»²»ÔÊÐíÖØ¸´ÔªËØ£¬×î¶à°üº¬Ò»¸önull£»
 set½Ó¿ÚµÄ±éÀú·½Ê½£ºµü´úÆ÷¡¢ÔöÇ¿for£»²»ÄÜÊ¹ÓÃË÷ÒýµÄ·½Ê½»ñÈ¡
 
-HashSetÊµ¼ÊÊÇHashMap£»¿ÉÒÔ´æ·Ånull£¬µ«ÊÇÖ»ÄÜÓÐÒ»¸ö£»²»±£Ö¤ÔªËØÓÐÐò£¬²»ÄÜÓÐÖØ¸´µÄÔªËØ»ò¶ÔÏó
+HashSetÊµ¼ÊÊÇHashMap£»¿ÉÒÔ´æ·Ånull£¬µ«ÊÇÖ»ÄÜÓÐÒ»¸ö£»²»±£Ö¤ÔªËØÓÐÐò£¬²»ÄÜÓÐÖØ¸´µÄÔªËØ»ò¶ÔÏó£»²»ÊÇÏß³Ì°²È«£¬Èç¹û¶à¸öÏß³ÌÍ¬Ê±ÐÞ¸ÄHashSet£¬×îÖÕ½á¹ûÊÇ²»È·¶¨µÄ¡£
 HashSetµÄÀ©ÈÝ£ºHashSetµ×²ãÊÇHashMap£»Ìí¼ÓÒ»¸öÔªËØÊ±£¬»á½«hashÖµ×ª»¯ÎªË÷ÒýÖµ£»ÕÒµ½´æ´¢Êý¾Ý±ítable£¬²é¿´Ë÷ÒýÖµ´¦ÊÇ·ñ´æÔÚÔªËØ£¬Èç¹ûÃ»ÓÐÖ±½Ó²åÈëÔªËØ£¬Èç¹ûÓÐÔòµ÷ÓÃequals±È½Ï£¬ÏàÍ¬Ôò²»Ìí¼Ó£¬²»Í¬ÔòÌí¼Óµ½×îºó£»µ±Á´±í³¤¶È>8ÇÒtable´óÐ¡>=64»á½øÐÐÊ÷»¯
 
 HashSetµÄµ×²ã»úÖÆ£ºµÚÒ»´ÎÌí¼ÓÔªËØÊ±£¬tableÊý×éÀ©ÈÝµ½16£¬ÁÙ½çÖµÊÇ16*0.75=12£»µ±table´óÐ¡´ïµ½12£¬»áÀ©ÈÝµ½16*2=32£¬ÐÂµÄÁÙ½çÖµÎª32*0.75=24£»HashSetÀ©ÈÝ£¬µ±Á´±íÖÐÔªËØ×ÜºÍ>12Ê±Ò²»áÀ©ÈÝ
@@ -298,8 +306,9 @@ MapºÍCollection²¢ÁÐ´æÔÚ£¬ÓÃÓÚ±£´æ¾ßÓÐÓ³Éä¹ØÏµµÄkey-value
 MapÖÐµÄk-v¿ÉÒÔÊÇÈÎºÎÒýÓÃÀàÐÍµÄÊý¾Ý£¬±£´æÔÚHashSet$Node¶ÔÏóÖÐ
 MapÖÐkey²»¿ÉÒÔÖØ¸´£¬value¿ÉÒÔÖØ¸´£»keyºÍvalue¶¼¿ÉÒÔÊÇnull£¬µ«ÊÇkeyÖ»ÄÜÓÐÒ»¸önull£¬value¿ÉÒÔÓÐºÜ¶à¸önull£»Ò»¶Ôk-vÊÇ·ÅÔÚnodeÖÐµÄ
 
-HashMapµ×²ãÎ¬»¤ÁËnodeÀàÐÍµÄtableÊý×é£¬Ä¬ÈÏÎªnull£»µ±´´½¨¶ÔÏóÊ±£¬½«¼ÓÔØÒò×Ó³õÊ¼»¯Îª0.75
+HashMapÊÇÒ»¸öÉ¢ÁÐ±í£¬Ëü´æ´¢µÄÄÚÈÝÊÇ¼üÖµ¶ÔÓ³Éä£»HashMapÊµÏÖÁËMap½Ó¿Ú£¬¸ù¾Ý¼üµÄHashcodeÖµ´æ´¢Êý¾Ý£¬×î¶àÔÊÐíÒ»Ìõ¼ÇÂ¼µÄ¼üÎªnull£¬²»Ö§³ÖÏß³ÌÍ¬²½£»HashMapµÄkeyºÍvalueÀàÐÍ¿ÉÒÔÏàÍ¬Ò²¿ÉÒÔ²»Í¬
 
+HashMapµ×²ãÎ¬»¤ÁËnodeÀàÐÍµÄtableÊý×é£¬Ä¬ÈÏÎªnull£»µ±´´½¨¶ÔÏóÊ±£¬½«¼ÓÔØÒò×Ó³õÊ¼»¯Îª0.75
 µ±Ìí¼Ók-vÊ±£¬Í¨¹ýkeyµÄhashÖµµÃµ½tableµÄË÷Òý£¬È»ºóÅÐ¶ÏË÷Òý´¦ÊÇ·ñÓÐÔªËØ¡£Èç¹ûÃ»ÓÐÔªËØÖ±½ÓÌí¼Ó£¬Èç¹ûÓÐÔªËØ£¬¼ÌÐøÅÐ¶Ï¸ÃË÷Òý´¦keyºÍ×¼±¸Ìí¼ÓµÄkeyÊÇ·ñÏàÍ¬£¬Èç¹ûÏàµÈÖ±½ÓÌæ»»val£¬Èç¹û²»ÏàÍ¬»¹ÒªÅÐ¶ÏÊÇÊ÷½á¹¹»¹ÊÇÁ´±í½á¹¹£»Èç¹ûÌí¼ÓÊ±·¢ÏÖÈÝÁ¿²»¹»»¹ÒªÀ©ÈÝ
 
 µÚÒ»´ÎÌí¼ÓÊ±£¬tableÀ©ÈÝÎª16£¬ÁÙ½çÖµÊÇ12£¬ÔÙ´ÎÀ©ÈÝ£¬ÈÝÁ¿Îª32£¬ÁÙ½çÖµÎª24£»ÔÚjava8ÖÐ£¬Èç¹ûÊý×é³¤¶È´ïµ½8ÇÒÁ´±íÔªËØ¸öÊý>=64£¬¾Í»áÊ÷»¯£¬·ñÔòÊ¹ÓÃÊý×éÀ©ÈÝ»úÖÆ
@@ -308,8 +317,21 @@ Hashtable´æ·ÅµÄÔªËØÊÇ¼üÖµ¶Ô£»hashtableµÄ¼üÖµ¶Ô²»ÄÜ¶¼ÊÇnull£»hashtableÊÇÏß³Ì°²È«µ
 
 properties¼Ì³ÐHashtableÀàÊµÏÖMap½Ó¿ÚÒ²ÊÇÓÃ¼üÖµ¶ÔµÄÐÎÊ½±£´æÊý¾Ý£»properties¿ÉÒÔ´Óxxx.propertiesÎÄ¼þÖÐ¼ÓÔØÊý¾Ýµ½propertiesÀà¶ÔÏó²¢½øÐÐ¶ÁÈ¡ºÍÐÞ¸Ä
 
+µü´úÆ÷Iterator
+next()£º·µ»Øµü´úÆ÷µÄÏÂÒ»¸öÔªËØ£¬²¢½«µü´úÆ÷µÄÖ¸ÕëÒÆµ½ÏÂÒ»¸öÎ»ÖÃ
+hasNext()£ºÓÃÓÚÅÐ¶Ï¼¯ºÏÊÇ·ñ»¹ÓÐÏÂÒ»¸öÔªËØ¿ÉÒÔ·ÃÎÊ
+remove()£º´Ó¼¯ºÏÉ¾³ýµü´úÆ÷×îºó·ÃÎÊµÄÔªËØ
+
 ¼¯ºÏÑ¡ÐÍ¹æÔò
 
+
+ÓÐ½çÀàÐÍ²ÎÊý£ºÓÐÐ©Ê±ºò£¬¿ÉÄÜ»áÏëÏÞÖÆÄÇÐ©±»ÔÊÐí´«µÝµ½Ò»¸öÀàÐÍ²ÎÊýµÄÀàÐÍÖÖÀà·¶Î§
+ÒªÉùÃ÷Ò»¸öÓÐ½çµÄÀàÐÍ²ÎÊý£¬Ê×ÏÈÁÐ³öÀàÐÍ²ÎÊýµÄÃû³Æ£¬ºó¸úextend£¬×îºó½ô¸úËüµÄÉÏ½ç
+·ºÐÍÀàµÄÀàÐÍ²ÎÊýÉùÃ÷²¿·ÖÒ²°üº¬Ò»¸ö»ò¶à¸ö²ÎÊýÀàÐÍ¡£Ò»¸ö·ºÐÍ²ÎÊýÓÃÓÚÖ¸¶¨Ò»¸ö·ºÐÍÀàÐÍÃû³ÆµÄ±êÊ¶·û
+
+ÀàÐÍÍ¨Åä·ûÒ»°ãÊ¹ÓÃ?´úÌæ¾ßÌåµÄÀàÐÍ²ÎÊý
+<? extends T>±íÊ¾¸ÃÍ¨Åä·ûËù´ú±íµÄÀàÐÍÊÇTÀàÐÍµÄ×ÓÀà
+<? super T>±íÊ¾¸ÃÍ¨Åä·ûËù´ú±íµÄÀàÐÍÊÇTÀàÐÍµÄ¸¸Àà
 ·ºÐÍºÃ´¦£º±àÒëÊ±£¬¼ì²éÌí¼ÓÔªËØÀàÐÍ£¬±£Ö¤°²È«ÐÔ£»¼õÉÙÀàÐÍ×ª»»´ÎÊý£¬Ìá¸ßÐ§ÂÊ£»²»ÔÚÌáÊ¾±àÒë¾¯¸æ
 ·ºÐÍÔÚÀàÉùÃ÷ºÍÊµÀý»¯Ê±ÒªÖ¸¶¨ºÃÐèÒªµÄÀàÐÍ£»·ºÐÍ¿ÉÒÔ±£Ö¤Ö»Òª±àÒëÕý³££¬ÔËÐÐÊ±²»»áÅ×³öÀàÐÍ×ª»»Òì³££»·ºÐÍµÄ×÷ÓÃÊÇÔÚÀàÉùÃ÷Ê±Í¨¹ýÒ»¸ö±êÊ¶±íÊ¾ÀàÖÐÄ³¸öÊôÐÔµÄÀàÐÍ£¬»òÄ³¸ö·½·¨·µ»ØÖµÀàÐÍ¡¢²ÎÊýÀàÐÍ
 
@@ -321,6 +343,12 @@ properties¼Ì³ÐHashtableÀàÊµÏÖMap½Ó¿ÚÒ²ÊÇÓÃ¼üÖµ¶ÔµÄÐÎÊ½±£´æÊý¾Ý£»properties¿ÉÒÔ´Ó
 ×Ô¶¨Òå·ºÐÍ·½·¨£¬¿ÉÒÔ¶¨ÒåÔÚÆÕÍ¨ÀàÖÐÒ²¿ÉÒÔ¶¨ÒåÔÚ·ºÐÍÀàÖÐ£»µ±·ºÐÍ·½·¨±»µ÷ÓÃÊ±£¬ÀàÐÍ±»È·¶¨
 
 ·ºÐÍ²»¾ß±¸¼Ì³ÐÐÔ£»<?> Ö§³ÖÈÎÒâ·ºÐÍÀàÐÍ <? extends A> Ö§³ÖAÀàºÍAµÄ×ÓÀà <? super A> Ö§³ÖAÀàºÍAµÄ¸¸Àà£¬²»ÏÞÓÚÖ±½Ó¸¸Àà
+
+ÍøÂç±à³Ì£º±àÐ´ÔËÐÐÔÚ¶à¸öÉè±¸µÄ³ÌÐò£¬ÕâÐ©Éè±¸¶¼Í¨¹ýÍøÂçÁ¬½ÓÆðÀ´
+tcp£ºÊÇÒ»ÖÖÃæÏòÁ¬½Ó¡¢¿É¿¿µÄ¡¢»ùÓÚ×Ö½ÚÁ÷µÄ´«Êä²ãÍ¨ÐÅÐ­Òé£¬tcp±£ÕÏÁËÁ½¸ö³ÌÐòÖ®¼äµÄ¿É¿¿Í¨ÐÅ
+udp£ºÒ»¸öÎÞÁ¬½Ó¡¢²»¿É¿¿Ð­Òé£¬Ìá¹©ÁË³ÌÐòÖ®¼äÒª·¢ËÍÊý¾ÝµÄÊý¾Ý±¨
+socket±à³Ì
+
 
 javaÉè¼ÆÕßÌá¹©ÁËÊµÏÖRunnable½Ó¿Ú´´½¨Ïß³Ì£»javaÊÇµ¥¼Ì³ÐµÄ£¬ÔÚ¼Ì³ÐÒ»¸ö¸¸ÀàµÄÇé¿öÏÂ£¬ÔÙ¼Ì³ÐThreadÀàÊµÏÖÏß³Ì²»ÏÖÊµ
 
