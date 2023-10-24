@@ -149,3 +149,14 @@ spring中的bean的作用域有以下几种
 * session（仅web应用可用）:每一次来自新session的http请求都会产生新的bean（会话bean），该bean仅在当前http session内有效
 * application/global-session（仅web应用可用）：每个web应用在启动时创建一个bean（应用bean），该bean仅在当前应用启动时间内有效
 * websocket（仅web应用可用）：每一次websocket会话产生一个新的bean
+
+#### 如何配置bean的作用域
+xml方式
+<bean id="" class="" scope="singleton"></bean>
+
+注解方式：
+@Bean
+@Scope(value= ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public Person PersonPrototype(){
+    return new Person();
+}
