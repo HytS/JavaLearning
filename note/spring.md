@@ -141,3 +141,11 @@ private SmsService smsService;
 * @Autowired支持在构造函数、方法、字段和参数上使用。@Resource主要用于字段和方法的注入，不支持在构造函数或参数上使用
 
 
+### bean的作用域有哪些
+spring中的bean的作用域有以下几种
+* singleton：ioc容器中只有唯一的bean实例。spring中的bean默认都是单例的，是对单例设计模式的应用
+* prototype：每次获取都会创建一个新的bean实例。也就是说，连续getBean()两次，得到的是两个不同的Bean实例
+* request（仅web应用可用）：每一次http请求都会产生一个新的bean（请求bean），该bean仅在当前http request内有效
+* session（仅web应用可用）:每一次来自新session的http请求都会产生新的bean（会话bean），该bean仅在当前http session内有效
+* application/global-session（仅web应用可用）：每个web应用在启动时创建一个bean（应用bean），该bean仅在当前应用启动时间内有效
+* websocket（仅web应用可用）：每一次websocket会话产生一个新的bean
