@@ -160,3 +160,14 @@ xml方式
 public Person PersonPrototype(){
     return new Person();
 }
+
+
+### Bean是线程安全的吗？
+spring框架中的bean是否线程安全，取决于其作用域和状态
+最常用的两种作用域prototype和singleton为例，几乎所有场景的bean作用域都是使用默认的singleton。
+prototype作用域下，每次获取都会创建一个新的bean实例，不存在资源竞争问题，所以 不存在线程安全问题。singleton作用域下，ioc容器中只有唯一的bean实例，可能存在资源竞争问题（取决于bean是否有状态）。如果这个bean是有状态的话，那就存在线程安全问题（有状态bean是指包含可变的成员变量的对象）
+不过大部分bean实例都是无状态（没有定义可变的成员变量）的（比如DAO、Service），这种情况下，bean是安全的
+
+对于有状态单例bean的线程安全问题，解决方法有两种：
+1、在bean中尽量避免定义可变的成员变量
+2、在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在ThreadLocal中
