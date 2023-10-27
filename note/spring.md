@@ -222,3 +222,21 @@ spring aop已经集成了AspectJ，AspectJ比spring aop功能更强，spring aop更简单
 1、通常使用@Order注解直接定义切面顺序（值越小优先级越高）
 2、实现Order接口重写getOrder方法（返回值越小优先级越高）
 
+
+### spring mvc
+#### mvc理解
+mvc是模型、视图、控制器的缩写，核心思想是通过将业务逻辑、数据、显示分离来组织代码
+model1
+整个web界面几乎全部用jsp页面组成，只有少量的javabean来处理数据库连接
+这个模式下，jsp既是控制层又是表现层，控制逻辑和表现逻辑混杂在一起，代码利用率低
+
+model2
+javaweb开发模式：javaBean（model）+jsp（view）+servlet（controller）
+* model：系统涉及的数据就是dao和bean
+* view：展示模型中的数据，只是用来展示
+* controller：接受用户请求，并将请求发送至model，最后返回数据给jsp并展示给用户
+
+model2的抽象和封装程度不够，
+
+spring mvc
+MVC 是一种设计模式，Spring MVC 是一款很优秀的 MVC 框架。Spring MVC 可以帮助我们进行更简洁的 Web 层的开发，并且它天生与 Spring 框架集成。Spring MVC 下我们一般把后端项目分为 Service 层（处理业务）、Dao 层（数据库操作）、Entity 层（实体类）、Controller 层(控制层，返回数据给前台页面)。
