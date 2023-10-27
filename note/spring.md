@@ -259,3 +259,27 @@ MVC ÊÇÒ»ÖÖÉè¼ÆÄ£Ê½£¬Spring MVC ÊÇÒ»¿îºÜÓÅÐãµÄ MVC ¿ò¼Ü¡£Spring MVC ¿ÉÒÔ°ïÖúÎÒÃÇ½
 * ViewResolver»á¸ù¾ÝÂß¼­view²éÕÒÊµ¼ÊµÄview
 * DispatcherServlet°Ñ·µ»ØµÄmodel´«¸øview
 * °Ñview·µ»Ø¸øÇëÇóÕß
+
+#### Í³Ò»Òì³£ÔõÃ´×ö
+ÍÆ¼öÊ¹ÓÃ×¢½âµÄ·½Ê½Í³Ò»Òì³£´¦Àí£¬Ê¹ÓÃ@ControllerAdvice+@ExceptionHandlerÕâÁ½¸ö×¢½â
+ÕâÖÖÒì³£´¦Àí·½Ê½ÏÂ£¬»á¸øËùÓÐ»òÕßÖ¸¶¨µÄControllerÖ¯ÈëÒì³£´¦ÀíµÄÂß¼­£¨aop£©£¬µ±controllerÖÐµÄ·½·¨Å×³öÒì³£µÄÊ±ºò£¬ÓÉ±»@ExceptionHandler×¢½âÐÞÊÎµÄ·½·¨½øÐÐ´¦Àí¡£
+
+ExceptionHandlerMethodResolverÖÐgetMappedMethod·½·¨¾ö¶¨ÁËÒì³£¾ßÌå±»ÄÄ¸ö±»@ExceptionHandlerÐÞÊÎµÄ·½·¨´¦ÀíÒì³£
+
+getMappedMethod()»áÊ×ÏÈÕÒµ½¿ÉÒÔÆ¥Åä´¦ÀíÒì³£µÄËùÓÐ·½·¨ÐÅÏ¢£¬È»ºó´ÓÐ¡µ½´óÅÅÐò£¬×îºóÈ¡×îÐ¡µÄÄÄÒ»¸öÆ¥ÅäµÄ·½·¨£¨¼´Æ¥Åä¶È×î¸ßµÄ·½·¨£©
+
+### spring¿ò¼ÜÖÐÓÃµ½ÁËÄÄÐ©Éè¼ÆÄ£Ê½
+* ¹¤³§Éè¼ÆÄ£Ê½£ºspringÊ¹ÓÃ¹¤³§Ä£Ê½Í¨¹ýBeanFactory¡¢ApplicationContext´´½¨bean¶ÔÏó
+* ´úÀíÉè¼ÆÄ£Ê½£ºspringaop¹¦ÄÜµÄÊµÏÖ
+* µ¥ÀýÉè¼ÆÄ£Ê½£ºspringÖÐµÄbeanÄ¬ÈÏ¶¼ÊÇµ¥ÀýµÄ
+* Ä£°å·½·¨Éè¼ÆÄ£Ê½£ºspringÖÐjdbcTemplate¡¢hibernateTemplateµÈÒÔTemplate½áÎ²µÄ¶ÔÊý¾Ý¿â²Ù×÷µÄÀà£¬ËüÃÇ¾ÍÓÃµ½ÁËÄ£°åÄ£Ê½
+* °ü×°Æ÷Éè¼ÆÄ£Ê½£ºÎÒÃÇµÄÏîÄ¿ÐèÒªÁ¬½Ó¶à¸öÊý¾Ý¿â£¬¶øÇÒ²»Í¬µÄÓÃ»§ÔÚÃ¿´Î·ÃÎÊÖÐ¸ù¾ÝÐèÒª»áÈ¥·ÃÎÊ²»Í¬µÄÊý¾Ý¿â¡£ÕâÖÖÄ£Ê½ÈÃÎÒÃÇ¿ÉÒÔ¸ù¾Ý¿Í»§µÄÐèÇóÄÜ¹»¶¯Ì¬ÇÐ»»²»Í¬µÄÊý¾ÝÔ´
+* ¹Û²ìÕßÄ£Ê½£ºspringÊÂ¼þÇý¶¯Ä£ÐÍ¾ÍÊÇ¹Û²ìÕßÄ£Ê½µÄÓ¦ÓÃ
+* ÊÊÅäÆ÷Ä£Ê½£ºspring aopµÄÔöÇ¿»òÍ¨Öª£¨advice£©Ê¹ÓÃµ½ÁËÊÊÅäÆ÷Ä£Ê½£¬spring mvcÖÐÒ²Ê¹ÓÃµ½ÁËÊÊÅäÆ÷Ä£Ê½ÊÊÅäController
+
+### springÊÂÎñ
+#### spring¹ÜÀíÊÂÎñµÄ·½Ê½ÓÐ¼¸ÖÖ
+* ±à³ÌÊ½ÊÂÎñ£ºÔÚ´úÂëÖÐÓ²±àÂë£¨²»ÍÆ¼ö£©£ºÍ¨¹ýTransactionTemplate»òÕßTransactionManager¹ÜÀíÊÂÎñ£¬Êµ¼ÊÓ¦ÓÃºÜÉÙÊ¹ÓÃ
+* ÉùÃ÷Ê½ÊÂÎñ£ºÔÚxmlÅäÖÃÎÄ¼þÖÐÅäÖÃ»òÕßÖ±½Ó»ùÓÚ×¢½â£¨ÍÆ¼ö£©£ºÊµ¼ÊÊÇÍ¨¹ýaopÊµÏÖ£¨»ùÓÚ@TransactionalµÄÈ«×¢½â·½Ê½Ê¹ÓÃ×î¶à£©
+
+#### springÊÂÎñÖÐÄÄ¼¸ÖÖÊÂÎñ´«²¥ÐÐÎª
