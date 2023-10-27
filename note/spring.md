@@ -171,3 +171,36 @@ prototype作用域下，每次获取都会创建一个新的bean实例，不存在资源竞争问题，所以 不
 对于有状态单例bean的线程安全问题，解决方法有两种：
 1、在bean中尽量避免定义可变的成员变量
 2、在类中定义一个ThreadLocal成员变量，将需要的可变成员变量保存在ThreadLocal中
+
+
+### bean的声明周期
+* bean容器找到配置文件中spring bean的定义
+* bean容器利用java reflection api创建一个bean实例
+* 如果涉及到一些属性值利用set()设置一些属性值
+* 如果bean实现BeanNameAware接口，调用setBeanName方法，传入bean的名字
+* 如果bean实现了BeanClassLoaderAware接口，调用setBeanClassLoader(),传入ClassLoader对象的实例
+* 如果bean实现BeanFactoryAware接口，调用setBeanFactory方法，传入BeanFactory对象的实例
+* 与上面类似，如果实现了其他*.aware接口，就调用相应的方法
+* 如果有和加载这个bean的spring容器相关的BeanPostProcessor对象，执行postProcessBeforeInitialization()
+* 如果bean实现了InitializaingBean接口，执行afterPropertiesSet方法
+* 如果bean配置文件中的定义包含init-method属性，执行指定的方法
+* 如果有和加载这个bean的spring容器相关的BeanPostProcessor对象，执行postProcessAfterInitialization()
+* 当要销毁bean的时候，如果bean实现类DisposableBean接口，执行destory方法
+* 当要销毁bean的时候，如果bean在配置文件中的定义包含destroy-method属性，执行指定的方法
+
+![图片](https://images.xiaozhuanlan.com/photo/2019/b5d264565657a5395c2781081a7483e1.jpg)
+
+### spring aop
+#### 对aop的理解
+aop能够将哪些与业务无关，却为业务模块所共同调用的逻辑或责任封装起来，便于减少系统的重复代码，降低模块之间的耦合度
+spring aop就是基于动态代理的，如果要代理的对象，实现了某个接口，那么spring aop就会使用jdk proxy，去创建代理对象，而对于没有实现接口的对象，就无法使用jdk proxy进行代理，这时spring aop会使用Cglib生成一个被代理对象的子类作为代理
+![图片](https://oss.javaguide.cn/github/javaguide/system-design/framework/spring/230ae587a322d6e4d09510161987d346.jpeg)
+
+当然也可以使用AspectJ，spring aop已经集成AspectJ
+Target：被通知的对象
+Proxy：向目标对象应用通知之后创建的代理对象
+连接点/JoinPoint：目标对象的所属类中，定义的方法均为连接点
+切入点/Pointcut：被截面拦截/增强的连接点（切入点一定是连接点，连接点不一定是切入点）
+通知/Advice：增强的逻辑/代码，即拦截到目标对象的连接点之后要做的事
+Aspect：切入点+通知
+Weaving：将通知应用到目标对象，进而生成代理对象的过程动作
