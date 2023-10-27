@@ -240,3 +240,22 @@ model2的抽象和封装程度不够，
 
 spring mvc
 MVC 是一种设计模式，Spring MVC 是一款很优秀的 MVC 框架。Spring MVC 可以帮助我们进行更简洁的 Web 层的开发，并且它天生与 Spring 框架集成。Spring MVC 下我们一般把后端项目分为 Service 层（处理业务）、Dao 层（数据库操作）、Entity 层（实体类）、Controller 层(控制层，返回数据给前台页面)。
+
+#### spring mvc的核心组件有哪些
+* DispatcherServelet：核心的中央处理器，负责接受请求、分发，并给与客户端相应
+* HandlerMapping：处理器映射器，根据url去匹配查找能处理的Handler，并会将请求涉及到的拦截器和Handler一起封装
+* HandlerAdapter：处理器适配器，根据HandlerMapping找到的Handler，适配执行对应的Handler
+* Handler：请求处理器，处理实际请求的处理器
+* viewResoler：视图解析器，根据Handler返回的逻辑视图，解析并渲染真正的视图，并传递给DispathcerServlet
+
+#### spring mvc的工作原理
+![图片](https://oss.javaguide.cn/github/javaguide/system-design/framework/spring/de6d2b213f112297298f3e223bf08f28.png)
+
+流程说明：
+* 客户端发送请求，DispatcherServlet拦截请求
+* DispatcherServlet根据请求信息调用HandlerMapping，HandlerMapping根据url去匹配查找能处理的Handler（即controller控制器），并会将请求涉及到的拦截器和Hanler一起封装
+* DispatcherServlet调用HandlerAdapter执行Handler
+* Handler完成对用户的请求后，会返回一个ModelAndView对象给DispatcherServlet（ModelAndView包含了数据模型以及相应的视图的信息。model返回的是数据对象，view是逻辑上的view）
+* ViewResolver会根据逻辑view查找实际的view
+* DispatcherServlet把返回的model传给view
+* 把view返回给请求者
