@@ -38,7 +38,7 @@ private¡¢protected²»ÄÜÐÞÊÎÀà£»ÀàºÍ½Ó¿Ú²»ÄÜ±»privateÐÞÊÎ£»×ÓÀàºÍ¸¸Àà²»ÔÚÍ¬Ò»¸ö°üÄ
 ×ÓÀàÖ®¼ä²»ÄÜ»¥Ïà×ªÐÍ£¬ÏòÏÂ×ªÐÍºó£¬¿ÉÒÔ·ÃÎÊ×ÓÀàµÄËùÓÐ³ÉÔ±£»ÊôÐÔµÄÖµ¿´±àÒëÀàÐÍ£»¶¯Ì¬°ó¶¨»úÖÆ£ºµ÷ÓÃ¶ÔÏó·½·¨Ê±£¬¸Ã·½·¨»áºÍ¸Ã¶ÔÏóµÄÔËÐÐµØÖ·°ó¶¨£¬µ÷ÓÃÊôÐÔÊ±£¬ÄÄÀïÉùÃ÷ÃÇÄÇÀïÊ¹ÓÃ
 ## final
 finalÐÞÊÎµÄ±äÁ¿Îª³£Á¿£¬finalÐÞÊÎµÄ·½·¨²»¿ÉÒÔ±»ÖØÐ´£»finalÐÞÊÎµÄÀà²»¿ÉÒÔ±»¼Ì³Ð£¬finalÐÞÊÎµÄÊôÐÔÒ»¶¨Òª¸³Öµ£¬¸³Öµºó²»¿ÉÒÔ¸ü¸Ä£»finalÐÞÊÎµÄÒýÓÃ±äÁ¿Ö¸µÄÊÇµØÖ·²»ÄÜ±ä£¬µØÖ·Ö¸ÏòµÄÄÚÈÝ¿ÉÒÔ¸Ä±ä£»³£Á¿ÔÚ±àÒë½×¶Î»á°ÑÊ¹ÓÃ³£Á¿µÄµØ·½»»³ÉÕæÊµµÄ×ÖÃæÁ¿£»
-
+final¿ÉÒÔÐÞÊÎÀà¡¢·½·¨¡¢ÊôÐÔ£¬±»finalÐÞÊÎ£¬²»¿ÉÒÔ¼Ì³Ð¸¸Àà¡¢²»¿ÉÒÔÖØÐ´¸¸Àà·½·¨¡¢²»¿ÉÒÔÐÞ¸ÄÀàµÄÊôÐÔÖµºÍ¾Ö²¿±äÁ¿£»final¸³ÖµÎ»ÖÃ£º¹¹ÔìÆ÷¡¢´úÂë¿é¡¢¶¨ÒåÊ±£»finalÀà²»ÄÜ±»¼Ì³Ð£¬µ«ÊÇ¿ÉÒÔÊµÀý»¯¶ÔÏó£»Èç¹ûÀàÃ»ÓÐ±»finalÐÞÊÎµ«ÊÇÓÖfinal·½·¨£¬¿ÉÒÔ±»¼Ì³Ðµ«ÊÇ²»ÄÜ±»ÖØÐ´£»Èç¹ûÒ»¸öÀà±»finalÐÞÊÎ£¬¾ÍÃ»±ØÒªÔÙÐÞÊÎfinal·½·¨£»final²»ÄÜÐÞÊÎ¹¹Ôì·½·¨£»finalºÍstaticÒ»ÆðÐÞÊÎ²»»áµ¼ÖÂÀà¼ÓÔØ£»°ü×°Àà¶¼ÊÇfinal£¬StringÒ²ÊÇfinal
 ## ÖØÐ´¡¢ÖØÔØ
 ### ÖØÐ´
 Í¬Ãûµ«ÊÇ¹¦ÄÜ²»Í¬µÄ·½·¨£»ÉùÃ÷ÎªfinalµÄ·½·¨²»ÄÜ±»ÖØÐ´£»ÉùÃ÷Îªstatic²»ÄÜ±»ÖØÐ´£¬µ«ÊÇ¿ÉÒÔ±»ÉùÃ÷£»×ÓÀàºÍ¸¸ÀàÔÚÒ»¸ö°üÄÚ£¬×ÓÀà¿ÉÒÔÖØÐ´³ýprivateºÍfinalÖ®ÍâµÄËùÓÐ·½·¨¡£×ÓÀàºÍ¸¸Àà²»ÔÚÒ»¸ö°üÄÚ£¬Ö»ÄÜÖØÐ´¸¸ÀàÉùÃ÷ÎªprotectedºÍpublicµÄ·ÇfinalµÄ·½·¨
@@ -51,8 +51,7 @@ javaÔËÐÐÍ¬Ò»¸öÀàÖÐÍ¬ÃûÍ¬¹¦ÄÜ²»Í¬²ÎÊýµÄ·½·¨·â×°ÎªÒ»¸ö·½·¨£¬Êµ²Î²ÎÊý¿ÉÓÐ¿ÉÎÞ£¬¿É±ä
 
 ## ==¡¢equals¡¢hashcode¡¢toString¡¢finalize
 ==ÅÐ¶Ï»ù±¾Êý¾ÝÀàÐÍÊÇ·ñÏàµÈ£»equals±È½ÏÒýÓÃÊý¾ÝÀàÐÍÊÇ·ñÏàµÈ£»==ºÍequals±È½ÏµÄ¶¼ÊÇÖµ£¬==±È½ÏµÄÊÇÖµ£¬equals±È½ÏµÄÊÇµØÖ·£»toString·µ»ØµÄÊÇÈ«ÀàÃû+@+¹þÏ£ÖµµÄÊ®Áù½øÖÆ£¬Ò»°ãÓÃÀ´·µ»Ø¶ÔÏóµÄÊôÐÔÐÅÏ¢£»hashcode£º¸ù¾Ý¶ÔÏó²»Í¬·µ»Ø²»Í¬µÄÊýÖµ£¬Á½¸öÒýÓÃÖ¸ÏòÍ¬Ò»¸ö¶ÔÏóÔò¹þÏ£ÖµÏàµÈ£»finalize£º¶ÔÏó±»»ØÊÕÊ±£¬ÏµÍ³µ÷ÓÃfinalize£¬¶ÔÏóÃ»ÓÐÒýÓÃÊ±£¬ÏµÍ³ÈÏÎª¶ÔÏóÊÇÀ¬»ø
-
-
+toString·½·¨µÄ»ù±¾×÷ÓÃÊÇ¸ø×ÓÀà¼Ì³Ð£¬×ÓÀà¶ÔÏóµ÷ÓÃ¿ÉÒÔ·µ»Ø×Ô¼ºµÄµØÖ·£»¶ÔÏóÄÚÈÝ±È½ÏÊ±½¨ÒéÊ¹ÓÃequals
 
 ## ¾²Ì¬±äÁ¿¡¢·½·¨
 ### ¾²Ì¬±äÁ¿
@@ -61,21 +60,96 @@ javaÔËÐÐÍ¬Ò»¸öÀàÖÐÍ¬ÃûÍ¬¹¦ÄÜ²»Í¬²ÎÊýµÄ·½·¨·â×°ÎªÒ»¸ö·½·¨£¬Êµ²Î²ÎÊý¿ÉÓÐ¿ÉÎÞ£¬¿É±ä
 
 main·½·¨ÓÉÐéÄâ»úµ÷ÓÃ£»jvmµ÷ÓÃmainÊ±²»ÓÃ´´½¨¶ÔÏó£»main·½·¨ÖÐ¿ÉÒÔÖ±½Óµ÷ÓÃmainËùÔÚÀàµÄ¾²Ì¬±äÁ¿ºÍ·½·¨£¬µ«²»ÄÜÖ±½Ó·ÃÎÊ·Ç¾²Ì¬³ÉÔ±
 
+## ´úÂë¿é
+´úÂë¿éÖ»ÓÐ·½·¨Ìå£¬ÔÚÀà¼ÓÔØºÍ´´½¨¶ÔÏóÊ±±»ÒþÊ½µ÷ÓÃ£»´úÂë¿éµÄµ÷ÓÃË³ÐòÔÚ¹¹ÔìÆ÷Ö®Ç°£»¾²Ì¬´úÂë¿éÖ»Ëæ×ÅÀà¼ÓÔØ¶ø¼ÓÔØÒ»´Î£¬ÆÕÍ¨´úÂë¿é´´½¨Ò»¸ö¶ÔÏó¾Í´´½¨Ò»´Î£»Àà¼ÓÔØµÄÊ±»ú£º1¡¢´´½¨¶ÔÏóÊµÀýÊ±2¡¢´´½¨×ÓÀà¶ÔÏóÊµÀýÊ±£¬»á¼ÓÔØ¸¸Àà3¡¢Ê¹ÓÃÀàµÄ¾²Ì¬³ÉÔ±Ê±
+¾²Ì¬´úÂë¿é×÷ÓÃ£ºÈç¹ûÔÚÏµÍ³Æô¶¯Ê±ÐèÒª¶Ô¾²Ì¬×ÊÔ´½øÐÐ³õÊ¼»¯£¬½¨ÒéÊ¹ÓÃ¾²Ì¬´úÂë¿éÍê³ÉÊý¾ÝµÄ³õÊ¼»¯
+´´½¨Ò»¸ö¶ÔÏóµ÷ÓÃµÄË³Ðò£º¾²Ì¬´úÂë¿éºÍ¾²Ì¬ÊôÐÔ³õÊ¼»¯¡¢ÆÕÍ¨´úÂë¿éºÍÊôÐÔ³õÊ¼»¯¡¢¹¹ÔìÆ÷£»¹¹ÔìÆ÷µÄ×îÇ°ÃæÒþº¬ÁËsuperºÍµ÷ÓÃÆÕÍ¨´úÂë¿é£¬¾²Ì¬´úÂë¿éºÍ¾²Ì¬ÊôÐÔµÄ³õÊ¼»¯ÔçÔÚÀà¼ÓÔØÊ±¾ÍÍê³ÉÁË
+´´½¨Ò»¸ö×ÓÀà£¬µ÷ÓÃË³Ðò£º¸¸Àà¾²Ì¬´úÂë¿é£¬¸¸ÀàÆÕÍ¨´úÂë¿é£¬×ÓÀà¾²Ì¬´úÂë¿é£¬¸¸Àà¹¹ÔìÆ÷£¬×ÓÀàÆÕÍ¨´úÂë¿é£¬×ÓÀà¹¹ÔìÆ÷
 ## ½Ó¿Ú¡¢³éÏóÀà
+### ½Ó¿Ú
+¸ø³öÒ»Ð©Ã»ÓÐÊµÏÖµÄ·½·¨·â×°µ½Ò»Æð£¬µ½ÌØ¶¨µÄÀàÖÐÐèÒªÊ¹ÓÃÊ±ÔÙ¾ßÌåÊµÏÖ£»jdk8Ö®ºó¿ÉÒÔÔÚ½Ó¿ÚÖÐÓÐ¾ßÌåÊµÏÖ£»ÔÚ½Ó¿ÚÖÐ£¬³éÏó·½·¨²»ÉùÃ÷Îªabstract£»Ò»¸öÆÕÍ¨ÀàÊµÏÖ½Ó¿Ú£¬ÐèÒªÊµÏÖ½Ó¿ÚÖÐËùÓÐ·½·¨£¬·ñÔò¾ÍÒªÉùÃ÷Îª³éÏóÀà£»½Ó¿Ú¿ÉÒÔ¼Ì³Ð½Ó¿Ú£¬²»¿ÉÒÔ¼Ì³ÐÀà£»
+½Ó¿Ú·ÃÎÊÊôÐÔ£º½Ó¿ÚÃû.ÊôÐÔ£»½Ó¿ÚÊôÐÔÀàÐÍ public static final£»Ò»¸öÀàÊµÏÖ¶à¸ö½Ó¿Ú£¬½Ó¿ÚµÄ¹æ·¶²»ÄÜ³åÍ»£¬¶à¸ö½Ó¿ÚÓÐÏàÍ¬µÄ¾²Ì¬·½·¨²»³åÍ»£»Ò»¸öÀàÊµÏÖ½Ó¿ÚÓÖ¼Ì³Ð¸¸Àà£¬¸¸ÀàÖÐÓÐºÍ½Ó¿ÚÍ¬ÑùµÄ·½·¨£¬Ä¬ÈÏÊ¹ÓÃ¸¸ÀàµÄ;Ò»¸öÀàÊµÏÖ¶à¸ö½Ó¿Ú£¬¶à¸ö½Ó¿ÚÓÐÍ¬ÃûµÄ·½·¨²»³åÍ»£¬¿ÉÒÔÈÃÀàÖØÐ´¸Ã·½·¨£»½Ó¿ÚÖÐµÄ·½·¨±ØÐëÊÇ³éÏó·½·¨£¬½Ó¿ÚÖÐ³ÉÔ±±äÁ¿±ØÐëÓÃfinalºÍstaticÐÞÊÎ£»½Ó¿ÚÖÐµÄ·½·¨±»ÒþÊ½µÄ¶¨ÒåÎªpublic abstract£»
+#### ½Ó¿ÚÎªÊ²Ã´²»ÄÜÊµÀý»¯
+ÊµÀý»¯µÄÒâÒå¾ÍÊÇjvmÔÚ¶ÑÖÐ¿ª±ÙÒ»¿é¿Õ¼äÓÃÓÚ´æ·Å¶ÔÏó£»½Ó¿ÚÖÐ´æ·ÅµÄÊÇ¾²Ì¬ÊôÐÔºÍ·½·¨ÉùÃ÷£»½Ó¿ÚÖÐµÄÊý¾Ý¶¼·ÅÔÚ´úÂëÇøºÍ¾²Ì¬Êý¾ÝÇø£¬¶ÑÖÐÃ»ÓÐÊý¾ÝÐèÒª´æ·Å£»½Ó¿ÚµÄ¶àÌ¬£º½Ó¿ÚÀàÐÍµÄ±äÁ¿¿ÉÒÔÖ¸ÏòÊµÏÖ½Ó¿ÚµÄÀàµÄ¶ÔÏóÊµÀý£¨IF if=new Cat()£©
+### ³éÏóÀà
+Ò»¸öÀàÃ»ÓÐ×ã¹»µÄÐÅÏ¢È¥ÃèÊö¶ÔÏó£»³éÏóÀà²»ÄÜ±»ÊµÀý»¯£¬Òª±»¼Ì³Ð£»Ê¹ÓÃ³¡¾°£ºµ±×ÓÀàÐèÒªÍê³ÉÒ»¶¨¹¦ÄÜ£¬¶øÃ¿¸ö×ÓÀà¹¦ÄÜÓÖ²»Í¬£¬¿ÉÒÔ½«·½·¨¶¨ÒåÎª³éÏó·½·¨£»¹¹Ôì·½·¨ºÍ¾²Ì¬·½·¨²»ÄÜ¶¨ÒåÎª³éÏó£»³éÏóÀà¿ÉÒÔÃ»ÓÐ³éÏó·½·¨£¬ÀàÒ»µ©°üº¬³éÏó·½·¨¾ÍÒª¶¨ÒåÎª³éÏóÀà£»
+abstractÖ»ÄÜÐÞÊÎ·½·¨ºÍÀà£»Èç¹ûÒ»¸öÀà¼Ì³ÐÁË³éÏóÀà£¬¾ÍÒªÊµÏÖ³éÏóÀàµÄËùÓÐ·½·¨£¬³ý·ÇÉùÃ÷Îª³éÏóÀà£»³éÏó·½·¨²»ÄÜÓÃfinal¡¢static¡¢privateÐÞÊÎ£»
+### ½Ó¿ÚºÍ³éÏóÀàµÄÇø±ð
+³éÏóÀà¿ÉÒÔÓÐ¾²Ì¬´úÂë¿é£¬½Ó¿Ú²»¿ÉÒÔÓÐ£»³éÏóÀàÖÐÆÕÍ¨·½·¨±ØÐëÓÐÊµÏÖ£¬³éÏó·½·¨±ØÐëÃ»ÓÐÊµÏÖ£¬½Ó¿ÚÖÐÆÕÍ¨·½·¨²»ÄÜÓÐÊµÏÖ£¬jdk8ÖÐstaticºÍÄ¬ÈÏ·½·¨±ØÐëÓÐÊµÏÖ£»³éÏóÀàÖÐµÄ³éÏó·½·¨²»ÄÜÓÃprivateÐÞÊÎ£¬½Ó¿ÚÖÐÄ¬ÈÏ¿ØÖÆ·ûÊÇpublic£»³éÏóÀàÖÐ·ÃÎÊ¿ØÖÆ·ûÎÞÏÞÖÆ£»
+## ÄÚ²¿Àà**8
+ÄÚ²¿Àà¿ÉÒÔÖ±½Ó·ÃÎÊË½ÓÐÊôÐÔ£»¾Ö²¿ÄÚ²¿Àà¶¨ÒåÔÚÀàÖÐµÄ¾Ö²¿Î»ÖÃ£¬Í¨³£ÔÚ·½·¨ºÍ´úÂë¿éÖÐ£¬¿ÉÒÔ·ÃÎÊÍâ²¿ÀàµÄËùÓÐ³ÉÔ±£¬²»¿ÉÒÔÌí¼Ó·ÃÎÊÐÞÊÎ·û£»¾Ö²¿ÄÚ²¿Àà·ÃÎÊÍâ²¿Àà³ÉÔ±£ºÖ±½Ó·ÃÎÊ£»Íâ²¿Àà·ÃÎÊ¾Ö²¿ÄÚ²¿Àà³ÉÔ±£ºÏÈ´´½¨¶ÔÏóÔÙ·ÃÎÊ£»Íâ²¿ÀàÆäËûÀà²»ÄÜ·ÃÎÊ¾Ö²¿ÄÚ²¿Àà£»ÆäËûÀà·ÃÎÊÍâ²¿Àà³ÉÔ± Íâ²¿Àà.this.³ÉÔ±±äÁ¿
+ÄäÃûÄÚ²¿Àà¶¨ÒåÔÚÍâ²¿ÀàµÄ¾Ö²¿Î»ÖÃ£¨new Àà»ò½Ó¿Ú(²ÎÊý){};£©£¬±¾ÖÊÊÇÃ»ÓÐÃû×ÖµÄ¾Ö²¿ÄÚ²¿Àà£¬ÊÇÒ»¸ö¶ÔÏó£»ÄäÃûÄÚ²¿Àà²úÉúµÄ¶ÔÏóÀàÐÍÊÇnewµÄ¶ÔÏóµÄ×ÓÀàÀàÐÍ£»
+³ÉÔ±ÄÚ²¿Àà¶¨ÒåÔÚÍâ²¿ÀàµÄ³ÉÔ±Î»ÖÃ£¬¿ÉÒÔÖ±½Ó·ÃÎÊÍâ²¿ÀàµÄËùÓÐ³ÉÔ±£¬²»ÓÃstaticÐÞÊÎ£¬¿ÉÒÔÌí¼ÓÈÎºÎÒ»¸öÐÞÊÎ·û£»Outer.Inner inner = new Outer().new Inner(); ³ÉÔ±ÄÚ²¿Àà¿ÉÒÔ·ÃÎÊÍâ²¿ÀàµÄ¾²Ì¬³ÉÔ±£»³ÉÔ±ÄÚ²¿Àà·ÃÎÊÍâ²¿Àà£ºÖ±½Ó·ÃÎÊ£»³ÉÔ±ÄÚ²¿Àà·ÃÎÊÍâ²¿Àà·½·¨ºÍÊôÐÔ£ºÍâ²¿Àà.this.³ÉÔ±·½·¨/ÊôÐÔ
+¾²Ì¬ÄÚ²¿Àà¶¨ÒåÔÚÍâ²¿Àà³ÉÔ±Î»ÖÃ²¢ÓÃstaticÐÞÊÎ£¬¿ÉÒÔÖ±½Ó·ÃÎÊÍâ²¿ÀàµÄ¾²Ì¬³ÉÔ±£¬²»¿ÉÒÔ·ÃÎÊ·Ç¾²Ì¬³ÉÔ±£¬¿ÉÒÔÌí¼ÓÈÎÒâ·ÃÎÊÐÞÊÎ·û£»¾²Ì¬ÄÚ²¿Àà¿ÉÒÔÖ±½Ó·ÃÎÊÍâ²¿ÀàµÄ¾²Ì¬³ÉÔ±£¬²»¿ÉÒÔ·ÃÎÊ·Ç¾²Ì¬³ÉÔ±£»
 
-Òì³£
-Ã¶¾Ù
-ÄÚ²¿Àà
-static
-´úÂë¿é
-°ü×°Àà
-String¡¢StringBuffer¡¢StringBuilder
-ArrayList¡¢vector¡¢LinkedList
-Set
-Map
-·´Éä
-io
-·ºÐÍ
-javaweb
+## Ã¶¾Ù
+Ã¶¾ÙÊÇÒ»ÖÖÌØÊâµÄÀà£¬enum¶¨ÒåµÄÃ¶¾ÙÀà¼Ì³ÐÁËEnumÀà£»Ã¶¾ÙÊÇfinalÀà£¬¹¹ÔìÆ÷ÊÇË½ÓÐµÄ£¬¶ÔÍâ²»ÄÜ´´½¨¶ÔÏó£¬Ã¶¾ÙÀàµÄµÚÒ»ÐÐÄ¬ÈÏ¶¼ÊÇÂÞÁÐÃ¶¾Ù¶ÔÏóµÄÃû³ÆµÄ£»Ã¶¾ÙÀàÓÐ×Ô¼ºµÄ¹¹Ôì·½·¨£¬±äÁ¿£¬·½·¨£»Ã¶¾ÙÀàÖ»ÄÜÊ¹ÓÃprivateÐÞÊÎ£¬ËùÒÔÍâ²¿ÎÞ·¨µ÷ÓÃ£¬Ã¶¾ÙÀà¿ÉÒÔÓÐ³éÏó·½·¨ºÍ¾ßÌå·½·¨£¬Èç¹ûÃ¶¾ÙÀà°üº¬³éÏó·½·¨£¬ÔòÃ¶¾ÙÀàµÄÃ¿¸öÊµÀý¶¼±ØÐëÊµÏÖ³éÏó·½·¨£»
+×Ô¶¨ÒåÃ¶¾Ù£ºÃ¶¾Ù¶ÔÏóÐèÒªÊ¹ÓÃstatic+finalÐÞÊÎ£¬¶ÔÏóÃûÒª´óÐ´£»×Ô¶¨Òå²½Öè£ºË½ÓÐ»¯¹¹ÔìÆ÷¡¢±¾Àà´´ÔìÒ»×é¶ÔÏó¡¿¶ÔÍâ±©Â¶¶ÔÏó¡¢Ìá¹©get·½·¨
+enumÃ¶¾ÙÀà£ºÈç¹ûÊ¹ÓÃenumÊµÏÖÃ¶¾Ù£¬ÐèÒª½«¶¨Òå³£Á¿¶ÔÏóÐ´ÔÚ×îÇ°Ãæ£¬Ê¹ÓÃenum¿ª·¢Ò»¸öÃ¶¾ÙÀà»áÄ¬ÈÏ¼Ì³ÐEnumÀà
+Ã¶¾Ù¶ÔÏó±ØÐë·ÅÔÚÃ¶¾ÙÀàµÄÐÐÊ×£¬Èç¹ûÊ¹ÓÃÎÞ²Î¹¹ÔìÆ÷´´½¨Ã¶¾Ù¶ÔÏó£¬ÔòÊµ²ÎºÍÐ¡À¨ºÅ¿ÉÒÔÊ¡ÂÔ£»
+## Òì³£
+throwÓÃÓÚÅ×³öÒì³££¬throwsÓÃÓÚÔÚ·½·¨ÉùÃ÷´¦Ö¸¶¨¿ÉÄÜ»áÅ×³öÒì³£µÄÀàÐÍ£»±àÒëÒì³££ºÈç¹û²»´¦Àí£¬³ÌÐòÎÞ·¨Í¨¹ý£»ÔËÐÐÒì³££º²»¼ì²éÒì³££¬ÓÉ³ÌÐòÂß¼­´íÎóÒýÆðµÄ£»Òì³£´¦Àí»úÖÆ£ºÈç¹ûÃ»ÓÐÏÔÊ½´¦ÀíÒì³££¬Ä¬ÈÏÊÇthrows
+throwsÒì³£´¦Àí£ºÈç¹ûÓï¾äÖ´ÐÐÖÐ¿ÉÄÜ³öÏÖÄ³ÖÖÒì³££¬µ«ÊÇ²»ÄÜÈ·¶¨ÈçºÎ´¦ÀíÒì³££¬ÏÔÊ½ÉùÃ÷½«Òì³£Å×³ö£¬±íÃ÷¸Ã·½·¨²»¶ÔÒì³£½øÐÐ´¦Àí£¬ÓÉ·½·¨µÄµ÷ÓÃÕß½øÐÐ´¦Àí£»throwsºó¸úµÄ¿ÉÒÔÊÇÒì³£ºÍÒì³£ÀàÐÍµÄ¸¸Àà£»
+ÔËÐÐÊ±Òì³££¬³ÌÐòÖÐÃ»ÓÐ´¦ÀíÄ¬ÈÏthrows£»×ÓÀàÖØÐ´¸¸Àà·½·¨£¬×ÓÀà·µ»ØµÄÒì³£ºÍ¸¸ÀàÏàÍ¬»òÊÇ¸¸ÀàÒì³£µÄ×ÓÀà£»
+ÔÚthrows¹ý³ÌÖÐ£¬ÓÐtry-catch¾Í²»ÐèÒªthrows£»×Ô¶¨ÒåÒì³££ºµ±³ÌÐòÖÐ³öÏÖ´íÎó£¬µ«´íÎóÐÅÏ¢²»ÔÚThrowableÀàÖÐ£¬×Ô¼º¿ÉÒÔÉè¼ÆÒì³£Àà£¬×Ô¶¨ÒåÒì³£¼Ì³ÐRunTimeException£¬°Ñ×Ô¶¨ÒåÒì³£×ö³ÉÔËÐÐÊ±Òì³£¿ÉÒÔÊ¹ÓÃthrowsÔÚ·½·¨ÉùÃ÷´¦Ìí¼ÓÒì³£ÀàÐÍ
+## °ü×°Àà
+## String¡¢StringBuffer¡¢StringBuilder
+### ´´½¨×Ö·û´®µÄ·½Ê½
+Í¨¹ýnew´´½¨µÄ×Ö·û´®¶ÔÏó£¬Ã¿Ò»´Înew¶¼»áÉêÇëÒ»¸öÄÚ´æ¿Õ¼ä£¬ÄÚÈÝÏàÍ¬£¬µØÖ·²»Í¬£»ÒÔ""·½Ê½¸ø³öµÄ×Ö·û´®£¬Ö»Òª×Ö·ûÏàÍ¬£¬ÎÞÂÛ³öÏÖ¼¸´Î£¬jvmÖ»»á½¨Á¢Ò»¸öString¶ÔÏó£¬ÔÚ³£Á¿³ØÖÐÎ¬»¤£»
+Stringµ÷ÓÃintern()Ê±£¬Èç¹û³£Á¿³ØÖÐ°üº¬Ò»¸öºÍStirng¶ÔÏóÄÚÈÝÏàÍ¬µÄ×Ö·û´®£¬Ôò·µ»Ø³ØÖÐµÄ×Ö·û´®£¬Èç¹ûÃ»ÓÐ£¬½«¸ÃString¶ÔÏóÌí¼Óµ½¶ÔÏó³ØÖÐ£¬²¢·µ»Ø´Ë¶ÔÏóµÄÒýÓÃ£»intern()·µ»ØµÄÊÇ³£Á¿³ØµÄµØÖ·
+³£Á¿Ïà¼Ó£¬·¢ÉúÔÚ³ØÖÐ£»±äÁ¿Ïà¼Ó£¬·¢ÉúÔÚ¶ÑÖÐ£»
+String¡¢Stringxx¶¼ÊÇfinal£¬²»ÄÜ±»¼Ì³Ð£»StringµÄ×Ö·û´®·ÅÔÚfinal char value[]£¬µØÖ·²»ÄÜ±»ÐÞ¸Ä£»StringBufferµÄ×Ö·ûÄÚÈÝ·ÅÔÚchar value[] ,ËùÓÐ±ä»¯²»ÓÃÒÀÀµÃ¿´Î¸Ä±äµØÖ·À´Íê³É£»StringBuffer×Ö·û·ÅÔÚ¶ÑÖÐ
+String´´½¨µÄ×Ö·û´®·ÅÔÚ³£Á¿³ØÖÐ£¬new´´½¨µÄ×Ö·û´®ÔÚ¶ÑÖÐ£»ÔÚ¶ÑÖÐÉú³É¶ÔÏóÊ±²»»á¼ì²â¸Ã¶ÔÏóÊÇ·ñ´æÔÚ£¬Òò´ËÍ¨¹ýnew´´½¨µÄ¶ÔÏó£¬Ò»¶¨ÊÇ²»Í¬µÄ¶ÔÏó£»¶ÔÓÚ×Ö·û´®µÄ+ÔËËã£¬µ±±àÒë³ÉclassÎÄ¼þÊ±£¬»á×Ô¶¯±àÒë³ÉStringBufferÀ´½øÐÐ×Ö·û´®µÄÁ¬½Ó²Ù×÷£»contactÊÇÍ¨¹ý¸´ÖÆÊý×éÔÙÍ¨¹ýcharÊý×é½øÐÐÆ´½ÓÉú³ÉÒ»¸öÐÂµÄ¶ÔÏó£¬µØÖ·»á±ä¶¯
+Stringxx¿ÉÒÔÐÞÊÎ×Ö·û´®¶ø²»ÊÇ´´½¨ÐÂµÄ¶ÔÏó£»ÔÚÊ¹ÓÃStringBufferÊ±£¬Ã¿´Î¶¼ÊÇ¶ÔStringBuffer¶ÔÏó±¾Éí½øÐÐ²Ù×÷£¬²»ÊÇ²úÉúÐÂ¶ÔÏó£»StringBuilder²»ÊÇÏß³Ì°²È«£¬²»ÄÜÍ¬²½·ÃÎÊ£»String±£´æµÄÊÇ×Ö·û´®³£Á¿£¬StringBuffer±£´æµÄÊÇ×Ö·û´®±äÁ¿£¬StringBufferÃ¿´Î¸üÐÂµÄÊÇÄÚÈÝ£¬²»ÊÇÄÚ´æµØÖ·£»StringBuffer()´´½¨ÁËÒ»¸ö´óÐ¡Îª16µÄchar[]£¬²ÎÊý¿ÉÒÔÊÇ³¤¶È»ò×Ö·û´®£¨×Ü³¤¶È=×Ö·û´®µÄ³¤¶È+16£©
+
+
+### Èç¹û×Ô¼ºÐ´Ò»¸öStringÀà»á·¢ÉúÊ²Ã´
+×Ô¼ºÐ´Ò»¸öStringÀà£¬»á¼ÓÔØ²»½øÄÚ´æ£»»ùÓÚjvmË«Ç×Î¯ÅÉ»úÖÆ£¬Àà¼ÓÔØÆ÷»áÊÕµ½¼ÓÔØÆ÷µÄÇëÇó£¬»á°ÑÕâ¸öÇëÇóÎ¯ÅÉ¸øËüµÄ¸¸Àà¼ÓÔØÆ÷¡£Ö»ÓÐ¸¸Àà¼ÓÔØÆ÷×Ô¼ºÎÞ·¨Íê³É¼ÓÔØÇëÇóÊ±£¬×ÓÀà²Å»á×Ô¼º¼ÓÔØ¡£ÕâÑù×Ô¶¨ÒåµÄStringÀàµÄ¼ÓÔØÇëÇó¾Í»áµ½´ï×î¶¥²ãµÄBootstrap ClassLoaderÆô¶¯Àà¼ÓÔØÆ÷£¬Æô¶¯Àà¼ÓÔØÆ÷¼ÓÔØµÄÊÇÏµÍ³µÄString¶ÔÏó£¬ÓÃ»§±àÐ´µÄjava.lang.String²»»á±»¼ÓÔØ£»
+²»¿ÉÒÔ×Ô¶¨ÒåÒÔjava¿ªÍ·µÄÀà£¬ÒªÃ´ÓÉÓÚÀà¼ÓÔØÆ÷µÄË«Ç×Î¯ÅÉ»úÖÆ²»ÄÜ¼ÓÔØ½øÄÚ´æ£¬ÒªÃ´¼´Ê¹Ê¹ÓÃ×Ô¶¨ÒåµÄÀà¼ÓÔØÆ÷È¥Ç¿ÐÐ¼ÓÔØ£¬Ò²»áÊÕµ½SecurityException
+
+## Iterator
+Iterator it=col.Iterator();
+while(it.hasNext()){System.out.println(i.next());}
+hasNext()ÓÃÓÚÅÐ¶Ï½áºÏÊÇ·ñ»¹ÓÐÏÂÒ»¸öÔªËØ¿ÉÒÔ·ÃÎÊ
+next()·µ»Øµü´úÆ÷µÄÏÂÒ»¸öÔªËØ£¬²¢½«µü´úÆ÷µÄÖ¸ÕëÒÆµ½ÏÂÒ»¸öÎ»ÖÃ
+## ArrayList¡¢vector¡¢LinkedList
+ArrayListµÈÍ¬ÓÚvector£¬ArrayListÏß³Ì²»°²È«£¬µ«Ð§ÂÊ¸ß£»´´½¨ArrayListÊ±£¬Èç¹ûÊ¹ÓÃÎÞ²Î¹¹ÔìÆ÷£¬ÔòelementDataÈÝÁ¿Îª0£¬µÚÒ»´ÎÌí¼ÓÀ©ÈÝÎª10£¬ÔÙ´ÎÌí¼ÓÀ©ÈÝÎªÉÏ´ÎµÄ1.5±¶£¬Èç¹ûÊ¹ÓÃÖ¸¶¨´óÐ¡µÄ¹¹ÔìÆ÷£¬elementDataÈÝÁ¿ÎªÖ¸¶¨´óÐ¡£¬À©ÈÝÊ±ÎªÉÏ´ÎµÄ1.5±¶£»
+vectorµ×²ãÊÇ¶ÔÏóÊý×é£¬Ïß³Ì°²È«£¬Ð§ÂÊµÍ£»vectorÀàµÄ²Ù×÷·½·¨ÓÐsynchronized£»À©ÈÝ£ºÈç¹ûÎÞ²Î£¬³õÊ¼Îª10£¬È»ºó2±»À©ÈÝ¡£Èç¹ûÖ¸¶¨´óÐ¡°´2±¶À©ÈÝ
+
+## Set
+set½Ó¿ÚÎÞÐò£¨Ìí¼ÓºÍÈ¡³öµÄË³Ðò²»Ò»ÖÂ£©£¬µ«ÊÇÈ¡³öµÄË³ÐòÊÇ¹Ì¶¨µÄ£¬Ã»ÓÐË÷Òý£¬²»ÔÊÐíÖØ¸´ÔªËØ£¬×î¶à°üº¬Ò»¸önull£»
+set½Ó¿ÚµÄ±éÀú·½Ê½£ºµü´úÆ÷¡¢ÔöÇ¿for£»²»ÄÜÊ¹ÓÃË÷ÒýµÄ·½Ê½»ñÈ¡ÔªËØ
+### HashSet
+µ×²ãÊÇHashMap£¬¿ÉÒÔ´æ·Ånull£¬µ«ÊÇÖ»ÄÜÓÐÒ»¸ö£»²»±£Ö¤ÔªËØÓÐÐò£¬ÔªËØ²»ÖØ¸´£¬Ïß³Ì²»°²È«£»Èç¹û¶à¸öÏß³ÌÍ¬Ê±ÐÞ¸ÄHashSet£¬×îÖÕ½á¹û²»È·¶¨£»
+À©ÈÝ£ºÌí¼ÓÒ»¸öÔªËØÊ±£¬»á½«hashÖµ×ª»¯ÎªË÷ÒýÖµ£¬ÕÒµ½´æ´¢Êý¾Ý±ítable£¬²é¿´Ë÷ÒýÖµ´¦ÊÇ·ñ´æÔÚÔªËØ£¬Èç¹û²»´æÔÚÔªËØÔò²åÈëÊý¾Ý£¬Èç¹ûÓÐÔªËØ´æÔÚ£¬Ê¹ÓÃequals±È½Ï£¬ÏàÍ¬Ôò²»Ìí¼Ó£¬²»Í¬ÔòÌí¼Óµ½×îºó£»µ±Á´±í³¤¶È>8ÇÒtable´óÐ¡>=64»á½øÐÐÊ÷»¯
+HashSetµ×²ã»úÖÆ£ºµÚÒ»´ÎÌí¼ÓÔªËØÊ±£¬tableÊý×éÀ©ÈÝµ½16£¬ÁÙ½çÖµÎª16*0.75=12£»µ±table´óÐ¡´ïµ½12Ê±£¬»á°´2±¶À©ÈÝÎª32£¬ÐÂµÄÁÙ½çÖµÎª32*0.75=24£»HashSetÀ©ÈÝ£¬µ±Á´±íÖÐÔªËØ×ÜºÍ>12Ê±Ò²»áÀ©ÈÝ
+
+### LinkedHashSet
+LinkedHashSetÊÇHashSetµÄ×ÓÀà£¬LinkedHashSetµÄµ×²ãÊÇLinkedHashMap£¬µ×²ãÎ¬»¤ÁËÒ»¸ötableÊý×éºÍË«ÏòÁ´±í£»LinkedHashSet¸ù¾ÝÔªËØµÄhashcode¾ö¶¨ÔªËØµÄ´æ´¢Î»ÖÃ£¬Í¬Ê±Ê¹ÓÃÁ´±íÎ¬»¤ÔªËØµÄ´ÎÐò£¬Ê¹µÃÔªËØ¿´ÆðÀ´ÊÇÒÔ²åÈëË³Ðò´æ´¢µÄ£»LinkedHashSet²»ÔÊÐíÌí¼ÓÖØ¸´ÔªËØ
+Ìí¼ÓÔªËØÊ±£¬ÏÈÇóhashÖµÔÙÇóË÷Òý£¬È·¶¨¸ÃÔªËØÔÚhashtable±íÉÏµÄÎ»ÖÃ£¬È»ºó½«Ìí¼ÓµÄÔªËØ¼ÓÈëË«ÏòÁ´±í£¨Èç¹ûÒÑ¾­´æÔÚ¾Í²»Ìí¼Ó£©£»Ìí¼ÓµÚÒ»´Î£¬½«tableÀ©ÈÝµ½16£¬´æ·ÅµÄ½ÚµãÀàÐÍÊ±LinkedHashMap$Entry
+## Map
+MapºÍCollection²¢ÁÐ´æÔÚ£¬ÓÃÓÚ±£´æ¾ßÓÐÓ³Éä¹ØÏµµÄkey-value£»mapÖÐµÄkv¿ÉÒÔÊÇÈÎºÎÀàÐÍµÄÊý¾Ý£¬±£´æÔÚHashSet$Node¶ÔÏóÖÐ£»mapÖÐµÄkey²»¿ÉÒÔÖØ¸´£¬value¿ÉÒÔÖØ¸´£¬keyºÍvalue¶¼¿ÉÒÔÊÇnull£¬keyÖ»ÄÜÓÐÒ»¸önull£¬value¿ÉÒÔÓÐºÜ¶ànull£»Ò»¶ÔkvÊÇ·ÅÔÚnodeÖÐµÄ
+
+### HashMap
+HashMapÊÇÒ»¸öÉ¢ÁÐ±í£¬´æ´¢µÄÄÚÈÝÊÇ¼üÖµ¶ÔÓ³Éä£»HashMapÊµÏÖÀàMap½Ó¿Ú£¬¸ù¾Ý¼üµÄhashÖµ´æ´¢Êý¾Ý£¬×î¶àÔÊÐíÒ»Ìõ¼ÇÂ¼µÄ¼üÎªnull£¬²»Ö§³ÖÏß³ÌÍ¬²½£¬HashMapµÄkeyºÍvalueÀàÐÍ¿ÉÒÔÏàÍ¬Ò²¿ÉÒÔ²»Í¬£»
+
+HashMapµ×²ãÎ¬»¤ÁËnodeÀàÐÍµÄtableÊý×é£¬Ä¬ÈÏnull£¬µ±´´½¨¶ÔÏóÊ±£¬½«¼ÓÔØÒò×Ó³õÊ¼»¯Îª0.75£¬µ±Ìí¼ÓkvÊ±£¬Í¨¹ýkeyµÄhashÖµµÃµ½tableµÄË÷Òý£¬È»ºóÅÐ¶ÏË÷Òý´¦ÊÇ·ñÓÐÔªËØ£¬Èç¹ûÃ»ÓÐÔªËØÖ±½ÓÌí¼Ó£¬Èç¹ûÓÐÔªËØ£¬¼ÌÐøÅÐ¶Ï¸ÃË÷Òý´¦µÄkeyºÍÒªÌí¼ÓµÄkeyÊÇ·ñÏàÍ¬£¬Èç¹ûÏàÍ¬Ö±½ÓÌæ»»value£¬Èç¹û²»Í¬»¹ÒªÅÐ¶ÏÊÇÊ÷½á¹¹»¹ÊÇÁ´±í½á¹¹£»Èç¹ûÌí¼ÓÊ±·¢ÏÖÈÝÁ¿²»¹»»¹ÒªÀ©ÈÝ£»
+
+µÚÒ»´ÎÌí¼ÓÊ±£¬tableÀ©ÈÝÎª16£¬ÁÙ½çÖµÎª12£¬ÔÙ´ÎÀ©ÈÝÎª32£¬ÁÙ½çÖµÎª24£»ÔÚjava8ÖÐ£¬Èç¹ûÊý×é³¤¶È´ïµ½8ÇÒÁ´±íÔªËØ¸öÊý>=64£¬¾Í»áÊ÷»¯£¬·ñÔòÊ¹ÓÃÊý×éÀ©ÈÝ»úÖÆ
+
+### Hashtable
+Hashtable´æ·ÅµÄÔªËØÊÇ¼üÖµ¶Ô£¬hashtableµÄ¼üÖµ¶Ô²»ÄÜ¶¼ÊÇnull£»hashtableÏß³Ì°²È«£¬hashmapÏß³Ì²»°²È«¡£
+properties¼Ì³ÐHashtableÀàÊµÏÖMap½Ó¿Ú£¬Ê¹ÓÃ¼üÖµ¶ÔµÄÐÎÊ½±£´æÊý¾Ý£¬properties¿ÉÒÔ´Óxx.propertiesÎÄ¼þÖÐ¼ÓÔØÊý¾Ýµ½propertiesÀà¶ÔÏó²¢½øÐÐ¶ÁÈ¡ºÍÐÞ¸Ä£»
+## ·ºÐÍ
+ÀàÐÍÍ¨Åä·ûÒ»°ãÊ¹ÓÃ?´úÌæ¾ßÌåµÄÀàÐÍ²ÎÊý£»<? extends T>±íÊ¾¸ÃÍ¨Åä·ûËù´ú±íµÄÀàÐÍÊÇTÀàÐÍµÄ×ÓÀà£»<? super T>±íÊ¾¸ÃÍ¨Åä·û´ú±íµÄÀàÐÍÊÇTÀàÐÍµÄ¸¸Àà£»·ºÐÍÔÚÀàÉùÃ÷ºÍÊµÀý»¯Ê±ÒªÖ¸¶¨ºÃÐèÒªµÄÀàÐÍ£»·ºÐÍ¿ÉÒÔ°ü×°Ö»Òª±àÒëÕý³££¬ÔËÐÐÊ±²»»áÅ×³öÀàÐÍÒì³££»Èç¹ûÔÚ´´½¨¶ÔÏóÊ±Ã»ÓÐÖ¸¶¨ÀàÐÍ£¬Ä¬ÈÏObject£»×Ô¶¨Òå·ºÐÍ½Ó¿Ú£¬·ºÐÍ½Ó¿ÚµÄÀàÐÍÔÚ¼Ì³Ð½Ó¿Ú»òÊµÏÖ½Ó¿ÚÊ±È·¶¨£»×Ô¶¨Òå·ºÐÍ·½·¨£¬¿ÉÒÔ¶¨ÒåÔÚÆÕÍ¨ÀàÖÐ£¬Ò²¿ÉÒÔ¶¨ÒåÔÚ·ºÐÍÀàÖÐ£¬µ±·ºÐÍ·½·¨±»µ÷ÓÃÊ±£¬ÀàÐÍ±»È·¶¨
+
+·ºÐÍ²»¾ßÓÐ¼Ì³ÐÐÔ£¬<?> Ö§³ÖÈÎÒâ·ºÐÍÀàÐÍ <? extends A> Ö§³ÖAÀàºÍAµÄ×ÓÀà <? super A> Ö§³ÖAÀàºÍAµÄ¸¸Àà£¬²»ÏÞÓÚÖ±½Ó¸¸Àà
+
+
+## ·´Éä
+
+## io
+
+# javaweb
 
 
