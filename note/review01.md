@@ -19,36 +19,48 @@ javaBean¿ÉÒÔÀí½âÎªÊµÌåÀà£¬³ÉÔ±±äÁ¿ÉùÃ÷Îªprivate£¬ÄÚ²¿ÊµÏÖget¡¢set·½·¨
 #### ÄäÃû¶ÔÏó
 Ò»°ãÄäÃû¶ÔÏóÖ»Ê¹ÓÃÒ»´Î£¬¶øÇÒÄäÃû¶ÔÏóÖ»ÔÚ¶ÑÄÚ´æÖÐ¿ª±Ù¿Õ¼ä£¬²»´æÔÚÕ»µÄÒýÓÃ£¨new Person("aaa").tell();¸Ã¶ÔÏóÊ¹ÓÃÒ»´Îºó¾ÍµÈ´ý±»gc»ØÊÕ£©£»Í¨³£×÷ÎªÆäËûÊµÀý»¯¶ÔÏóµÄ²ÎÊý´«µÝ£»
 
+### ¶ÔÏóÊý×é
+Êý×éÖÐ°üº¬Í¬Ò»ÀàÐÍµÄ¶ÔÏó£¬Êý×éÒªÏÈ¿ª±Ù¿Õ¼ä£¬²¢ÇÒÊý×éÖÐÃ¿Ò»¸ö¶ÔÏó¶¼ÒªÊµÀý»¯£»
+### ÄÚ´æÇøÓò
+Õ»ÄÚ´æ£º´æ·ÅËùÓÐ¶ÔÏóÃû³Æ
+¶ÑÄÚ´æ£º±£´æÃ¿¸ö¶ÔÏóµÄ¾ßÌåÄÚÈÝ
+È«¾ÖÊý¾ÝÇø£º±£´æstaticÀàÐÍµÄÊôÐÔ
+È«¾Ö´úÂëÇø£º±£´æËùÓÐ·½·¨µÄ¶¨Òå
 
 ### ×÷ÓÃÓò
 ³ÉÔ±±äÁ¿¿ÉÒÔÌí¼Ó·ÃÎÊÐÞÊÎ·û£¬¿ÉÒÔÔÚ±¾Àà¼°ÆäËûÀàÖÐÊ¹ÓÃ£¬ÓÐÄ¬ÈÏÖµ£¬ÊôÐÔËæ×Å¶ÔÏó´´½¨¶ø´´½¨£¬Ëæ×Å¶ÔÏóµÄÏú»Ù¶øÏú»Ù£»¾Ö²¿±äÁ¿²»ÄÜ¼Ó·ÃÎÊÐÞÊÎ·û£¬ÎÞÄ¬ÈÏÖµ£¬Ö»ÄÜÔÚ±¾ÀàÖÐÊ¹ÓÃ£¬¾Ö²¿±äÁ¿Ëæ×Å´úÂë¿éµÄ½áÊø¶ø½áÊø£»¾Ö²¿±äÁ¿ÔÚÕ»ÉÏ·ÖÅä£¬±ØÐë³õÊ¼»¯²ÅÄÜÊ¹ÓÃ£¬ÈôÎ´³õÊ¼»¯£¬Ôò¸³ÓèÄ¬ÈÏÖµ£»¾Ö²¿±äÁ¿Ö»ÔÚÉùÃ÷ËüµÄ·½·¨¡¢¹¹Ôì·½·¨¡¢Óï¾ä¿éÖÐ¿É¼û£»¾²Ì¬±äÁ¿Ö¸ÔÚÀàÖÐ¶¨ÒåµÄ±äÁ¿£¬Ëæ×ÅÀàµÄ¼ÓÔØ¶ø¼ÓÔØ£¬¿ÉÒÔ¼Ó·ÃÎÊÐÞÊÎ·û£¬ËùÓÐ¶ÔÏóÊµÀý¹²ÏíÒ»¸ö¾²Ì¬±äÁ¿£¬¾²Ì¬±äÁ¿ÓëÀàÏà¹Ø£¬¶à¸öÏß³Ì·ÃÎÊ¾²Ì¬±äÁ¿»áÓÐÊý¾ÝÒ»ÖÂÐÔÎÊÌâ£¬½¨Òé²ÉÓÃÍ¬²½´ëÊ©£»
 ### ¹¹ÔìÆ÷
 Ä¬ÈÏÓÐÎÞ²Î¹¹ÔìÆ÷£¬Èç¹ûÉùÃ÷ÁËÒ»¸öÐÂµÄ¹¹ÔìÆ÷£¬¾Í»á¸²¸ÇÄ¬ÈÏµÄÎÞ²Î¹¹ÔìÆ÷£»¹¹ÔìÆ÷ÊÇÍê³É¶ÔÏóµÄ³õÊ¼»¯£¬²»ÊÇ´´Ôì¶ÔÏó£»
 ´´Ôì¶ÔÏó£º¼ÓÔØÀàÐÅÏ¢Ö»»á¼ÓÔØÒ»´Î£¬ÔÚ¶ÑÖÐ·ÖÅä¿Õ¼ä£¬Ä¬ÈÏ³õÊ¼»¯£¬ÏÔÊ½³õÊ¼»¯£¬¹¹ÔìÆ÷³õÊ¼»¯£¬½«¶ÑÖÐµÄµØÖ··ÖÅä¸øÒýÓÃ
+#### ¹¹Ôì·½·¨µÄË½ÓÐ»¯
+ÔÚÀàÄÚ²¿È¥ÊµÀý»¯¶ÔÏó£¬È»ºó·µ»Ø¸østaticÐÞÊÎµÄinstance£¨±»staticÐÞÊÎºó²»ÊÜÊµÀý»¯¶ÔÏóµÄÏÞÖÆ£¬¿ÉÒÔÍ¨¹ýÀàÃû·ÃÎÊ£©£¬ÓÖÒòÎªÀàÖÐµÄÊôÐÔ±ØÐë·â×°£¬ËùÒÔÍ¨¹ý¾²Ì¬·½·¨getInstance()·½·¨·µ»Øinstance£¨ÒòÎªinstanceÊÇ¾²Ì¬ÊôÐÔËùÒÔÒªÉùÃ÷Îª¾²Ì¬·½·¨£©£»
 ### this¡¢super
-thisÖ¸´úÕâ¸ö¶ÔÏó£»thisÖ»ÄÜ³öÏÖÔÚ¹¹ÔìÆ÷µÄµÚÒ»ÐÐ£»
+thisÖ¸´úÕâ¸ö¶ÔÏó£»thisÖ»ÄÜ³öÏÖÔÚ¹¹ÔìÆ÷µÄµÚÒ»ÐÐ£»¿ÉÒÔÊ¹ÓÃthis()µ÷ÓÃÎÞ²Î¹¹ÔìÆ÷£»thisµ÷ÓÃ¹¹Ôì·½·¨Ò»¶¨ÒªÁôÒ»¸ö³ö¿Ú£¬¼´³ÌÐòÖÐÖÁÉÙ´æÔÚÒ»¸ö¹¹Ôì·½·¨ÊÇ²»Ê¹ÓÃthisµ÷ÓÃÆäËû¹¹Ôì·½·¨µÄ£¬Ò»°ã½«ÎÞ²Î¹¹Ôì·½·¨µ±×÷³ö¿Ú£¬¼´ÎÞ²Î¹¹ÔìÆ÷×îºÃ²»ÒªÈ¥µ÷ÓÃÆäËû¹¹Ôì·½·¨£»
 
 ### ·ÃÎÊÐÞÊÎ·û
-public ±¾Àà¡¢Í¬°ü¡¢×ÓÀà¡¢²»Í¬°ü default£ºÍ¬Ò»°üÄÚ¿É¼û protected£º¶ÔÍ¬°üµÄÀàºÍËùÓÐ×ÓÀà¿É¼û private£ºÍ¬Àà
+public ±¾Àà¡¢Í¬°üµÄÀà¡¢²»Í¬°üµÄ×ÓÀà¡¢ÆäËû°üµÄÀà  protected£º±¾°üµÄÀàºÍ²»Í¬°üµÄ×ÓÀà default£º±¾°üµÄÆäËûÀà private£ºÍ¬Àà
 private¡¢protected²»ÄÜÐÞÊÎÀà£»ÀàºÍ½Ó¿Ú²»ÄÜ±»privateÐÞÊÎ£»×ÓÀàºÍ¸¸Àà²»ÔÚÍ¬Ò»¸ö°üÄÚ£¬ÔÚ×ÓÀàÖÐ£¬×ÓÀàÊµÀý¿ÉÒÔ·ÃÎÊ´Ó¸¸Àà¼Ì³ÐµÄprotected·½·¨£¬²»ÄÜ·ÃÎÊ¸¸ÀàÊµÀýµÄprotected·½·¨£»Ö»ÓÐÄÚ²¿Àà²ÅÄÜÓÃprivate¡¢protectedÐÞÊÎ
 ¸¸ÀàÉùÃ÷ÎªpublicµÄ·½·¨£¬×ÓÀàÒ²ÒªÉùÃ÷Îªpublic£»¸¸ÀàÉùÃ÷ÎªprotectedµÄ·½·¨£¬×ÓÀàÒªÃ´ÉùÃ÷ÎªprotectedÒªÃ´public
 
 ## ÌØÐÔ
 ### ·â×°¡¢¼Ì³Ð¡¢¶àÌ¬
 #### ¼Ì³Ð
-×ÓÀà¿ÉÒÔ¼Ì³Ð¸¸ÀàµÄË½ÓÐ³ÉÔ±£¬µ«ÊÇ²»ÄÜ·ÃÎÊ¸¸ÀàµÄË½ÓÐÊôÐÔºÍ·½·¨£¬ÐèÒªÍ¨¹ý¸¸ÀàÌá¹©µÄ¹«¹²·½·¨Çø·ÃÎÊ£»×ÓÀà²»¿ÉÒÔ¼Ì³Ð¸¸ÀàµÄ¹¹ÔìÆ÷£¬Ö»ÊÇÏÔÊ½/ÒþÊ½µÄµ÷ÓÃ£»´´½¨×ÓÀà¶ÔÏóÊ±»áÏÈ·ÃÎÊ¸¸Àà¹¹ÔìÆ÷£¬Íê³É¸¸Àà³õÊ¼»¯£¬ÔÙÈ¥·ÃÎÊ×ÓÀà¹¹ÔìÆ÷
+×ÓÀà¿ÉÒÔ¼Ì³Ð¸¸ÀàµÄË½ÓÐ³ÉÔ±£¬µ«ÊÇ²»ÄÜÖ±½Ó·ÃÎÊ¸¸ÀàµÄË½ÓÐÊôÐÔºÍ·½·¨£¬ÐèÒªÍ¨¹ý¸¸ÀàÌá¹©µÄgetter·ÃÎÊ£»×ÓÀà²»¿ÉÒÔ¼Ì³Ð¸¸ÀàµÄ¹¹ÔìÆ÷£¬Ö»ÊÇÏÔÊ½/ÒþÊ½µÄµ÷ÓÃ£»´´½¨×ÓÀà¶ÔÏóÊ±»áÏÈ·ÃÎÊ¸¸Àà¹¹ÔìÆ÷£¬Íê³É¸¸Àà³õÊ¼»¯£¬ÔÙÈ¥·ÃÎÊ×ÓÀà¹¹ÔìÆ÷
 ÔÚ´´½¨×ÓÀà¶ÔÏóÊ±£¬ÎÞÂÛµ÷ÓÃÄÄ¸ö×ÓÀà¹¹ÔìÆ÷¶¼Ä¬ÈÏµ÷ÓÃ¸¸ÀàµÄÎÞ²Î¹¹ÔìÆ÷£¬Èç¹û¸¸ÀàÃ»ÓÐÎÞ²Î¹¹ÔìÆ÷£¬ÔòÐèÒªÔÚ×ÓÀà¹¹ÔìÆ÷ÖÐÓÃsuperµ÷ÓÃÏàÓ¦µÄ¸¸Àà¹¹ÔìÆ÷Íê³É¸¸ÀàµÄ³õÊ¼»¯
 ²»Í¬°üÏÂµÄÀàÐèÒªÏÈµ¼°ü²ÅÄÜÊ¹ÓÃ£¬Èç¹ûÄ³¸öÀàÊ¹ÓÃ²»Í¬°üÏÂµÄÏàÍ¬ÀàÃû£¬¶øÕâÊ±Ä¬ÈÏÖ»ÄÜµ¼ÈëÒ»¸öÀàµÄ°ü£¬ÔòÁíÒ»¸öÀàÒªÈ«Ãû·ÃÎÊ£»Èç¹û¸¸ÀàµÄ¹¹ÔìÆ÷´øÓÐ²ÎÊý£¬ÔòÔÚ×ÓÀà¹¹ÔìÆ÷ÖÐÐèÒªÓÃsuperÏÔÊ½µÄµ÷ÓÃ¹¹ÔìÆ÷²¢¸½´ø²ÎÊý£»Èç¹û¸¸Àà¹¹ÔìÆ÷Ã»ÓÐ²ÎÊý£¬×ÓÀà¹¹ÔìÆ÷²»ÐèÒªÊ¹ÓÃsuperµ÷ÓÃ¸¸Àà¹¹ÔìÆ÷
 #### ¶àÌ¬
-ÏòÉÏ×ªÐÍ Animal ani=new Cat()£¨¿ÉÒÔµ÷ÓÃ¸¸ÀàµÄËùÓÐ³ÉÔ±£¬²»¿ÉÒÔµ÷ÓÃ×ÓÀàµÄÌØÓÐ³ÉÔ±£©; ÏòÏÂ×ªÐÍ Cat cat =(Cat)ani;¸¸ÀàÒýÓÃ¿ÉÒÔÖ¸Ïò×ÓÀà¶ÔÏó£¬×ÓÀàÒýÓÃ²»ÄÜÖ¸Ïò¸¸Àà¶ÔÏó
+ÏòÉÏ×ªÐÍ£º×ÓÀà¶ÔÏó->¸¸Àà¶ÔÏó Animal ani=new Cat()£¨¿ÉÒÔµ÷ÓÃ¸¸ÀàµÄËùÓÐ³ÉÔ±£¬²»¿ÉÒÔµ÷ÓÃ×ÓÀàµÄÌØÓÐ³ÉÔ±£©; ÏòÏÂ×ªÐÍ£º¸¸Àà¶ÔÏó->×ÓÀà¶ÔÏó Cat cat =(Cat)ani;¸¸ÀàÒýÓÃ¿ÉÒÔÖ¸Ïò×ÓÀà¶ÔÏó£¬×ÓÀàÒýÓÃ²»ÄÜÖ¸Ïò¸¸Àà¶ÔÏó
+¸¸ÀàÒýÓÃ²»ÄÜµ÷ÓÃÃ»ÓÐÔÚ¸¸Àà¶¨ÒåµÄ·½·¨£¬Èç¹ûÒªµ÷ÓÃ×ÓÀà¶¨ÒåµÄÆäËûµÄ·½·¨£¬ÐèÒªÊ¹ÓÃ×ÓÀàÊµÀý£¬¿ÉÒÔÊ¹ÓÃÏòÏÂ×ªÐÍ£»ÔÚ½øÐÐÏòÏÂ×ªÐÍÖ®Ç°ÐèÒª½øÐÐÏòÉÏ×ªÐÍ£¬Èç¹ûAÀàÊµÀý»¯ºó£¬Ö±½ÓÈÃBÀàÖ¸ÏòA»áÔÚÔËÐÐÊ±³öÏÖÒì³££¨B extend A£©£»Ò»µ©·¢Éú¶ÔÏóµÄÏòÉÏ×ªÐÍºó£¬µ÷ÓÃµÄ·½·¨¾ÍÊÇ±»×ÓÀàÖØÐ´µÄ·½·¨£»
+Í¨¹ý×ÓÀàÊµÀý»¯µÄ¶ÔÏóÍ¬Ê±ÊÇ×ÓÀàºÍ¸¸ÀàµÄÊµÀý£»Èç¹ûÊ¹ÓÃ¸¸ÀàÊµÀý»¯±¾Àà¶ÔÏó£¬¾ÍÒ»¶¨²»ÊÇ×ÓÀàÊµÀý£»Òªµ÷ÓÃ¸÷¸ö×ÓÀà×Ô¼ºµÄ·½·¨¾ÍÐèÒªÏòÏÂ×ªÐÍ£»
 ¸¸ÀàµÄÒýÓÃ¿ÉÒÔÖ¸Ïò×ÓÀàµÄ¶ÔÏó£»·ÃÎÊÊôÐÔÒª¿´±àÒëÀàÐÍ£»ÔÚ±àÒë½×¶Î£¬ÄÜµ÷ÓÃÄÇÐ©³ÉÔ±È¡¾öÓÚ±àÒëÀàÐÍ£¬·½·¨µÄµ÷ÓÃÈ¡¾öÓÚÔËÐÐÀàÐÍ£»ÏòÉÏ×ªÐÍÊ±»áÒÅÊ§³ýÓë¸¸Àà¹«ÓÐµÄÆäËû·½·¨£»Ö»ÄÜÇ¿ÖÆ×ª»»¸¸ÀàµÄÒýÓÃ£¬²»ÄÜÇ¿ÖÆ×ª»»¸¸ÀàµÄ¶ÔÏó£»
 ×ÓÀàÖ®¼ä²»ÄÜ»¥Ïà×ªÐÍ£¬ÏòÏÂ×ªÐÍºó£¬¿ÉÒÔ·ÃÎÊ×ÓÀàµÄËùÓÐ³ÉÔ±£»ÊôÐÔµÄÖµ¿´±àÒëÀàÐÍ£»¶¯Ì¬°ó¶¨»úÖÆ£ºµ÷ÓÃ¶ÔÏó·½·¨Ê±£¬¸Ã·½·¨»áºÍ¸Ã¶ÔÏóµÄÔËÐÐµØÖ·°ó¶¨£¬µ÷ÓÃÊôÐÔÊ±£¬ÄÄÀïÉùÃ÷ÃÇÄÇÀïÊ¹ÓÃ
 ## final
-finalÐÞÊÎµÄ±äÁ¿Îª³£Á¿£¬finalÐÞÊÎµÄ·½·¨²»¿ÉÒÔ±»ÖØÐ´£»finalÐÞÊÎµÄÀà²»¿ÉÒÔ±»¼Ì³Ð£¬finalÐÞÊÎµÄÊôÐÔÒ»¶¨Òª¸³Öµ£¬¸³Öµºó²»¿ÉÒÔ¸ü¸Ä£»finalÐÞÊÎµÄÒýÓÃ±äÁ¿Ö¸µÄÊÇµØÖ·²»ÄÜ±ä£¬µØÖ·Ö¸ÏòµÄÄÚÈÝ¿ÉÒÔ¸Ä±ä£»³£Á¿ÔÚ±àÒë½×¶Î»á°ÑÊ¹ÓÃ³£Á¿µÄµØ·½»»³ÉÕæÊµµÄ×ÖÃæÁ¿£»
+finalÐÞÊÎµÄ±äÁ¿Îª³£Á¿£¬finalÐÞÊÎµÄ·½·¨²»¿ÉÒÔ±»ÖØÐ´£»finalÐÞÊÎµÄÀà²»¿ÉÒÔ±»¼Ì³Ð£¬finalÐÞÊÎµÄÊôÐÔÒ»¶¨Òª¸³Öµ£¬¸³Öµºó²»¿ÉÒÔ¸ü¸Ä£»finalÐÞÊÎµÄÒýÓÃ±äÁ¿Ö¸µÄÊÇµØÖ·²»ÄÜ±ä£¬µØÖ·Ö¸ÏòµÄÄÚÈÝ¿ÉÒÔ¸Ä±ä£»³£Á¿ÔÚ±àÒë½×¶Î»á°ÑÊ¹ÓÃ³£Á¿µÄµØ·½»»³ÉÕæÊµµÄ×ÖÃæÁ¿£»È«¾Ö±äÁ¿£ºpublic static final;
 final¿ÉÒÔÐÞÊÎÀà¡¢·½·¨¡¢ÊôÐÔ£¬±»finalÐÞÊÎ£¬²»¿ÉÒÔ¼Ì³Ð¸¸Àà¡¢²»¿ÉÒÔÖØÐ´¸¸Àà·½·¨¡¢²»¿ÉÒÔÐÞ¸ÄÀàµÄÊôÐÔÖµºÍ¾Ö²¿±äÁ¿£»final¸³ÖµÎ»ÖÃ£º¹¹ÔìÆ÷¡¢´úÂë¿é¡¢¶¨ÒåÊ±£»finalÀà²»ÄÜ±»¼Ì³Ð£¬µ«ÊÇ¿ÉÒÔÊµÀý»¯¶ÔÏó£»Èç¹ûÀàÃ»ÓÐ±»finalÐÞÊÎµ«ÊÇÓÖfinal·½·¨£¬¿ÉÒÔ±»¼Ì³Ðµ«ÊÇ²»ÄÜ±»ÖØÐ´£»Èç¹ûÒ»¸öÀà±»finalÐÞÊÎ£¬¾ÍÃ»±ØÒªÔÙÐÞÊÎfinal·½·¨£»final²»ÄÜÐÞÊÎ¹¹Ôì·½·¨£»finalºÍstaticÒ»ÆðÐÞÊÎ²»»áµ¼ÖÂÀà¼ÓÔØ£»°ü×°Àà¶¼ÊÇfinal£¬StringÒ²ÊÇfinal
 ## ÖØÐ´¡¢ÖØÔØ
 ### ÖØÐ´
-Í¬Ãûµ«ÊÇ¹¦ÄÜ²»Í¬µÄ·½·¨£»ÉùÃ÷ÎªfinalµÄ·½·¨²»ÄÜ±»ÖØÐ´£»ÉùÃ÷Îªstatic²»ÄÜ±»ÖØÐ´£¬µ«ÊÇ¿ÉÒÔ±»ÉùÃ÷£»×ÓÀàºÍ¸¸ÀàÔÚÒ»¸ö°üÄÚ£¬×ÓÀà¿ÉÒÔÖØÐ´³ýprivateºÍfinalÖ®ÍâµÄËùÓÐ·½·¨¡£×ÓÀàºÍ¸¸Àà²»ÔÚÒ»¸ö°üÄÚ£¬Ö»ÄÜÖØÐ´¸¸ÀàÉùÃ÷ÎªprotectedºÍpublicµÄ·ÇfinalµÄ·½·¨
+Í¬Ãûµ«ÊÇ¹¦ÄÜ²»Í¬µÄ·½·¨£»ÉùÃ÷ÎªfinalµÄ·½·¨²»ÄÜ±»ÖØÐ´£»ÉùÃ÷Îªstatic²»ÄÜ±»ÖØÐ´£¬µ«ÊÇ¿ÉÒÔ±»ÉùÃ÷£»×ÓÀàºÍ¸¸ÀàÔÚÒ»¸ö°üÄÚ£¬×ÓÀà¿ÉÒÔÖØÐ´³ýprivateºÍfinalÖ®ÍâµÄËùÓÐ·½·¨¡£×ÓÀàºÍ¸¸Àà²»ÔÚÒ»¸ö°üÄÚ£¬Ö»ÄÜÖØÐ´¸¸ÀàÉùÃ÷ÎªprotectedºÍpublicµÄ·ÇfinalµÄ·½·¨£»×ÓÀàÖØÐ´²»ÄÜËõÐ¡·ÃÎÊÈ¨ÏÞ£»
+·½·¨ÖØÐ´Ê±´Óprivate±ä³Édefault²»Ëã·½·¨ÖØÐ´£»
 ÖØÐ´µÄ·½·¨¿ÉÒÔÅ×³öÈÎºÎ·ÇÇ¿ÖÆÒì³££¬ÎÞÂÛ±»ÖØÐ´µÄ·½·¨ÊÇ·ñÅ×³öÒì³£¡£µ«ÊÇ²»ÄÜÅ×³öÐÂµÄÇ¿ÖÆÐÔÒì³££¬»òÕß±ÈÖØÐ´·½·¨ÉùÃ÷·¶Î§¸ü¹ãµÄÇ¿ÖÆÐÔÒì³£
 ÖØÐ´Ê±£¬×ÓÀà²»ÄÜËõÐ¡¸¸ÀàµÄ·ÃÎÊÈ¨ÏÞ£¬×ÓÀàµÄ·ÃÎÊÀàÐÍÖ»ÄÜÊÇºÍ¸¸ÀàÏàÍ¬»ò¸¸Àà·ÃÎÊÀàÐÍµÄ×ÓÀà£»
 ### ÖØÔØ
@@ -60,11 +72,21 @@ javaÔËÐÐÍ¬Ò»¸öÀàÖÐÍ¬ÃûÍ¬¹¦ÄÜ²»Í¬²ÎÊýµÄ·½·¨·â×°ÎªÒ»¸ö·½·¨£¬Êµ²Î²ÎÊý¿ÉÓÐ¿ÉÎÞ£¬¿É±ä
 ==ÅÐ¶Ï»ù±¾Êý¾ÝÀàÐÍÊÇ·ñÏàµÈ£»equals±È½ÏÒýÓÃÊý¾ÝÀàÐÍÊÇ·ñÏàµÈ£»==ºÍequals±È½ÏµÄ¶¼ÊÇÖµ£¬==±È½ÏµÄÊÇÖµ£¬equals±È½ÏµÄÊÇµØÖ·£»toString·µ»ØµÄÊÇÈ«ÀàÃû+@+¹þÏ£ÖµµÄÊ®Áù½øÖÆ£¬Ò»°ãÓÃÀ´·µ»Ø¶ÔÏóµÄÊôÐÔÐÅÏ¢£»hashcode£º¸ù¾Ý¶ÔÏó²»Í¬·µ»Ø²»Í¬µÄÊýÖµ£¬Á½¸öÒýÓÃÖ¸ÏòÍ¬Ò»¸ö¶ÔÏóÔò¹þÏ£ÖµÏàµÈ£»finalize£º¶ÔÏó±»»ØÊÕÊ±£¬ÏµÍ³µ÷ÓÃfinalize£¬¶ÔÏóÃ»ÓÐÒýÓÃÊ±£¬ÏµÍ³ÈÏÎª¶ÔÏóÊÇÀ¬»ø
 toString·½·¨µÄ»ù±¾×÷ÓÃÊÇ¸ø×ÓÀà¼Ì³Ð£¬×ÓÀà¶ÔÏóµ÷ÓÃ¿ÉÒÔ·µ»Ø×Ô¼ºµÄµØÖ·£»¶ÔÏóÄÚÈÝ±È½ÏÊ±½¨ÒéÊ¹ÓÃequals
 
+## °ü
+Ò»¸öÀàÒª±»Íâ°ü·ÃÎÊ£¬´ËÀàÒ»¶¨Òª¶¨Òå³Épublic class£»Ò»¸öÀàÎÄ¼þÖÐÓÐÒ»¸öpublic class£»Èç¹ûÒ»¸öÀàÉùÃ÷Îªpublic class£¬ÔòÀàÃûºÍÎÄ¼þÃûÒªÒ»ÖÂ£»Èç¹ûÊ¹ÓÃclassÉùÃ÷Ò»¸öÀà£¬ÔòÀàÃûºÍÎÄ¼þÃû¿ÉÒÔ²»Ò»ÖÂ£»Èç¹ûÒ»¸öÀàÖ»ÔÚ±¾°üÄÚ·ÃÎÊ²»±»Íâ°ü·ÃÎÊ£¬ÉùÃ÷Îªclass¼´¿É£¬ÈôÒª±»Íâ°ü·ÃÎÊ£¬ÉùÃ÷Îªpublic class£»
+Èç¹ûÒ»¸ö³ÌÐòÍ¬Ê±µ¼ÈëÁ½¸ö°üµÄÍ¬ÃûÀà£¬ÔÚÊ¹ÓÃÊ±±ØÐëÃ÷È·µÄÐ´³öÍêÕûµÄ"°ü.ÀàÃû³Æ"
+¾²Ì¬µ¼Èë£ºÈç¹ûÒ»¸öÀàµÄ·½·¨È«²¿¶¼ÊÇ¾²Ì¬·½·¨£¬µ¼ÈëµÄÊ±ºòÖ±½ÓÊ¹ÓÃ"import.static °ü.Àà"·½Ê½µ¼Èë£»
+Ê¹ÓÃ¾²Ì¬µ¼Èëºó£¬¾²Ì¬·½·¨¾Í²»ÐèÒªÍ¨¹ý"Àà.¾²Ì¬·½·¨()"µ÷ÓÃÁË
+### jarÃüÁîµÄÊ¹ÓÃ
+°Ñ*.classÎÄ¼þÑ¹Ëõ³ÉjarÎÄ¼þ£»µ±ÓÃ»§µÃµ½Ò»¸öjarÎÄ¼þºó£¬¿ÉÒÔÉèÖÃclasspathµÄ·½Ê½ÔÚÏµÍ³ÖÐ×¢²ájarÎÄ¼þ£»
+Ö÷Òª²ÎÊý£ºc£¨´´½¨ÐÂµÄÎÄµµ£©v£¨Éú³ÉÏêÏ¸µÄÊä³öÐÅÏ¢£©f£¨Ö¸¶¨´æµµµÄÎÄ¼þÃû£©
+
+
 ## ¾²Ì¬±äÁ¿¡¢·½·¨
 ### ¾²Ì¬±äÁ¿
 ¾²Ì¬±äÁ¿ÊÇ±¾ÀàËùÓÐ¶ÔÏó¹²ÓÐµÄ±äÁ¿£»Àà¼ÓÔØÊ±Àà·½·¨»á·ÅÔÚ·½·¨Çø£¬¾²Ì¬±äÁ¿ÔÚÀà¼ÓÔØÊ±¾ÍÒÑ¾­´æÔÚ£¬ÎÞÂÛÊÇ·ñ´´½¨¶ÔÏó£»¾²Ì¬±äÁ¿ÔÚjdk8ÒÔÇ°·ÅÔÚ·½·¨Çø£¬8Ö®ºó·ÅÔÚ¶ÑÖÐÀà¶ÔÓ¦µÄclass¶ÔÏóÖÐ£¬Í¨¹ý·´Éä¼ÓÔØclass¶ÔÏó£»·½·¨ÇøµÄ¾²Ì¬·½·¨Çø
 ±íÊ¾¶ÔÏóÐÐÎªÇÒÒª·ÃÎÊ¶ÔÏóÊôÐÔ£¬½¨ÒéÉùÃ÷ÎªÊµÀý·½·¨£¬¸Ã·½·¨ÒÔÖ´ÐÐÒ»¸öµ¥Ò»¹¦ÄÜÎªÄ¿µÄ£¬ÉùÃ÷Îª¾²Ì¬·½·¨£»¾²Ì¬·½·¨ÖÐ²»ÔÊÐíÊ¹ÓÃºÍ¶ÔÏóÓÐ¹ØµÄ¹Ø¼ü×Ö£»
-
+static²»ÄÜµ÷ÓÃÈÎºÎ·ÇstaticÀàÐÍÄÚÈÝ£¬ÒòÎªÔÚ³ÌÐòÖÐËùÓÐÊôÐÔºÍ·½·¨±ØÐëÔÚ¶ÔÏó¿ª±Ù¶ÑÄÚ´æÖ®ºó²Å¿ÉÒÔµ÷ÓÃ£¬¶østaticÀàÐÍµÄ·½·¨ÔÚ¶ÔÏóÎ´±»ÊµÀý»¯Ê±¾Í¿ÉÒÔ±»ÀàÃûµ÷ÓÃ£»
 main·½·¨ÓÉÐéÄâ»úµ÷ÓÃ£»jvmµ÷ÓÃmainÊ±²»ÓÃ´´½¨¶ÔÏó£»main·½·¨ÖÐ¿ÉÒÔÖ±½Óµ÷ÓÃmainËùÔÚÀàµÄ¾²Ì¬±äÁ¿ºÍ·½·¨£¬µ«²»ÄÜÖ±½Ó·ÃÎÊ·Ç¾²Ì¬³ÉÔ±
 ### ÒýÓÃ´«µÝ
 ÔÚ¶ÔÏóÒýÓÃ´«µÝÖÐ£¬Ò»¸öÀà¿ÉÒÔ½ÓÊÕ±¾Àà¶ÔÏóµÄÊµÀý£¬¶øÇÒ½ÓÊÕÍêºó£¬¿ÉÒÔ·½±ãµÄÍ¨¹ý´Ë¶ÔÏó¶ÔË½ÓÐÊôÐÔ½øÐÐ·ÃÎÊ£»
@@ -74,18 +96,26 @@ main·½·¨ÓÉÐéÄâ»úµ÷ÓÃ£»jvmµ÷ÓÃmainÊ±²»ÓÃ´´½¨¶ÔÏó£»main·½·¨ÖÐ¿ÉÒÔÖ±½Óµ÷ÓÃmainËùÔÚÀ
 ¾²Ì¬´úÂë¿é×÷ÓÃ£ºÈç¹ûÔÚÏµÍ³Æô¶¯Ê±ÐèÒª¶Ô¾²Ì¬×ÊÔ´½øÐÐ³õÊ¼»¯£¬½¨ÒéÊ¹ÓÃ¾²Ì¬´úÂë¿éÍê³ÉÊý¾ÝµÄ³õÊ¼»¯
 ´´½¨Ò»¸ö¶ÔÏóµ÷ÓÃµÄË³Ðò£º¾²Ì¬´úÂë¿éºÍ¾²Ì¬ÊôÐÔ³õÊ¼»¯¡¢ÆÕÍ¨´úÂë¿éºÍÊôÐÔ³õÊ¼»¯¡¢¹¹ÔìÆ÷£»¹¹ÔìÆ÷µÄ×îÇ°ÃæÒþº¬ÁËsuperºÍµ÷ÓÃÆÕÍ¨´úÂë¿é£¬¾²Ì¬´úÂë¿éºÍ¾²Ì¬ÊôÐÔµÄ³õÊ¼»¯ÔçÔÚÀà¼ÓÔØÊ±¾ÍÍê³ÉÁË
 ´´½¨Ò»¸ö×ÓÀà£¬µ÷ÓÃË³Ðò£º¸¸Àà¾²Ì¬´úÂë¿é£¬¸¸ÀàÆÕÍ¨´úÂë¿é£¬×ÓÀà¾²Ì¬´úÂë¿é£¬¸¸Àà¹¹ÔìÆ÷£¬×ÓÀàÆÕÍ¨´úÂë¿é£¬×ÓÀà¹¹ÔìÆ÷
+ÆÕÍ¨´úÂë¿é£ºÖ±½ÓÔÚ·½·¨ÖÐ¶¨ÒåµÄ´úÂë¿é
+¹¹Ôì¿é£ºÖ±½ÓÐ´ÔÚÀàÖÐµÄ´úÂë¿é;¹¹Ôì¿éÓÅÏÈÓÚ¹¹Ôì·½·¨£»
+¾²Ì¬´úÂë¿é  ÓÅÏÈÓÚ´úÂë¿éÔËÐÐ£¬¶øÇÒ²»¹Ü¶àÉÙ¸ö¶ÔÏó²úÉú£¬¾²Ì¬´úÂë¿éÖ»Ö´ÐÐÒ»´Î
+¾²Ì¬´úÂë¿é>¹¹Ôì¿é>ÆÕÍ¨´úÂë¿é
 ## ½Ó¿Ú¡¢³éÏóÀà
 ### ½Ó¿Ú
 ¸ø³öÒ»Ð©Ã»ÓÐÊµÏÖµÄ·½·¨·â×°µ½Ò»Æð£¬µ½ÌØ¶¨µÄÀàÖÐÐèÒªÊ¹ÓÃÊ±ÔÙ¾ßÌåÊµÏÖ£»jdk8Ö®ºó¿ÉÒÔÔÚ½Ó¿ÚÖÐÓÐ¾ßÌåÊµÏÖ£»ÔÚ½Ó¿ÚÖÐ£¬³éÏó·½·¨²»ÉùÃ÷Îªabstract£»Ò»¸öÆÕÍ¨ÀàÊµÏÖ½Ó¿Ú£¬ÐèÒªÊµÏÖ½Ó¿ÚÖÐËùÓÐ·½·¨£¬·ñÔò¾ÍÒªÉùÃ÷Îª³éÏóÀà£»½Ó¿Ú¿ÉÒÔ¼Ì³Ð½Ó¿Ú£¬²»¿ÉÒÔ¼Ì³ÐÀà£»
+½Ó¿ÚµÄ³éÏó·½·¨±ØÐëÉùÃ÷Îªpublic£¬¼´±ã²»ÉùÃ÷Îªpublic£¬Ò²ÊÇÄ¬ÈÏÎªpublic£»½Ó¿ÚÓÉÈ«¾Ö±äÁ¿ºÍ¹«¹²µÄ³éÏó·½·¨×é³É£»ÔÚjavaÖÐÒ»¸ö½Ó¿Ú²»ÔÊÐí¼Ì³Ð³éÏóÀà£¬µ«ÊÇÒ»¸ö½Ó¿Ú¿ÉÒÔ¼Ì³Ð¶à¸ö½Ó¿Ú
 ½Ó¿Ú·ÃÎÊÊôÐÔ£º½Ó¿ÚÃû.ÊôÐÔ£»½Ó¿ÚÊôÐÔÀàÐÍ public static final£»Ò»¸öÀàÊµÏÖ¶à¸ö½Ó¿Ú£¬½Ó¿ÚµÄ¹æ·¶²»ÄÜ³åÍ»£¬¶à¸ö½Ó¿ÚÓÐÏàÍ¬µÄ¾²Ì¬·½·¨²»³åÍ»£»Ò»¸öÀàÊµÏÖ½Ó¿ÚÓÖ¼Ì³Ð¸¸Àà£¬¸¸ÀàÖÐÓÐºÍ½Ó¿ÚÍ¬ÑùµÄ·½·¨£¬Ä¬ÈÏÊ¹ÓÃ¸¸ÀàµÄ;Ò»¸öÀàÊµÏÖ¶à¸ö½Ó¿Ú£¬¶à¸ö½Ó¿ÚÓÐÍ¬ÃûµÄ·½·¨²»³åÍ»£¬¿ÉÒÔÈÃÀàÖØÐ´¸Ã·½·¨£»½Ó¿ÚÖÐµÄ·½·¨±ØÐëÊÇ³éÏó·½·¨£¬½Ó¿ÚÖÐ³ÉÔ±±äÁ¿±ØÐëÓÃfinalºÍstaticÐÞÊÎ£»½Ó¿ÚÖÐµÄ·½·¨±»ÒþÊ½µÄ¶¨ÒåÎªpublic abstract£»
 #### ½Ó¿ÚÎªÊ²Ã´²»ÄÜÊµÀý»¯
 ÊµÀý»¯µÄÒâÒå¾ÍÊÇjvmÔÚ¶ÑÖÐ¿ª±ÙÒ»¿é¿Õ¼äÓÃÓÚ´æ·Å¶ÔÏó£»½Ó¿ÚÖÐ´æ·ÅµÄÊÇ¾²Ì¬ÊôÐÔºÍ·½·¨ÉùÃ÷£»½Ó¿ÚÖÐµÄÊý¾Ý¶¼·ÅÔÚ´úÂëÇøºÍ¾²Ì¬Êý¾ÝÇø£¬¶ÑÖÐÃ»ÓÐÊý¾ÝÐèÒª´æ·Å£»½Ó¿ÚµÄ¶àÌ¬£º½Ó¿ÚÀàÐÍµÄ±äÁ¿¿ÉÒÔÖ¸ÏòÊµÏÖ½Ó¿ÚµÄÀàµÄ¶ÔÏóÊµÀý£¨IF if=new Cat()£©
 ### ³éÏóÀà
-Ò»¸öÀàÃ»ÓÐ×ã¹»µÄÐÅÏ¢È¥ÃèÊö¶ÔÏó£»³éÏóÀà²»ÄÜ±»ÊµÀý»¯£¬Òª±»¼Ì³Ð£»Ê¹ÓÃ³¡¾°£ºµ±×ÓÀàÐèÒªÍê³ÉÒ»¶¨¹¦ÄÜ£¬¶øÃ¿¸ö×ÓÀà¹¦ÄÜÓÖ²»Í¬£¬¿ÉÒÔ½«·½·¨¶¨ÒåÎª³éÏó·½·¨£»¹¹Ôì·½·¨ºÍ¾²Ì¬·½·¨²»ÄÜ¶¨ÒåÎª³éÏó£»³éÏóÀà¿ÉÒÔÃ»ÓÐ³éÏó·½·¨£¬ÀàÒ»µ©°üº¬³éÏó·½·¨¾ÍÒª¶¨ÒåÎª³éÏóÀà£»
+Ò»¸öÀàÃ»ÓÐ×ã¹»µÄÐÅÏ¢È¥ÃèÊö¶ÔÏó£»³éÏóÀà²»ÄÜ±»ÊµÀý»¯£¬Òª±»¼Ì³Ð£»Ê¹ÓÃ³¡¾°£ºµ±×ÓÀàÐèÒªÍê³ÉÒ»¶¨¹¦ÄÜ£¬¶øÃ¿¸ö×ÓÀà¹¦ÄÜÓÖ²»Í¬£¬¿ÉÒÔ½«·½·¨¶¨ÒåÎª³éÏó·½·¨£»¹¹Ôì·½·¨ºÍ¾²Ì¬·½·¨²»ÄÜ¶¨ÒåÎª³éÏó£»³éÏóÀà¿ÉÒÔÃ»ÓÐ³éÏó·½·¨£¬ÀàÒ»µ©°üº¬³éÏó·½·¨¾ÍÒª¶¨ÒåÎª³éÏóÀà£»³éÏóÀà¿ÉÒÔ¶¨Òå¹¹Ôì·½·¨£»
 abstractÖ»ÄÜÐÞÊÎ·½·¨ºÍÀà£»Èç¹ûÒ»¸öÀà¼Ì³ÐÁË³éÏóÀà£¬¾ÍÒªÊµÏÖ³éÏóÀàµÄËùÓÐ·½·¨£¬³ý·ÇÉùÃ÷Îª³éÏóÀà£»³éÏó·½·¨²»ÄÜÓÃfinal¡¢static¡¢privateÐÞÊÎ£»
 ### ½Ó¿ÚºÍ³éÏóÀàµÄÇø±ð
-³éÏóÀà¿ÉÒÔÓÐ¾²Ì¬´úÂë¿é£¬½Ó¿Ú²»¿ÉÒÔÓÐ£»³éÏóÀàÖÐÆÕÍ¨·½·¨±ØÐëÓÐÊµÏÖ£¬³éÏó·½·¨±ØÐëÃ»ÓÐÊµÏÖ£¬½Ó¿ÚÖÐÆÕÍ¨·½·¨²»ÄÜÓÐÊµÏÖ£¬jdk8ÖÐstaticºÍÄ¬ÈÏ·½·¨±ØÐëÓÐÊµÏÖ£»³éÏóÀàÖÐµÄ³éÏó·½·¨²»ÄÜÓÃprivateÐÞÊÎ£¬½Ó¿ÚÖÐÄ¬ÈÏ¿ØÖÆ·ûÊÇpublic£»³éÏóÀàÖÐ·ÃÎÊ¿ØÖÆ·ûÎÞÏÞÖÆ£»
+³éÏóÀà¿ÉÒÔÓÐ¾²Ì¬´úÂë¿é£¬½Ó¿Ú²»¿ÉÒÔÓÐ£»³éÏóÀàÖÐÆÕÍ¨·½·¨±ØÐëÓÐÊµÏÖ£¬³éÏó·½·¨±ØÐëÃ»ÓÐÊµÏÖ£¬½Ó¿ÚÖÐÆÕÍ¨·½·¨²»ÄÜÓÐÊµÏÖ£¬jdk8ÖÐstaticºÍÄ¬ÈÏ·½·¨±ØÐëÓÐÊµÏÖ£»³éÏóÀàÖÐµÄ³éÏó·½·¨²»ÄÜÓÃprivateÐÞÊÎ£¬½Ó¿ÚÖÐÄ¬ÈÏ¿ØÖÆ·ûÊÇpublic£»³éÏóÀàÖÐ·ÃÎÊ¿ØÖÆ·ûÎÞÏÞÖÆ£»Ò»¸ö½Ó¿Ú¿ÉÒÔ°üº¬¶à¸ö³éÏóÀà£¬Ò»¸ö³éÏóÀà¿ÉÒÔ°üº¬¶à¸ö½Ó¿Ú£»³éÏóÀàÊÇ°üº¬³éÏó·½·¨µÄÀà£¬½Ó¿ÚÊÇ³éÏó·½·¨ºÍÈ«¾Ö³£Á¿µÄ¼¯ºÏ£»³éÏóÀà¿ÉÒÔÊµÏÖ¶à¸ö½Ó¿Ú£¬½Ó¿Ú¿ÉÒÔ¼Ì³Ð¶à¸ö½Ó¿Ú£¬²»¿ÉÒÔ¼Ì³Ð¶à¸ö³éÏóÀà£»³éÏóÀàÓÉ³éÏó·½·¨¡¢¹¹Ôì·½·¨¡¢ÆÕÍ¨·½·¨¡¢³£Á¿¡¢±äÁ¿×é³É£¬½Ó¿ÚÓÉ³£Á¿ºÍ³éÏó·½·¨×é³É£»£¨jdk1.8Ö®ºó½Ó¿Ú¶¨ÒåÆÕÍ¨·½·¨ºÍ¾²Ì¬·½·¨£¬Òª¶¨ÒåÆÕÍ¨·½·¨±ØÐëÊ¹ÓÃdefault£¬£©
+Ò»¸öÀà²»ÒªÈ¥¼Ì³ÐÒÑ¾­ÊµÏÖºÃµÄÀà£¬ÒªÃ´¼Ì³Ð³éÏóÀà£¬ÒªÃ´ÊµÏÖ½Ó¿Ú£¬Èç¹û½Ó¿ÚºÍ³éÏóÀà¶¼¿ÉÒÔÊ¹ÓÃµÄ»°£¬ÓÅÏÈÊ¹ÓÃ½Ó¿Ú
 ## ÄÚ²¿Àà**8
+ÄÚ²¿ÀàÎ¨Ò»ºÃ´¦¾ÍÊÇ¿ÉÒÔ·½±ãµÄ·ÃÎÊÍâ²¿ÀàµÄË½ÓÐÊôÐÔ£¨Í¨¹ý½«ÄÚ²¿ÀàÄÃµ½ÍâÃæÈ¥£©£¬Í¬Ê±Íâ²¿ÀàÒ²¿ÉÒÔ·ÃÎÊÄÚ²¿ÀàµÄË½ÓÐÊôÐÔ£»Ê¹ÓÃstaticÐÞÊÎÄÚ²¿Àà¿ÉÒÔÊ¹ÄÚ²¿Àà±ä³ÉÍâ²¿Àà£¬Ê¹ÓÃstaticÐÞÊÎµÄÄÚ²¿Àà²»ÄÜ·ÃÎÊ·ÇstaticµÄÍâ²¿ÀàÊôÐÔ£»ÔÚÍâ²¿·ÃÎÊÄÚ²¿Àà£ºÍâ²¿Àà.ÄÚ²¿Àà ÄÚ²¿Àà¶ÔÏó=Íâ²¿ÀàÊµÀý.new ÄÚ²¿Àà();Ê×ÏÈÒªÕÒµ½Íâ²¿ÀàÊµÀý¶ÔÏó£¬²ÅÄÜÍ¨¹ýÍâ²¿ÀàÊµÀý»¯¶ÔÏóÈ¥ÊµÀý»¯ÄÚ²¿Àà¶ÔÏó£¨Outer out=new Outer(); Outer.Inner in= out.new Inner()£©£»
+ÔÚ·½·¨ÖÐ¶¨ÒåµÄÄÚ²¿Àà²»ÄÜ·ÃÎÊ·½·¨µÄ²ÎÊý£¬Èç¹û·½·¨ÖÐµÄ²ÎÊýÏëÒª±»·ÃÎÊ£¬¾ÍÒªÔÚ²ÎÊýÇ°¼Ófinal£¨1.8Ö®ºó¿ÉÒÔ²»¼Ófinal£©£»
 ÄÚ²¿Àà¿ÉÒÔÖ±½Ó·ÃÎÊË½ÓÐÊôÐÔ£»¾Ö²¿ÄÚ²¿Àà¶¨ÒåÔÚÀàÖÐµÄ¾Ö²¿Î»ÖÃ£¬Í¨³£ÔÚ·½·¨ºÍ´úÂë¿éÖÐ£¬¿ÉÒÔ·ÃÎÊÍâ²¿ÀàµÄËùÓÐ³ÉÔ±£¬²»¿ÉÒÔÌí¼Ó·ÃÎÊÐÞÊÎ·û£»¾Ö²¿ÄÚ²¿Àà·ÃÎÊÍâ²¿Àà³ÉÔ±£ºÖ±½Ó·ÃÎÊ£»Íâ²¿Àà·ÃÎÊ¾Ö²¿ÄÚ²¿Àà³ÉÔ±£ºÏÈ´´½¨¶ÔÏóÔÙ·ÃÎÊ£»Íâ²¿ÀàÆäËûÀà²»ÄÜ·ÃÎÊ¾Ö²¿ÄÚ²¿Àà£»ÆäËûÀà·ÃÎÊÍâ²¿Àà³ÉÔ± Íâ²¿Àà.this.³ÉÔ±±äÁ¿
 ÄäÃûÄÚ²¿Àà¶¨ÒåÔÚÍâ²¿ÀàµÄ¾Ö²¿Î»ÖÃ£¨new Àà»ò½Ó¿Ú(²ÎÊý){};£©£¬±¾ÖÊÊÇÃ»ÓÐÃû×ÖµÄ¾Ö²¿ÄÚ²¿Àà£¬ÊÇÒ»¸ö¶ÔÏó£»ÄäÃûÄÚ²¿Àà²úÉúµÄ¶ÔÏóÀàÐÍÊÇnewµÄ¶ÔÏóµÄ×ÓÀàÀàÐÍ£»
 ³ÉÔ±ÄÚ²¿Àà¶¨ÒåÔÚÍâ²¿ÀàµÄ³ÉÔ±Î»ÖÃ£¬¿ÉÒÔÖ±½Ó·ÃÎÊÍâ²¿ÀàµÄËùÓÐ³ÉÔ±£¬²»ÓÃstaticÐÞÊÎ£¬¿ÉÒÔÌí¼ÓÈÎºÎÒ»¸öÐÞÊÎ·û£»Outer.Inner inner = new Outer().new Inner(); ³ÉÔ±ÄÚ²¿Àà¿ÉÒÔ·ÃÎÊÍâ²¿ÀàµÄ¾²Ì¬³ÉÔ±£»³ÉÔ±ÄÚ²¿Àà·ÃÎÊÍâ²¿Àà£ºÖ±½Ó·ÃÎÊ£»³ÉÔ±ÄÚ²¿Àà·ÃÎÊÍâ²¿Àà·½·¨ºÍÊôÐÔ£ºÍâ²¿Àà.this.³ÉÔ±·½·¨/ÊôÐÔ
@@ -98,9 +128,14 @@ enumÃ¶¾ÙÀà£ºÈç¹ûÊ¹ÓÃenumÊµÏÖÃ¶¾Ù£¬ÐèÒª½«¶¨Òå³£Á¿¶ÔÏóÐ´ÔÚ×îÇ°Ãæ£¬Ê¹ÓÃenum¿ª·¢Ò»¸ö
 Ã¶¾Ù¶ÔÏó±ØÐë·ÅÔÚÃ¶¾ÙÀàµÄÐÐÊ×£¬Èç¹ûÊ¹ÓÃÎÞ²Î¹¹ÔìÆ÷´´½¨Ã¶¾Ù¶ÔÏó£¬ÔòÊµ²ÎºÍÐ¡À¨ºÅ¿ÉÒÔÊ¡ÂÔ£»
 ## Òì³£
 throwÓÃÓÚÅ×³öÒì³££¬throwsÓÃÓÚÔÚ·½·¨ÉùÃ÷´¦Ö¸¶¨¿ÉÄÜ»áÅ×³öÒì³£µÄÀàÐÍ£»±àÒëÒì³££ºÈç¹û²»´¦Àí£¬³ÌÐòÎÞ·¨Í¨¹ý£»ÔËÐÐÒì³££º²»¼ì²éÒì³££¬ÓÉ³ÌÐòÂß¼­´íÎóÒýÆðµÄ£»Òì³£´¦Àí»úÖÆ£ºÈç¹ûÃ»ÓÐÏÔÊ½´¦ÀíÒì³££¬Ä¬ÈÏÊÇthrows
+
 throwsÒì³£´¦Àí£ºÈç¹ûÓï¾äÖ´ÐÐÖÐ¿ÉÄÜ³öÏÖÄ³ÖÖÒì³££¬µ«ÊÇ²»ÄÜÈ·¶¨ÈçºÎ´¦ÀíÒì³££¬ÏÔÊ½ÉùÃ÷½«Òì³£Å×³ö£¬±íÃ÷¸Ã·½·¨²»¶ÔÒì³£½øÐÐ´¦Àí£¬ÓÉ·½·¨µÄµ÷ÓÃÕß½øÐÐ´¦Àí£»throwsºó¸úµÄ¿ÉÒÔÊÇÒì³£ºÍÒì³£ÀàÐÍµÄ¸¸Àà£»
+ÔÚÖ÷·½·¨ÖÐÊ¹ÓÃthrows£¬ËùÒÔÔÚÖ÷·½·¨ÖÐ¿ÉÒÔ²»ÔÙÊ¹ÓÃtrycatchÓï¾ä½øÐÐÒì³£µÄ²¶×½ºÍ´¦Àí£»Òì³£²úÉúÊ±»áÓÉÏµÍ³²úÉúÒ»¸öÒì³£ÀàµÄÊµÀý»¯¶ÔÏó£»
 ÔËÐÐÊ±Òì³££¬³ÌÐòÖÐÃ»ÓÐ´¦ÀíÄ¬ÈÏthrows£»×ÓÀàÖØÐ´¸¸Àà·½·¨£¬×ÓÀà·µ»ØµÄÒì³£ºÍ¸¸ÀàÏàÍ¬»òÊÇ¸¸ÀàÒì³£µÄ×ÓÀà£»
 ÔÚthrows¹ý³ÌÖÐ£¬ÓÐtry-catch¾Í²»ÐèÒªthrows£»×Ô¶¨ÒåÒì³££ºµ±³ÌÐòÖÐ³öÏÖ´íÎó£¬µ«´íÎóÐÅÏ¢²»ÔÚThrowableÀàÖÐ£¬×Ô¼º¿ÉÒÔÉè¼ÆÒì³£Àà£¬×Ô¶¨ÒåÒì³£¼Ì³ÐRunTimeException£¬°Ñ×Ô¶¨ÒåÒì³£×ö³ÉÔËÐÐÊ±Òì³£¿ÉÒÔÊ¹ÓÃthrowsÔÚ·½·¨ÉùÃ÷´¦Ìí¼ÓÒì³£ÀàÐÍ
+ËäÈ»RuntimeExceptionµÄÒì³£¿ÉÒÔ²»ÓÃtry-catch´¦Àí£¬µ«ÊÇÈç¹û³öÏÖÒì³££¬¾Í¿Ï¶¨»áµ¼ÖÂ³ÌÐòÖÐ¶Ï£¬ËùÒÔ½¨Òé×îºÃÊ¹ÓÃtry-catch
+### RuntimeExceptionºÍExceptionµÄÇø±ð
+RuntimeExceptionÊÇExceptionµÄ×ÓÀà£»Exception¶¨ÒåÁË±ØÐë´¦ÀíµÄÒì³££¬RuntimeException¶¨ÒåµÄÒì³£¿ÉÒÔÑ¡ÔñÐÔµÄ´¦Àí£»
 ## °ü×°Àà
 ## String¡¢StringBuffer¡¢StringBuilder
 ### ´´½¨×Ö·û´®µÄ·½Ê½
@@ -123,6 +158,9 @@ Stringxx¿ÉÒÔÐÞÊÎ×Ö·û´®¶ø²»ÊÇ´´½¨ÐÂµÄ¶ÔÏó£»ÔÚÊ¹ÓÃStringBufferÊ±£¬Ã¿´Î¶¼ÊÇ¶ÔString
 ### Èç¹û×Ô¼ºÐ´Ò»¸öStringÀà»á·¢ÉúÊ²Ã´
 ×Ô¼ºÐ´Ò»¸öStringÀà£¬»á¼ÓÔØ²»½øÄÚ´æ£»»ùÓÚjvmË«Ç×Î¯ÅÉ»úÖÆ£¬Àà¼ÓÔØÆ÷»áÊÕµ½¼ÓÔØÆ÷µÄÇëÇó£¬»á°ÑÕâ¸öÇëÇóÎ¯ÅÉ¸øËüµÄ¸¸Àà¼ÓÔØÆ÷¡£Ö»ÓÐ¸¸Àà¼ÓÔØÆ÷×Ô¼ºÎÞ·¨Íê³É¼ÓÔØÇëÇóÊ±£¬×ÓÀà²Å»á×Ô¼º¼ÓÔØ¡£ÕâÑù×Ô¶¨ÒåµÄStringÀàµÄ¼ÓÔØÇëÇó¾Í»áµ½´ï×î¶¥²ãµÄBootstrap ClassLoaderÆô¶¯Àà¼ÓÔØÆ÷£¬Æô¶¯Àà¼ÓÔØÆ÷¼ÓÔØµÄÊÇÏµÍ³µÄString¶ÔÏó£¬ÓÃ»§±àÐ´µÄjava.lang.String²»»á±»¼ÓÔØ£»
 ²»¿ÉÒÔ×Ô¶¨ÒåÒÔjava¿ªÍ·µÄÀà£¬ÒªÃ´ÓÉÓÚÀà¼ÓÔØÆ÷µÄË«Ç×Î¯ÅÉ»úÖÆ²»ÄÜ¼ÓÔØ½øÄÚ´æ£¬ÒªÃ´¼´Ê¹Ê¹ÓÃ×Ô¶¨ÒåµÄÀà¼ÓÔØÆ÷È¥Ç¿ÐÐ¼ÓÔØ£¬Ò²»áÊÕµ½SecurityException
+
+## ¶àÏß³Ì
+### ½ø³ÌÓëÏß³Ì
 
 ## Iterator
 Iterator it=col.Iterator();
