@@ -215,9 +215,24 @@ sleepÊÇThreadÀà¶¨ÒåµÄstatic·½·¨£¬±íÊ¾Ïß³ÌÐÝÃß£¬½«Ö´ÐÐ»ú»áÈÃ¸øÆäËûÏß³Ì£¬µ«ÊÇ¼à¿Ø×
 waitÊÇObjectÀà¶¨ÒåµÄ·½·¨£¬±íÊ¾Ïß³ÌµÈ´ý£¬Ò»Ö±µ½Ö´ÐÐÁËnotify»ònotifyAllºó²Å½áÊøµÈ´ý
 
 ## ·ºÐÍ
-ÀàÐÍÍ¨Åä·ûÒ»°ãÊ¹ÓÃ?´úÌæ¾ßÌåµÄÀàÐÍ²ÎÊý£»<? extends T>±íÊ¾¸ÃÍ¨Åä·ûËù´ú±íµÄÀàÐÍÊÇTÀàÐÍµÄ×ÓÀà£»<? super T>±íÊ¾¸ÃÍ¨Åä·û´ú±íµÄÀàÐÍÊÇTÀàÐÍµÄ¸¸Àà£»·ºÐÍÔÚÀàÉùÃ÷ºÍÊµÀý»¯Ê±ÒªÖ¸¶¨ºÃÐèÒªµÄÀàÐÍ£»·ºÐÍ¿ÉÒÔ°ü×°Ö»Òª±àÒëÕý³££¬ÔËÐÐÊ±²»»áÅ×³öÀàÐÍÒì³££»Èç¹ûÔÚ´´½¨¶ÔÏóÊ±Ã»ÓÐÖ¸¶¨ÀàÐÍ£¬Ä¬ÈÏObject£»×Ô¶¨Òå·ºÐÍ½Ó¿Ú£¬·ºÐÍ½Ó¿ÚµÄÀàÐÍÔÚ¼Ì³Ð½Ó¿Ú»òÊµÏÖ½Ó¿ÚÊ±È·¶¨£»×Ô¶¨Òå·ºÐÍ·½·¨£¬¿ÉÒÔ¶¨ÒåÔÚÆÕÍ¨ÀàÖÐ£¬Ò²¿ÉÒÔ¶¨ÒåÔÚ·ºÐÍÀàÖÐ£¬µ±·ºÐÍ·½·¨±»µ÷ÓÃÊ±£¬ÀàÐÍ±»È·¶¨
-
+·ºÐÍµÄ»ù±¾Ô­ÀíÊÇÍ¨¹ýÒ»¸ö±êÊ¶±íÊ¾ÀàÖÐÄ³¸öÊôÐÔµÄÀàÐÍ»òÕßÄ³¸ö·½·¨µÄ·µ»ØÖµ¼°²ÎÊýÀàÐÍ£»
+ÔÚ·ºÐÍµÄÖ¸¶¨ÖÐÊÇÎÞ·¨Ö¸¶¨»ù±¾Êý¾ÝÀàÐÍµÄ£¬±ØÐëÉèÖÃ³ÉÒ»¸öÀà£¬ÕâÑùÔÚÉèÖÃÊý×ÖÊ±¾Í±ØÐëÊ¹ÓÃ°ü×°Àà£»
+¼ÓÈë·ºÐÍ×î´óµÄºÃ´¦¾ÍÊÇ±ÜÃâÀà×ª»»Òì³££»ÔÚ·ºÐÍÓ¦ÓÃÖÐ£¬×îºÃÔÚÉùÃ÷Àà¶ÔÏóÊ±Ö¸¶¨ºÃÆäÄÚ²¿µÄÊý¾ÝÀàÐÍ£¬ÈçInfo<String>,·ñÔò»á³öÏÖ²»°²È«¾¯¸æ£»¾ÍËãÃ»ÓÐÖ¸¶¨·ºÐÍ³ÌÐòÒ²¿ÉÒÔÕý³£ÔËÐÐ£¬¶øËùÓÐÍ³Ò»Ê¹ÓÃObject½øÐÐ½ÓÊÕ£¬ÔÚ¶¨ÒåµÄÊ±ºò½«·ºÐÍ²Á³ý£»
+### Í¨Åä·û
+ÔÚ½øÐÐÒýÓÃ´«µÝµÄ·ºÐÍÀàÐÍ±ØÐëÆ¥Åä²Å¿ÉÒÔ´«µÝ£¬·ñÔòÎÞ·¨´«µÝ£»£¿±íÊ¾¿ÉÒÔ½ÓÊÕ´ËÀàÐÍµÄÈÎÒâ·ºÐÍ¶ÔÏó£¬µ«ÊÇÊ¹ÓÃ£¿½ÓÊÕ·ºÐÍ¶ÔÏóÊ±£¬²»ÄÜÉèÖÃ·ºÐÍÖ¸¶¨µÄÄÚÈÝ£¬¿ÉÒÔÉèÖÃnullÖµ£»
+#### ÊÜÏÞ·ºÐÍ
+<? extends T>±íÊ¾¸ÃÍ¨Åä·ûËù´ú±íµÄÀàÐÍÊÇTÀàÐÍµÄ×ÓÀà£»<? super T>±íÊ¾¸ÃÍ¨Åä·û´ú±íµÄÀàÐÍÊÇTÀàÐÍµÄ¸¸Àà£»
 ·ºÐÍ²»¾ßÓÐ¼Ì³ÐÐÔ£¬<?> Ö§³ÖÈÎÒâ·ºÐÍÀàÐÍ <? extends A> Ö§³ÖAÀàºÍAµÄ×ÓÀà <? super A> Ö§³ÖAÀàºÍAµÄ¸¸Àà£¬²»ÏÞÓÚÖ±½Ó¸¸Àà
+·ºÐÍÔÚÀàÉùÃ÷ºÍÊµÀý»¯Ê±ÒªÖ¸¶¨ºÃÐèÒªµÄÀàÐÍ£»·ºÐÍ¿ÉÒÔ°ü×°Ö»Òª±àÒëÕý³££¬ÔËÐÐÊ±²»»áÅ×³öÀàÐÍÒì³££»Èç¹ûÔÚ´´½¨¶ÔÏóÊ±Ã»ÓÐÖ¸¶¨ÀàÐÍ£¬Ä¬ÈÏObject£»×Ô¶¨Òå·ºÐÍ½Ó¿Ú£¬·ºÐÍ½Ó¿ÚµÄÀàÐÍÔÚ¼Ì³Ð½Ó¿Ú»òÊµÏÖ½Ó¿ÚÊ±È·¶¨£»×Ô¶¨Òå·ºÐÍ·½·¨£¬¿ÉÒÔ¶¨ÒåÔÚÆÕÍ¨ÀàÖÐ£¬Ò²¿ÉÒÔ¶¨ÒåÔÚ·ºÐÍÀàÖÐ£¬µ±·ºÐÍ·½·¨±»µ÷ÓÃÊ±£¬ÀàÐÍ±»È·¶¨
+### ·ºÐÍÓë×ÓÀà¼Ì³ÐµÄÏÞÖÆ
+×ÓÀàµÄ·ºÐÍÀàÐÍÎÞ·¨Ê¹ÓÃ¸¸ÀàµÄ·ºÐÍÀàÐÍ½ÓÊÕ£¬±ÈÈçInfo<String>²»ÄÜÊ¹ÓÃInfo<Object>½ÓÊÕ£»·ºÐÍÖÐÎÞ·¨ÏòÉÏ×ªÐÍ
+### ·ºÐÍ½Ó¿Ú
+public interface Info<T>{}
+·ºÐÍ½Ó¿Ú¶¨ÒåÍê³Éºó£¬¾ÍÒª¶¨Òå´Ë½Ó¿ÚµÄ×ÓÀà£¬ÓÐÁ½ÖÖ·½Ê½£¬Ò»ÖÖÊÇÖ±½ÓÔÚ×ÓÀàÖ®ºóÉùÃ÷·ºÐÍ£¬Ò»ÖÖÊÇÖ±½ÓÔÚ×ÓÀàÊµÏÖµÄ½Ó¿ÚÖÐÃ÷È·¸ø³ö·ºÐÍ»ù´¡
+### ·ºÐÍ·½·¨
+·ºÐÍ·½·¨µÄ¶¨ÒåÓëÆäËùÔÚÀàÊÇ·ñÊÇ·ºÐÍÀàÃ»ÓÐ¹ØÏµ£»public <T> T name(T var){}
+
+
 
 ## Iterator
 Iterator it=col.Iterator();
