@@ -161,6 +161,53 @@ Stringxx可以修饰字符串而不是创建新的对象；在使用StringBuffer时，每次都是对String
 
 ## 多线程
 ### 进程与线程
+进程是程序的一次动态执行过程；进程和线程都是实现并发的一个基本单位。多线程是指一个进程在执行过程中可以产生多个更小的线程，这些线程可以同时存在、同时运行；
+### 线程的实现
+#### 继承Thread类
+一个类只要继承了Thread类，就称作多线程操作类，在Thread子类中，必须重写run()，此方法为线程主体；
+如果想要正确的启动线程，不能直接调用run(),应该调用从Thread类中继承的start()；在线程启动时调用的是start()，实际上调用的是run()的主体
+Q:启动线程为什么不能直接使用run
+A:线程的运行需要本机os支持
+如果一个类通过继承Thread类来实现，那么只能调用一次start()，如果调用多次，会抛出异常
+#### 实现Runnable接口
+实现Runnable接口依旧要依靠Thread类完成启动，在Thread类中提供了public Thread(Runnable target)和public Thread(Runnable target,String name)两种构造方法，这两种构造方法可以接收Runnable的子类实例对象；
+#### Thread类和Runnable接口的区别
+如果一个类继承Thread类，则不适合多个线程共享资源，而是实现Runnable接口，可以实现共享资源；
+#### 多线程的两种实现方式和区别
+多线程的两种实现方式都需要一个线程的主类，而这个类可以实现Runnable接口或者继承Thread类，不管哪种方式都需要在子类重写run()
+Thread类是Runnable的子类，使用Runnable可以避免单继承的局限，实现资源共享；
+继承Thread类
+MyThread my=new MyThread();
+my.start()
+实现Runnable接口
+MyThread my=new MyThread();
+new Thread(my).start
+#### 利用Callable接口实现多线程
+Runnable接口中的run()不能返回操作结果，1.5之后提供了一个Callable接口，接口中有一个call()，call可以实现线程操作数据的返回，返回的数据类型由Callable接口上的泛型类型动态决定；
+FutureTask实现了RunnableFuture接口，RunnableFuture实现类Future和Runnable接口；FutureTask是Runnable的子类，FutureTask类可以接收Callable接口实例；
+### 线程的状态
+创建、就绪（线程启动时就进入就绪状态）、运行（就绪状态的线程被调用获取处理器资源时，线程就进入运行状态）、阻塞（可执行状态下调用sleep(),wait(),suspend()，线程进入阻塞态，阻塞时线程不能进入排队队列）、死亡（线程调用stop()或run()）
+### 线程操作的线管方法
+如果没有为一个线程指定名称，系统会在使用时为线程分配一个名称（Thread-xx）；java中所有线程都是同时启动的；java每次运行至少启动2个线程（一个是main线程，一个是垃圾收集线程）；每当使用java命令执行一个类时，都会启动一个jvm，每一个jvm就是os中启动一个进程；
+start()可以通知cpu这个线程已经准备好启动，等待分配cpu资源；主线程可能比其他线程先执行完；
+join()可以让线程强制执行，在线程强制执行期间，其他线程无法运行，必须等该线程完成后；
+在java程序中，只要前台有一个线程在运行，整个java进程都不会消失
+并不一定是线程的优先级高就一定会先执行，哪个线程先执行将由cpu的调度决定；主方法的优先级是NORM_PRIORITY；
+yield()将一个线程的操作暂时让给其他线程执行；
+### 同步和死锁
+#### 使用同步解决问题
+解决资源共享的同步操作，可以使用同步代码块和同步方法
+##### 同步代码块
+synchronized(同步对象){}；在使用同步代码块时必须指定一个需要同步的对象，但一般都将当前对象（this）设置为同步对象
+##### 同步方法
+可以使用synchronized关键字将方法声明为同步方法
+#### 死锁
+两个线程都在等待彼此先完成，造成了程序的停滞状态
+多个线程共享同一资源时需要同步，过多的同步会造成死锁；
+#### 多个线程访问同一资源时需要考虑那些情况 ，会带来哪些问题
+1、多个线程访问同一资源时，考虑数据操作的安全性问题，一定要使用同步操作，同步有同步代码块和同步方法；
+2、过多的同步会带来死锁
+
 
 ## Iterator
 Iterator it=col.Iterator();
