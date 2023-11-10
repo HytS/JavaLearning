@@ -140,6 +140,8 @@ RuntimeExceptionÊÇExceptionµÄ×ÓÀà£»Exception¶¨ÒåÁË±ØÐë´¦ÀíµÄÒì³££¬RuntimeExcepti
 ## String¡¢StringBuffer¡¢StringBuilder
 ### ´´½¨×Ö·û´®µÄ·½Ê½
 Í¨¹ýnew´´½¨µÄ×Ö·û´®¶ÔÏó£¬Ã¿Ò»´Înew¶¼»áÉêÇëÒ»¸öÄÚ´æ¿Õ¼ä£¬ÄÚÈÝÏàÍ¬£¬µØÖ·²»Í¬£»ÒÔ""·½Ê½¸ø³öµÄ×Ö·û´®£¬Ö»Òª×Ö·ûÏàÍ¬£¬ÎÞÂÛ³öÏÖ¼¸´Î£¬jvmÖ»»á½¨Á¢Ò»¸öString¶ÔÏó£¬ÔÚ³£Á¿³ØÖÐÎ¬»¤£»
+Èç¹ûÒª¸Ä±äStringµÄÄÚÈÝ£¬Ôò¸Ä±äµÄÊÇStringµÄÒýÓÃµØÖ·£»ÔÚStringÖÐµÄÌæ»»ÊÇreplaceAll()£¬ÔÚStringBufferÖÐÌæ»»ÊÇreplace()£»delete()É¾³ýÖ¸¶¨·¶Î§µÄ×Ö·û´®£»indexOf(String str)²éÕÒÖ¸¶¨µÄÄÚÈÝÊÇ·ñ´æÔÚ£»
+StringBufferÀàÌá¹©µÄ·½·¨¶¼ÊÇÍ¬²½·½·¨£¬ÊôÓÚ°²È«µÄÏß³Ì²Ù×÷£¬¶øStringBuilderÀàµÄ·½·¨¶¼ÊôÓÚÒì²½·½·¨£¬ÊôÓÚ·ÇÏß³Ì°²È«µÄ²Ù×÷
 Ã¿¸öString¶ÔÏó¶¼ÊÇ´æ·ÅÔÚ¶ÑÄÚ´æÖÐ£»Ò»¸ö×Ö·û´®¾ÍÊÇÒ»¸öStringÀàµÄÄäÃû¶ÔÏó£»ÄäÃû¶ÔÏó¾ÍÊÇ¿ª±ÙÁË¶ÑÄÚ´æ²¢ÇÒ¿ÉÒÔÖ±½ÓÊ¹ÓÃµÄ¶ÔÏó£»String str1="hello" ÔÚ¶ÑÖÐ¿ª±ÙºÃµÄ¶ÑÄÚ´æµÄÊ¹ÓÃÈ¨¸øÁËstr1£»StringÀàËù²ÉÓÃµÄÄ£Ê½ÊÇ¹²ÏíÉè¼ÆÄ£Ê½£»Ê¹ÓÃnew´´½¨StringÀà¶ÔÏó£¨String str1=new String("hello")£©£¬ÎÞÂÛÈçºÎ¶¼»áÔÙ¿ª±ÙÒ»¸öÐÂ¿Õ¼ä£¬ËùÒÔÏàµ±ÓÚ¿ª±ÙÁËÁ½¸ö¿Õ¼ä£¬µ«ÊÇÕæÕýÊ¹ÓÃµÄÖ»ÊÇÓÃnew¿ª±ÙµÄ¿Õ¼ä£¬ÁíÒ»¸öÊÇÀ¬»ø¿Õ¼ä
 ×Ö·û´®ÄÚÈÝ²»¿ÉÒÔ¸ü¸Ä£¬Êµ¼ÊÉÏÊÇÍ¨¹ýÄÚ´æµØÖ·µÄ'¶Ï¿ª-Á¬½Ó'±ä»¯Íê³ÉµÄ£¬±¾Éí×Ö·û´®ÄÚÈÝÃ»ÓÐ±ä»¯£»×Ö·û´®µÄÄÚÈÝ²»¿ÉÒÔ¸Ä±ä£¬ÄÜ¸Ä±äµÄÊÇÆäÄÚ´æµØÖ·µÄÖ¸Ïò£»String×÷ÎªÀàµÄÊôÐÔ´æÔÚÊ±£¬¿ÉÒÔ¸Ä±äÀàµÄÊôÐÔÄÚÈÝ£»
 #### Ö±½Ó¸³ÖµºÍ¹¹Ôì·½·¨¸³ÖµµÄÇø±ð
@@ -154,11 +156,39 @@ String¡¢Stringxx¶¼ÊÇfinal£¬²»ÄÜ±»¼Ì³Ð£»StringµÄ×Ö·û´®·ÅÔÚfinal char value[]£¬µØÖ
 String´´½¨µÄ×Ö·û´®·ÅÔÚ³£Á¿³ØÖÐ£¬new´´½¨µÄ×Ö·û´®ÔÚ¶ÑÖÐ£»ÔÚ¶ÑÖÐÉú³É¶ÔÏóÊ±²»»á¼ì²â¸Ã¶ÔÏóÊÇ·ñ´æÔÚ£¬Òò´ËÍ¨¹ýnew´´½¨µÄ¶ÔÏó£¬Ò»¶¨ÊÇ²»Í¬µÄ¶ÔÏó£»¶ÔÓÚ×Ö·û´®µÄ+ÔËËã£¬µ±±àÒë³ÉclassÎÄ¼þÊ±£¬»á×Ô¶¯±àÒë³ÉStringBufferÀ´½øÐÐ×Ö·û´®µÄÁ¬½Ó²Ù×÷£»contactÊÇÍ¨¹ý¸´ÖÆÊý×éÔÙÍ¨¹ýcharÊý×é½øÐÐÆ´½ÓÉú³ÉÒ»¸öÐÂµÄ¶ÔÏó£¬µØÖ·»á±ä¶¯
 Stringxx¿ÉÒÔÐÞÊÎ×Ö·û´®¶ø²»ÊÇ´´½¨ÐÂµÄ¶ÔÏó£»ÔÚÊ¹ÓÃStringBufferÊ±£¬Ã¿´Î¶¼ÊÇ¶ÔStringBuffer¶ÔÏó±¾Éí½øÐÐ²Ù×÷£¬²»ÊÇ²úÉúÐÂ¶ÔÏó£»StringBuilder²»ÊÇÏß³Ì°²È«£¬²»ÄÜÍ¬²½·ÃÎÊ£»String±£´æµÄÊÇ×Ö·û´®³£Á¿£¬StringBuffer±£´æµÄÊÇ×Ö·û´®±äÁ¿£¬StringBufferÃ¿´Î¸üÐÂµÄÊÇÄÚÈÝ£¬²»ÊÇÄÚ´æµØÖ·£»StringBuffer()´´½¨ÁËÒ»¸ö´óÐ¡Îª16µÄchar[]£¬²ÎÊý¿ÉÒÔÊÇ³¤¶È»ò×Ö·û´®£¨×Ü³¤¶È=×Ö·û´®µÄ³¤¶È+16£©
 
-
 ### Èç¹û×Ô¼ºÐ´Ò»¸öStringÀà»á·¢ÉúÊ²Ã´
 ×Ô¼ºÐ´Ò»¸öStringÀà£¬»á¼ÓÔØ²»½øÄÚ´æ£»»ùÓÚjvmË«Ç×Î¯ÅÉ»úÖÆ£¬Àà¼ÓÔØÆ÷»áÊÕµ½¼ÓÔØÆ÷µÄÇëÇó£¬»á°ÑÕâ¸öÇëÇóÎ¯ÅÉ¸øËüµÄ¸¸Àà¼ÓÔØÆ÷¡£Ö»ÓÐ¸¸Àà¼ÓÔØÆ÷×Ô¼ºÎÞ·¨Íê³É¼ÓÔØÇëÇóÊ±£¬×ÓÀà²Å»á×Ô¼º¼ÓÔØ¡£ÕâÑù×Ô¶¨ÒåµÄStringÀàµÄ¼ÓÔØÇëÇó¾Í»áµ½´ï×î¶¥²ãµÄBootstrap ClassLoaderÆô¶¯Àà¼ÓÔØÆ÷£¬Æô¶¯Àà¼ÓÔØÆ÷¼ÓÔØµÄÊÇÏµÍ³µÄString¶ÔÏó£¬ÓÃ»§±àÐ´µÄjava.lang.String²»»á±»¼ÓÔØ£»
 ²»¿ÉÒÔ×Ô¶¨ÒåÒÔjava¿ªÍ·µÄÀà£¬ÒªÃ´ÓÉÓÚÀà¼ÓÔØÆ÷µÄË«Ç×Î¯ÅÉ»úÖÆ²»ÄÜ¼ÓÔØ½øÄÚ´æ£¬ÒªÃ´¼´Ê¹Ê¹ÓÃ×Ô¶¨ÒåµÄÀà¼ÓÔØÆ÷È¥Ç¿ÐÐ¼ÓÔØ£¬Ò²»áÊÕµ½SecurityException
 
+## ³£ÓÃÀà¿â
+### Runtime
+RuntimeÀà±íÊ¾ÔËÐÐÊ±²Ù×÷Àà£¬ÊÇÒ»¸ö·â×°ÁËjvm½ø³ÌµÄÀà£¬Ã¿Ò»¸öjvm¶¼¶ÔÓ¦×ÅÒ»¸öRuntimeÀàµÄÊµÀý£¬´ËÊµÀýÓÉjvmÔËÐÐÊ±ÎªÆäÊµÀý»¯£¬ÔÚjdkÎÄµµÖÐ²»»áÕÒµ½ÓÐ¹ØRuntime¹¹Ôì·½·¨µÄ¶¨Òå£¬ÒòÎªRuntime¹¹Ôì·½·¨ÊÇË½ÓÐµÄ(µ¥ÀýÄ£Ê½)
+È¡µÃÒ»¸öRuntimeÊµÀý Runtime run=Runtime.getRuntime();
+#### µÃµ½jvmµÄÄÚ´æ¿Õ¼äÐÅÏ¢
+javaµÄÄÚ´æ×é³ÉÓÐÁ½²¿·Ö£ºÒ»²¿·ÖÊÇ¶ÑÄÚ´æ£¬¶ÑÄÚ´æÓÉÁ½²¿·Ö×é³É£º1¡¢ÄêÇá´ú£¨Ö÷ÒªÓÃÓÚ²úÉúÐÂ¶ÔÏó£©Óë¾ÉÉú´ú£¨´æ·ÅÓ¦ÓÃ³ÌÐòÖÐÉùÃ÷ÖÜÆÚ×î³¤µÄ´æ»î¶ÔÏó£©2¡¢´æ»î¿Õ¼ä£¨´æ·ÅÃ¿´ÎÀ¬»ø»ØÊÕºó´æ»îµÄ¶ÔÏó£©£¬ÁíÒ»²¿·ÖÊÇ·Ç¶ÑÄÚ´æ£¬
+#### Ê²Ã´ÊÇgc£¬ÈçºÎ´¦Àí
+GCÖ¸µÄÊÇÊÍ·ÅÎÞÓÃµÄÄÚ´æ¿Õ¼ä£»GC»áÓÉÏµÍ³²»¶¨ÆÚµÄ»ØÊÕ»òÕßµ÷ÓÃRuntimeÀàµÄgc·½·¨ÊÖ¹¤»ØÊÕ£»
+### ¹ú¼Ê»¯³ÌÐò
+#### ÊµÏÖË¼Â·
+¿ÉÒÔ¸ù¾Ý²»Í¬µÄ×ÊÔ´ÎÄ¼þ£¨ÊôÐÔÎÄ¼þ£©£¬ËùÓÐµÄ×ÊÔ´ÎÄ¼þÒÔ'key=value'µÄÐÎÊ½³öÏÖ£¬ÔÚ³ÌÐòÖ´ÐÐÖÐ¸ù¾ÝkeyÕÒµ½value²¢½«valueµÄÄÚÈÝ³ÊÏÖ£»¾ßÌåÊµÏÖ£º¸ù¾ÝLocaleÀàËùÖ¸¶¨µÄÇøÓòÂë£¬È»ºóResourceBundleÀàËùÖ¸¶¨µÄÇøÓòÂëÕÒµ½ÏàÓ¦µÄ×ÊÔ´ÎÄ¼þ£¬Èç¹û×ÊÔ´ÎÄ¼þÖÐ´æÔÚ¶¯Ì¬ÎÄ±¾£¬ÔòÊ¹ÓÃMessageFormat½øÐÐ¸ñÊ½»¯
+#### ResourceBundleÀà
+Ö÷Òª×÷ÓÃÊÇ¶ÁÈ¡ÊôÐÔÎÄ¼þ£¬¶ÁÈ¡ÊôÐÔÎÄ¼þÊ±£¬¿ÉÒÔÖ±½ÓÖ¸¶¨ÊôÐÔÎÄ¼þµÄÃû³Æ£¬Ò²¿ÉÒÔ¸ù¾ÝLocaleÖ¸¶¨µÄÇøÓòÂëÀ´Ñ¡È¡Ö¸¶¨µÄ×ÊÔ´ÎÄ¼þ£»Èç¹ûÒªÊ¹ÓÃResourceBundle¶ÔÏó£¬ÔòÍ¨¹ýResourceBundleÀàÖÐµÄ¾²Ì¬·½·¨getBundleÈ¡µÃ£»
+#### ´¦Àí¶¯Ì¬ÎÄ±¾
+Èç¹ûÊä³öÏûÏ¢ÖÐ¶àÁË¶¯Ì¬ÎÄ±¾£¬Ôò±ØÐëÊ¹ÓÃÕ¼Î»·û±íÊ¾³ö¶¯Ì¬ÎÄ±¾µÄÎ»ÖÃ£¬Õ¼Î»·ûÊ¹ÓÃ"{±àºÅ}"µÄ¸ñÊ½³öÏÖ£¬Ê¹ÓÃÕ¼Î»·ûºó£¬³ÌÐò¿ÉÒÔÖ±½ÓÍ¨¹ýMessageFormat¶ÔÐÅÏ¢½øÐÐ¸ñÊ½»¯£¬ÎªÕ¼Î»·û¶¯Ì¬ÉèÖÃÎÄ±¾£»
+### SystemÀà
+SystemÀàÖÐ·½·¨¶¼ÊÇ¾²Ì¬µÄ£»ÔÚÊµ¼ÊµÄ¿ª·¢ÖÐ£¬À¬»øÄÚ´æµÄÊÍ·Å»ù±¾ÉÏ¶¼ÊÇÓÉÏµÍ³×Ô¶¯Íê³ÉµÄ£»finalize()·½·¨Å×³öµÄÊÇThrowableÒì³££¬ËùÒÔÔÚµ÷ÓÃ´Ë·½·¨Ê±²»Ò»¶¨»áÔÚ³ÌÐòÔËÐÐÖÐ²úÉú´íÎó£¬Ò²ÓÐ¿ÉÄÜ²úÉújvm´íÎó£»
+¶ÔÏóµÄÉúÃüÖÜÆÚ£ºÒ»¸öÀà¼ÓÔØºóÒª½øÐÐ³õÊ¼»¯£¬È»ºó½øÐÐ¶ÔÏóµÄÊµÀý»¯£¬µ±Ò»¸ö¶ÔÏó²»ÔÙÊ¹ÓÃÊ±¾ÍÒªµÈ´ý±»À¬»øÊÕ¼¯£¬Ö®ºó¶ÔÏóÖÕ½á£¬±»³ÌÐòÐ¶ÔØ
+### ¶ÔÏó¿ËÂ¡¼¼Êõ
+Ö±½ÓÊ¹ÓÃObjectÀàÖÐµÄclone(),ÒòÎªcloneÊÇÊÜ±£»¤µÄÀàÐÍ£¬ËùÒÔÔÚ×ÓÀàÖÐÒªÖØÐ´´Ë·½·¨£¬¶øÇÒÔÚÖØÐ´Ê±ÒªÀ©´ó·ÃÎÊÈ¨ÏÞ£¬ÕâÑù²ÅÄÜ±»Íâ²¿µ÷ÓÃ£»µ«ÊÇ¾ßÌåµÄ¿ËÂ¡·½·¨»¹ÔÚObjectÀàÖÐ£¬ÖØÐ´Ê±Ö»ÐèÒªµ÷ÓÃObjectÀàµÄclone¼´¿É£»
+### Comparable½Ó¿Ú
+ÔÚArraysÀà¶¨ÒåµÄsort·½·¨£¬´æÔÚÒ»¸öÕë¶ÔÓÚ¶ÔÏóÊý×éµÄÅÅÐòµÄ²Ù×÷Ö§³Ö£¬µ«ÊÇÈç¹ûÒªÊ¹ÓÃÕâ¸ö·½·¨£¬±ØÐë½áºÏ±È½ÏÆ÷À´Íê³É£»
+String¡¢Integer¶¼ÊµÏÖÁËComparable½Ó¿Ú£¬ÕâÐ©ÀàµÄ¶ÔÏóÊý×é¶¼¿ÉÒÔÊ¹ÓÃArrays.sort()½øÐÐ¶ÔÏóÊý×éÅÅÐò£»
+#### Çë½âÊÍComparableºÍComparatorµÄÇø±ð
+Èç¹û¶ÔÏóÊý×éÒª½øÐÐÅÅÐò£¬ÄÇÃ´±ØÐëÉèÖÃÅÅÐò¹æÔò£¬¶þÕß¶¼¿ÉÒÔÊµÏÖ£»ComparableÊÇÒ»¸öÀà¶¨ÒåÊ±ÊµÏÖºÃµÄ½Ó¿Ú£¬ÕâÑù£¬´ËÀàµÄ¶ÔÏóÊý×é¾Í¿ÉÒÔ½øÐÐÅÅÐò£¬ÔÚComparable½Ó¿Ú¶¨ÒåÏÂÓÐÒ»¸öpublic int compareTo()
+ComparatorÊÇ×¨ÃÅ¶¨ÒåÒ»¸öÖ¸¶¨ÀàµÄ±È½Ï¹æÔò£¬ÀïÃæÓÐint compare(),public boolean equals()
+### ÕýÔò±í´ïÊ½
+#### PatternÀàºÍMatcherÀà
+Èç¹ûÏëÔÚ³ÌÐòÖÐÓ¦ÓÃÕýÔò±í´ïÊ½£¬±ØÐëÒÀ¿¿PatternÀàºÍMatcherÀà£»
 ## ¶àÏß³Ì
 ### ½ø³ÌÓëÏß³Ì
 ½ø³ÌÊÇ³ÌÐòµÄÒ»´Î¶¯Ì¬Ö´ÐÐ¹ý³Ì£»½ø³ÌºÍÏß³Ì¶¼ÊÇÊµÏÖ²¢·¢µÄÒ»¸ö»ù±¾µ¥Î»¡£¶àÏß³ÌÊÇÖ¸Ò»¸ö½ø³ÌÔÚÖ´ÐÐ¹ý³ÌÖÐ¿ÉÒÔ²úÉú¶à¸ö¸üÐ¡µÄÏß³Ì£¬ÕâÐ©Ïß³Ì¿ÉÒÔÍ¬Ê±´æÔÚ¡¢Í¬Ê±ÔËÐÐ£»
@@ -231,8 +261,13 @@ public interface Info<T>{}
 ·ºÐÍ½Ó¿Ú¶¨ÒåÍê³Éºó£¬¾ÍÒª¶¨Òå´Ë½Ó¿ÚµÄ×ÓÀà£¬ÓÐÁ½ÖÖ·½Ê½£¬Ò»ÖÖÊÇÖ±½ÓÔÚ×ÓÀàÖ®ºóÉùÃ÷·ºÐÍ£¬Ò»ÖÖÊÇÖ±½ÓÔÚ×ÓÀàÊµÏÖµÄ½Ó¿ÚÖÐÃ÷È·¸ø³ö·ºÐÍ»ù´¡
 ### ·ºÐÍ·½·¨
 ·ºÐÍ·½·¨µÄ¶¨ÒåÓëÆäËùÔÚÀàÊÇ·ñÊÇ·ºÐÍÀàÃ»ÓÐ¹ØÏµ£»public <T> T name(T var){}
-
-
+Èç¹û¿ÉÒÔÍ¨¹ý·ºÐÍ·½·¨·µ»Ø·ºÐÍÀàµÄÊµÀý»¯¶ÔÏó£¬Ôò±ØÐëÔÚ·½·¨µÄ·µ»ØÀàÐÍ´¦Ã÷È·µÄÖ¸¶¨·ºÐÍ±êÊ¶
+Èç¹ûÓÐÒ»¸ö·½·¨ÓëÒªÇó´«ÈëµÄ·ºÐÍ¶ÔÏóµÄ·ºÐÍÀàÐÍÊÇÒ»ÖÂµÄ£¬Ò²¿ÉÒÔÍ¨¹ý·ºÐÍ·½·¨Ö¸¶¨£»
+### ·ºÐÍÊý×é
+Ê¹ÓÃ·ºÐÍ·½·¨Ê±£¬Ò²¿ÉÒÔ´«µÝ»ò·µ»ØÒ»¸ö·ºÐÍÊý×é
+## IO
+### File
+ÊµÀý»¯File±ØÐëÉèÖÃºÃÂ·¾¶
 
 ## Iterator
 Iterator it=col.Iterator();
@@ -293,7 +328,7 @@ new´´½¨¶ÔÏóÊ±£»µ±×ÓÀà±»¼ÓÔØÊ±£¬¸¸ÀàÒ²±»¼ÓÔØ£»µ÷ÓÃÀàÖÐµÄ¾²Ì¬³ÉÔ±Ê±£»Í¨¹ý·´Éä¼ÓÔØ£
 ### ·´Éä¼¼ÊõµÄÓ¦ÓÃ
 jdbc¼ÓÔØÇý¶¯Æ÷Á¬½Ó£¬class.forNameÔËÓÃÁË·´Éä¼¼Êõ£»spring¿ò¼ÜÓÃ·´ÉäÀ´ÊµÀý»¯¶ÔÏó£»×Ô¶¨Òå×¢½âÉúÐ§£¨·´Éä+aop£©£»µÚÈý·½ºËÐÄµÄ¿ò¼Ü£»¶¯Ì¬´úÀíµÄ³¡¾°
 
-## io
+
 
 # javaweb
 
