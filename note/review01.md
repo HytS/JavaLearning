@@ -290,20 +290,46 @@ ByteArrayInputStream将内容写到内存中，ByteArrayOutputStream将内存中的数据输出；
 ### 打印流
 OutputStream只能输出字节数据；打印流包含字节打印流和字符打印流，打印流可以打印任何类型的数据类型；PrintStream是OutputStream的子类，
 ### System类对io的支持
+定义了out、in、err三个常量；System.out是PrintStream的对象，PrintStream是OutputStream的子类，可以利用此对象向屏幕上输出信息，即OutputStream哪个子类为其实例化，就具备了向哪输出的能力；
+System.err表示的是错误信息输出，如果程序出现错误，可以直接用System.err打印；
+System.in是一个键盘的输入流，其本身是InputStream的对象，
+#### System.out和System.err的区别
+二者都可以输出错误信息，System.out一般是将信息显示给用户看，是正常的信息显示，System.err是不希望用户看到的，会直接在后台打印，专门打印错误信息
+### BufferedReader类
+BufferedReader类是从缓冲区中读取内容，所有的输入字节数据都将放在缓冲区中，类中定义的构造方法只能接收字符输入流的实例，所以必须使用字符输入流-字节输入流的转换类InputStreamReader类将字节输入流System.in变为字符流，
+### Scanner
+Scanner将空格看作间隔符，为了保证程序的正确，可以将间隔符改为'\n'；
+### 对象序列化
+是把一个对象变为二进制的数据流的一种方法，  使用对象输出流输出序列化对象也叫序列化；如果某个属性不希望被序列化可以使用transient关键字，
 
-
+# 类集框架
+Collection子接口：List接口（可以存放重复的内容）、Set接口（不能存放重复的内容）、Queue接口（队列接口）、SortSet接口（可以对集合中的数据进行排序）
+## List接口
+### ArrayList、vector、LinkedList
+ArrayList是List的子类，可以直接通过对象的多态性为List接口实例化；toArray()将集合变为对象数组，但是在类集声明时已经通过泛型指定类集合中的元素类型，所以在接收时要使用泛型指定的类型；
+#### ArrayList和vector的区别
+ArrayList采用异步处理方式，性能更高，vector采用同步处理方式，性能低；
+ArrayList等同于vector，ArrayList属于非线程安全的操作类，但效率高，vector属于线程安全的操作类；
+创建ArrayList时，如果使用无参构造器，则elementData容量为0，第一次添加扩容为10，再次添加扩容为上次的1.5倍，如果使用指定大小的构造器，elementData容量为指定大小，扩容时为上次的1.5倍；
+vector底层是对象数组，线程安全，效率低；vector类的操作方法有synchronized；扩容：如果无参，初始为10，然后2被扩容。如果指定大小按2倍扩容
+### Queue接口
+Queue接口是Collection的子接口，可以增加元素并输出；
+## Set接口
+不能添加重复的元素；Set接口的主要方法和Collection一致；Set接口的实例无法像List接口那样进行双向输出；
+set接口无序（添加和取出的顺序不一致），但是取出的顺序是固定的，没有索引，不允许重复元素，最多包含一个null；set接口的遍历方式：迭代器、增强for；不能使用索引的方式获取元素
+### 常用子类
+Set接口中有HashSet（散列存放）和TreeSet（有序存放）；
+#### 
 ## Iterator
 Iterator it=col.Iterator();
 while(it.hasNext()){System.out.println(i.next());}
 hasNext()用于判断结合是否还有下一个元素可以访问
 next()返回迭代器的下一个元素，并将迭代器的指针移到下一个位置
-## ArrayList、vector、LinkedList
-ArrayList等同于vector，ArrayList线程不安全，但效率高；创建ArrayList时，如果使用无参构造器，则elementData容量为0，第一次添加扩容为10，再次添加扩容为上次的1.5倍，如果使用指定大小的构造器，elementData容量为指定大小，扩容时为上次的1.5倍；
-vector底层是对象数组，线程安全，效率低；vector类的操作方法有synchronized；扩容：如果无参，初始为10，然后2被扩容。如果指定大小按2倍扩容
+
+
 
 ## Set
-set接口无序（添加和取出的顺序不一致），但是取出的顺序是固定的，没有索引，不允许重复元素，最多包含一个null；
-set接口的遍历方式：迭代器、增强for；不能使用索引的方式获取元素
+
 ### HashSet
 底层是HashMap，可以存放null，但是只能有一个；不保证元素有序，元素不重复，线程不安全；如果多个线程同时修改HashSet，最终结果不确定；
 扩容：添加一个元素时，会将hash值转化为索引值，找到存储数据表table，查看索引值处是否存在元素，如果不存在元素则插入数据，如果有元素存在，使用equals比较，相同则不添加，不同则添加到最后；当链表长度>8且table大小>=64会进行树化
