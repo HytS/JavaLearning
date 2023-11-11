@@ -334,11 +334,29 @@ HashSet底层机制：第一次添加元素时，table数组扩容到16，临界值为16*0.75=12；当tabl
 实现此接口的子类都属于排序的子类；
 ## 集合的输出
 Iterator：迭代输出；ListIterator：是Iterator的子接口，专门输出List中的内容；foreach:可以输出数组和集合；
-### Iterator
+### 迭代输出Iterator
+依据指针依次判断是否有数据，如果有数据则进行数据的取出；
 Iterator it=col.Iterator();
 while(it.hasNext()){System.out.println(i.next());}
-hasNext()用于判断结合是否还有下一个元素可以访问
-next()返回迭代器的下一个元素，并将迭代器的指针移到下一个位置
+hasNext()判断是否还有下一个值；next()取出当前元素；remove():移除当前元素；
+如果使用Iterator输出时，由集合对象调用了自身的删除方法，运行时会出现错误；
+### 双向迭代输出ListIterator
+为List子接口实现双向迭代操作；Iterator主要功能是实现从前向后单向输出，如果想实现双向输出，需要ListIterator；ListIterator只能通过List接口实例化，即只能输出List接口中的内容；由后向前输出时必先由前向后输出；
+### foreach
+foreach可以完成数组和集合的输出；
+### 废弃的接口Enumeration
+vector使用Enumeration接口进行输出；
+### Map接口
+Map.Entry接口是Map中内部定义的一个接口，专门用来保存'key->value'的内容,Map.Entry是使用static声明的内部接口，此接口可以通过'外部类.内部类'的形式直接调用;
+在Map的操作中，所有内容都是通过'key->value'的形式存储数据的，对于集合来说，实际上是把'key->value'的数据保存在Map.Entry的实例之后，之后在Map集合中插入一个Map.Entry的实例化对象；
+#### Map接口的常用子类
+HashMap:无序存放，key不允许重复；Hashtable：无序存放，key不允许重复；TreeMap：可以排序的Map集合，按集合的key排序，key不允许重复；
+HashMap本身是Map的子类，直接使用此类为Map接口实例化即可；在Map中提供了一个叫做keySet()的方法，可以将一个Map中的key变成一个Set集合，接收的Set集合里指定的泛型和Map中key的泛型类型保持一致；如果要输出全部的value，要使用values()，但是该方法的返回类型是Collection；
+##### HashMap和Hashtable的区别
+HashMap：采用异步处理方式，性能更高；属于非线程安全的操作类，key和value允许保存null；
+Hashtable：采用同步处理方式，属于线程安全；key和value不允许保存null；
+
+
 
 
 
