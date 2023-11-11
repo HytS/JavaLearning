@@ -267,7 +267,30 @@ public interface Info<T>{}
 使用泛型方法时，也可以传递或返回一个泛型数组
 ## IO
 ### File
-实例化File必须设置好路径
+实例化File必须设置好路径；File类的对象实例化完成后，可以使用createNewFile()创建一个新文件，但是该方法用了throws，所以在使用时必须和trycatch一起处理；exist()判断文件是否存在，delete()删除文件；mkdir()创建文件夹；
+### RandomAccessFile
+可以对文件内容进行操作，此类属于随机读取类，可以随机读取一个文件指定位置的数据；如果使用rw的方式声明RandomAccessFile对象时，如果写入的对象不存在，系统将自动创建；读取时所有字符串只能按照byte数组的方式读取出来，而且所有的长度是8位；
+### 字节流和字符流
+io包中流的操作分为字节流和字符流，字节流输出主要使用OutputStream类，输入使的是InputStream类，在字符流中输出使用的是writer类，输入使用的是reader类
+#### 字节流
+字节流主要操作byte类型数据；如何增加换行？（直接将字符串要换行处加入一个"\r\n"）;文件读到末尾了，则返回的内容为-1；
+#### 字符流
+一个字符等于两个字节；
+#### 字节流和字符流的区别
+字节流在操作的时候不会用到缓冲区（内存），是对文件本身进行操作，字符流在操作时用到缓冲区，通过缓冲区再操作文件；使用字节流更好，因为所有文件在硬盘存储或在传输的时候都是以字节的方式进行的，而字符是只有在内存中才会形成；
+#### 类拷贝操作
+### 转换流-OutputStreamWriter类和InputStreamReader类
+OutputStreamWriter是Writer的子类，将输出的字符流变成字节流；InputStreamReader是Reader的子类，将输入的字节流变成字符流；以文件操作为例，在内存中的字符数据需要通过OutputStreamWriter变成字节流才能保存在文件中，读取时，需要将字节流通过InputStreamReader变成字符流；
+### 内存操作流
+针对内存操作提供了两组类：1、字节内存流：ByteArrayInputStream（内存字节输入流）、ByteArrayOutputStream（内存字节输出流）2、字符内存流：CharArrayReader（内存字符输入流）CharArrayWriter（内存字符输出流）
+字节内存流和字符内存流的区别是操作数据类型，字节内存流操作使用byte数据类型，字符内存流操作使用char数据类型；
+ByteArrayInputStream将内容写到内存中，ByteArrayOutputStream将内存中的数据输出；
+### 管道流
+主要作用是进行两个线程间的通信，分为管道输入流PipeInputStream和管道输出流PipeOutputStream;如果想进行管道输出，则必须把输出流接到输入流上；
+### 打印流
+OutputStream只能输出字节数据；打印流包含字节打印流和字符打印流，打印流可以打印任何类型的数据类型；PrintStream是OutputStream的子类，
+### System类对io的支持
+
 
 ## Iterator
 Iterator it=col.Iterator();
