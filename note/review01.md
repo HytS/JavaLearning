@@ -425,6 +425,32 @@ java.lang.reflect°üÖÐÓÐÒÔÏÂ¹¦ÄÜ£ºConstructor£¨±íÊ¾ÀàÖÐµÄ¹¹Ôì·½·¨£©¡¢Field£¨±íÊ¾À
 Ò»¸öÀà¿ÉÒÔÊµÏÖ¶à¸ö½Ó¿Ú£¬µ«ÊÇÖ»ÄÜ¼Ì³ÐÒ»¸ö¸¸Àà£¬ËùÒÔÒªÏëÈ¡µÃÒ»¸öÀàµÄ¸¸Àà£¬¿ÉÒÔÖ±½ÓÊ¹ÓÃClassÀàÖÐµÄgetSuperclass()·½·¨£¬·µ»ØµÄÊÇ¶ÔÏóÊµÀý£»
 #### È¡µÃÈ«²¿¹¹Ôì·½·¨
 ÒªÈ¡µÃÒ»¸öÀàÖÐµÄÈ«²¿¹¹Ôì·½·¨£¬±ØÐëÊ¹ÓÃClassÀàÖÐµÄgetConstructors();
+#### È¡µÃÈ«²¿·½·¨
+ÒªÈ¡µÃÈ«²¿·½·¨£¬¿ÉÒÔÊ¹ÓÃClassÀàÖÐµÄgetMethod()£¬´Ë·½·¨·µ»ØÒ»¸öMethodÀàµÄ¶ÔÏóÊý×é£»
+#### È¡µÃÈ«²¿ÊôÐÔ
+È¡µÃÊôÐÔÓÐÁ½ÖÖ²»Í¬µÄ²Ù×÷
+1¡¢µÃµ½ÊµÏÖµÄ½Ó¿Ú»ò¸¸ÀàÖÐµÄ¹«¹²ÊôÐÔ£ºpublic Field[] getField() throws SecurityException
+2¡¢µÃµ½±¾ÀàÖÐµÄÈ«²¿ÊôÐÔpublic Field[] getDeclaredField() throws SecurityException
+ÒÔÉÏ·½·¨·µ»ØµÄ¶¼ÊÇFieldµÄÊý×é£¬Ã¿Ò»¸öField¶ÔÏó¾Í±íÊ¾ÀàÖÐµÄÒ»¸öÊôÐÔ£»
+### ·´Éä»úÖÆ
+#### Í¨¹ý·´Éäµ÷ÓÃÀàÖÐµÄ·½·¨
+Èç¹ûÒªÍ¨¹ý·´Éäµ÷ÓÃÀàÖÐµÄ·½·¨¿ÉÒÔÍ¨¹ýMethodÀàÍê³É£º1¡¢Í¨¹ýClassÀàµÄgetMethod(String name,Class ParameterTypes)È¡µÃÒ»¸öMethod¶ÔÏó£¬²¢ÉèÖÃ´Ë·½·¨²Ù×÷Ê±ËùÐèÒªµÄ²ÎÊýÀàÐÍ2¡¢Ö®ºó²Å¿ÉÒÔÊ¹ÓÃinvoke()½øÐÐµ÷ÓÃ£¬²¢Ïò·½·¨ÖÐ´«µÝÒªÉèÖÃµÄ²ÎÊý£»
+ÔÚÊ¹ÓÃinvoke()Ê±±ØÐë´«ÈëÒ»¸öÀàµÄÊµÀý»¯¶ÔÏó£¬µ÷ÓÃ·½·¨Ê±±ØÐë´«µÝ¶ÔÏóÊµÀý£¬Í¬Ê±´«µÝ²ÎÊýÖµ£»
+#### µ÷ÓÃsetterºÍgetter·½·¨
+1¡¢ÉèÖÃ·½·¨Ãû³Æ2¡¢µ÷ÓÃsetter·½·¨3¡¢µ÷ÓÃgetter·½·¨
+#### Í¨¹ý·´Éä²Ù×÷ÊôÐÔ
+ÔÚ·´Éä»úÖÆÖÐ¿ÉÒÔÍ¨¹ýFieldÀà²Ù×÷ÀàÖÐµÄÊôÐÔ£¬Í¨¹ýFieldÀàÌá¹©µÄset()ºÍget()¿ÉÒÔÍê³ÉÉèÖÃºÍÈ¡µÃÊôÐÔÄÚÈÝµÄ²Ù×÷£»²Ù×÷Ç°ÐèÒª×¢Òâ£¬ÔÚÀàÖÐµÄËùÓÐÊôÐÔÒÑ¾­±»ÉèÖÃ³ÉË½ÓÐµÄ·ÃÎÊÈ¨ÏÞ£¬ËùÒÔÔÚÊ¹ÓÃset()ºÍget()µÄÊ±ºòÊ×ÏÈÒªÏÈÊ¹ÓÃFieldÀàÖÐµÄsetAccessible(true)·½·¨½«ÐèÒª²Ù×÷µÄÊôÐÔÉèÖÃ³É¿ÉÒÔÍâ²¿·ÃÎÊ£»
+#### Í¨¹ý·´Éä²Ù×÷Êý×é
+¿ÉÒÔÍ¨¹ýClassÀàµÄgetComponentType()»ñµÃÒ»¸öÊý×éµÄClass¶ÔÏó£»
+### ClassLoader
+¹¦ÄÜÊÇ¿ÉÒÔÓÉÓÃ»§×Ô¼ºÉèÖÃÀàµÄ¼ÓÔØÂ·¾¶£»Èç¹ûÒª¶¨ÒåÊôÓÚ×Ô¼ºµÄÀà¼ÓÔØÆ÷£¬¿ÉÒÔÖ±½Ó¼Ì³ÐClassLoaderÀà£¬¸ÃÀàÊÇÒ»¸ö³éÏóÀà£¬µ«ÊÇÃ»ÓÐ³éÏó·½·¨£»
+#### ÄÜ·ñÀûÓÃ×Ô¶¨ÒåÀà¼ÓÔØÆ÷£¬¼ÓÔØ×Ô¼ºµÄjava.lang.String
+ClassLoaderÊ¹ÓÃË«Ç×¼ÓÔØ»úÖÆ£¬²»ÄÜ¹»¼ÓÔØ£»¼´ÏµÍ³Àà¿âÒÀÈ»Ê¹ÓÃÏµÍ³µÄÀà¼ÓÔØÆ÷£¬¶øÖ»ÓÐ·ÇÏµÍ³Àà¿â²Å¿ÉÒÔÊ¹ÓÃ×Ô¶¨ÒåµÄClassLoader£¬java.lang.StringÊÇÏµÍ³ÀàµÄÃû×Ö£¬Õâ¸öÀàÖ»ÄÜ±»ÏµÍ³Àà¼ÓÔØÆ÷¿ØÖÆ£¬ÓÃ»§ÎÞ·¨¶¨ÒåÓëÖ®Ò»ÑùµÄÀàÀ´ÊµÏÖ¼ÓÔØ
+### ¶¯Ì¬´úÀí
+Ã¿Ò»¸ö´úÀíÀàÖ»ÄÜÎªÒ»¸ö½Ó¿Ú·þÎñ£¬ÕâÑù¿ª·¢ÖÐ±ØÈ»»áµ¼ÖÂ²úÉú¹ý¶àµÄ´úÀí£¬×îºÃµÄ×ö·¨ÊÇ¿ÉÒÔÍ¨¹ýÒ»¸ö´úÀíÀàÍê³ÉÈ«²¿µÄ´úÀí¹¦ÄÜ£¬ÕâÊ±¾ÍÐèÒªÊ¹ÓÃ¶¯Ì¬´úÀí¹¦ÄÜ£»
+
+### ÀàµÄÉùÃ÷ÖÜÆÚ
+### ¹¤³§Éè¼ÆÄ£Ê½
 ### ·´Éä»úÖÆ
 ·´Éä»úÖÆÔÊÐí³ÌÐòÔÚÖ´ÐÐÆÚ½èÖúReflectionAPIÈ¡µÃÈÎºÎÀàµÄÄÚ²¿ÐÅÏ¢£¬²¢ÄÜ²Ù×÷¶ÔÏóµÄÊôÐÔ¼°·½·¨£»¼ÓÔØÍêÀàºó£¬ÔÚ¶ÑÖÐ²úÉúÁËÒ»¸öclassÀàÐÍµÄ¶ÔÏó£¨Ò»¸öÀàÖ»ÓÐÒ»¸öclass¶ÔÏó£©£¬Õâ¸ö¶ÔÏó°üº¬ÁËÀàµÄÍêÕû½á¹¹ÐÅÏ¢£¬Í¨¹ýÕâ¸ö¶ÔÏóµÃµ½ÀàµÄ½á¹¹£¬³ÆÖ®Îª·´Éä
 ÔÚÔËÐÐÊ±¿ÉÒÔÍê³É£ºÅÐ¶ÏÈÎÒâÒ»¸ö¶ÔÏóËùÊôµÄÀà£¬¹¹ÔìÈÎÒâÒ»¸öÀàµÄ¶ÔÏó£¬µÃµ½ÈÎÒâÒ»¸öÀàËù¾ßÓÐµÄ³ÉÔ±±äÁ¿ºÍ·½·¨£¬µ÷ÓÃÈÎÒâÒ»¸ö¶ÔÏóµÄ³ÉÔ±±äÁ¿ºÍ·½·¨£¬Éú³É¶¯Ì¬´úÀí
