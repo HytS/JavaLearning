@@ -451,28 +451,22 @@ ClassLoaderÊ¹ÓÃË«Ç×¼ÓÔØ»úÖÆ£¬²»ÄÜ¹»¼ÓÔØ£»¼´ÏµÍ³Àà¿âÒÀÈ»Ê¹ÓÃÏµÍ³µÄÀà¼ÓÔØÆ÷£¬¶øÖ»Ó
 ### ÀàµÄÉùÃ÷ÖÜÆÚ
 ÀàµÄ×°ÔØ¾ÍÊÇÍ¨¹ýÀà¼ÓÔØÆ÷°Ñ.class¶þ½øÖÆÎÄ¼þ×°ÈëjvmµÄ·½·¨Çø£¬²¢ÔÚ¶ÑÇø´´½¨ÃèÊö¸ÃÀàµÄjava.lang.Class¶ÔÏó£¬ÓÃÀ´·â×°Êý¾Ý£»Í¬Ò»¸öÀàÖ»»á±»jvm¼ÓÔØÒ»´Î¡£Á´½Ó¾ÍÊÇ°Ñ¶þ½øÖÆÊý¾Ý×é×°³É¿ÉÒÔÔËÐÐµÄ×´Ì¬£¬Á´½Ó·ÖÎªÐ£Ñé¡¢×¼±¸¡¢½âÎö£»Ð£ÑéÓÃÀ´È·ÈÏ´Ë¶þ½øÖÆÎÄ¼þÊÇ·ñÊÊºÏµ±Ç°µÄjvm°æ±¾£»×¼±¸¾ÍÊÇÎª¾²Ì¬³ÉÔ±·ÖÅäÄÚ´æ¿Õ¼ä£¬²¢ÉèÖÃÄ¬ÈÏÖµ£»½âÎöÖ¸µÄÊÇ×ª»»³£Á¿³ØµÄ´úÂëÒýÓÃÎªÖ±½ÓÒýÓÃµÄ¹ý³Ì£¬Ö±µ½ËùÓÐ·ûºÅÒýÓÃ¶¼¿ÉÒÔ±»ÔËÐÐ³ÌÐòÊ¹ÓÃ¡£Íê³ÉÖ®ºó£¬ÀàÐÍ¿ÉÒÔ³õÊ¼»¯£¬³õÊ¼»¯Ö®ºóµÄ¶ÔÏó¶¼¿ÉÒÔÊ¹ÓÃ£¬Ö±µ½Ò»¸ö¶ÔÏó²»ÔÙÊ¹ÓÃºó£¬½«±»À¬»ø»ØÊÕ£¬ÊÍ·Å¿Õ¼ä£¬µ±Ã»ÓÐÈÎºÎÒýÓÃÖ¸ÏòClass¶ÔÏóÊ±£¬½«½áÊøÀàµÄÉúÃüÖÜÆÚ
 ### ¹¤³§Éè¼ÆÄ£Ê½
-
+#### ½«·´ÉäÓ¦ÓÃµ½¹¤³§Ä£Ê½ÉÏ
+#### ½áºÏÊôÐÔÎÄ¼þµÄ¹¤³§Ä£Ê½
 ### ·´Éä»úÖÆ
 ·´Éä»úÖÆÔÊÐí³ÌÐòÔÚÖ´ÐÐÆÚ½èÖúReflectionAPIÈ¡µÃÈÎºÎÀàµÄÄÚ²¿ÐÅÏ¢£¬²¢ÄÜ²Ù×÷¶ÔÏóµÄÊôÐÔ¼°·½·¨£»¼ÓÔØÍêÀàºó£¬ÔÚ¶ÑÖÐ²úÉúÁËÒ»¸öclassÀàÐÍµÄ¶ÔÏó£¨Ò»¸öÀàÖ»ÓÐÒ»¸öclass¶ÔÏó£©£¬Õâ¸ö¶ÔÏó°üº¬ÁËÀàµÄÍêÕû½á¹¹ÐÅÏ¢£¬Í¨¹ýÕâ¸ö¶ÔÏóµÃµ½ÀàµÄ½á¹¹£¬³ÆÖ®Îª·´Éä
 ÔÚÔËÐÐÊ±¿ÉÒÔÍê³É£ºÅÐ¶ÏÈÎÒâÒ»¸ö¶ÔÏóËùÊôµÄÀà£¬¹¹ÔìÈÎÒâÒ»¸öÀàµÄ¶ÔÏó£¬µÃµ½ÈÎÒâÒ»¸öÀàËù¾ßÓÐµÄ³ÉÔ±±äÁ¿ºÍ·½·¨£¬µ÷ÓÃÈÎÒâÒ»¸ö¶ÔÏóµÄ³ÉÔ±±äÁ¿ºÍ·½·¨£¬Éú³É¶¯Ì¬´úÀí
-### java³ÌÐòÔÚ¼ÆËã»úµÄÈý¸ö½×¶Î
-´úÂë½×¶Î£ºjava×Ö½ÚÂëÍ¨¹ýÀà¼ÓÔØÆ÷¼ÓÔØ³Éclass¶ÔÏó£»classÀà/¼ÓÔØ½×¶Î£ºclass¶ÔÏó±íÊ¾Ä³¸öÀà¼ÓÔØºóÔÚ¶ÑÖÐµÄ¶ÔÏó£»
-runtimeÔËÐÐ½×¶Î
 ### classÀà
 classÀà¼Ì³ÐObject£¬class¶ÔÏóÊÇÏµÍ³´´½¨µÄ£¬²»ÊÇnew³öÀ´µÄ£¬¶ÔÓÚÄ³¸öÀàµÄclass¶ÔÏó£¬ÔÚÄÚ´æÖÐÖ»ÓÐÒ»·Ý£¬Òò´ËÀàÖ»¼ÓÔØÒ»´Î£¬Ã¿¸öÀàµÄÊµÀý¶¼»á¼ÇµÃ×Ô¼ºÊÇÓÉÄÄ¸öclassÊµÀýÉú³ÉµÄ£»Í¨¹ýclass¿ÉÒÔÍêÕûµÄµÃµ½Ò»¸öÀàµÄÍêÕû½á¹¹£¬class¶ÔÏó´æ·ÅÔÚ¶ÑÖÐ£¬ÀàµÄ×Ö½ÚÂë¶þ½øÖÆÊý¾Ý·ÅÔÚ·½·¨Çø£»
-#### »ñÈ¡Class¶ÔÏó
-Class.forName() 
 ### Àà¼ÓÔØ
 Dog dog=new Dog()ÊÇ¾²Ì¬¼ÓÔØ£»·´ÉäÊÇ¶¯Ì¬¼ÓÔØ£¬Ö»ÓÐ¶¯Ì¬¼ÓÔØ¸ÃÀàÊ±£¬²Å»á±¨´í£»¾²Ì¬¼ÓÔØ£º±àÒëÊ±¼ÓÔØÏà¹ØµÄÀà£¬Èç¹ûÃ»ÓÐ¾Í±¨´í£»¶¯Ì¬¼ÓÔØ£ºÔËÐÐÊ±¼ÓÔØÐèÒªµÄÀà£¬Èç¹ûÔËÐÐÊ±²»ÓÃ¸ÃÀà£¬Ôò²»±¨´í
-#### Àà¼ÓÔØµÄÊ±»ú
-new´´½¨¶ÔÏóÊ±£»µ±×ÓÀà±»¼ÓÔØÊ±£¬¸¸ÀàÒ²±»¼ÓÔØ£»µ÷ÓÃÀàÖÐµÄ¾²Ì¬³ÉÔ±Ê±£»Í¨¹ý·´Éä¼ÓÔØ£»
-#### ¼ÓÔØµÄ¹ý³Ì
 
-
-### ·´Éä¼¼ÊõµÄÓ¦ÓÃ
-jdbc¼ÓÔØÇý¶¯Æ÷Á¬½Ó£¬class.forNameÔËÓÃÁË·´Éä¼¼Êõ£»spring¿ò¼ÜÓÃ·´ÉäÀ´ÊµÀý»¯¶ÔÏó£»×Ô¶¨Òå×¢½âÉúÐ§£¨·´Éä+aop£©£»µÚÈý·½ºËÐÄµÄ¿ò¼Ü£»¶¯Ì¬´úÀíµÄ³¡¾°
-
-
+## Annotation
+Annotation¿ÉÒÔÓÃÀ´ÐÞÊÎÀà¡¢ÊôÐÔ¡¢·½·¨£¬¶øÇÒAnnotation²»Ó°ÏìÔËÐÐ£»
+### ÏµÍ³ÄÚ½¨µÄAnnotation
+@Override ÖØÐ´µÄAnnotation£»@Deprecated ²»ÔÞ³ÉÊ¹ÓÃµÄAnnotation£»@SuppressWarnings£ºÑ¹ÖÆ°²È«¾¯¸æµÄAnnotation£»
+@DeprecatedÖ÷Òª¹¦ÄÜÊÇÉùÃ÷Ò»¸ö²»½¨ÒéÊ¹ÓÃµÄ·½·¨,Èç¹ûÔÚ³ÌÐòÖÐÊ¹ÓÃ´Ë·½·¨£¬±àÒëÊ±½«³öÏÖ¾¯¸æÐÅÏ¢£»
+@SuppressWarningsÖ÷Òª¹¦ÄÜÊÇÑ¹ÖÆ¾¯¸æ£»
 
 # javaweb
 
