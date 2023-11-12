@@ -448,9 +448,10 @@ java.lang.reflect°üÖÐÓÐÒÔÏÂ¹¦ÄÜ£ºConstructor£¨±íÊ¾ÀàÖÐµÄ¹¹Ôì·½·¨£©¡¢Field£¨±íÊ¾À
 ClassLoaderÊ¹ÓÃË«Ç×¼ÓÔØ»úÖÆ£¬²»ÄÜ¹»¼ÓÔØ£»¼´ÏµÍ³Àà¿âÒÀÈ»Ê¹ÓÃÏµÍ³µÄÀà¼ÓÔØÆ÷£¬¶øÖ»ÓÐ·ÇÏµÍ³Àà¿â²Å¿ÉÒÔÊ¹ÓÃ×Ô¶¨ÒåµÄClassLoader£¬java.lang.StringÊÇÏµÍ³ÀàµÄÃû×Ö£¬Õâ¸öÀàÖ»ÄÜ±»ÏµÍ³Àà¼ÓÔØÆ÷¿ØÖÆ£¬ÓÃ»§ÎÞ·¨¶¨ÒåÓëÖ®Ò»ÑùµÄÀàÀ´ÊµÏÖ¼ÓÔØ
 ### ¶¯Ì¬´úÀí
 Ã¿Ò»¸ö´úÀíÀàÖ»ÄÜÎªÒ»¸ö½Ó¿Ú·þÎñ£¬ÕâÑù¿ª·¢ÖÐ±ØÈ»»áµ¼ÖÂ²úÉú¹ý¶àµÄ´úÀí£¬×îºÃµÄ×ö·¨ÊÇ¿ÉÒÔÍ¨¹ýÒ»¸ö´úÀíÀàÍê³ÉÈ«²¿µÄ´úÀí¹¦ÄÜ£¬ÕâÊ±¾ÍÐèÒªÊ¹ÓÃ¶¯Ì¬´úÀí¹¦ÄÜ£»
-
 ### ÀàµÄÉùÃ÷ÖÜÆÚ
+ÀàµÄ×°ÔØ¾ÍÊÇÍ¨¹ýÀà¼ÓÔØÆ÷°Ñ.class¶þ½øÖÆÎÄ¼þ×°ÈëjvmµÄ·½·¨Çø£¬²¢ÔÚ¶ÑÇø´´½¨ÃèÊö¸ÃÀàµÄjava.lang.Class¶ÔÏó£¬ÓÃÀ´·â×°Êý¾Ý£»Í¬Ò»¸öÀàÖ»»á±»jvm¼ÓÔØÒ»´Î¡£Á´½Ó¾ÍÊÇ°Ñ¶þ½øÖÆÊý¾Ý×é×°³É¿ÉÒÔÔËÐÐµÄ×´Ì¬£¬Á´½Ó·ÖÎªÐ£Ñé¡¢×¼±¸¡¢½âÎö£»Ð£ÑéÓÃÀ´È·ÈÏ´Ë¶þ½øÖÆÎÄ¼þÊÇ·ñÊÊºÏµ±Ç°µÄjvm°æ±¾£»×¼±¸¾ÍÊÇÎª¾²Ì¬³ÉÔ±·ÖÅäÄÚ´æ¿Õ¼ä£¬²¢ÉèÖÃÄ¬ÈÏÖµ£»½âÎöÖ¸µÄÊÇ×ª»»³£Á¿³ØµÄ´úÂëÒýÓÃÎªÖ±½ÓÒýÓÃµÄ¹ý³Ì£¬Ö±µ½ËùÓÐ·ûºÅÒýÓÃ¶¼¿ÉÒÔ±»ÔËÐÐ³ÌÐòÊ¹ÓÃ¡£Íê³ÉÖ®ºó£¬ÀàÐÍ¿ÉÒÔ³õÊ¼»¯£¬³õÊ¼»¯Ö®ºóµÄ¶ÔÏó¶¼¿ÉÒÔÊ¹ÓÃ£¬Ö±µ½Ò»¸ö¶ÔÏó²»ÔÙÊ¹ÓÃºó£¬½«±»À¬»ø»ØÊÕ£¬ÊÍ·Å¿Õ¼ä£¬µ±Ã»ÓÐÈÎºÎÒýÓÃÖ¸ÏòClass¶ÔÏóÊ±£¬½«½áÊøÀàµÄÉúÃüÖÜÆÚ
 ### ¹¤³§Éè¼ÆÄ£Ê½
+
 ### ·´Éä»úÖÆ
 ·´Éä»úÖÆÔÊÐí³ÌÐòÔÚÖ´ÐÐÆÚ½èÖúReflectionAPIÈ¡µÃÈÎºÎÀàµÄÄÚ²¿ÐÅÏ¢£¬²¢ÄÜ²Ù×÷¶ÔÏóµÄÊôÐÔ¼°·½·¨£»¼ÓÔØÍêÀàºó£¬ÔÚ¶ÑÖÐ²úÉúÁËÒ»¸öclassÀàÐÍµÄ¶ÔÏó£¨Ò»¸öÀàÖ»ÓÐÒ»¸öclass¶ÔÏó£©£¬Õâ¸ö¶ÔÏó°üº¬ÁËÀàµÄÍêÕû½á¹¹ÐÅÏ¢£¬Í¨¹ýÕâ¸ö¶ÔÏóµÃµ½ÀàµÄ½á¹¹£¬³ÆÖ®Îª·´Éä
 ÔÚÔËÐÐÊ±¿ÉÒÔÍê³É£ºÅÐ¶ÏÈÎÒâÒ»¸ö¶ÔÏóËùÊôµÄÀà£¬¹¹ÔìÈÎÒâÒ»¸öÀàµÄ¶ÔÏó£¬µÃµ½ÈÎÒâÒ»¸öÀàËù¾ßÓÐµÄ³ÉÔ±±äÁ¿ºÍ·½·¨£¬µ÷ÓÃÈÎÒâÒ»¸ö¶ÔÏóµÄ³ÉÔ±±äÁ¿ºÍ·½·¨£¬Éú³É¶¯Ì¬´úÀí
