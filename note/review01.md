@@ -56,12 +56,12 @@ private¡¢protected²»ÄÜÐÞÊÎÀà£»ÀàºÍ½Ó¿Ú²»ÄÜ±»privateÐÞÊÎ£»×ÓÀàºÍ¸¸Àà²»ÔÚÍ¬Ò»¸ö°üÄ
 ¸¸ÀàµÄÒýÓÃ¿ÉÒÔÖ¸Ïò×ÓÀàµÄ¶ÔÏó£»·ÃÎÊÊôÐÔÒª¿´±àÒëÀàÐÍ£»ÔÚ±àÒë½×¶Î£¬ÄÜµ÷ÓÃÄÇÐ©³ÉÔ±È¡¾öÓÚ±àÒëÀàÐÍ£¬·½·¨µÄµ÷ÓÃÈ¡¾öÓÚÔËÐÐÀàÐÍ£»ÏòÉÏ×ªÐÍÊ±»áÒÅÊ§³ýÓë¸¸Àà¹«ÓÐµÄÆäËû·½·¨£»Ö»ÄÜÇ¿ÖÆ×ª»»¸¸ÀàµÄÒýÓÃ£¬²»ÄÜÇ¿ÖÆ×ª»»¸¸ÀàµÄ¶ÔÏó£»
 ×ÓÀàÖ®¼ä²»ÄÜ»¥Ïà×ªÐÍ£¬ÏòÏÂ×ªÐÍºó£¬¿ÉÒÔ·ÃÎÊ×ÓÀàµÄËùÓÐ³ÉÔ±£»ÊôÐÔµÄÖµ¿´±àÒëÀàÐÍ£»¶¯Ì¬°ó¶¨»úÖÆ£ºµ÷ÓÃ¶ÔÏó·½·¨Ê±£¬¸Ã·½·¨»áºÍ¸Ã¶ÔÏóµÄÔËÐÐµØÖ·°ó¶¨£¬µ÷ÓÃÊôÐÔÊ±£¬ÄÄÀïÉùÃ÷ÃÇÄÇÀïÊ¹ÓÃ
 ## final
-finalÐÞÊÎµÄ±äÁ¿Îª³£Á¿£¬finalÐÞÊÎµÄ·½·¨²»¿ÉÒÔ±»ÖØÐ´£»finalÐÞÊÎµÄÀà²»¿ÉÒÔ±»¼Ì³Ð£¬finalÐÞÊÎµÄÊôÐÔÒ»¶¨Òª¸³Öµ£¬¸³Öµºó²»¿ÉÒÔ¸ü¸Ä£»finalÐÞÊÎµÄÒýÓÃ±äÁ¿Ö¸µÄÊÇµØÖ·²»ÄÜ±ä£¬µØÖ·Ö¸ÏòµÄÄÚÈÝ¿ÉÒÔ¸Ä±ä£»³£Á¿ÔÚ±àÒë½×¶Î»á°ÑÊ¹ÓÃ³£Á¿µÄµØ·½»»³ÉÕæÊµµÄ×ÖÃæÁ¿£»È«¾Ö±äÁ¿£ºpublic static final;
+finalÐÞÊÎµÄ±äÁ¿Îª³£Á¿£¬³£Á¿²»¿ÉÒÔÐÞ¸Ä£¬finalÐÞÊÎµÄ·½·¨²»¿ÉÒÔ±»ÖØÐ´£»finalÐÞÊÎµÄÀà²»¿ÉÒÔ±»¼Ì³Ð£¬finalÐÞÊÎµÄÊôÐÔÒ»¶¨Òª¸³Öµ£¬¸³Öµºó²»¿ÉÒÔ¸ü¸Ä£»finalÐÞÊÎ¶ÔÏó£¬Öµ¿É±ä£¬ÒýÓÃ²»¿É±ä£»³£Á¿ÔÚ±àÒë½×¶Î»á°ÑÊ¹ÓÃ³£Á¿µÄµØ·½»»³ÉÕæÊµµÄ×ÖÃæÁ¿£»È«¾Ö±äÁ¿£ºpublic static final;
 final¿ÉÒÔÐÞÊÎÀà¡¢·½·¨¡¢ÊôÐÔ£¬±»finalÐÞÊÎ£¬²»¿ÉÒÔ¼Ì³Ð¸¸Àà¡¢²»¿ÉÒÔÖØÐ´¸¸Àà·½·¨¡¢²»¿ÉÒÔÐÞ¸ÄÀàµÄÊôÐÔÖµºÍ¾Ö²¿±äÁ¿£»final¸³ÖµÎ»ÖÃ£º¹¹ÔìÆ÷¡¢´úÂë¿é¡¢¶¨ÒåÊ±£»finalÀà²»ÄÜ±»¼Ì³Ð£¬µ«ÊÇ¿ÉÒÔÊµÀý»¯¶ÔÏó£»Èç¹ûÀàÃ»ÓÐ±»finalÐÞÊÎµ«ÊÇÓÖfinal·½·¨£¬¿ÉÒÔ±»¼Ì³Ðµ«ÊÇ²»ÄÜ±»ÖØÐ´£»Èç¹ûÒ»¸öÀà±»finalÐÞÊÎ£¬¾ÍÃ»±ØÒªÔÙÐÞÊÎfinal·½·¨£»final²»ÄÜÐÞÊÎ¹¹Ôì·½·¨£»finalºÍstaticÒ»ÆðÐÞÊÎ²»»áµ¼ÖÂÀà¼ÓÔØ£»°ü×°Àà¶¼ÊÇfinal£¬StringÒ²ÊÇfinal
 ## ÖØÐ´¡¢ÖØÔØ
 ### ÖØÐ´
 Í¬Ãûµ«ÊÇ¹¦ÄÜ²»Í¬µÄ·½·¨£»ÉùÃ÷ÎªfinalµÄ·½·¨²»ÄÜ±»ÖØÐ´£»ÉùÃ÷Îªstatic²»ÄÜ±»ÖØÐ´£¬µ«ÊÇ¿ÉÒÔ±»ÉùÃ÷£»×ÓÀàºÍ¸¸ÀàÔÚÒ»¸ö°üÄÚ£¬×ÓÀà¿ÉÒÔÖØÐ´³ýprivateºÍfinalÖ®ÍâµÄËùÓÐ·½·¨¡£×ÓÀàºÍ¸¸Àà²»ÔÚÒ»¸ö°üÄÚ£¬Ö»ÄÜÖØÐ´¸¸ÀàÉùÃ÷ÎªprotectedºÍpublicµÄ·ÇfinalµÄ·½·¨£»×ÓÀàÖØÐ´²»ÄÜËõÐ¡·ÃÎÊÈ¨ÏÞ£»
-·½·¨ÖØÐ´Ê±´Óprivate±ä³Édefault²»Ëã·½·¨ÖØÐ´£»
+·½·¨ÖØÐ´Ê±´Óprivate±ä³Édefault²»Ëã·½·¨ÖØÐ´£¨¸¸ÀàµÄÒ»¸ö·½·¨¶¨ÒåÎªprivate£¬×ÓÀàµÄ·½·¨¶¨ÒåÎªdefault£©£»ÖØÐ´Ê±×ÓÀàµÄ·ÃÎÊÈ¨ÏÞÒª´óÓÚµÈÓÚ¸¸ÀàµÄ·ÃÎÊÈ¨ÏÞ£»
 ÖØÐ´µÄ·½·¨¿ÉÒÔÅ×³öÈÎºÎ·ÇÇ¿ÖÆÒì³££¬ÎÞÂÛ±»ÖØÐ´µÄ·½·¨ÊÇ·ñÅ×³öÒì³£¡£µ«ÊÇ²»ÄÜÅ×³öÐÂµÄÇ¿ÖÆÐÔÒì³££¬»òÕß±ÈÖØÐ´·½·¨ÉùÃ÷·¶Î§¸ü¹ãµÄÇ¿ÖÆÐÔÒì³£
 ÖØÐ´Ê±£¬×ÓÀà²»ÄÜËõÐ¡¸¸ÀàµÄ·ÃÎÊÈ¨ÏÞ£¬×ÓÀàµÄ·ÃÎÊÀàÐÍÖ»ÄÜÊÇºÍ¸¸ÀàÏàÍ¬»ò¸¸Àà·ÃÎÊÀàÐÍµÄ×ÓÀà£»
 ### ÖØÔØ
@@ -111,16 +111,22 @@ static·½·¨¶¨ÒåµÄËµÃ÷£º´Ë·½·¨²»Ï£ÍûÍ¨¹ýÊµÀý»¯¶ÔÏóµ÷ÓÃ£¬´ËÊ±»áÓÐÁ½ÖÖÒòËØ£¨±¾ÀàÃ»ÓÐ
 #### ½Ó¿ÚÎªÊ²Ã´²»ÄÜÊµÀý»¯
 ÊµÀý»¯µÄÒâÒå¾ÍÊÇjvmÔÚ¶ÑÖÐ¿ª±ÙÒ»¿é¿Õ¼äÓÃÓÚ´æ·Å¶ÔÏó£»½Ó¿ÚÖÐ´æ·ÅµÄÊÇ¾²Ì¬ÊôÐÔºÍ·½·¨ÉùÃ÷£»½Ó¿ÚÖÐµÄÊý¾Ý¶¼·ÅÔÚ´úÂëÇøºÍ¾²Ì¬Êý¾ÝÇø£¬¶ÑÖÐÃ»ÓÐÊý¾ÝÐèÒª´æ·Å£»½Ó¿ÚµÄ¶àÌ¬£º½Ó¿ÚÀàÐÍµÄ±äÁ¿¿ÉÒÔÖ¸ÏòÊµÏÖ½Ó¿ÚµÄÀàµÄ¶ÔÏóÊµÀý£¨IF if=new Cat()£©
 ### ³éÏóÀà
-Ò»¸öÀàÃ»ÓÐ×ã¹»µÄÐÅÏ¢È¥ÃèÊö¶ÔÏó£»³éÏóÀà²»ÄÜ±»ÊµÀý»¯£¬Òª±»¼Ì³Ð£»Ê¹ÓÃ³¡¾°£ºµ±×ÓÀàÐèÒªÍê³ÉÒ»¶¨¹¦ÄÜ£¬¶øÃ¿¸ö×ÓÀà¹¦ÄÜÓÖ²»Í¬£¬¿ÉÒÔ½«·½·¨¶¨ÒåÎª³éÏó·½·¨£»¹¹Ôì·½·¨ºÍ¾²Ì¬·½·¨²»ÄÜ¶¨ÒåÎª³éÏó£»³éÏóÀà¿ÉÒÔÃ»ÓÐ³éÏó·½·¨£¬ÀàÒ»µ©°üº¬³éÏó·½·¨¾ÍÒª¶¨ÒåÎª³éÏóÀà£»³éÏóÀà¿ÉÒÔ¶¨Òå¹¹Ôì·½·¨£»
+ÔÚjavaÖÐÒ²¿ÉÒÔ´´½¨Ò»ÖÖÀà×¨ÃÅÓÃÀ´µ±¸¸Àà£¬³ÆÎª³éÏóÀà£»ÆäÄ¿µÄ¾ÍÊÇÒªÉè¼ÆÕß¸ù¾ÝËüµÄ¸ñÊ½À´ÐÞ¸Ä²¢´´½¨ÐÂµÄÀà£¬µ«ÊÇ²»ÄÜÖ±½ÓÓÉ³éÏóÀà´´½¨¶ÔÏó£¬Ö»ÄÜÍ¨¹ý³éÏóÀàÅÉÉú³öÐÂµÄÀà£¬ÔÙÓÉËü´´½¨¶ÔÏó£»
+³éÏóÀà²»ÄÜ±»finalÐÞÊÎ£¬ÒòÎª³éÏóÀàÒª±»×ÓÀàÖØÐ´£»
+Ò»¸öÀàÃ»ÓÐ×ã¹»µÄÐÅÏ¢È¥ÃèÊö¶ÔÏó£»³éÏóÀà²»ÄÜ±»ÊµÀý»¯£¬Òª±»¼Ì³Ð£»Ê¹ÓÃ³¡¾°£ºµ±×ÓÀàÐèÒªÍê³ÉÒ»¶¨¹¦ÄÜ£¬¶øÃ¿¸ö×ÓÀà¹¦ÄÜÓÖ²»Í¬£¬¿ÉÒÔ½«·½·¨¶¨ÒåÎª³éÏó·½·¨£»¹¹Ôì·½·¨ºÍ¾²Ì¬·½·¨²»ÄÜ¶¨ÒåÎª³éÏó£»³éÏóÀà¿ÉÒÔÃ»ÓÐ³éÏó·½·¨£¬ÀàÒ»µ©°üº¬³éÏó·½·¨¾ÍÒª¶¨ÒåÎª³éÏóÀà£»³éÏóÀà¿ÉÒÔ¶¨Òå¹¹Ôì·½·¨£»¶øÇÒ³éÏóÀàÒ²´æÔÚ¸÷¸öÊôÐÔ£¬ËùÒÔ×ÓÀàÔÚÊµÀý»¯Ö®Ç°ÒªÏÈ¶Ô¸¸Àà½øÐÐÊµÀý»¯£»
+
+µ÷ÓÃ³éÏóÀàÖÐµÄÖ¸¶¨²ÎÊýµÄ¹¹Ôì·½·¨
 abstractÖ»ÄÜÐÞÊÎ·½·¨ºÍÀà£»Èç¹ûÒ»¸öÀà¼Ì³ÐÁË³éÏóÀà£¬¾ÍÒªÊµÏÖ³éÏóÀàµÄËùÓÐ·½·¨£¬³ý·ÇÉùÃ÷Îª³éÏóÀà£»³éÏó·½·¨²»ÄÜÓÃfinal¡¢static¡¢privateÐÞÊÎ£»
 ### ½Ó¿ÚºÍ³éÏóÀàµÄÇø±ð
 ³éÏóÀà¿ÉÒÔÓÐ¾²Ì¬´úÂë¿é£¬½Ó¿Ú²»¿ÉÒÔÓÐ£»³éÏóÀàÖÐÆÕÍ¨·½·¨±ØÐëÓÐÊµÏÖ£¬³éÏó·½·¨±ØÐëÃ»ÓÐÊµÏÖ£¬½Ó¿ÚÖÐÆÕÍ¨·½·¨²»ÄÜÓÐÊµÏÖ£¬jdk8ÖÐstaticºÍÄ¬ÈÏ·½·¨±ØÐëÓÐÊµÏÖ£»³éÏóÀàÖÐµÄ³éÏó·½·¨²»ÄÜÓÃprivateÐÞÊÎ£¬½Ó¿ÚÖÐÄ¬ÈÏ¿ØÖÆ·ûÊÇpublic£»³éÏóÀàÖÐ·ÃÎÊ¿ØÖÆ·ûÎÞÏÞÖÆ£»Ò»¸ö½Ó¿Ú¿ÉÒÔ°üº¬¶à¸ö³éÏóÀà£¬Ò»¸ö³éÏóÀà¿ÉÒÔ°üº¬¶à¸ö½Ó¿Ú£»³éÏóÀàÊÇ°üº¬³éÏó·½·¨µÄÀà£¬½Ó¿ÚÊÇ³éÏó·½·¨ºÍÈ«¾Ö³£Á¿µÄ¼¯ºÏ£»³éÏóÀà¿ÉÒÔÊµÏÖ¶à¸ö½Ó¿Ú£¬½Ó¿Ú¿ÉÒÔ¼Ì³Ð¶à¸ö½Ó¿Ú£¬²»¿ÉÒÔ¼Ì³Ð¶à¸ö³éÏóÀà£»³éÏóÀàÓÉ³éÏó·½·¨¡¢¹¹Ôì·½·¨¡¢ÆÕÍ¨·½·¨¡¢³£Á¿¡¢±äÁ¿×é³É£¬½Ó¿ÚÓÉ³£Á¿ºÍ³éÏó·½·¨×é³É£»£¨jdk1.8Ö®ºó½Ó¿Ú¶¨ÒåÆÕÍ¨·½·¨ºÍ¾²Ì¬·½·¨£¬Òª¶¨ÒåÆÕÍ¨·½·¨±ØÐëÊ¹ÓÃdefault£¬£©
 Ò»¸öÀà²»ÒªÈ¥¼Ì³ÐÒÑ¾­ÊµÏÖºÃµÄÀà£¬ÒªÃ´¼Ì³Ð³éÏóÀà£¬ÒªÃ´ÊµÏÖ½Ó¿Ú£¬Èç¹û½Ó¿ÚºÍ³éÏóÀà¶¼¿ÉÒÔÊ¹ÓÃµÄ»°£¬ÓÅÏÈÊ¹ÓÃ½Ó¿Ú
 ## ÄÚ²¿Àà**8
 µ±ÄÚ²¿ÀàÉùÃ÷Îªpublic»òprivateÊ±£¬¶ÔÆä·ÃÎÊµÄÏÞÖÆÓë³ÉÔ±±äÁ¿ºÍ³ÉÔ±·½·¨ÍêÈ«ÏàÍ¬£»
+
 ÄÚ²¿ÀàÎ¨Ò»ºÃ´¦¾ÍÊÇ¿ÉÒÔ·½±ãµÄ·ÃÎÊÍâ²¿ÀàµÄË½ÓÐÊôÐÔ£¨Í¨¹ý½«ÄÚ²¿ÀàÄÃµ½ÍâÃæÈ¥£©£¬Í¬Ê±Íâ²¿ÀàÒ²¿ÉÒÔ·ÃÎÊÄÚ²¿ÀàµÄË½ÓÐÊôÐÔ£»Ê¹ÓÃstaticÐÞÊÎÄÚ²¿Àà¿ÉÒÔÊ¹ÄÚ²¿Àà±ä³ÉÍâ²¿Àà£¬Ê¹ÓÃstaticÐÞÊÎµÄÄÚ²¿Àà²»ÄÜ·ÃÎÊ·ÇstaticµÄÍâ²¿ÀàÊôÐÔ£»
 
-ÔÚÍâ²¿·ÃÎÊÄÚ²¿Àà£ºÍâ²¿Àà.ÄÚ²¿Àà ÄÚ²¿Àà¶ÔÏó=Íâ²¿ÀàÊµÀý.new ÄÚ²¿Àà();Ê×ÏÈÒªÕÒµ½Íâ²¿ÀàÊµÀý¶ÔÏó£¬²ÅÄÜÍ¨¹ýÍâ²¿ÀàÊµÀý»¯¶ÔÏóÈ¥ÊµÀý»¯ÄÚ²¿Àà¶ÔÏó£¨Outer out=new Outer(); Outer.Inner in= out.new Inner()£©£»
+ÔÚÍâ²¿·ÃÎÊÄÚ²¿Àà£ºÍâ²¿Àà.ÄÚ²¿Àà ÄÚ²¿Àà¶ÔÏó=Íâ²¿ÀàÊµÀý.new ÄÚ²¿Àà();Ê×ÏÈÒªÕÒµ½Íâ²¿ÀàÊµÀý¶ÔÏó£¬²ÅÄÜÍ¨¹ýÍâ²¿ÀàÊµÀý»¯¶ÔÏóÈ¥ÊµÀý»¯ÄÚ²¿Àà¶ÔÏó£¨Outer out=new Outer(); Outer.Inner in= out.new Inner()£©£»Íâ²¿Àà.ÄÚ²¿Àà ÄÚ²¿Àà¶ÔÏó=Íâ²¿ÀàÊµÀý.new ÄÚ²¿Àà();
+ÄÚ²¿Àà¶¨Òåºó£¬Éú³ÉµÄclassÎÄ¼þÊÇÒÔ'Outer$Inner.class'
 
 ÔÚ·½·¨ÖÐ¶¨ÒåµÄÄÚ²¿Àà²»ÄÜ·ÃÎÊ·½·¨µÄ²ÎÊý£¬Èç¹û·½·¨ÖÐµÄ²ÎÊýÏëÒª±»·ÃÎÊ£¬¾ÍÒªÔÚ²ÎÊýÇ°¼Ófinal£¨1.8Ö®ºó¿ÉÒÔ²»¼Ófinal£©£»
 
